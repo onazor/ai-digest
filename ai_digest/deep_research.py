@@ -73,7 +73,7 @@ CATEGORY_KEYWORDS = {
     "ai_trends": [],
     "ai_technology": ["Google", "Apple", "Microsoft", "OpenAI", "Meta", "Amazon", "NVIDIA", "tech", "product", "launch", "company", "announces"],
     "ai_innovations": ["model", "algorithm", "research", "paper", "arXiv", "ML", "training", "inference", "architecture", "neural", "learning", "AI"],
-    "ai_research": ["model", "algorithm", "paper", "arXiv", "architecture", "training", "benchmark", "method", "neural", "transformer", "embedding", "optimization", "loss", "dataset", "accuracy", "SOTA", "conference", "preprint"],
+    "ai_research": ["arxiv", "paper", "preprint", "algorithm", "benchmark", "SOTA", "conference", "journal", "publication", "method", "result", "finding", "model", "training", "architecture", "NeurIPS", "ICML", "ICLR"],
     "genai_tips": ["tip", "how to", "guide", "tutorial", "best practice", "use", "prompt", "GenAI", "generative"],
     "tools_updates": ["tool", "release", "update", "API", "software", "launch", "new", "version"],
     "policy_ethics": ["policy", "regulation", "ethics", "law", "EU", "US", "governance", "legal", "bill", "AI act"],

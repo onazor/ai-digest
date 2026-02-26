@@ -70,10 +70,10 @@ def collect_articles_for_category(
         )
     elif category == "ai_research":
         query = (
-            "Latest AI/ML research in the last 7 days: new models, algorithms, technical techniques, "
-            "research papers, architectures, training methods, optimization, benchmarks. "
-            "Highly technical content for data scientists and AI researchers: arXiv, conference papers, "
-            "model cards, ablation studies, novel methods. Prioritize research-oriented and technical sources."
+            "arXiv AI ML papers, research publications, technical papers, preprints from last 7 days. "
+            "New algorithms, groundbreaking research results, novel methods, SOTA benchmarks. "
+            "Sources: arxiv.org, conference papers (NeurIPS ICML ICLR), journal articles. "
+            "No product news or company announcements—only research papers and technical results."
         )
     else:
         query = (
@@ -160,10 +160,11 @@ def evaluate_article(
         )
     elif article.category == "ai_research":
         category_guidance = (
-            " For category ai_research (research-focused, for data scientists / AI researchers): accept highly technical "
-            "content on models, algorithms, research approaches, architectures, training techniques, benchmarks, "
-            "novel methods, papers, and technical breakthroughs. Prefer research papers, model cards, method descriptions, "
-            "and technical deep-dives. Reject purely product/marketing or non-technical content."
+            " For category ai_research: accept ONLY research-focused content—publications, technical papers, and "
+            "journal/preprint-style articles (e.g. from arXiv, conferences, journals). Prefer: new algorithms, "
+            "new technical trends in AI, groundbreaking results, novel methods, benchmarks, and formal research. "
+            "REJECT: product launches, company announcements, general tech news, how-tos, or any non-publication content. "
+            "When the source is arXiv or a research venue, lean accept; when it is a general news site, accept only if the article is clearly about a specific paper or research result."
         )
 
     system_prompt = textwrap.dedent(
