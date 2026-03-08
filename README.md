@@ -217,7 +217,7 @@ python run_pipeline.py compose --category CATEGORY --audience "..." --tone "..."
 | `--format` | No | `card` | `card` (emoji headlines + summaries + images) or `table` (Date \| Headline \| Source \| Summary) |
 | `--no-standardize` | No | off | Skip Standardizer (card only; ignored for table) |
 | `--target-max-words N` | No | `500` | Target total words for standardized draft (card only) |
-| `--target-words-per-item N` | No | `80` | Target words per item (card only) |
+| `--target-words-per-item N` | No | `40` | Target words per item (card only; 1 short sentence) |
 
 **Examples:**
 
@@ -280,7 +280,7 @@ python run_pipeline.py collect-and-compose --category CATEGORY --audience "..." 
 | `--format` | No | `card` | `card` or `table` (Date \| Headline \| Source \| Summary) |
 | `--no-standardize` | No | off | Skip Standardizer (card only) |
 | `--target-max-words N` | No | `500` | Target max total words (card only) |
-| `--target-words-per-item N` | No | `80` | Target words per item (card only) |
+| `--target-words-per-item N` | No | `40` | Target words per item (card only; 1 short sentence) |
 
 **Examples:**
 

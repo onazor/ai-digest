@@ -258,7 +258,7 @@ def compose_newsletter_from_run(
     max_items: int = 3,
     standardize: bool = True,
     target_max_words: int = 500,
-    target_words_per_item: int = 80,
+    target_words_per_item: int = 40,
     output_format: str = "card",
     roundup_title: Optional[str] = None,
     roundup_intro: Optional[str] = None,

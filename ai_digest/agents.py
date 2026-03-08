@@ -228,7 +228,7 @@ def summarize_article(
 ) -> ArticleSummary:
     """
     Summarizer Agent:
-    Create a concise summary (exactly 2 sentences) with an eye-catching headline for a single accepted item.
+    Create one very short, scannable summary (1 sentence, max 25 words) with an eye-catching headline.
     """
     system_prompt = textwrap.dedent(
         """
@@ -240,19 +240,18 @@ def summarize_article(
            (e.g., 🚀 for launches, 🤖 for AI tools, 🌐 for global/tech, 💼 for business). Make it
            bold and engaging while staying professional. Focus on the most impactful aspect of the news.
 
-        2. summary: A concise summary (exactly 2 sentences, no more). Focus on the key facts: what happened,
-           who/what is involved, and the most important detail (e.g., numbers, impact, significance).
-           Remove fluff and unnecessary details. Keep it tight and factual.
+        2. summary: ONE short sentence only (max 25 words). State the single most important fact:
+           what happened and the key detail (e.g., who, number, or impact). No filler. Readers should
+           get the gist in under 10 seconds.
 
         3. key_points: Optional list of 2-3 short bullet strings (for backward compatibility).
 
-        Prioritize: Capture only the most relevant and trending aspects. Focus on high-impact stories
-        that matter to a bank audience.
+        Prioritize: One sentence, key fact only. High-impact and scannable.
 
         Output strict JSON with:
         {
           "suggested_subject": "eye-catching headline with emoji if appropriate",
-          "summary": "exactly 2 sentences, key facts only",
+          "summary": "one sentence, max 25 words, key fact only",
           "key_points": ["...", "..."]
         }
         """
@@ -301,18 +300,17 @@ def compose_newsletter_section(
     Given a list of summarized items, draft a newsletter section with eye-catching headlines and concise content.
 
     `items` is a list of dicts with keys:
-      - title (headline), url, summary (exactly 2 sentences), image_path (optional, for embedding)
+      - title (headline), url, summary (one short sentence), image_path (optional, for embedding)
     """
     system_prompt = textwrap.dedent(
         """
         You draft an internal AI/GenAI newsletter section for a bank.
 
         Format rules:
-        - Keep content SHORT and attention-grabbing. Each news item must be exactly 2 sentences (no more).
+        - Keep content VERY SHORT and scannable. Each news item must be exactly 1 sentence (the provided summary).
         - Use the provided headline exactly as-is (it's already eye-catching with emojis if appropriate).
-        - Focus on key facts: what happened, who/what is involved, and the most important detail.
-        - Remove fluff and unnecessary details. Prioritize high-impact, trending, and relevant news.
-        - If an image_path is provided for an item, add a single line after the 2 sentences and before "Read more": ![Headline](image_path) using the exact image_path given (e.g. images/run_id/1.jpg). This embeds the image for email.
+        - Do not expand the summary; use it as-is so readers can scan quickly.
+        - If an image_path is provided for an item, add a single line after the 1 sentence and before "Read more": ![Headline](image_path) using the exact image_path given (e.g. images/run_id/1.jpg). This embeds the image for email.
         - End each item with a clear "Read more: <URL>" or "See more: <URL>" link.
         - Assume the content will be sent via email or pasted into a poster. Use simple markdown-style formatting (bold for headlines, plain text otherwise). No HTML.
         - Match the requested tone.
@@ -322,13 +320,13 @@ def compose_newsletter_section(
         - A brief 1-2 sentence intro that frames the section (optional, keep it concise).
         - For each item:
           - **Bold headline** (use the provided suggested_subject/title exactly as-is).
-          - Exactly 2 sentences of content (use the provided summary; keep it tight and factual).
+          - Exactly 1 sentence of content (use the provided summary as-is; it is already short).
           - If image_path is provided: a line ![Headline](image_path) with the exact path.
           - "Read more: <URL>" or "See more: <URL>" on its own line.
 
         Example (with image):
         **🚀 Historic Tech Merger**
-        SpaceX acquires xAI in an all-stock deal valuing the combined company at $1.25 trillion, the largest merger ever. Elon Musk's aim: build orbital AI data centers and unify AI with space ventures.
+        SpaceX acquires xAI in an all-stock deal valuing the combined company at $1.25 trillion.
         ![Historic Tech Merger](images/20260208-153640/1.jpg)
         Read more: <URL>
         """
@@ -345,7 +343,7 @@ def compose_newsletter_section(
                 Headline: {item.get("title", "")}
                 URL: {item.get("url", "")}
 
-                Summary (use exactly as-is, exactly 2 sentences):
+                Summary (use exactly as-is, one short sentence):
                 {item.get("summary", "")}
                 {img_line}
                 """
@@ -364,7 +362,7 @@ def compose_newsletter_section(
 
         {items_block}
 
-        Draft the newsletter section. Use the exact headlines provided. Keep each item to exactly 2 sentences of content. For any item that has an image path, add a line ![Headline](image_path) after the 2 sentences (use the exact path given). End each item with "Read more: <URL>" or "See more: <URL>". Focus on key facts and remove fluff.
+        Draft the newsletter section. Use the exact headlines provided. Keep each item to exactly 1 short sentence (the provided summary). For any item that has an image path, add a line ![Headline](image_path) after the sentence (use the exact path given). End each item with "Read more: <URL>" or "See more: <URL>". Keep it scannable.
         """
     ).strip()
 
@@ -375,8 +373,8 @@ def standardize_newsletter(
     draft: str,
     category: str,
     audience: str,
-    target_max_words: int = 600,
-    target_words_per_item: int = 120,
+    target_max_words: int = 500,
+    target_words_per_item: int = 40,
 ) -> tuple[str, Dict[str, Any]]:
     """
     Standardizer Agent:
@@ -395,11 +393,10 @@ def standardize_newsletter(
            - A brief 1-2 sentence intro (optional, keep it concise).
            - For each item:
              - **Bold headline** (keep the eye-catching headline as-is, including emojis if present).
-             - Exactly 2 sentences of content (keep it tight and factual; focus on key facts only).
+             - Exactly 1 short sentence of content (keep it tight; one key fact only).
              - "Read more: <URL>" or "See more: <URL>" on its own line.
         2. Length: Keep the total section under the requested max words. Each item must be
-           exactly 2 sentences. Remove any fluff or unnecessary details. Prioritize
-           key facts and high-impact information.
+           exactly 1 sentence. Remove any fluff. Prioritize one key fact per item so readers can scan quickly.
         3. Tone and focus: Preserve the original tone and audience. Keep all content focused
            on the topic. Do not add new information; only trim or rephrase for clarity and consistency.
            Ensure headlines remain eye-catching and attention-grabbing.

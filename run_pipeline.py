@@ -208,8 +208,8 @@ def main(argv: Optional[List[str]] = None) -> None:
     compose_parser.add_argument(
         "--target-words-per-item",
         type=int,
-        default=80,
-        help="Target words per item in the standardized draft (2 sentences).",
+        default=40,
+        help="Target words per item in the standardized draft (1 short sentence).",
     )
     compose_parser.set_defaults(func=cmd_compose)
 
@@ -276,8 +276,8 @@ def main(argv: Optional[List[str]] = None) -> None:
     collect_compose_parser.add_argument(
         "--target-words-per-item",
         type=int,
-        default=80,
-        help="Target words per item in the standardized draft (card only, 2-3 sentences).",
+        default=40,
+        help="Target words per item in the standardized draft (card only, 1 short sentence).",
     )
     collect_compose_parser.set_defaults(func=cmd_collect_and_compose)
 
