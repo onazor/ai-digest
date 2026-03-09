@@ -14,6 +14,7 @@ from .agents import (
     article_to_dict,
     compose_newsletter_section,
     evaluate_article,
+    generate_newsletter_headline,
     standardize_newsletter,
     summarize_article,
     summary_to_dict,
@@ -303,6 +304,21 @@ def compose_newsletter_from_run(
         key=lambda t: int(t[1].get("quality_score", 0)), reverse=True
     )
     selected_items = eligible_items[:max_items]
+
+    # One all-encompassing headline for the whole newsletter (when not overridden)
+    if roundup_title is None and selected_items:
+        try:
+            logger.step(
+                "headline",
+                "generating",
+                "Generating one punchy headline for the entire newsletter.",
+                details={"category": category, "num_items": len(selected_items)},
+            )
+            roundup_title = generate_newsletter_headline(category=category, selected_items=selected_items)
+            logger.step("headline", "done", f"Headline: {roundup_title}", details={"headline": roundup_title})
+        except Exception as e:
+            logger.step("headline", "error", str(e), details={})
+            roundup_title = None  # fall back to default in _build_roundup_header
 
     if not selected_items:
         logger.step(
