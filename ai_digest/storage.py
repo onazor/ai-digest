@@ -68,3 +68,21 @@ def save_newsletter_text(
         f.write(text)
     return path
 
+
+
+def save_newsletter_html(
+    html: str,
+    category: str,
+    run_id: Optional[str] = None,
+) -> Path:
+    """
+    Save a rendered HTML newsletter section to output/ as a self-contained .html file.
+    """
+    timestamp = datetime.now(APP_TIMEZONE).strftime("%Y%m%d-%H%M%S")
+    safe_category = category.replace(" ", "_")
+    if not run_id:
+        run_id = timestamp
+    path = OUTPUT_DIR / f"newsletter_{safe_category}_{run_id}.html"
+    with path.open("w", encoding="utf-8") as f:
+        f.write(html)
+    return path

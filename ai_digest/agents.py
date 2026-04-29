@@ -5,7 +5,7 @@ import uuid
 from dataclasses import dataclass, asdict
 from datetime import datetime
 
-from typing import Any, Dict, List, Optional, Tuple
+from typing import Any, Dict, List, Optional
 
 from tavily import TavilyClient  # type: ignore[import-error]
 
@@ -42,9 +42,7 @@ class ArticleEvaluation:
 class ArticleSummary:
     article_id: str
     summary: str
-    key_points: List[str]  # kept for backward compatibility
     suggested_subject: str
-    why_this_matters: str = ""  # paragraph form, aligned with bank/audience
 
 
 def collect_articles_for_category(
@@ -55,46 +53,62 @@ def collect_articles_for_category(
     Collector Agent:
     Use Tavily to fetch recent, relevant items for a given category.
     """
-    if category == "ai_technology":
+    if category == "ai_innovations":
         query = (
-            "Latest AI and generative AI news from major tech companies in the last 7 days: "
-            "Google, Apple, Microsoft, OpenAI, Meta, Amazon, NVIDIA, and similar. "
-            "Product launches, announcements, and AI initiatives. Prioritize high-quality sources."
-        )
-    elif category == "ai_innovations":
-        query = (
-            "Latest AI and ML innovations in the last 7 days: new models, new methods, algorithms, "
-            "research breakthroughs, technical advances. Focus on the technology itself: model releases, "
-            "novel architectures, training techniques, inference improvements, and new AI/ML processes. "
-            "Prioritize high-quality technical sources."
+            "What is new and capable in AI in the last 7 days. "
+            "Include: new model releases and what they can do (GPT, Gemini, Claude, Llama, Mistral, "
+            "and similar) with benchmark results and capability comparisons; capability breakthroughs "
+            "in reasoning, multimodality, long-context, or agents; open-source model or framework "
+            "milestones that change what practitioners can build; and techniques crossing from research "
+            "into real-world use such as new inference methods, quantization, or fine-tuning approaches. "
+            "Also include: major AI product launches and initiatives from Google, Microsoft, OpenAI, "
+            "Meta, Apple, Amazon, NVIDIA, and similar — focusing on the capability angle, not just the "
+            "announcement. Exclude: market analysis, adoption trends, tips and tutorials, "
+            "and academic papers without a release or deployment angle."
         )
     elif category == "ai_research":
         query = (
-            "arXiv AI ML papers, research publications, technical papers, preprints from last 7 days. "
-            "New algorithms, groundbreaking research results, novel methods, SOTA benchmarks. "
-            "Sources: arxiv.org, conference papers (NeurIPS ICML ICLR), journal articles. "
-            "No product news or company announcements—only research papers and technical results."
+            "site:arxiv.org OR site:paperswithcode.com new AI ML research papers preprints last 7 days. "
+            "New algorithms, novel architectures, SOTA benchmarks, groundbreaking results. "
+            "Include: arXiv preprints, NeurIPS ICML ICLR papers, technical research results. "
+            "Exclude: product launches, company news, how-to guides, opinion pieces."
+        )
+    elif category == "ai_research_arxiv":
+        query = (
+            "site:arxiv.org new AI ML research papers preprints last 7 days. "
+            "New algorithms, novel architectures, SOTA benchmarks, groundbreaking results. "
+            "Only arXiv preprints — no blogs, no news sites, no company announcements."
         )
     elif category == "genai_tips":
         query = (
-            "GenAI and ChatGPT tips, tricks, techniques in the last 7 days: how to prompt, best practices, "
-            "practical techniques for using or developing generative AI. How-to guides, prompting tips, "
-            "practical tutorials. Exclude general AI news; only tips/tricks/techniques."
-        )
-    elif category == "tools_updates":
-        query = (
-            "AI tool and API releases in the last 7 days: new features, new versions, new AI software or APIs. "
-            "Product announcements for AI tools, SDKs, APIs. Exclude tips and how-tos; only tool/update news."
-        )
-    elif category == "policy_ethics":
-        query = (
-            "AI policy, regulation, and ethics in the last 7 days: new laws, regulatory decisions, "
-            "ethics guidelines, governance. Exclude product news; only policy/ethics/governance."
+            "Practical GenAI and LLM techniques for data scientists and AI practitioners last 7 days. "
+            "Include: advanced prompting techniques (chain-of-thought, few-shot, structured outputs, "
+            "system prompt design, prompt chaining), new tools for working with LLMs (agent frameworks, "
+            "RAG tooling, evaluation libraries, IDE integrations, API features), and practical workflows "
+            "using GenAI in real pipelines (LLMs for data analysis, building agents, prompt-to-code). "
+            "Exclude: beginner ChatGPT guides, generic AI opinion pieces, product announcements "
+            "without practical usage guidance, and listicles with no technical depth."
         )
     elif category == "ai_trends":
         query = (
-            "AI and GenAI trends in the last 7 days: market trends, adoption trends, landscape developments, "
-            "industry shifts. Exclude single product announcements; focus on trend and market analysis."
+            "AI and generative AI trends gaining widespread attention in the last 7 days. "
+            "Include: industry adoption shifts, enterprise AI rollouts, AI market movements, "
+            "widely debated AI topics, emerging use cases getting traction, surveys and reports "
+            "on how organisations are using AI, and stories that many people in tech are discussing. "
+            "Exclude: single product launches, individual research papers, how-to guides, "
+            "company earnings, or one-off announcements without a broader trend angle. "
+            "Prioritize stories from analysts, industry publications, and business press."
+        )
+    elif category == "ai_capability":
+        query = (
+            "AI capabilities and what AI can do now in the last 7 days. "
+            "Include: knowledge assist and enterprise search powered by AI, voice AI and speech "
+            "recognition advances, intelligent document processing and OCR, image and video "
+            "generation (text-to-image, text-to-video), code generation and AI coding assistants, "
+            "AI-powered translation and summarization, recommendation systems, predictive analytics, "
+            "autonomous agents and robotics, and any new demonstration of what AI systems can accomplish. "
+            "Focus on concrete capabilities — what the AI can DO — not market trends or research theory. "
+            "Exclude: pure research papers, market analysis without capability details, opinion pieces."
         )
     else:
         query = (
@@ -102,11 +116,53 @@ def collect_articles_for_category(
             f"{category} related to AI and generative AI. Prioritize high-quality sources."
         )
 
+    # Tavily enforces a hard 400-character query limit.
+    query = query[:400]
+
+    if category in ("ai_research", "ai_research_arxiv"):
+        search_params: Dict[str, Any] = {
+            "search_depth": "basic",
+            "topic": "news",  # news topic favours recent publications over evergreen content
+        }
+        if category == "ai_research_arxiv":
+            search_params["include_domains"] = ["arxiv.org"]
+    elif category == "ai_innovations":
+        search_params = {
+            "search_depth": "basic",
+            "topic": "news",  # news surfaces recent model releases and capability announcements
+            "exclude_domains": ["arxiv.org"],
+        }
+    elif category == "genai_tips":
+        search_params = {
+            "search_depth": "basic",
+            "topic": "general",
+            "exclude_domains": ["arxiv.org"],
+            # general topic (not news) — practical technique articles aren't always breaking news
+        }
+    elif category == "ai_trends":
+        search_params = {
+            "search_depth": "basic",
+            "topic": "news",  # news topic surfaces recent widely-covered stories over evergreen content
+            "exclude_domains": ["arxiv.org"],
+        }
+    elif category == "ai_capability":
+        search_params = {
+            "search_depth": "basic",
+            "topic": "general",  # general topic catches both news and capability showcases
+            "exclude_domains": ["arxiv.org"],
+        }
+    else:
+        search_params = {
+            "search_depth": "basic",
+            "topic": "general",
+            "exclude_domains": ["arxiv.org"],
+        }
+
     result = tavily_client.search(
         query=query,
-        search_depth="advanced",
         max_results=max_results,
         include_raw_content=True,
+        **search_params,
     )
 
     articles: List[Article] = []
@@ -114,7 +170,7 @@ def collect_articles_for_category(
 
     for item in result.get("results", []):
         content = item.get("raw_content") or item.get("content") or ""
-        snippet = (content or item.get("content") or "")[:1000]
+        snippet = content[:1000]
 
         articles.append(
             Article(
@@ -154,39 +210,46 @@ def evaluate_article(
     category_guidance = ""
     if article.category == "ai_innovations":
         category_guidance = (
-            " For category ai_innovations: accept ONLY content specifically about new models, methods, algorithms, "
-            "research breakthroughs, and technical advances (e.g. from arXiv, ML blogs). REJECT: product launches, "
-            "company news, how-tos, or anything that is not a model/method/algorithm innovation."
-        )
-    elif article.category == "ai_technology":
-        category_guidance = (
-            " For category ai_technology: accept ONLY news from major tech companies (Google, Apple, Microsoft, "
-            "OpenAI, Meta, Amazon, NVIDIA, etc.) about specific products, launches, or AI initiatives. "
-            "REJECT: generic commentary, tips, research papers, or non–tech-company news."
+            " For category ai_innovations: accept content that answers 'what is new and capable in AI'. "
+            "Two equal pillars — (1) CAPABILITY: new model releases with benchmark results or capability "
+            "comparisons, breakthroughs in reasoning/multimodality/agents/long-context, open-source "
+            "milestones that change what practitioners can build, and techniques crossing from research "
+            "into real use (inference, quantization, fine-tuning). (2) INDUSTRY: major AI product launches "
+            "and initiatives from Google, Microsoft, OpenAI, Meta, Apple, Amazon, NVIDIA — focus on "
+            "what the product can DO, not just that it was announced. "
+            "Score 4-5 for clear capability advances or major releases with concrete details. "
+            "Score 3 for solid product news or technical updates with real substance. "
+            "REJECT: market analysis and adoption trends (use ai_trends), tips and tutorials "
+            "(use genai_tips), pure academic papers without a release angle (use ai_research), "
+            "and company announcements with no technical detail or capability discussion."
         )
     elif article.category == "ai_trends":
         category_guidance = (
-            " For category ai_trends: accept ONLY articles specifically about AI/GenAI trends, market shifts, "
-            "or landscape developments (e.g. 'AI adoption is growing in X', 'trends in enterprise AI'). "
-            "REJECT: single product announcements without a trend angle, tips, or how-tos."
+            " For category ai_trends: accept ONLY stories that reflect a genuine trend — "
+            "something that is gaining traction, being widely adopted, heavily debated, or shifting "
+            "how the industry thinks about AI. Strong signals: adoption numbers, industry surveys, "
+            "enterprise rollouts, market analysis, emerging use cases with real examples, topics "
+            "that many outlets are covering simultaneously. "
+            "Score 4-5 for stories backed by data, multiple organisations, or clear industry momentum. "
+            "Score 3 for clearly trend-adjacent stories with a credible angle. "
+            "REJECT: single product launches or announcements without a trend angle (use ai_innovations), "
+            "individual research papers (use ai_research), how-to guides (use genai_tips), "
+            "opinion pieces with no supporting evidence, or any story that is only about one company "
+            "doing one thing with no broader pattern."
         )
     elif article.category == "genai_tips":
         category_guidance = (
-            " For category genai_tips: accept ONLY tips, tricks, or techniques for using or developing GenAI—e.g. "
-            "prompting how-tos, best practices, 'how to' guides, practical techniques. REJECT: general AI news, "
-            "product launches, research papers, or any article that is not clearly a tip/trick/technique."
-        )
-    elif article.category == "tools_updates":
-        category_guidance = (
-            " For category tools_updates: accept ONLY product releases, API updates, or software/tool announcements "
-            "related to AI (new version, new feature, new tool). REJECT: tips, opinion pieces, or general news "
-            "that does not announce a specific tool/API/update."
-        )
-    elif article.category == "policy_ethics":
-        category_guidance = (
-            " For category policy_ethics: accept ONLY policy, regulation, ethics, or governance content related to AI "
-            "(e.g. new laws, regulatory decisions, ethics guidelines). REJECT: product news, tips, or general news "
-            "that is not specifically about policy/ethics/governance."
+            " For category genai_tips: the audience is data scientists and AI practitioners — "
+            "accept ONLY content with genuine technical depth and practical value. "
+            "Strong accepts: advanced prompting techniques (chain-of-thought, few-shot, structured outputs, "
+            "prompt chaining, system prompt design), practical LLM tooling guides (RAG frameworks, "
+            "agent libraries, evaluation tools, API features), and real workflow tutorials "
+            "(LLMs for data analysis, building agents, integrating GenAI into pipelines). "
+            "Score 4-5 for content a working data scientist could apply immediately. "
+            "Score 3 for solid practitioner content that is useful but not immediately actionable. "
+            "REJECT: beginner-level or consumer-facing guides ('10 ChatGPT prompts for productivity'), "
+            "generic AI opinion pieces, product announcements without practical usage guidance, "
+            "shallow listicles with no technical substance, and anything that assumes no prior AI knowledge."
         )
     elif article.category == "ai_research":
         category_guidance = (
@@ -196,18 +259,38 @@ def evaluate_article(
             "REJECT: product launches, company announcements, general tech news, how-tos, or any non-publication content. "
             "When the source is arXiv or a research venue, lean accept; when it is a general news site, accept only if the article is clearly about a specific paper or research result."
         )
-
+    elif article.category == "ai_research_arxiv":
+        category_guidance = (
+            " For category ai_research_arxiv: accept ONLY papers from arxiv.org. "
+            "REJECT anything that is not an arXiv preprint — no blog posts, no news articles, "
+            "no company announcements, no paperswithcode pages, no conference proceedings pages. "
+            "The URL must contain 'arxiv.org'. If the URL is not from arxiv.org, reject immediately."
+        )
+    elif article.category == "ai_capability":
+        category_guidance = (
+            " For category ai_capability: accept content that demonstrates or discusses what AI "
+            "systems can DO — concrete capabilities, not just announcements. "
+            "Strong accepts: knowledge assist and enterprise AI search, voice AI and speech "
+            "recognition advances, intelligent document processing and OCR, image and video "
+            "generation (text-to-image, text-to-video, editing), code generation and AI coding "
+            "assistants, AI-powered translation and summarisation, recommendation engines, "
+            "predictive analytics, autonomous agents and robotics, and real-world demonstrations "
+            "of AI capability. "
+            "Score 4-5 for articles showing concrete capability with demos, benchmarks, or real "
+            "deployments. Score 3 for solid capability coverage without concrete evidence. "
+            "REJECT: pure market trends without capability detail (use ai_trends), research "
+            "papers without a capability angle (use ai_research), tips and tutorials without "
+            "a capability showcase (use genai_tips), and opinion pieces with no substance."
+        )
     system_prompt = textwrap.dedent(
         f"""
         You are a quality-control editor for an internal AI newsletter focused on RELEVANT, TIMELY, and TRENDING AI/GenAI news.
 
         Your job:
         - Decide if a candidate article is suitable for inclusion.
-        - REJECT (and do not include) any article that is about AI news itself—e.g. curated lists of AI news sources, "best AI news sites", "top AI newsletters", "where to find AI news", roundups of AI news feeds, or meta-content about reading/following AI news. We want actual AI/GenAI news and insights for the audience, not articles that point them to other news sources.
-        - Category fit: Only accept articles that are clearly and specifically about the chosen category. Reject anything that is only tangentially related or could fit better in another category. When in doubt, reject.{rss_guidance}{category_guidance}
-        - PRIORITIZE: news that is timely, relevant, and likely getting a lot of attention (trending)—e.g. major announcements, big launches, breakthrough research, significant market or policy moves, widely discussed topics. Prefer stories that would be shared and talked about.
+        - PRIORITIZE: news that is timely, relevant, and likely getting a lot of attention (trending)—e.g. major announcements, big launches, breakthrough research, significant market or policy moves, widely discussed topics. Prefer stories that would be shared and talked about.{rss_guidance}{category_guidance}
         - Rate on a 1-5 scale: 5 = highly relevant + likely trending/high-attention; 4 = strong, timely, relevant; 3 = acceptable and on-topic; 1-2 = niche, outdated, or low relevance.
-        - Flag issues (clickbait, low credibility, off-topic, outdated, "meta: about AI news sources"). For known outlets, lean toward accept when the story sounds timely and relevant; use higher scores (4-5) when it sounds like trending or high-impact news.
+        - Flag issues (clickbait, low credibility, off-topic, outdated). For known outlets, lean toward accept when the story sounds timely and relevant; use higher scores (4-5) when it sounds like trending or high-impact news.
 
         Output strict JSON with the following shape:
         {{
@@ -256,48 +339,82 @@ def evaluate_article(
 
 def summarize_article(
     article: Article,
-    audience_description: str = "AI practitioners and leaders at a bank",
+    audience_description: str = "AI practitioners and tech-savvy readers",
 ) -> ArticleSummary:
     """
     Summarizer Agent:
-    Create one very short, scannable summary (1 sentence, max 25 words) and a punchy, attention-grabbing headline.
+    Create a concise, skimmable summary with an eye-catching headline for a single accepted item.
+    Research articles get a dedicated prompt that prioritises what-method-result over plain-English softening.
     """
-    system_prompt = textwrap.dedent(
-        """
-        You are a newsletter writer for an internal AI/GenAI digest at a bank.
+    is_research = article.category in ("ai_research", "ai_research_arxiv")
 
-        Given a single article, produce:
+    if is_research:
+        system_prompt = textwrap.dedent(
+            """
+            You are a research digest writer. Your reader is technical but busy —
+            they want to know what a paper does and why it matters in the fewest words possible.
 
-        1. suggested_subject: A PUNCHY, attention-grabbing headline that makes readers want to click. Keep it short
-           (under 10 words when possible). Use a strong verb or number when relevant. Use emojis if appropriate
-           (e.g., 🚀 for launches, 🤖 for AI tools, 💡 for tips, 🔬 for research, 📌 for tips). Make it bold,
-           memorable, and specific to the story—not generic. Examples of punchy style: "5 Prompts That Actually
-           Work", "Google’s New Model Beats GPT-4", "The One Prompt Trick Everyone’s Using."
+            Given a research paper or article, produce:
 
-        2. summary: ONE short sentence only (max 25 words). State the single most important fact:
-           what happened and the key detail (e.g., who, number, or impact). No filler. Readers should
-           get the gist in under 10 seconds.
+            1. suggested_subject: A sharp headline with a relevant emoji (🔬 research, 🧠 models,
+               📊 benchmarks, ⚡ efficiency, 🛡️ safety). Lead with the finding or capability,
+               not the field. Under 12 words. OK to keep key technical terms if they are the point
+               (e.g. "New Sparse Attention Cuts Transformer Cost by 3×").
 
-        3. key_points: Optional list of 2-3 short bullet strings (for backward compatibility).
+            2. summary: Exactly 2 sentences — no more, no fewer.
+               Sentence 1: What the paper does — the problem it tackles and the core method/approach.
+               Sentence 2: The best concrete result or key takeaway (numbers are good: accuracy, speedup,
+               parameter count, benchmark name). If no hard numbers exist, state the practical implication.
+               Write tight. Drop all filler ("the researchers found that", "this paper presents", etc.).
+               Keep technical terms that carry real meaning; explain ones that don't in plain words.
 
-        Prioritize: Punchy headline + one sentence, key fact only. High-impact and scannable.
+            HARD RULES:
+            - Exactly 2 sentences in the summary. Not 1, not 3.
+            - No bullet points, no lists, no labels inside the summary.
+            - Do not start either sentence with "The paper" or "This paper".
 
-        Output strict JSON with:
-        {
-          "suggested_subject": "punchy, attention-grabbing headline (short, specific, emoji if appropriate)",
-          "summary": "one sentence, max 25 words, key fact only",
-          "key_points": ["...", "..."]
-        }
-        """
-    ).strip()
+            Output strict JSON:
+            {
+              "suggested_subject": "sharp headline with emoji",
+              "summary": "exactly 2 sentences"
+            }
+            """
+        ).strip()
+    else:
+        system_prompt = textwrap.dedent(
+            """
+            You are a newsletter writer producing a quick-read AI news digest.
+
+            Given a single article, produce:
+
+            1. suggested_subject: A punchy headline with a relevant emoji
+               (🚀 launches, 🤖 AI tools, 🌐 global news, 📢 announcements, ⚖️ policy).
+               Under 10 words. No jargon.
+
+            2. summary: Exactly 2 sentences — no more, no fewer.
+               Sentence 1: What happened and who/what is involved.
+               Sentence 2: Why it matters or what the reader should take away.
+               Write like a smart friend summarising the news. Cut every word that doesn't add meaning.
+               Plain English — no buzzwords, no padding.
+
+            HARD RULES:
+            - Exactly 2 sentences. Not 1, not 3.
+            - No bullet points, no lists, no labels inside the summary.
+            - Do not start with "In a significant" or "In an exciting" or similar filler openers.
+
+            Output strict JSON:
+            {
+              "suggested_subject": "punchy headline with emoji",
+              "summary": "exactly 2 sentences"
+            }
+            """
+        ).strip()
 
     content_preview = article.content[:6000] or article.snippet
 
     user_prompt = textwrap.dedent(
         f"""
-        Audience description: {audience_description}
-
-        Category (keep content focused on this topic): {article.category}
+        Category: {article.category}
         Title: {article.title}
         URL: {article.url}
 
@@ -310,66 +427,11 @@ def summarize_article(
 
     data = chat_completion_json(system_prompt=system_prompt, user_prompt=user_prompt)
 
-    summary = str(data.get("summary", "")).strip()
-    key_points = [str(p) for p in data.get("key_points", [])]
-    suggested_subject = str(data.get("suggested_subject", "")).strip()
-
     return ArticleSummary(
         article_id=article.id,
-        summary=summary,
-        key_points=key_points,
-        suggested_subject=suggested_subject,
-        why_this_matters="",  # No longer used, kept for backward compatibility
+        summary=str(data.get("summary", "")).strip(),
+        suggested_subject=str(data.get("suggested_subject", "")).strip(),
     )
-
-
-def generate_newsletter_headline(
-    category: str,
-    selected_items: List[Tuple[Dict, Dict, Dict]],
-) -> str:
-    """
-    Generate one punchy, all-encompassing headline for the entire newsletter
-    based on the selected articles (titles + one-line summaries). Used as the
-    main newsletter title when no custom roundup_title is provided.
-    """
-    if not selected_items:
-        return "AI News Roundup"
-
-    items_block_parts: List[str] = []
-    for idx, (article, _eval, summary) in enumerate(selected_items, start=1):
-        title = (summary.get("suggested_subject") or article.get("title") or "(no title)").strip()
-        one_liner = (summary.get("summary") or "").strip().replace("\n", " ")
-        items_block_parts.append(f"{idx}. {title}\n   Summary: {one_liner}")
-
-    items_block = "\n".join(items_block_parts)
-
-    system_prompt = textwrap.dedent(
-        """
-        You write a single, punchy newsletter headline that encompasses ALL of the
-        news items listed below. The headline is the main title for the whole
-        newsletter issue—not per article. It should be attention-grabbing, concise
-        (under 15 words), and accurately reflect the overall theme of the stories.
-        Respond with ONLY the headline text, no quotes, no explanation.
-        """
-    ).strip()
-
-    user_prompt = textwrap.dedent(
-        f"""
-        Category: {category}
-
-        News items in this issue:
-        {items_block}
-
-        Write one all-encompassing headline for this newsletter.
-        """
-    ).strip()
-
-    headline = chat_completion(
-        system_prompt=system_prompt,
-        user_prompt=user_prompt,
-        temperature=0.3,
-    )
-    return (headline or "AI News Roundup").strip()
 
 
 def compose_newsletter_section(
@@ -380,137 +442,130 @@ def compose_newsletter_section(
 ) -> str:
     """
     Composer Agent:
-    Given a list of summarized items, draft a newsletter section with eye-catching headlines and concise content.
+    Assembles pre-written summaries into a formatted newsletter section.
+    Does NOT rewrite summaries — treats them as final copy.
 
     `items` is a list of dicts with keys:
-      - title (headline), url, summary (one short sentence), image_path (optional, for embedding)
+      - title (headline), url, summary (2 sentences, final), image_path (optional)
     """
     system_prompt = textwrap.dedent(
         """
-        You draft an internal AI/GenAI newsletter section for a bank.
+        You assemble a quick-read AI news newsletter section from pre-written items.
+        Your job is layout and structure only — do NOT rewrite, expand, or paraphrase any summary.
 
-        Format rules:
-        - Keep content VERY SHORT and scannable. Each news item must be exactly 1 sentence (the provided summary).
-        - Use the provided headline exactly as-is (it's already eye-catching with emojis if appropriate).
-        - Do not expand the summary; use it as-is so readers can scan quickly.
-        - If an image_path is provided for an item, add a single line after the 1 sentence and before "Read more": ![Headline](image_path) using the exact image_path given (e.g. images/run_id/1.jpg). This embeds the image for email.
-        - End each item with a clear "Read more: <URL>" or "See more: <URL>" link.
-        - Assume the content will be sent via email or pasted into a poster. Use simple markdown-style formatting (bold for headlines, plain text otherwise). No HTML.
-        - Match the requested tone.
+        Layout for the section:
+        - One short section heading (reflect the category).
+        - No intro sentence unless it genuinely adds context in under 8 words.
+        - Each item in this exact order:
+            **[Headline]** (copy exactly as given, including emoji)
+            [Summary] (copy exactly as given — 2 sentences, do not alter a single word)
+            ![Headline](image_path)  ← only if an image_path is provided
+            Read more: <URL>
+        - One blank line between items.
+        - No extra labels, fields, commentary, or section dividers.
+        - Plain markdown only. No HTML.
 
-        Structure (plain text, markdown-friendly):
-        - One short section heading that reflects the category/topic.
-        - A brief 1-2 sentence intro that frames the section (optional, keep it concise).
-        - For each item:
-          - **Bold headline** (use the provided suggested_subject/title exactly as-is).
-          - Exactly 1 sentence of content (use the provided summary as-is; it is already short).
-          - If image_path is provided: a line ![Headline](image_path) with the exact path.
-          - "Read more: <URL>" or "See more: <URL>" on its own line.
-
-        Example (with image):
-        **🚀 Historic Tech Merger**
-        SpaceX acquires xAI in an all-stock deal valuing the combined company at $1.25 trillion.
-        ![Historic Tech Merger](images/20260208-153640/1.jpg)
-        Read more: <URL>
+        If a summary already has 2 sentences, it is correct — do not touch it.
         """
     ).strip()
 
     items_text_parts: List[str] = []
     for idx, item in enumerate(items, start=1):
         image_path = item.get("image_path", "").strip()
-        img_line = f"\nImage path (embed as ![Headline](image_path) if present): {image_path}" if image_path else ""
+        img_line = f"\nImage path (embed as Markdown image if present): {image_path}" if image_path else ""
         items_text_parts.append(
             textwrap.dedent(
                 f"""
                 Item {idx}
                 Headline: {item.get("title", "")}
                 URL: {item.get("url", "")}
-
-                Summary (use exactly as-is, one short sentence):
-                {item.get("summary", "")}
+                Summary (copy verbatim — do not change): {item.get("summary", "")}
                 {img_line}
                 """
-            ).strip()
+            ).strip() + "\n\n---"
         )
 
     items_block = "\n\n".join(items_text_parts)
 
     user_prompt = textwrap.dedent(
         f"""
-        Audience: {audience}
         Tone: {tone}
-        Category (keep the entire section focused on this topic): {category}
-
-        Curated items to cover (prioritize high-impact, trending, and relevant news):
+        Category: {category}
 
         {items_block}
 
-        Draft the newsletter section. Use the exact headlines provided. Keep each item to exactly 1 short sentence (the provided summary). For any item that has an image path, add a line ![Headline](image_path) after the sentence (use the exact path given). End each item with "Read more: <URL>" or "See more: <URL>". Keep it scannable.
+        Assemble the newsletter section. Copy headlines and summaries exactly as given.
         """
     ).strip()
 
-    return chat_completion(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.4)
+    return chat_completion(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.2)
 
 
 def standardize_newsletter(
     draft: str,
     category: str,
     audience: str,
-    target_max_words: int = 500,
-    target_words_per_item: int = 40,
+    target_max_words: int = 600,
+    target_words_per_item: int = 120,
 ) -> tuple[str, Dict[str, Any]]:
     """
     Standardizer Agent:
-    Normalize newsletter length and structure so every issue feels consistent.
-    Returns (standardized_text, details_dict) for logging (e.g. word counts, changes_applied).
+    Final trim pass — enforces length and structure. Only shortens, never expands.
+    Returns (standardized_text, details_dict) for logging.
     """
     word_count_before = len(draft.split())
     system_prompt = textwrap.dedent(
         """
-        You are an editor for an internal AI/GenAI newsletter. Your job is to standardize
-        draft content so that every issue has the same structure and length guidelines.
+        You are the final editor for a quick-read AI news newsletter.
+        Your only job is to trim — you NEVER add words, expand summaries, or rewrite headlines.
 
-        Rules:
-        1. Structure: Use exactly this layout every time:
-           - One main section heading (short, clear, on-topic).
-           - A brief 1-2 sentence intro (optional, keep it concise).
-           - For each item:
-             - **Bold headline** (keep the eye-catching headline as-is, including emojis if present).
-             - Exactly 1 short sentence of content (keep it tight; one key fact only).
-             - "Read more: <URL>" or "See more: <URL>" on its own line.
-        2. Length: Keep the total section under the requested max words. Each item must be
-           exactly 1 sentence. Remove any fluff. Prioritize one key fact per item so readers can scan quickly.
-        3. Tone and focus: Preserve the original tone and audience. Keep all content focused
-           on the topic. Do not add new information; only trim or rephrase for clarity and consistency.
-           Ensure headlines remain eye-catching and attention-grabbing.
-        4. Images: Preserve any markdown image lines in the form ![alt](path) exactly; do not remove or change them.
+        RULES:
 
-        You must respond with a single JSON object with these exact keys:
-        - "standardized_text": string, the full standardized newsletter section (plain text, markdown-friendly).
-        - "word_count_after": integer, word count of standardized_text.
-        - "changes_applied": array of strings, short descriptions of what you changed.
+        1. ITEM BOUNDARIES: Never merge content from two different items. Every story stays separate.
+
+        2. SENTENCE CAP: Each item's summary must be exactly 2 sentences. If a summary has 3+,
+           cut the least informative sentence. If it has 1, leave it — do not add a sentence.
+
+        3. TRIM TARGETS (in order of priority if word count is too high):
+           a. Cut filler openers ("It is worth noting that", "In a significant development", etc.)
+           b. Cut redundant qualifiers ("very", "quite", "highly", "extremely")
+           c. Tighten wordy phrases ("in order to" → "to", "at this point in time" → "now")
+           d. As a last resort, cut the less important of the 2 summary sentences down to a clause.
+
+        4. NEVER TOUCH: Headlines (including emojis), "Read more:" links, image lines, section headings.
+
+        5. Structure per item (preserve exactly):
+           **Bold headline with emoji**
+           [2 sentences of summary]
+           ![alt](path)  ← if present, keep as-is
+           Read more: <URL>
+
+        Respond with a single JSON object:
+        - "standardized_text": the trimmed newsletter section (string)
+        - "word_count_after": integer word count
+        - "changes_applied": array of short strings describing what was trimmed
         """
     ).strip()
 
     user_prompt = textwrap.dedent(
         f"""
-        Audience: {audience}
         Category: {category}
-        Target max total words: {target_max_words}
-        Target words per item (approx): {target_words_per_item}
+        Target max words: {target_max_words}
+        Target per item: {target_words_per_item}
+        Current word count: {word_count_before}
 
-        Draft to standardize (word count: {word_count_before}):
+        Draft:
         ---
         {draft}
         ---
 
-        Output only valid JSON with keys: standardized_text, word_count_after, changes_applied.
+        Output only valid JSON: standardized_text, word_count_after, changes_applied.
         """
     ).strip()
 
     try:
         data = chat_completion_json(
-            system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.2
+            system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.1
         )
         standardized_text = str(data.get("standardized_text", draft)).strip()
         details: Dict[str, Any] = {
@@ -528,6 +583,43 @@ def standardize_newsletter(
     return standardized_text, details
 
 
+
+
+def generate_digest_headline(items: List[Dict[str, str]]) -> str:
+    """
+    Headline Agent:
+    Given the final composer items (title + summary for each card), write
+    a single teaser sentence that previews all stories without repeating
+    their headlines verbatim. Used as the masthead tagline in the HTML output.
+    """
+    if not items:
+        return "The latest in AI — research, tools, and what's moving the field."
+
+    stories = "\n".join(
+        f"- {item.get('title', '')} — {item.get('summary', '')}"
+        for item in items
+    )
+
+    system_prompt = (
+        "You write a single teaser sentence for an AI newsletter. "
+        "Given the stories in this issue, write exactly 1 sentence that acts as a "
+        "preview — hint at what is inside without repeating any headline word-for-word. "
+        "Make it feel like an editorial hook: specific enough to be interesting, "
+        "broad enough to cover all the stories. "
+        "No emoji. No lists. One sentence only. No quotation marks."
+    )
+
+    user_prompt = f"Stories in this issue:\n{stories}\n\nWrite the 1-sentence teaser:"
+
+    result = chat_completion(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=0.5,
+    )
+    # Strip any accidental surrounding quotes or newlines
+    return result.strip().strip('"\'\' ')
+
+
 def article_to_dict(article: Article) -> Dict:
     return asdict(article)
 
@@ -538,4 +630,3 @@ def evaluation_to_dict(evaluation: ArticleEvaluation) -> Dict:
 
 def summary_to_dict(summary: ArticleSummary) -> Dict:
     return asdict(summary)
-
