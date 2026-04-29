@@ -1,31 +1,34 @@
 # AI Digest – Changelog
-**Prepared by:** Yvhan
 
 ---
 
 ## **Changelog & Technical Updates**
 
 ### **`agents.py`**
-* **Simplified `ArticleSummary` Dataclass:** Removed deprecated fields (`key_points`, `why_this_matters`, `technical_specs`, `industry_impact`). The dataclass is now streamlined to three essential fields: `article_id`, `summary`, and `suggested_subject`.
+* **Simplified `ArticleSummary` Dataclass:** Removed deprecated fields (`key_points`, `why_this_matters`). The dataclass retains `article_id`, `summary`, `suggested_subject`, `technical_specs`, and `industry_impact` — the latter two are kept for backward compatibility with stored runs read by `pipeline.py`.
 * **Category-Specific Tavily Queries:** Replaced the generic fallback with dedicated search queries for every active category. Queries are now precision-targeted and explicitly exclude cross-category content.
-* **Tailored Search Parameters:** * `ai_research` and `ai_research_arxiv` use `topic: "news"` to capture recent publications, with `ai_research_arxiv` strictly pinned to `arxiv.org` via `include_domains`. 
-    * `genai_tips` utilizes `topic: "general"` to capture quality practitioner content that isn't breaking news. 
-    * `ai_trends` and `ai_innovations` use `topic: "news"`.
+* **Tailored Search Parameters:**
+    * `ai_research` and `ai_research_arxiv` use `topic: "news"` to capture recent publications, with `ai_research_arxiv` strictly pinned to `arxiv.org` via `include_domains`.
+    * `genai_tips` utilizes `topic: "general"` to capture quality practitioner content that isn't breaking news.
+    * `ai_trends`, `ai_innovations`, and `ai_capability` use `topic: "news"`.
 * **New Category (`ai_research_arxiv`):** Created a strictly locked category for arXiv content. This enforces arXiv exclusivity at every layer: Tavily `include_domains`, deep research `ARXIV_ONLY_FEEDS`, a hard URL filter, and an instant evaluator rejection for non-arXiv URLs.
-* **Category Consolidation:** Streamlined the active categories down to five (`ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`). `ai_technology` was absorbed into `ai_innovations`, `tools_updates` into `ai_trends`, and `policy_ethics` was removed entirely.
+* **New Category (`ai_capability`):** Added a category covering practical AI capability applications — knowledge assist, voice AI, intelligent document processing, video/image generation, and similar real-world deployments. Uses both Tavily and Deep Research collectors. Follows the same standard category pipeline as `ai_trends` and `ai_innovations` with no domain locks or special URL filters.
+* **Category Consolidation:** Streamlined the active categories to six (`ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`, `ai_capability`). `ai_technology` was absorbed into `ai_innovations`, `tools_updates` into `ai_trends`, and `policy_ethics` was removed entirely.
 * **Rewritten Quality Evaluator Rules:** Implemented precise accept/reject criteria tailored to specific audiences:
     * `ai_innovations`: Evaluates capability breakthroughs and industry releases based on concrete technical detail.
     * `ai_trends`: Requires evidence of genuine traction (adoption data, widespread coverage); rejects single-company announcements.
     * `genai_tips`: Calibrated for practitioners/data scientists; rejects beginner content.
     * `ai_research`: Strictly limits to publications and preprints.
     * `ai_research_arxiv`: Strictly rejects non-arxiv.org URLs.
+    * `ai_capability`: Accepts articles covering real-world AI capability deployments (knowledge assist, voice AI, intelligent document processing, video/image generation, etc.); rejects purely theoretical or research-only content.
 * **Research-Aware Summarizer Branching:** General categories now use a plain-English prompt focusing on impact. Research categories use a dedicated prompt that prescribes a strict sentence structure (problem + method, then concrete results/numbers), preserves technical terms, and bans filler.
 * **Strict Assembly Composer:** Lowered temperature from 0.4 to 0.2. The prompt now explicitly forbids creative rewriting, instructing the model to copy headlines and summaries verbatim and focus purely on layout and structure.
 * **Trim-Only Standardizer:** Lowered temperature to 0.1 and explicitly forbade expanding summaries. It now uses a prioritized trim checklist: cut filler openers first, redundant qualifiers second, wordy phrases third, and shorten sentences only as a last resort.
 * **Added `generate_digest_headline()`:** A new function that reads the final composer items and generates a single teaser sentence previewing all stories without verbatim repetition, used as the masthead tagline in the HTML.
 
 ### **`pipeline.py`**
-* **Parallelization Sweeps:** * **Quality Evaluation:** Articles within a category are now evaluated concurrently using `ThreadPoolExecutor(max_workers=5)` instead of sequentially.
+* **Parallelization Sweeps:**
+    * **Quality Evaluation:** Articles within a category are now evaluated concurrently using `ThreadPoolExecutor(max_workers=5)` instead of sequentially.
     * **Summarization:** Accepted articles are summarized concurrently under a 5-worker pool.
     * **Image Collection:** Images are fetched simultaneously, reducing collection time for 3 articles from ~30s down to ~10s.
     * **Dual Collection:** When `collector_type = "both"`, Tavily and Deep Research run concurrently in a 2-worker pool.
@@ -42,7 +45,7 @@
 * **Added `_sort_arxiv_first()`:** Prioritizes arXiv entries to the top (sorted by date) for research categories, preventing papers from getting buried under general tech news.
 * **Hard URL Filter:** Implemented a final backstop filter for `ai_research_arxiv` that removes any non-arxiv.org entries before evaluation.
 * **Removed Pool Cap:** Deleted the hardcoded `min(max_results * 2, 30)` cap. `max_results` is now passed directly to the collector, giving users full control.
-* **Updated Category Keywords:** Expanded `ai_trends` with adoption signals, rewrote `ai_innovations` around capability and model releases to avoid research overlap, emptied `ai_research_arxiv` (handled by URL filtering), and removed deprecated categories.
+* **Updated Category Keywords:** Expanded `ai_trends` with adoption signals, rewrote `ai_innovations` around capability and model releases to avoid research overlap, emptied `ai_research_arxiv` (handled by URL filtering), added `ai_capability` keywords targeting real-world AI application areas (knowledge assist, voice AI, document processing, image/video generation), and removed deprecated categories.
 
 ### **New Files: HTML Formatting & Templating**
 * **`formatter.py` (New):** Renders newsletter cards as a self-contained HTML string via a Jinja2 template. Converts all images to base64 and accepts the optional `digest_headline` for the masthead.
@@ -50,16 +53,16 @@
 
 ### **`storage.py`, `config.py` & `run_pipeline.py`**
 * **`storage.py`:** Added `save_newsletter_html()` to save the rendered HTML to the `output/` directory.
-* **`config.py`:** Updated default categories to match the new consolidated list (`ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`).
-* **`run_pipeline.py`:** Added the `--max-pool` argument to both `collect` and `collect-and-compose` subcommands. Updated the help text for the `--category` argument to include `ai_research_arxiv`.
+* **`config.py`:** Updated default categories to match the new consolidated list (`ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`, `ai_capability`).
+* **`run_pipeline.py`:** Added the `--max-pool` argument to both `collect` and `collect-and-compose` subcommands. Updated the help text for the `--category` argument to include `ai_research_arxiv` and `ai_capability`.
 
 ---
 
 ## **Recommendations & Future Work**
 
 ### **Technical Findings & Optimization Goals**
-* **Category Refinement Parity:** While the `ai_research` and `ai_research_arxiv` categories have seen substantial performance upgrades in this iteration, future development should prioritize bringing `ai_trends`, `genai_tips`, and `ai_innovations` up to the same standard of search precision and content quality.
-* **Deduplication Improvements:** The current deduplication logic occasionally allows similar stories to slip through, which is most noticeable in the `ai_innovations` category. While temporarily mitigated by increasing the `--max-results` parameter to broaden the pool, refining the deduplication function's algorithms (entity overlap and text similarity thresholds) is a high-priority technical objective.
+* **Category Refinement Parity:** While the `ai_research` and `ai_research_arxiv` categories have seen substantial performance upgrades in this iteration, future development should prioritize bringing `ai_trends`, `genai_tips`, `ai_innovations`, and `ai_capability` up to the same standard of search precision and content quality.
+* **Deduplication Improvements:** The current deduplication logic occasionally allows similar stories to slip through, which is most noticeable in the `ai_innovations` and `ai_capability` categories. While temporarily mitigated by increasing the `--max-results` parameter to broaden the pool, refining the deduplication function's algorithms (entity overlap and text similarity thresholds) is a high-priority technical objective.
 
 ### **Team Recommendations & User Experience**
 * **Graphical User Interface (GUI) Development:** Transition from the current CLI and `.env` configuration model to a dedicated front-end UI. This will streamline daily operations and make the tool accessible to operators who are less comfortable with command-line interfaces.
