@@ -8,6 +8,7 @@ from __future__ import annotations
 import logging
 import re
 import uuid
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timedelta, timezone
 
 from .config import APP_TIMEZONE
@@ -44,10 +45,16 @@ DEFAULT_AI_FEEDS = [
     "https://blog.google/technology/developers/rss/",
     "https://engineering.fb.com/feed/",
     "https://feeds.feedburner.com/nvidiablog",
-    # arXiv & research
+    # arXiv & research — expanded for better ai_research coverage
     "https://rss.arxiv.org/rss/cs.AI",
     "https://rss.arxiv.org/rss/cs.LG",
+    "https://rss.arxiv.org/rss/cs.CL",   # Computation & Language (NLP/LLMs)
+    "https://rss.arxiv.org/rss/cs.CV",   # Computer Vision
+    "https://rss.arxiv.org/rss/cs.NE",   # Neural & Evolutionary Computing
+    "https://rss.arxiv.org/rss/cs.RO",   # Robotics
     "https://rss.arxiv.org/rss/stat.ML",
+    "https://rss.arxiv.org/rss/cs.IR",   # Information Retrieval (RAG/search)
+    "https://rss.arxiv.org/rss/eess.SP", # Signal Processing (audio/speech AI)
     # AI/ML blogs & community
     "https://www.marktechpost.com/feed/",
     "https://syncedreview.com/feed/",
@@ -68,15 +75,80 @@ DEFAULT_AI_FEEDS = [
     "https://www.infoq.com/ai-ml/news/feed/",
 ]
 
+# Feeds used exclusively for ai_research_arxiv — only arXiv RSS feeds, nothing else.
+ARXIV_ONLY_FEEDS = [
+    "https://rss.arxiv.org/rss/cs.AI",
+    "https://rss.arxiv.org/rss/cs.LG",
+    "https://rss.arxiv.org/rss/cs.CL",
+    "https://rss.arxiv.org/rss/cs.CV",
+    "https://rss.arxiv.org/rss/cs.NE",
+    "https://rss.arxiv.org/rss/cs.RO",
+    "https://rss.arxiv.org/rss/stat.ML",
+    "https://rss.arxiv.org/rss/cs.IR",
+    "https://rss.arxiv.org/rss/eess.SP",
+]
+
 # Per-category keywords: if set, prefer entries that match. If no match or too few, we still use all entries.
 CATEGORY_KEYWORDS = {
-    "ai_trends": [],
-    "ai_technology": ["Google", "Apple", "Microsoft", "OpenAI", "Meta", "Amazon", "NVIDIA", "tech", "product", "launch", "company", "announces"],
-    "ai_innovations": ["model", "algorithm", "research", "paper", "arXiv", "ML", "training", "inference", "architecture", "neural", "learning", "AI"],
-    "ai_research": ["arxiv", "paper", "preprint", "algorithm", "benchmark", "SOTA", "conference", "journal", "publication", "method", "result", "finding", "model", "training", "architecture", "NeurIPS", "ICML", "ICLR"],
-    "genai_tips": ["tip", "how to", "guide", "tutorial", "best practice", "use", "prompt", "GenAI", "generative"],
-    "tools_updates": ["tool", "release", "update", "API", "software", "launch", "new", "version"],
-    "policy_ethics": ["policy", "regulation", "ethics", "law", "EU", "US", "governance", "legal", "bill", "AI act"],
+    "ai_trends": [
+        "trend", "adoption", "surge", "growing", "rise", "shift", "report", "survey",
+        "industry", "enterprise", "market", "widespread", "mainstream", "boom", "demand",
+        "investment", "workforce", "jobs", "impact", "future", "regulation", "governance",
+        "rollout", "deployment", "transformation", "disruption", "race", "competition",
+        # tools/frameworks gaining traction (absorbed from tools_updates)
+        "tool", "release", "update", "launch", "new version", "framework", "platform",
+        "open source", "SDK", "API update", "integration",
+    ],
+    "ai_innovations": [
+        # capability and model releases
+        "GPT", "Gemini", "Claude", "Llama", "Mistral", "Grok", "model", "release", "launch",
+        "benchmark", "capability", "performance", "multimodal", "reasoning", "agent",
+        "long-context", "inference", "quantization", "fine-tuning", "open source", "weights",
+        # architecture and technique advances
+        "architecture", "transformer", "diffusion", "LoRA", "RLHF", "alignment",
+        "neural", "training", "new model", "state-of-the-art", "SOTA", "outperforms",
+        # major lab and company capability news
+        "Google", "OpenAI", "Microsoft", "Meta", "Apple", "NVIDIA", "Anthropic",
+        "announces", "introduces", "unveils", "breakthrough",
+    ],
+    "ai_research": [
+        "arxiv", "paper", "preprint", "algorithm", "benchmark", "SOTA", "conference",
+        "journal", "publication", "method", "result", "finding", "model", "training",
+        "architecture", "NeurIPS", "ICML", "ICLR",
+    ],
+    "ai_research_arxiv": [],  # no keyword filter — URL filtering handles source restriction
+    "genai_tips": [
+        "prompt", "prompting", "chain-of-thought", "few-shot", "RAG", "agent", "LangChain",
+        "LlamaIndex", "workflow", "pipeline", "technique", "framework", "evaluation", "evals",
+        "fine-tuning", "embedding", "retrieval", "context window", "system prompt",
+        "structured output", "function calling", "tool use", "notebook", "tutorial",
+        "guide", "how to", "best practice", "practical", "hands-on", "walkthrough",
+        "implementation", "API", "SDK",
+    ],
+    "ai_capability": [
+        # Knowledge & search
+        "knowledge assist", "knowledge management", "search", "enterprise search", "semantic search",
+        "question answering", "chatbot", "virtual assistant", "copilot", "AI assistant",
+        # Voice & speech
+        "voice AI", "speech recognition", "text-to-speech", "speech synthesis", "voice agent",
+        "voice assistant", "conversational AI", "natural language understanding", "ASR", "TTS",
+        # Document & data processing
+        "intelligent document processing", "IDP", "document understanding", "OCR",
+        "document extraction", "data extraction", "form processing", "invoice processing",
+        "contract analysis", "document AI",
+        # Image & video generation
+        "image generation", "video generation", "text-to-image", "text-to-video",
+        "image editing", "video editing", "deepfake", "visual AI", "computer vision",
+        "image recognition", "object detection", "image segmentation",
+        # Code generation
+        "code generation", "code completion", "code assistant", "coding AI", "AI coding",
+        "program synthesis", "automated programming",
+        # Other capabilities
+        "translation", "summarization", "content generation", "text generation",
+        "recommendation", "personalization", "predictive", "forecasting",
+        "anomaly detection", "fraud detection", "automation", "RPA",
+        "robotics", "autonomous", "self-driving", "AI agent", "agentic",
+    ],
 }
 
 
@@ -178,6 +250,13 @@ def _sort_by_date(entries: List[dict]) -> List[dict]:
     return sorted(entries, key=key)
 
 
+def _sort_arxiv_first(entries: List[dict]) -> List[dict]:
+    """Sort arXiv entries to the top (by date), then all other entries (by date)."""
+    arxiv = [e for e in entries if "arxiv.org" in (e.get("url") or "") or "arxiv" in (e.get("source") or "").lower()]
+    others = [e for e in entries if e not in arxiv]
+    return _sort_by_date(arxiv) + _sort_by_date(others)
+
+
 def _within_days(entry: dict, days: int) -> bool:
     """True if entry has a published date within the last `days` days."""
     p = entry.get("published_parsed")
@@ -220,23 +299,37 @@ def collect_articles_for_category(
     keywords, sort by date, and return up to max_results Articles. No Tavily dependency.
     """
     settings = get_settings()
-    feeds = settings.deep_research_feeds if settings.deep_research_feeds else DEFAULT_AI_FEEDS
+    if category == "ai_research_arxiv":
+        # Bypass user-configured feeds entirely — only arXiv RSS feeds
+        feeds = ARXIV_ONLY_FEEDS
+    else:
+        feeds = settings.deep_research_feeds if settings.deep_research_feeds else DEFAULT_AI_FEEDS
 
-    all_entries: List[dict] = []
-    feed_results: List[Tuple[str, int, str]] = []  # (url, count, error)
-    for feed_url in feeds:
+    def _fetch_one(feed_url: str) -> Tuple[str, List[dict], str]:
         content, fetch_err = _fetch_feed_content(feed_url, timeout=25)
         if fetch_err:
-            feed_results.append((feed_url, 0, fetch_err))
-            continue
+            return (feed_url, [], fetch_err)
         try:
             entries = _parse_feed_content(content, feed_url)
+            for e in entries:
+                e["_feed_url"] = feed_url
+            return (feed_url, entries, "")
         except Exception as parse_err:
-            feed_results.append((feed_url, 0, str(parse_err)))
-            continue
-        feed_results.append((feed_url, len(entries), ""))
-        for e in entries:
-            e["_feed_url"] = feed_url
+            return (feed_url, [], str(parse_err))
+
+    feed_map: dict = {}
+    with ThreadPoolExecutor(max_workers=min(len(feeds), 20)) as pool:
+        futures = {pool.submit(_fetch_one, url): url for url in feeds}
+        for future in as_completed(futures):
+            url, entries, err = future.result()
+            feed_map[url] = (entries, err)
+
+    # Reconstruct in original feed order so deduplication is deterministic
+    all_entries: List[dict] = []
+    feed_results: List[Tuple[str, int, str]] = []
+    for feed_url in feeds:
+        entries, err = feed_map.get(feed_url, ([], "not fetched"))
+        feed_results.append((feed_url, len(entries), err))
         all_entries.extend(entries)
 
     # Dedupe by URL
@@ -263,18 +356,28 @@ def collect_articles_for_category(
         if len(feed_results) > 8:
             print(f"  ... and {len(feed_results) - 8} more feeds.")
 
-    # Prefer recent articles (last 7 days, or 14 if too few) so we surface timely / likely-trending news
+    # Prefer recent articles (last 7 days, or 14 if too few).
     unique = _filter_recent(unique, max_results)
 
-    # Prefer entries matching category keywords; if too few, use all (so every category gets a full pool).
-    filtered = [e for e in unique if _matches_category(e, category)]
-    if not filtered or len(filtered) < max_results:
-        filtered = unique
+    # For ai_research: sort arXiv entries to the top so they aren't buried by general tech news.
+    # For other categories: keyword filter with full-pool fallback.
+    if category in ("ai_research", "ai_research_arxiv"):
+        filtered = [e for e in unique if _matches_category(e, category)]
+        if not filtered:
+            filtered = unique
+        # For ai_research_arxiv, additionally hard-filter to only arxiv.org URLs
+        if category == "ai_research_arxiv":
+            arxiv_only = [e for e in filtered if "arxiv.org" in (e.get("url") or "")]
+            if arxiv_only:
+                filtered = arxiv_only
+        sorted_entries = _sort_arxiv_first(filtered)
+    else:
+        filtered = [e for e in unique if _matches_category(e, category)]
+        if not filtered or len(filtered) < max_results:
+            filtered = unique
+        sorted_entries = _sort_by_date(filtered)
 
-    sorted_entries = _sort_by_date(filtered)
-    # Return more articles for deep search so the quality agent has a larger pool (more likely some pass)
-    take = min(max_results * 2, 30)
-    to_take = sorted_entries[:take]
+    to_take = sorted_entries[:max_results]
 
     now = datetime.now(APP_TIMEZONE).isoformat()
     articles: List[Article] = []

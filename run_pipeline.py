@@ -28,6 +28,7 @@ def cmd_collect(args: argparse.Namespace) -> None:
         categories=categories,
         audience_description=args.audience,
         max_results_per_category=args.max_results,
+        max_pool=getattr(args, "max_pool", None),
     )
 
     print("Collection complete.")
@@ -90,6 +91,7 @@ def cmd_collect_and_compose(args: argparse.Namespace) -> None:
         categories=categories,
         audience_description=args.audience,
         max_results_per_category=args.max_results,
+        max_pool=getattr(args, "max_pool", None),
     )
     
     print(f"\nCollection complete. Run ID: {payload.get('run_id')}")
@@ -148,7 +150,17 @@ def main(argv: Optional[List[str]] = None) -> None:
         "--max-results",
         type=int,
         default=6,
-        help="Max Tavily results per category.",
+        help="Max results per category.",
+    )
+    collect_parser.add_argument(
+        "--max-pool",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Max articles passed to the quality evaluator (deep collector only). "
+            "Defaults to --max-results when not set."
+        ),
     )
     collect_parser.set_defaults(func=cmd_collect)
 
@@ -208,8 +220,8 @@ def main(argv: Optional[List[str]] = None) -> None:
     compose_parser.add_argument(
         "--target-words-per-item",
         type=int,
-        default=40,
-        help="Target words per item in the standardized draft (1 short sentence).",
+        default=80,
+        help="Target words per item in the standardized draft (2 sentences).",
     )
     compose_parser.set_defaults(func=cmd_compose)
 
@@ -222,7 +234,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         "--category",
         type=str,
         required=True,
-        help="Category to collect and generate newsletter for (e.g., 'ai_trends', 'genai_tips').",
+        help="Category to collect and generate newsletter for (e.g., 'ai_trends', 'genai_tips', 'ai_research_arxiv', 'ai_capability').",
     )
     collect_compose_parser.add_argument(
         "--audience",
@@ -248,6 +260,17 @@ def main(argv: Optional[List[str]] = None) -> None:
         default=3,
         metavar="N",
         help="Fixed number of news sections (e.g. 3 = exactly 3 items). Default: 3.",
+    )
+    collect_compose_parser.add_argument(
+        "--max-pool",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Max articles passed to the quality evaluator (deep collector only). "
+            "Defaults to --max-results when not set. "
+            "Raise this to give the evaluator a larger pool without fetching more from the source."
+        ),
     )
     collect_compose_parser.add_argument(
         "--max-items",
@@ -276,8 +299,8 @@ def main(argv: Optional[List[str]] = None) -> None:
     collect_compose_parser.add_argument(
         "--target-words-per-item",
         type=int,
-        default=40,
-        help="Target words per item in the standardized draft (card only, 1 short sentence).",
+        default=80,
+        help="Target words per item in the standardized draft (card only, 2-3 sentences).",
     )
     collect_compose_parser.set_defaults(func=cmd_collect_and_compose)
 
@@ -287,4 +310,3 @@ def main(argv: Optional[List[str]] = None) -> None:
 
 if __name__ == "__main__":
     main()
-
