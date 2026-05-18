@@ -11,6 +11,24 @@ from dotenv import load_dotenv  # type: ignore[import-error]
 # All logs, run IDs, data timestamps, and output filenames use this timezone (UTC+8).
 APP_TIMEZONE = timezone(timedelta(hours=8))
 
+CATEGORY_LABELS = {
+    "ai_trends": "AI Trends",
+    "genai_tips": "GenAI Tips",
+    "ai_innovations": "AI Innovation",
+    "ai_research": "AI Research",
+    "ai_research_arxiv": "AI Research: arXiv",
+    "ai_capability": "AI Capability",
+}
+
+CATEGORY_DESCRIPTIONS = {
+    "ai_trends": "Industry adoption, market movement, governance, and widely discussed AI shifts.",
+    "genai_tips": "Practical techniques, tooling, and workflows for AI builders and data teams.",
+    "ai_innovations": "New model releases, product launches, breakthroughs, and capability upgrades.",
+    "ai_research": "Technical papers, preprints, benchmarks, methods, and research results.",
+    "ai_research_arxiv": "arXiv-only papers and preprints from AI, ML, NLP, vision, and related fields.",
+    "ai_capability": "Concrete examples of what AI systems can do across text, voice, image, video, code, and automation.",
+}
+
 # Load .env from cwd and from package dir (ai_digest/.env) so it works from project root
 load_dotenv()
 _package_dir = Path(__file__).resolve().parent
@@ -25,6 +43,16 @@ class Settings:
     default_categories: List[str]
     collector_type: str  # "tavily" | "deep" | "both"
     deep_research_feeds: List[str]  # RSS/Atom feed URLs for deep collector
+
+
+def get_category_label(category: str) -> str:
+    """Human-friendly label for a configured category."""
+    return CATEGORY_LABELS.get(category, category.replace("_", " ").title())
+
+
+def get_category_description(category: str) -> str:
+    """Short explanation used in multi-category channel outputs."""
+    return CATEGORY_DESCRIPTIONS.get(category, "Latest AI news and resources for this category.")
 
 
 def get_settings() -> Settings:

@@ -8,7 +8,12 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
 from .agent_logger import AgentLogger
-from .config import APP_TIMEZONE
+from .config import (
+    APP_TIMEZONE,
+    get_category_description,
+    get_category_label,
+    get_settings,
+)
 from .agents import (
     Article,
     ArticleEvaluation,
@@ -21,10 +26,15 @@ from .agents import (
     summarize_article,
     summary_to_dict,
 )
-from .config import get_settings
 from .image_collector import collect_and_save_image
-from .formatter import render_newsletter_html
-from .storage import save_run, save_newsletter_text, save_newsletter_html
+from .formatter import render_channel_digest_html, render_newsletter_html
+from .storage import (
+    save_channel_digest_html,
+    save_channel_digest_text,
+    save_newsletter_html,
+    save_newsletter_text,
+    save_run,
+)
 
 
 def _collect_both(category: str, max_results: int) -> List[Article]:
@@ -460,6 +470,153 @@ def _build_roundup_table(
     return "\n".join(lines) + "\n"
 
 
+def _select_category_items(
+    run_payload: Dict,
+    category: str,
+    max_items: int,
+) -> List[Tuple[Dict, Dict, Dict]]:
+    """
+    Select top accepted, deduplicated article/evaluation/summary triples for one category.
+    """
+    articles: List[Dict] = run_payload.get("articles", [])
+    evaluations: List[Dict] = run_payload.get("evaluations", [])
+    summaries: List[Dict] = run_payload.get("summaries", [])
+
+    eval_by_id, summary_by_id = _index_by_article_id(evaluations, summaries)
+
+    quality_min = 2 if run_payload.get("collector_type") in ("deep", "both") else 3
+    eligible_items = []
+    for article in articles:
+        if article.get("category") != category:
+            continue
+        article_id = article.get("id")
+        if not article_id:
+            continue
+        evaluation = eval_by_id.get(article_id)
+        summary = summary_by_id.get(article_id)
+        if not evaluation or not summary:
+            continue
+        if evaluation.get("decision") != "accept" or int(
+            evaluation.get("quality_score", 0)
+        ) < quality_min:
+            continue
+        eligible_items.append((article, evaluation, summary))
+
+    eligible_items.sort(
+        key=lambda t: int(t[1].get("quality_score", 0)), reverse=True
+    )
+
+    return _deduplicate_by_story(eligible_items, category=category)[:max_items]
+
+
+def _category_anchor(category: str) -> str:
+    """Stable anchor id for category navigation in Markdown and HTML outputs."""
+    import re
+    label = get_category_label(category).lower()
+    slug = re.sub(r"[^a-z0-9]+", "-", label).strip("-")
+    return slug or category.replace("_", "-")
+
+
+def _digest_title(run_payload: Dict, title_override: Optional[str] = None) -> str:
+    if title_override:
+        return title_override
+    run_id = run_payload.get("run_id", "")
+    if run_id and len(run_id) >= 8:
+        date_text = _date_from_iso(f"{run_id[:4]}-{run_id[4:6]}-{run_id[6:8]}T12:00:00+08:00")
+    else:
+        date_text = _date_from_iso(run_payload.get("run_started_at"))
+    return f"AI Digest ({date_text})"
+
+
+def _channel_item_dict(article: Dict, summary: Dict) -> Dict[str, str]:
+    return {
+        "title": (summary.get("suggested_subject") or article.get("title") or "(no title)").strip(),
+        "summary": (summary.get("summary") or "").strip(),
+        "url": article.get("url", ""),
+        "source": _source_from_url(article.get("url", "")),
+        "date": _date_from_iso(article.get("collected_at")),
+    }
+
+
+def _build_channel_digest_sections(
+    run_payload: Dict,
+    categories: List[str],
+    max_items_per_category: int,
+    include_empty: bool,
+) -> List[Dict[str, object]]:
+    sections: List[Dict[str, object]] = []
+    for category in categories:
+        selected = _select_category_items(
+            run_payload=run_payload,
+            category=category,
+            max_items=max_items_per_category,
+        )
+        items = [
+            _channel_item_dict(article=article, summary=summary)
+            for article, _evaluation, summary in selected
+        ]
+        if not items and not include_empty:
+            continue
+        sections.append(
+            {
+                "category": category,
+                "label": get_category_label(category),
+                "description": get_category_description(category),
+                "anchor": _category_anchor(category),
+                "items": items,
+            }
+        )
+    return sections
+
+
+def _build_channel_digest_markdown(title: str, intro: str, sections: List[Dict[str, object]]) -> str:
+    """
+    Build Teams-friendly Markdown. The top menu uses Markdown anchors where supported,
+    and still works as a visible category index if the destination app ignores anchors.
+    """
+    lines = [f"# {title}", "", intro.strip(), ""]
+
+    menu = []
+    for section in sections:
+        label = str(section["label"])
+        anchor = str(section["anchor"])
+        menu.append(f"[{label}](#{anchor})")
+    if menu:
+        lines.extend(["**Categories:** " + " | ".join(menu), ""])
+
+    for section in sections:
+        label = str(section["label"])
+        description = str(section["description"])
+        items_obj = section.get("items", [])
+        items = items_obj if isinstance(items_obj, list) else []
+        lines.extend([f"## {label}", "", f"_{description}_", ""])
+
+        if not items:
+            lines.extend(["No accepted articles for this category in the selected run.", ""])
+            continue
+
+        for idx, item_obj in enumerate(items, start=1):
+            item = item_obj if isinstance(item_obj, dict) else {}
+            title_text = str(item.get("title", "")).strip()
+            summary_text = str(item.get("summary", "")).strip()
+            url = str(item.get("url", "")).strip()
+            source = str(item.get("source", "")).strip()
+            date = str(item.get("date", "")).strip()
+            source_bits = " | ".join(bit for bit in [date, source] if bit)
+
+            lines.append(f"{idx}. **{title_text}**")
+            if summary_text:
+                lines.append(f"   {summary_text}")
+            if source_bits:
+                lines.append(f"   _{source_bits}_")
+            if url:
+                lines.append(f"   [Read more]({url})")
+            lines.append("")
+
+    lines.append("_AI Digest - Generated by AI for internal use._")
+    return "\n".join(lines).strip() + "\n"
+
+
 def compose_newsletter_from_run(
     run_payload: Dict,
     category: str,
@@ -697,3 +854,55 @@ def compose_newsletter_from_run(
     save_newsletter_html(html=html, category=category, run_id=run_id)
 
     return text
+
+
+def compose_channel_digest_from_run(
+    run_payload: Dict,
+    categories: Optional[List[str]] = None,
+    max_items_per_category: int = 3,
+    title: Optional[str] = None,
+    intro: Optional[str] = None,
+    include_empty: bool = True,
+) -> str:
+    """
+    Build a multi-category digest for a chat/channel post.
+
+    Saves two files:
+      - output/channel_digest_<run_id>.md: Teams-friendly Markdown
+      - output/channel_digest_<run_id>.html: clickable category preview
+
+    The Markdown intentionally avoids tables and inline HTML because channel renderers
+    vary. The category menu uses standard Markdown links plus visible headings.
+    """
+    run_id = run_payload.get("run_id", "")
+    if categories is None:
+        categories = run_payload.get("categories", []) or get_settings().default_categories
+
+    digest_title = _digest_title(run_payload, title_override=title)
+    digest_intro = intro or (
+        "A category-based roundup of accepted AI news items across innovation, "
+        "research, trends, practical tips, and capabilities."
+    )
+
+    sections = _build_channel_digest_sections(
+        run_payload=run_payload,
+        categories=categories,
+        max_items_per_category=max_items_per_category,
+        include_empty=include_empty,
+    )
+
+    markdown = _build_channel_digest_markdown(
+        title=digest_title,
+        intro=digest_intro,
+        sections=sections,
+    )
+    save_channel_digest_text(text=markdown, run_id=run_id)
+
+    html = render_channel_digest_html(
+        title=digest_title,
+        intro=digest_intro,
+        sections=sections,
+    )
+    save_channel_digest_html(html=html, run_id=run_id)
+
+    return markdown

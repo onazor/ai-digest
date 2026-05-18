@@ -86,3 +86,35 @@ def save_newsletter_html(
     with path.open("w", encoding="utf-8") as f:
         f.write(html)
     return path
+
+
+def save_channel_digest_text(
+    text: str,
+    run_id: Optional[str] = None,
+) -> Path:
+    """
+    Save a multi-category Teams/channel-friendly digest to output/.
+    """
+    timestamp = datetime.now(APP_TIMEZONE).strftime("%Y%m%d-%H%M%S")
+    if not run_id:
+        run_id = timestamp
+    path = OUTPUT_DIR / f"channel_digest_{run_id}.md"
+    with path.open("w", encoding="utf-8") as f:
+        f.write(text)
+    return path
+
+
+def save_channel_digest_html(
+    html: str,
+    run_id: Optional[str] = None,
+) -> Path:
+    """
+    Save a multi-category HTML digest preview with clickable category navigation.
+    """
+    timestamp = datetime.now(APP_TIMEZONE).strftime("%Y%m%d-%H%M%S")
+    if not run_id:
+        run_id = timestamp
+    path = OUTPUT_DIR / f"channel_digest_{run_id}.html"
+    with path.open("w", encoding="utf-8") as f:
+        f.write(html)
+    return path

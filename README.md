@@ -9,6 +9,8 @@ A terminal-based pipeline for an **AI Digest** newsletter: it collects AI/GenAI 
 1. **Collect** – For each category, the **Collector** fetches articles (via **Tavily** or **Deep Research** RSS/feeds, configurable); the **Quality** agent accepts/rejects each; the **Summarizer** writes short summaries for accepted items. Results are stored in `data/`. Articles within a category are now evaluated and summarized **concurrently** (5-worker pool), and when using `both` collector mode, Tavily and Deep Research run in parallel.
 2. **Compose** – Loads the latest run, picks top items for a category, and the **Composer** drafts a section; the **Standardizer** normalizes length and structure. The final draft is printed and saved to `output/` as both a **Markdown** and a **self-contained HTML** file (with base64-embedded images).
 
+3. **Channel Digest** - Builds one multi-category digest for Teams/group-channel posting. It saves a Teams-friendly Markdown post with a top category menu and a standalone HTML preview with clickable category tabs.
+
 All agent steps are logged under `logs/` and echoed in the terminal.
 
 ---
@@ -20,11 +22,14 @@ All agent steps are logged under `logs/` and echoed in the terminal.
 | `ai_digest/` | Core package: config, LLM, agents, pipeline, storage, agent logger, image collector |
 | `ai_digest/templates/newsletter_card.html` | Email-safe Jinja2 template (table-based layout, orange masthead, responsive stacking) |
 | `ai_digest/formatter.py` | Renders newsletter cards as a self-contained HTML string; converts images to base64 |
+| `ai_digest/templates/channel_digest.html` | Multi-category HTML preview with top category navigation |
 | `data/` | JSON files per collection run (`digest_run_<run_id>.json`) |
 | `logs/` | Agent log files per run (`collect_<run_id>.log`, `compose_<run_id>.log`) |
 | `output/` | Newsletter drafts – both `newsletter_<category>_<run_id>.md` and `newsletter_<category>_<run_id>.html` |
 | `output/images/<run_id>/` | One image per news item (e.g. `1.jpg`, `2.png`) for embedding in the newsletter |
 | `run_pipeline.py` | CLI entrypoint |
+| `output/channel_digest_<run_id>.md` | Teams-friendly multi-category Markdown post |
+| `output/channel_digest_<run_id>.html` | Standalone multi-category HTML preview with clickable category navigation |
 
 ---
 
@@ -160,7 +165,9 @@ All commands are run from the **project root** (`ai-digest`). Use `python` or `p
 |---------|----------------|
 | `collect` | Fetch articles (Tavily or Deep Research), run Quality + Summarizer, save one run to `data/`. |
 | `compose` | Load latest run, draft a newsletter section for one category, save to `output/`. (Run `collect` first.) |
+| `compose-digest` | Load latest run, create one multi-category channel digest with a category menu. |
 | `collect-and-compose` | Run `collect` for one category then `compose` in one go; draft saved to `output/`. |
+| `collect-and-compose-digest` | Run `collect` for multiple categories then create one channel digest. |
 
 ### Command: `collect`
 
@@ -261,6 +268,36 @@ python run_pipeline.py compose \
 
 ---
 
+### Command: `compose-digest`
+
+Loads the latest run from `data/` and creates one multi-category post for Teams/group-channel use. The output is saved to `output/channel_digest_<run_id>.md` and `output/channel_digest_<run_id>.html`.
+
+**Usage:**
+
+```bash
+python run_pipeline.py compose-digest [OPTIONS]
+```
+
+**Common options:**
+
+| Option | Default | Meaning |
+|--------|---------|---------|
+| `--categories "cat1,cat2"` | Categories in latest run | Categories to include in the menu |
+| `--sections N` | `3` | Max items per category |
+| `--title "..."` | `AI Digest (<date>)` | Optional title override |
+| `--intro "..."` | Built-in intro | Optional intro override |
+| `--hide-empty` | Off | Hide categories with no accepted articles |
+
+**Example:**
+
+```bash
+python run_pipeline.py compose-digest \
+  --categories "ai_trends,ai_innovations,ai_research,genai_tips,ai_capability" \
+  --sections 3
+```
+
+---
+
 ### Command: `collect-and-compose`
 
 Runs **collect** then **compose** in one command for a single category. Uses the same collector as `collect` (Tavily or Deep Research per `AI_DIGEST_COLLECTOR`).
@@ -356,6 +393,22 @@ python run_pipeline.py collect-and-compose \
 
 ---
 
+### Command: `collect-and-compose-digest`
+
+Runs collection across multiple categories, then creates one Teams/group-channel digest with a top category menu.
+
+```bash
+python run_pipeline.py collect-and-compose-digest \
+  --categories "ai_trends,ai_innovations,ai_research,genai_tips,ai_capability" \
+  --audience "AI team at UnionBank" \
+  --max-results 8 \
+  --sections 3
+```
+
+**Result:** The channel post is printed to the terminal and saved as `output/channel_digest_<run_id>.md`; an HTML preview with clickable category navigation is saved as `output/channel_digest_<run_id>.html`.
+
+---
+
 ## Agents and logs
 
 | Agent | Role |
@@ -368,6 +421,7 @@ python run_pipeline.py collect-and-compose \
 | **Standardizer** | LLM normalizes length and structure (headings, intro, per-item blocks, word limits); preserves image markdown. Operates at very low temperature (0.1) and only trims — never expands. Trim priority: filler openers → redundant qualifiers → wordy phrases → sentence shortening. |
 | **Deduplicator** | Runs before the final item slice. Uses named entity overlap (0.45 threshold) and text similarity (0.38 threshold) to remove same-story duplicates. Research categories skip the entity signal to avoid false positives. |
 | **Headline generator** | Reads the final composer items and generates a single teaser sentence used as the masthead tagline in the HTML output. |
+| **Channel formatter** | Builds the multi-category Teams/channel Markdown and the HTML preview with category navigation. This step reuses saved summaries and does not call the LLM. |
 
 **Image collection (card format only):** Before composing, the pipeline fetches one image per news item from the article's page (via `og:image` or the first suitable image). Images are saved under `output/images/<run_id>/` as `1.jpg`, `2.png`, etc., and the newsletter markdown embeds them as `![Headline](images/<run_id>/1.jpg)`. The HTML output has all images embedded as base64.
 

@@ -2,6 +2,16 @@
 
 ---
 
+## 2026-05-18 - Multi-Category Channel Digest
+
+* Added `compose-digest` and `collect-and-compose-digest` CLI commands for one Teams/group-channel-friendly digest across multiple categories.
+* Added `output/channel_digest_<run_id>.md`, a Markdown post with a top category menu and per-category news sections.
+* Added `output/channel_digest_<run_id>.html`, a standalone HTML preview with clickable category navigation.
+* Added category labels/descriptions in `config.py` so output uses readable labels such as "AI Innovation", "AI Research", and "GenAI Tips".
+* The channel digest reuses saved summaries and accepted articles; it does not call the LLM again during formatting.
+
+---
+
 ## **Changelog & Technical Updates**
 
 ### **`agents.py`**

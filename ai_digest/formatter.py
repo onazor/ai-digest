@@ -22,10 +22,15 @@ from .storage import OUTPUT_DIR
 
 # Path to the Jinja2 template file
 _TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "newsletter_card.html"
+_CHANNEL_TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "channel_digest.html"
 
 
 def _load_template() -> Template:
     return Template(_TEMPLATE_PATH.read_text(encoding="utf-8"))
+
+
+def _load_channel_template() -> Template:
+    return Template(_CHANNEL_TEMPLATE_PATH.read_text(encoding="utf-8"))
 
 
 def _image_to_b64(image_path: str) -> tuple[str, str]:
@@ -90,3 +95,18 @@ def render_newsletter_html(
         items=enriched,
         digest_headline=digest_headline,
     )
+
+
+def render_channel_digest_html(
+    title: str,
+    intro: str,
+    sections: List[Dict[str, Any]],
+) -> str:
+    """
+    Render a multi-category HTML digest with top category navigation.
+
+    `sections` contains dicts with: category, label, description, anchor, items.
+    Each item contains: title, summary, url, source, date.
+    """
+    template = _load_channel_template()
+    return template.render(title=title, intro=intro, sections=sections)

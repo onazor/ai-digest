@@ -6,6 +6,7 @@ from typing import List, Optional
 
 from ai_digest.config import get_settings
 from ai_digest.pipeline import (
+    compose_channel_digest_from_run,
     compose_newsletter_from_run,
     run_collection_pipeline,
 )
@@ -72,6 +73,38 @@ def cmd_compose(args: argparse.Namespace) -> None:
     print(text)
 
 
+def cmd_compose_digest(args: argparse.Namespace) -> None:
+    """Compose a multi-category channel digest from the latest stored run."""
+    settings = get_settings()
+    run_payload = load_latest_run()
+    if not run_payload:
+        print("No stored runs found in data/. Please run 'collect' first.")
+        sys.exit(1)
+
+    categories = (
+        _parse_categories_arg(args.categories)
+        or run_payload.get("categories")
+        or settings.default_categories
+    )
+    sections = _sections_from_args(args)
+
+    print(
+        f"Composing channel digest for {len(categories)} categories "
+        f"({sections} item(s) per category)..."
+    )
+    text = compose_channel_digest_from_run(
+        run_payload=run_payload,
+        categories=categories,
+        max_items_per_category=sections,
+        title=getattr(args, "title", None),
+        intro=getattr(args, "intro", None),
+        include_empty=not getattr(args, "hide_empty", False),
+    )
+
+    print("\n=== Channel Digest Draft ===\n")
+    print(text)
+
+
 def cmd_collect_and_compose(args: argparse.Namespace) -> None:
     """Run collect and compose in one command for a specific category and audience."""
     settings = get_settings()
@@ -121,6 +154,46 @@ def cmd_collect_and_compose(args: argparse.Namespace) -> None:
     )
 
     print("\n=== Newsletter Draft ===\n")
+    print(text)
+
+
+def cmd_collect_and_compose_digest(args: argparse.Namespace) -> None:
+    """Run collect then compose one multi-category channel digest."""
+    settings = get_settings()
+    categories = _parse_categories_arg(args.categories) or settings.default_categories
+
+    print("=" * 60)
+    print("Step 1: Collecting and processing content...")
+    print("=" * 60)
+    print(f"Categories: {', '.join(categories)}")
+    print(f"Audience: {args.audience}")
+
+    payload = run_collection_pipeline(
+        categories=categories,
+        audience_description=args.audience,
+        max_results_per_category=args.max_results,
+        max_pool=getattr(args, "max_pool", None),
+    )
+
+    print(f"\nCollection complete. Run ID: {payload.get('run_id')}")
+    print(f"Articles collected: {len(payload.get('articles', []))}")
+    print(f"Summaries created: {len(payload.get('summaries', []))}")
+
+    print("\n" + "=" * 60)
+    print("Step 2: Composing channel digest...")
+    print("=" * 60)
+
+    sections = _sections_from_args(args)
+    text = compose_channel_digest_from_run(
+        run_payload=payload,
+        categories=categories,
+        max_items_per_category=sections,
+        title=getattr(args, "title", None),
+        intro=getattr(args, "intro", None),
+        include_empty=not getattr(args, "hide_empty", False),
+    )
+
+    print("\n=== Channel Digest Draft ===\n")
     print(text)
 
 
@@ -225,6 +298,50 @@ def main(argv: Optional[List[str]] = None) -> None:
     )
     compose_parser.set_defaults(func=cmd_compose)
 
+    # compose-digest
+    compose_digest_parser = subparsers.add_parser(
+        "compose-digest",
+        help="Compose one multi-category channel digest from the latest run.",
+    )
+    compose_digest_parser.add_argument(
+        "--categories",
+        type=str,
+        default=None,
+        help="Comma-separated categories to include. Defaults to categories in the latest run.",
+    )
+    compose_digest_parser.add_argument(
+        "--sections",
+        type=int,
+        default=3,
+        metavar="N",
+        help="Max news items per category. Default: 3.",
+    )
+    compose_digest_parser.add_argument(
+        "--max-items",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Deprecated: use --sections. Max items per category.",
+    )
+    compose_digest_parser.add_argument(
+        "--title",
+        type=str,
+        default=None,
+        help="Optional digest title override.",
+    )
+    compose_digest_parser.add_argument(
+        "--intro",
+        type=str,
+        default=None,
+        help="Optional intro text override.",
+    )
+    compose_digest_parser.add_argument(
+        "--hide-empty",
+        action="store_true",
+        help="Do not show categories with no accepted articles.",
+    )
+    compose_digest_parser.set_defaults(func=cmd_compose_digest)
+
     # collect-and-compose
     collect_compose_parser = subparsers.add_parser(
         "collect-and-compose",
@@ -303,6 +420,72 @@ def main(argv: Optional[List[str]] = None) -> None:
         help="Target words per item in the standardized draft (card only, 2-3 sentences).",
     )
     collect_compose_parser.set_defaults(func=cmd_collect_and_compose)
+
+    # collect-and-compose-digest
+    collect_digest_parser = subparsers.add_parser(
+        "collect-and-compose-digest",
+        help="Collect content and compose one multi-category channel digest.",
+    )
+    collect_digest_parser.add_argument(
+        "--categories",
+        type=str,
+        default=None,
+        help="Comma-separated categories to collect and include. Defaults to AI_DIGEST_CATEGORIES.",
+    )
+    collect_digest_parser.add_argument(
+        "--audience",
+        type=str,
+        default="AI practitioners and leaders at a bank",
+        help="High-level description of the target audience.",
+    )
+    collect_digest_parser.add_argument(
+        "--max-results",
+        type=int,
+        default=6,
+        help="Max results per category.",
+    )
+    collect_digest_parser.add_argument(
+        "--max-pool",
+        type=int,
+        default=None,
+        metavar="N",
+        help=(
+            "Max articles passed to the quality evaluator (deep collector only). "
+            "Defaults to --max-results when not set."
+        ),
+    )
+    collect_digest_parser.add_argument(
+        "--sections",
+        type=int,
+        default=3,
+        metavar="N",
+        help="Max news items per category. Default: 3.",
+    )
+    collect_digest_parser.add_argument(
+        "--max-items",
+        type=int,
+        default=None,
+        metavar="N",
+        help="Deprecated: use --sections. Max items per category.",
+    )
+    collect_digest_parser.add_argument(
+        "--title",
+        type=str,
+        default=None,
+        help="Optional digest title override.",
+    )
+    collect_digest_parser.add_argument(
+        "--intro",
+        type=str,
+        default=None,
+        help="Optional intro text override.",
+    )
+    collect_digest_parser.add_argument(
+        "--hide-empty",
+        action="store_true",
+        help="Do not show categories with no accepted articles.",
+    )
+    collect_digest_parser.set_defaults(func=cmd_collect_and_compose_digest)
 
     args = parser.parse_args(argv)
     args.func(args)
