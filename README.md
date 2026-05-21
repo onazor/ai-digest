@@ -459,11 +459,13 @@ Log details include e.g. category, article title/URL, quality decision and notes
 
 ---
 
-## Roadmap
+## Roadmap & Future Enhancements (Suggestions and Recommendations only)
 
-- **Category refinement parity:** Bring `ai_trends`, `genai_tips`, and `ai_innovations` search precision and content quality up to the same standard as the research categories.
-- **Deduplication improvements:** Refine entity overlap and text similarity thresholds to reduce same-story slip-through, particularly in `ai_innovations`.
-- **Graphical User Interface (GUI):** Transition from CLI and `.env` configuration to a dedicated front-end UI for easier daily operations.
-- **Cross-functional feedback:** Expand pilot distribution to other departments and working groups to align the digest with broader organizational needs.
-- **Non-technical summaries ("Layman" mode):** Add a processing layer that provides jargon-free summaries for non-technical stakeholders.
-- **Scheduled runs and delivery:** Email, Slack, or SharePoint delivery integration.
+- **Category Refinement Parity:** Bring `ai_trends`, `genai_tips`, and `ai_innovations` search precision and content quality up to the same high standard as the strictly filtered research categories.
+- **Deduplication Improvements:** Refine entity overlap and text similarity thresholds to reduce same-story slip-through, particularly within the `ai_innovations` category.
+- **Editor's Note Integration:** Add a dedicated section in the HTML template for the pipeline operator to insert a custom preface, contextualizing exactly why the week's digest is important and how it applies to the AI CoE team's current goals.
+- **Multi-Tab Category Navigation:** Upgrade the HTML formatting to support generating and displaying all categories simultaneously via a tabbed interface, allowing readers to filter and read only the specific topics they care about.
+- **Graphical User Interface (GUI):** Transition from the current Command Line Interface (CLI) and `.env` configuration model to a dedicated front-end Web UI for easier daily operations.
+- **MS Teams Integration & Delivery:** Shift the primary distribution method from email (which suffers from inbox fatigue and gets ignored) to automated, scheduled deployment directly into dedicated Microsoft Teams channels to increase visibility and engagement.
+- **Cross-Functional Feedback:** Expand pilot distribution to other departments and working groups across the bank to align the digest with broader organizational needs.
+- **Non-Technical Summaries:** Add a dedicated AI processing layer that provides jargon-free, simplified article summaries for non-technical stakeholders.
