@@ -8,7 +8,7 @@ from typing import Dict, List, Optional, Tuple
 from urllib.parse import urlparse
 
 from .agent_logger import AgentLogger
-from .config import APP_TIMEZONE
+from .config import ACTIVE_CATEGORIES, APP_TIMEZONE
 from .agents import (
     Article,
     ArticleEvaluation,
@@ -27,39 +27,24 @@ from .formatter import render_newsletter_html
 from .storage import save_run, save_newsletter_text, save_newsletter_html
 
 
-def _collect_both(category: str, max_results: int) -> List[Article]:
-    """
-    Run both Tavily and Deep Research for the category, merge and dedupe by URL.
-    Returns combined list (Tavily first, then deep; duplicates by URL removed).
-    """
-    from . import agents
-    from . import deep_research
-    with ThreadPoolExecutor(max_workers=2) as pool:
-        f_tavily = pool.submit(agents.collect_articles_for_category, category=category, max_results=max_results)
-        f_deep = pool.submit(deep_research.collect_articles_for_category, category=category, max_results=max_results)
-        tavily_articles = f_tavily.result()
-        deep_articles = f_deep.result()
-    seen_urls = set()
-    merged: List[Article] = []
-    for a in tavily_articles + deep_articles:
-        u = (a.url or "").strip()
-        if u and u not in seen_urls:
-            seen_urls.add(u)
-            merged.append(a)
-    return merged
-
-
 def _get_collector():
-    """Return the article collector for the configured backend (tavily, deep, or both)."""
-    from . import agents
+    """Return the article collector for the configured backend."""
     from . import deep_research
+    from . import openai_deep_research
     settings = get_settings()
     if settings.collector_type == "deep":
         return deep_research.collect_articles_for_category
-    if settings.collector_type == "both":
-        return _collect_both
-    return agents.collect_articles_for_category
+    return openai_deep_research.collect_articles_for_category
 
+
+def _validate_categories(categories: List[str]) -> None:
+    invalid = [category for category in categories if category not in ACTIVE_CATEGORIES]
+    if invalid:
+        allowed = ", ".join(ACTIVE_CATEGORIES)
+        raise ValueError(
+            f"Unsupported category/categories: {', '.join(invalid)}. "
+            f"Allowed categories: {allowed}."
+        )
 
 
 def _is_quota_exhausted(exc: Exception) -> bool:
@@ -85,15 +70,16 @@ def run_collection_pipeline(
       - All articles within a category are evaluated by the Quality Agent concurrently.
       - All accepted articles are summarised concurrently across the whole category batch.
       - A semaphore (max_workers) caps simultaneous LLM calls to avoid rate-limit errors.
-      - Collection itself stays sequential per category (Tavily is one call per category).
+      - Collection itself stays sequential per category.
       - Thread-safe logging via a lock so log lines don't interleave.
     """
     settings = get_settings()
     if categories is None:
         categories = settings.default_categories
+    _validate_categories(categories)
 
     collect_fn = _get_collector()
-    quality_bar = 2 if settings.collector_type in ("deep", "both") else 3
+    quality_bar = 2
     run_id = datetime.now(APP_TIMEZONE).strftime("%Y%m%d-%H%M%S")
     run_started_at = datetime.now(APP_TIMEZONE).isoformat()
     own_logger = logger is None
@@ -110,6 +96,7 @@ def run_collection_pipeline(
     all_articles: List[Article] = []
     all_evaluations: List[ArticleEvaluation] = []
     all_summaries: List[ArticleSummary] = []
+    seen_accepted_urls: set[str] = set()
 
     def _evaluate_one(article: Article):
         """Run quality evaluation for one article. Returns (article, evaluation)."""
@@ -198,10 +185,27 @@ def run_collection_pipeline(
                     ) from exc
                 raise
 
+            deduped_articles_to_summarise: List[Article] = []
+            skipped_overlap = 0
+            for article in articles_to_summarise:
+                url_key = (article.url or "").strip().lower()
+                if url_key and url_key in seen_accepted_urls:
+                    skipped_overlap += 1
+                    continue
+                if url_key:
+                    seen_accepted_urls.add(url_key)
+                deduped_articles_to_summarise.append(article)
+            articles_to_summarise = deduped_articles_to_summarise
+
             safe_log("quality", "batch_done",
                      f"Evaluation complete for '{category}': "
-                     f"{len(articles_to_summarise)}/{len(articles)} passed quality bar.",
-                     details={"accepted": len(articles_to_summarise), "total": len(articles)})
+                     f"{len(articles_to_summarise)}/{len(articles)} passed quality bar "
+                     f"({skipped_overlap} cross-category duplicate(s) skipped).",
+                     details={
+                         "accepted": len(articles_to_summarise),
+                         "total": len(articles),
+                         "cross_category_duplicates_skipped": skipped_overlap,
+                     })
 
             if not articles_to_summarise:
                 continue
@@ -270,7 +274,7 @@ def _source_from_url(url: str) -> str:
 
 
 # Research categories where every article is intentionally from the same domain.
-_RESEARCH_CATEGORIES = {"ai_research", "ai_research_arxiv"}
+_RESEARCH_CATEGORIES = {"ai_research"}
 
 # Stop words stripped before text fingerprinting.
 _STOP_WORDS = {
@@ -492,8 +496,8 @@ def compose_newsletter_from_run(
 
     eval_by_id, summary_by_id = _index_by_article_id(evaluations, summaries)
 
-    # Filter articles by category and acceptance (lower quality bar for deep or both)
-    quality_min = 2 if run_payload.get("collector_type") in ("deep", "both") else 3
+    # Filter articles by category and acceptance (lower quality bar for curated collectors)
+    quality_min = 2
     eligible_items = []
     for article in articles:
         if article.get("category") != category:

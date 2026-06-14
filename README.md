@@ -6,7 +6,7 @@ A terminal-based pipeline for an **AI Digest** newsletter: it collects AI/GenAI 
 
 ## What it does
 
-1. **Collect** – For each category, the **Collector** fetches articles (via **Tavily** or **Deep Research** RSS/feeds, configurable); the **Quality** agent accepts/rejects each; the **Summarizer** writes short summaries for accepted items. Results are stored in `data/`. Articles within a category are now evaluated and summarized **concurrently** (5-worker pool), and when using `both` collector mode, Tavily and Deep Research run in parallel.
+1. **Collect** – For each category, the **Collector** fetches articles via **OpenAI Deep Research** through the Responses API, or optionally via the legacy local **Deep Research** RSS/feed collector; the **Quality** agent accepts/rejects each; the **Summarizer** writes short summaries for accepted items. Results are stored in `data/`. Articles within a category are evaluated and summarized **concurrently**.
 2. **Compose** – Loads the latest run, picks top items for a category, and the **Composer** drafts a section; the **Standardizer** normalizes length and structure. The final draft is printed and saved to `output/` as both a **Markdown** and a **self-contained HTML** file (with base64-embedded images).
 
 All agent steps are logged under `logs/` and echoed in the terminal.
@@ -47,42 +47,40 @@ Set these (e.g. in your shell or a `.env` file in the project root):
 | Variable | Required | Description |
 |----------|----------|-------------|
 | `OPENAI_API_KEY` | Yes | OpenAI-compatible API key |
-| `TAVILY_API_KEY` | When `AI_DIGEST_COLLECTOR=tavily` or `both` | Tavily search API key |
 | `OPENAI_MODEL` | No | Model name (default: `gpt-4.1-mini`) |
-| `AI_DIGEST_CATEGORIES` | No | Comma-separated categories (default: `ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`, `ai_capability`) |
-| `AI_DIGEST_COLLECTOR` | No | `tavily` (default), `deep`, or `both` – article collection backend |
-| `AI_DIGEST_DEEP_FEEDS` | No | Comma-separated RSS/Atom feed URLs for deep research; if empty, built-in AI feeds are used |
+| `AI_DIGEST_CATEGORIES` | No | Comma-separated categories (default: `ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`) |
+| `AI_DIGEST_COLLECTOR` | No | `openai_deep_research` (default) or `deep` – article collection backend |
+| `AI_DIGEST_DEEP_FEEDS` | No | Comma-separated RSS/Atom feed URLs for the legacy RSS collector; if empty, built-in AI feeds are used |
+| `OPENAI_DEEP_RESEARCH_MODEL` | No | Deep research model for `openai_deep_research` (default: `o4-mini-deep-research`; use `o3-deep-research` for stronger/slower research) |
+| `OPENAI_DEEP_RESEARCH_MAX_RESULTS` | No | Max articles requested from OpenAI Deep Research per category, even if `--max-results` is higher (default: `12`) |
+| `OPENAI_DEEP_RESEARCH_MAX_TOOL_CALLS` | No | Cap on web-search/tool calls for OpenAI Deep Research (default: `24`) |
+| `OPENAI_DEEP_RESEARCH_POLL_INTERVAL_SECONDS` | No | Polling interval for background Deep Research responses (default: `15`) |
+| `OPENAI_DEEP_RESEARCH_TIMEOUT_SECONDS` | No | Max wait time for a Deep Research response (default: `3600`) |
 
-- **Tavily** (`tavily`): search API only; requires `TAVILY_API_KEY`.
-- **Deep Research** (`deep`): RSS/Atom feeds only (TechCrunch, VentureBeat, arXiv, Google AI, OpenAI, etc.); no Tavily key needed. All 30+ feeds now fetch concurrently, reducing worst-case time from ~750s to ~25s.
-- **Both** (`both`): runs Tavily and Deep Research concurrently per category, merges and dedupes by URL; then Quality and Summarizer run on the combined list. Requires `TAVILY_API_KEY`.
+- **OpenAI Deep Research** (`openai_deep_research`): calls OpenAI's deep research models through the Responses API with web search enabled. This is the closest code-access equivalent to ChatGPT Deep Research and is best for category-specific, cited discovery.
+- **Deep Research RSS** (`deep`): RSS/Atom feeds only (TechCrunch, VentureBeat, arXiv, Google AI, OpenAI, etc.). All 30+ feeds fetch concurrently.
 
-Example `.env` (Tavily):
+OpenAI Deep Research runs in background mode and can take several minutes per category. Use `OPENAI_DEEP_RESEARCH_MAX_RESULTS` and `OPENAI_DEEP_RESEARCH_MAX_TOOL_CALLS` to control cost, latency, and rate-limit risk.
+
+Example `.env` (OpenAI Deep Research API):
 
 ```
 OPENAI_API_KEY=your-openai-key
-TAVILY_API_KEY=your-tavily-key
-OPENAI_MODEL=gpt-4.1-mini
-AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research,ai_research_arxiv,ai_capability
+AI_DIGEST_COLLECTOR=openai_deep_research
+OPENAI_DEEP_RESEARCH_MODEL=o4-mini-deep-research
+OPENAI_DEEP_RESEARCH_MAX_RESULTS=12
+OPENAI_DEEP_RESEARCH_MAX_TOOL_CALLS=24
+AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research
 ```
 
-Example `.env` (Deep Research):
+Example `.env` (legacy Deep Research RSS):
 
 ```
 OPENAI_API_KEY=your-openai-key
 AI_DIGEST_COLLECTOR=deep
-AI_DIGEST_CATEGORIES=ai_trends,ai_innovations,ai_research_arxiv
+AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research
 # Optional: override default feeds (comma-separated URLs)
 # AI_DIGEST_DEEP_FEEDS=https://example.com/ai.xml,https://other.com/feed/
-```
-
-Example `.env` (Both Tavily + Deep Research):
-
-```
-OPENAI_API_KEY=your-openai-key
-TAVILY_API_KEY=your-tavily-key
-AI_DIGEST_COLLECTOR=both
-AI_DIGEST_CATEGORIES=ai_trends,ai_innovations,ai_research,ai_capability
 ```
 
 ---
@@ -104,21 +102,23 @@ pip install -r requirements.txt
 
 Create a `.env` file in the project root (or export variables in your shell).
 
-**Option A – Tavily (search API):**
+**Option A – OpenAI Deep Research API:**
 
 ```bash
 OPENAI_API_KEY=your-openai-key
-TAVILY_API_KEY=your-tavily-key
 OPENAI_MODEL=gpt-4.1-mini
-AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research,ai_research_arxiv,ai_capability
+AI_DIGEST_COLLECTOR=openai_deep_research
+OPENAI_DEEP_RESEARCH_MODEL=o4-mini-deep-research
+OPENAI_DEEP_RESEARCH_MAX_RESULTS=12
+AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research
 ```
 
-**Option B – Deep Research (RSS/feeds, no Tavily key):**
+**Option B – Deep Research RSS feeds:**
 
 ```bash
 OPENAI_API_KEY=your-openai-key
 AI_DIGEST_COLLECTOR=deep
-AI_DIGEST_CATEGORIES=ai_trends,ai_innovations,ai_research_arxiv
+AI_DIGEST_CATEGORIES=ai_trends,genai_tips,ai_innovations,ai_research
 ```
 
 ### 3. Run the pipeline
@@ -158,13 +158,13 @@ All commands are run from the **project root** (`ai-digest`). Use `python` or `p
 
 | Command | What it does |
 |---------|----------------|
-| `collect` | Fetch articles (Tavily or Deep Research), run Quality + Summarizer, save one run to `data/`. |
+| `collect` | Fetch articles, run Quality + Summarizer, save one run to `data/`. |
 | `compose` | Load latest run, draft a newsletter section for one category, save to `output/`. (Run `collect` first.) |
 | `collect-and-compose` | Run `collect` for one category then `compose` in one go; draft saved to `output/`. |
 
 ### Command: `collect`
 
-Fetches articles per category (via Tavily or Deep Research, depending on `AI_DIGEST_COLLECTOR`), runs the Quality and Summarizer agents **concurrently**, and saves one JSON run in `data/`. Images are also fetched in parallel. Logs go to `logs/collect_<run_id>.log` and to the terminal.
+Fetches articles per category (via OpenAI Deep Research or the legacy local RSS collector depending on `AI_DIGEST_COLLECTOR`), runs the Quality and Summarizer agents **concurrently**, and saves one JSON run in `data/`. Images are also fetched in parallel. Logs go to `logs/collect_<run_id>.log` and to the terminal.
 
 **When to use:** To refresh content for all (or selected) categories. Run this before `compose` if you use the two-step workflow.
 
@@ -190,8 +190,11 @@ python run_pipeline.py collect
 # Override categories
 python run_pipeline.py collect --categories "ai_trends,genai_tips"
 
-# Deep Research only (no Tavily key): set AI_DIGEST_COLLECTOR=deep in .env, then:
+# Deep Research RSS only: set AI_DIGEST_COLLECTOR=deep in .env, then:
 python run_pipeline.py collect --categories "ai_trends" --max-results 8
+
+# OpenAI Deep Research API: set AI_DIGEST_COLLECTOR=openai_deep_research in .env, then:
+python run_pipeline.py collect --categories "ai_trends" --max-results 5
 
 # Custom audience and broader evaluator pool
 python run_pipeline.py collect --audience "CTO and tech leadership" --max-results 8 --max-pool 20
@@ -263,7 +266,7 @@ python run_pipeline.py compose \
 
 ### Command: `collect-and-compose`
 
-Runs **collect** then **compose** in one command for a single category. Uses the same collector as `collect` (Tavily or Deep Research per `AI_DIGEST_COLLECTOR`).
+Runs **collect** then **compose** in one command for a single category. Uses the same collector as `collect` (OpenAI Deep Research or legacy local RSS per `AI_DIGEST_COLLECTOR`).
 
 **When to use:** When you want fresh content and a newsletter draft in one go, without running `collect` and `compose` separately.
 
@@ -275,7 +278,7 @@ python run_pipeline.py collect-and-compose --category CATEGORY --audience "..." 
 
 | Option | Required | Default | Description |
 |--------|----------|---------|-------------|
-| `--category` | Yes | — | Category to collect and draft (e.g. `ai_trends`, `ai_innovations`, `ai_research`, `ai_research_arxiv`, `ai_capability`) |
+| `--category` | Yes | — | Category to collect and draft (`ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`) |
 | `--audience` | Yes | — | Audience (e.g. `"AI team at UnionBank"`) |
 | `--tone` | Yes | — | Tone (e.g. `"professional, concise, optimistic"`) |
 | `--max-results N` | No | `6` | Max articles to collect for the category |
@@ -320,7 +323,7 @@ python run_pipeline.py collect-and-compose \
   --sections 3 \
   --format card
 
-# AI Research (papers and preprints from general sources)
+# AI Research (papers, journals, and theory-heavy articles)
 python run_pipeline.py collect-and-compose \
   --category "ai_research" \
   --audience "Data scientists and AI researchers" \
@@ -328,31 +331,20 @@ python run_pipeline.py collect-and-compose \
   --max-results 12 \
   --sections 3 \
   --format card
-
-# AI Research – arXiv only (strictly locked to arxiv.org)
-python run_pipeline.py collect-and-compose \
-  --category "ai_research_arxiv" \
-  --audience "Data scientists and AI researchers" \
-  --tone "technical, precise, research-oriented" \
-  --max-results 12 \
-  --sections 3 \
-  --format card
-
-# AI Capability (knowledge assist, voice AI, intelligent document processing, video/image generation, etc.)
-python run_pipeline.py collect-and-compose \
-  --category "ai_capability" \
-  --audience "AI Center of Excellence Team" \
-  --tone "professional, concise, optimistic" \
-  --max-results 10 \
-  --sections 3 \
-  --format card
 ```
 
 **Result:** The draft is printed to the terminal and saved as `output/newsletter_<category>_<run_id>.md` and `output/newsletter_<category>_<run_id>.html`. Logs are written to `logs/`.
 
-**Categories:** `ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`, `ai_research_arxiv`, `ai_capability`.
+**Categories:** `ai_trends`, `genai_tips`, `ai_innovations`, `ai_research`.
 
-> **Note:** `ai_technology`, `tools_updates`, and `policy_ethics` have been removed. `ai_technology` content is now covered by `ai_innovations`; `tools_updates` content is now covered by `ai_trends`.
+Definitions:
+
+- `ai_trends`: trending AI news in general, including broad trends within AI.
+- `genai_tips`: GenAI usage tips, techniques, practitioner workflows, and tools.
+- `ai_innovations`: new AI innovations, capabilities, models, product features, and technical breakthroughs.
+- `ai_research`: research papers, journal articles, preprints, conference work, or theory-heavy technical articles.
+
+The collection and evaluation prompts treat these categories as mutually exclusive. If an item primarily belongs to another category, it is rejected for the current one.
 
 ---
 
@@ -360,8 +352,8 @@ python run_pipeline.py collect-and-compose \
 
 | Agent | Role |
 |-------|------|
-| **Collector** | Fetches articles per category (Tavily, Deep Research RSS, or both merged, per `AI_DIGEST_COLLECTOR`); produces raw articles. Deep Research now fetches all 30+ feeds concurrently. |
-| **Quality** | LLM accept/reject and 1–5 score per article using category-specific criteria; articles within a category are evaluated concurrently. Only accepted items (score ≥ 3) are summarized. |
+| **Collector** | Fetches articles per category (OpenAI Deep Research by default, or legacy Deep Research RSS per `AI_DIGEST_COLLECTOR`); produces raw articles. |
+| **Quality** | LLM accept/reject and 1–5 score per article using category-specific criteria; articles within a category are evaluated concurrently. Accepted curated collector items need score >= 2. |
 | **Summarizer** | LLM creates eye-catching headline and concise summary per accepted article. General categories use a plain-English impact-focused prompt; research categories use a structured prompt preserving technical terms and concrete results. Summarization runs concurrently per category. |
 | **Image collector** | For each selected article, fetches the article page and saves one image (`og:image` or first suitable `img`) under `output/images/<run_id>/`. Images are fetched in parallel (reducing ~30s to ~10s for 3 articles). Used only in **card** format. |
 | **Composer** | LLM drafts a full newsletter section with headlines, summaries, optional embedded image markdown, and "Read more" links. Operates at low temperature (0.2) and copies headlines and summaries verbatim — no creative rewriting. |

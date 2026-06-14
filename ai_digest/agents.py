@@ -1,20 +1,11 @@
 from __future__ import annotations
 
 import textwrap
-import uuid
 from dataclasses import dataclass, asdict
-from datetime import datetime
 
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, List
 
-from tavily import TavilyClient  # type: ignore[import-error]
-
-from .config import APP_TIMEZONE, get_settings
 from .llm import chat_completion_json, chat_completion
-
-
-settings = get_settings()
-tavily_client = TavilyClient(api_key=settings.tavily_api_key) # type: ignore[reportUnknownMemberType]
 
 
 @dataclass
@@ -45,149 +36,6 @@ class ArticleSummary:
     suggested_subject: str
 
 
-def collect_articles_for_category(
-    category: str,
-    max_results: int = 6,
-) -> List[Article]:
-    """
-    Collector Agent:
-    Use Tavily to fetch recent, relevant items for a given category.
-    """
-    if category == "ai_innovations":
-        query = (
-            "What is new and capable in AI in the last 7 days. "
-            "Include: new model releases and what they can do (GPT, Gemini, Claude, Llama, Mistral, "
-            "and similar) with benchmark results and capability comparisons; capability breakthroughs "
-            "in reasoning, multimodality, long-context, or agents; open-source model or framework "
-            "milestones that change what practitioners can build; and techniques crossing from research "
-            "into real-world use such as new inference methods, quantization, or fine-tuning approaches. "
-            "Also include: major AI product launches and initiatives from Google, Microsoft, OpenAI, "
-            "Meta, Apple, Amazon, NVIDIA, and similar — focusing on the capability angle, not just the "
-            "announcement. Exclude: market analysis, adoption trends, tips and tutorials, "
-            "and academic papers without a release or deployment angle."
-        )
-    elif category == "ai_research":
-        query = (
-            "site:arxiv.org OR site:paperswithcode.com new AI ML research papers preprints last 7 days. "
-            "New algorithms, novel architectures, SOTA benchmarks, groundbreaking results. "
-            "Include: arXiv preprints, NeurIPS ICML ICLR papers, technical research results. "
-            "Exclude: product launches, company news, how-to guides, opinion pieces."
-        )
-    elif category == "ai_research_arxiv":
-        query = (
-            "site:arxiv.org new AI ML research papers preprints last 7 days. "
-            "New algorithms, novel architectures, SOTA benchmarks, groundbreaking results. "
-            "Only arXiv preprints — no blogs, no news sites, no company announcements."
-        )
-    elif category == "genai_tips":
-        query = (
-            "Practical GenAI and LLM techniques for data scientists and AI practitioners last 7 days. "
-            "Include: advanced prompting techniques (chain-of-thought, few-shot, structured outputs, "
-            "system prompt design, prompt chaining), new tools for working with LLMs (agent frameworks, "
-            "RAG tooling, evaluation libraries, IDE integrations, API features), and practical workflows "
-            "using GenAI in real pipelines (LLMs for data analysis, building agents, prompt-to-code). "
-            "Exclude: beginner ChatGPT guides, generic AI opinion pieces, product announcements "
-            "without practical usage guidance, and listicles with no technical depth."
-        )
-    elif category == "ai_trends":
-        query = (
-            "AI and generative AI trends gaining widespread attention in the last 7 days. "
-            "Include: industry adoption shifts, enterprise AI rollouts, AI market movements, "
-            "widely debated AI topics, emerging use cases getting traction, surveys and reports "
-            "on how organisations are using AI, and stories that many people in tech are discussing. "
-            "Exclude: single product launches, individual research papers, how-to guides, "
-            "company earnings, or one-off announcements without a broader trend angle. "
-            "Prioritize stories from analysts, industry publications, and business press."
-        )
-    elif category == "ai_capability":
-        query = (
-            "AI capabilities and what AI can do now in the last 7 days. "
-            "Include: knowledge assist and enterprise search powered by AI, voice AI and speech "
-            "recognition advances, intelligent document processing and OCR, image and video "
-            "generation (text-to-image, text-to-video), code generation and AI coding assistants, "
-            "AI-powered translation and summarization, recommendation systems, predictive analytics, "
-            "autonomous agents and robotics, and any new demonstration of what AI systems can accomplish. "
-            "Focus on concrete capabilities — what the AI can DO — not market trends or research theory. "
-            "Exclude: pure research papers, market analysis without capability details, opinion pieces."
-        )
-    else:
-        query = (
-            f"Latest important, non-duplicate news and resources in the last 7 days about "
-            f"{category} related to AI and generative AI. Prioritize high-quality sources."
-        )
-
-    # Tavily enforces a hard 400-character query limit.
-    query = query[:400]
-
-    if category in ("ai_research", "ai_research_arxiv"):
-        search_params: Dict[str, Any] = {
-            "search_depth": "basic",
-            "topic": "news",  # news topic favours recent publications over evergreen content
-        }
-        if category == "ai_research_arxiv":
-            search_params["include_domains"] = ["arxiv.org"]
-    elif category == "ai_innovations":
-        search_params = {
-            "search_depth": "basic",
-            "topic": "news",  # news surfaces recent model releases and capability announcements
-            "exclude_domains": ["arxiv.org"],
-        }
-    elif category == "genai_tips":
-        search_params = {
-            "search_depth": "basic",
-            "topic": "general",
-            "exclude_domains": ["arxiv.org"],
-            # general topic (not news) — practical technique articles aren't always breaking news
-        }
-    elif category == "ai_trends":
-        search_params = {
-            "search_depth": "basic",
-            "topic": "news",  # news topic surfaces recent widely-covered stories over evergreen content
-            "exclude_domains": ["arxiv.org"],
-        }
-    elif category == "ai_capability":
-        search_params = {
-            "search_depth": "basic",
-            "topic": "general",  # general topic catches both news and capability showcases
-            "exclude_domains": ["arxiv.org"],
-        }
-    else:
-        search_params = {
-            "search_depth": "basic",
-            "topic": "general",
-            "exclude_domains": ["arxiv.org"],
-        }
-
-    result = tavily_client.search(
-        query=query,
-        max_results=max_results,
-        include_raw_content=True,
-        **search_params,
-    )
-
-    articles: List[Article] = []
-    now = datetime.now(APP_TIMEZONE).isoformat()
-
-    for item in result.get("results", []):
-        content = item.get("raw_content") or item.get("content") or ""
-        snippet = content[:1000]
-
-        articles.append(
-            Article(
-                id=str(uuid.uuid4()),
-                category=category,
-                title=item.get("title") or "(no title)",
-                url=item.get("url") or "",
-                snippet=snippet,
-                content=content,
-                source="tavily",
-                collected_at=now,
-            )
-        )
-
-    return articles
-
-
 def evaluate_article(
     article: Article,
     audience_description: str = "AI practitioners and leaders at a bank",
@@ -196,51 +44,48 @@ def evaluate_article(
     Quality Agent:
     Ask the LLM to determine whether this article is worth including, prioritizing trending and highly relevant news.
     """
-    # When articles come from RSS/Atom (deep research), favor timely + trending / high-attention.
-    from_rss = article.source and article.source.lower() != "tavily"
-    rss_guidance = ""
-    if from_rss:
-        rss_guidance = (
-            " This item is from curated RSS/Atom feeds (TechCrunch, VentureBeat, arXiv, etc.). "
-            "Prioritize RELEVANT, TIMELY, and LIKELY TRENDING news: give quality_score 4 or 5 to stories that sound like they are (or would be) getting a lot of attention—e.g. major product launches, big company announcements, breakthrough research, widely discussed topics, record deals, regulatory milestones. "
-            "Give 3 for clearly on-topic AI/tech news that is useful but not necessarily 'trending'. "
-            "Use 'reject' or low scores only for off-topic, niche-without-impact, or clearly outdated content. Short snippets are normal for feeds; do not reject for that."
-        )
+    # When articles come from curated collectors, favor timely + trending / high-attention.
+    collector_guidance = (
+        " This item is from a curated collector (RSS/Atom feeds or OpenAI Deep Research). "
+        "Prioritize RELEVANT, TIMELY, and LIKELY TRENDING news: give quality_score 4 or 5 to stories that sound like they are (or would be) getting a lot of attention—e.g. major product launches, big company announcements, breakthrough research, widely discussed topics, record deals, regulatory milestones. "
+        "Give 3 for clearly on-topic AI/tech news that is useful but not necessarily 'trending'. "
+        "Use 'reject' or low scores only for off-topic, niche-without-impact, or clearly outdated content. Short snippets are normal for curated inputs; do not reject for that."
+    )
 
     category_guidance = ""
     if article.category == "ai_innovations":
         category_guidance = (
-            " For category ai_innovations: accept content that answers 'what is new and capable in AI'. "
-            "Two equal pillars — (1) CAPABILITY: new model releases with benchmark results or capability "
-            "comparisons, breakthroughs in reasoning/multimodality/agents/long-context, open-source "
-            "milestones that change what practitioners can build, and techniques crossing from research "
-            "into real use (inference, quantization, fine-tuning). (2) INDUSTRY: major AI product launches "
-            "and initiatives from Google, Microsoft, OpenAI, Meta, Apple, Amazon, NVIDIA — focus on "
-            "what the product can DO, not just that it was announced. "
+            " For category ai_innovations: accept ONLY content whose primary value is a new AI "
+            "innovation or newly possible AI capability. Strong accepts: model releases with "
+            "benchmark results or capability comparisons, breakthroughs in reasoning/multimodality/"
+            "agents/long-context, open-source model or framework milestones, major product features "
+            "that change what practitioners can build, and techniques crossing from research into "
+            "real-world use. "
             "Score 4-5 for clear capability advances or major releases with concrete details. "
             "Score 3 for solid product news or technical updates with real substance. "
-            "REJECT: market analysis and adoption trends (use ai_trends), tips and tutorials "
-            "(use genai_tips), pure academic papers without a release angle (use ai_research), "
-            "and company announcements with no technical detail or capability discussion."
+            "REJECT if the primary value is market/adoption/trend context (ai_trends), how-to "
+            "guidance or practitioner technique/tool usage (genai_tips), pure academic/theory-heavy "
+            "research without deployment or release angle (ai_research), or a company announcement "
+            "with no concrete capability detail."
         )
     elif article.category == "ai_trends":
         category_guidance = (
-            " For category ai_trends: accept ONLY stories that reflect a genuine trend — "
-            "something that is gaining traction, being widely adopted, heavily debated, or shifting "
-            "how the industry thinks about AI. Strong signals: adoption numbers, industry surveys, "
-            "enterprise rollouts, market analysis, emerging use cases with real examples, topics "
-            "that many outlets are covering simultaneously. "
+            " For category ai_trends: accept ONLY trending news about AI in general or trends "
+            "within AI — something gaining traction, being widely adopted, heavily debated, or "
+            "shifting how the industry thinks about AI. Strong signals: adoption numbers, industry "
+            "surveys, enterprise rollouts, market analysis, regulation/governance moves, emerging "
+            "use cases with real examples, or topics many outlets are covering simultaneously. "
             "Score 4-5 for stories backed by data, multiple organisations, or clear industry momentum. "
             "Score 3 for clearly trend-adjacent stories with a credible angle. "
-            "REJECT: single product launches or announcements without a trend angle (use ai_innovations), "
-            "individual research papers (use ai_research), how-to guides (use genai_tips), "
-            "opinion pieces with no supporting evidence, or any story that is only about one company "
-            "doing one thing with no broader pattern."
+            "REJECT if the primary value is a single product/model capability launch (ai_innovations), "
+            "a research paper or theory-heavy article (ai_research), a how-to guide or tool technique "
+            "(genai_tips), or an opinion piece with no supporting evidence."
         )
     elif article.category == "genai_tips":
         category_guidance = (
-            " For category genai_tips: the audience is data scientists and AI practitioners — "
-            "accept ONLY content with genuine technical depth and practical value. "
+            " For category genai_tips: accept ONLY tips about using GenAI, techniques to apply, "
+            "or tools/workflows practitioners can use. The audience is data scientists and AI "
+            "practitioners, so content must have genuine practical value. "
             "Strong accepts: advanced prompting techniques (chain-of-thought, few-shot, structured outputs, "
             "prompt chaining, system prompt design), practical LLM tooling guides (RAG frameworks, "
             "agent libraries, evaluation tools, API features), and real workflow tutorials "
@@ -248,39 +93,20 @@ def evaluate_article(
             "Score 4-5 for content a working data scientist could apply immediately. "
             "Score 3 for solid practitioner content that is useful but not immediately actionable. "
             "REJECT: beginner-level or consumer-facing guides ('10 ChatGPT prompts for productivity'), "
-            "generic AI opinion pieces, product announcements without practical usage guidance, "
-            "shallow listicles with no technical substance, and anything that assumes no prior AI knowledge."
+            "generic AI opinion pieces, trending news without a how-to angle (ai_trends), product "
+            "announcements without practical usage guidance (ai_innovations), research papers or "
+            "theory-heavy articles (ai_research), shallow listicles with no technical substance, "
+            "and anything that assumes no prior AI knowledge."
         )
     elif article.category == "ai_research":
         category_guidance = (
-            " For category ai_research: accept ONLY research-focused content—publications, technical papers, and "
-            "journal/preprint-style articles (e.g. from arXiv, conferences, journals). Prefer: new algorithms, "
-            "new technical trends in AI, groundbreaking results, novel methods, benchmarks, and formal research. "
-            "REJECT: product launches, company announcements, general tech news, how-tos, or any non-publication content. "
-            "When the source is arXiv or a research venue, lean accept; when it is a general news site, accept only if the article is clearly about a specific paper or research result."
-        )
-    elif article.category == "ai_research_arxiv":
-        category_guidance = (
-            " For category ai_research_arxiv: accept ONLY papers from arxiv.org. "
-            "REJECT anything that is not an arXiv preprint — no blog posts, no news articles, "
-            "no company announcements, no paperswithcode pages, no conference proceedings pages. "
-            "The URL must contain 'arxiv.org'. If the URL is not from arxiv.org, reject immediately."
-        )
-    elif article.category == "ai_capability":
-        category_guidance = (
-            " For category ai_capability: accept content that demonstrates or discusses what AI "
-            "systems can DO — concrete capabilities, not just announcements. "
-            "Strong accepts: knowledge assist and enterprise AI search, voice AI and speech "
-            "recognition advances, intelligent document processing and OCR, image and video "
-            "generation (text-to-image, text-to-video, editing), code generation and AI coding "
-            "assistants, AI-powered translation and summarisation, recommendation engines, "
-            "predictive analytics, autonomous agents and robotics, and real-world demonstrations "
-            "of AI capability. "
-            "Score 4-5 for articles showing concrete capability with demos, benchmarks, or real "
-            "deployments. Score 3 for solid capability coverage without concrete evidence. "
-            "REJECT: pure market trends without capability detail (use ai_trends), research "
-            "papers without a capability angle (use ai_research), tips and tutorials without "
-            "a capability showcase (use genai_tips), and opinion pieces with no substance."
+            " For category ai_research: accept ONLY research papers, preprints, journal articles, "
+            "conference papers, or theory-heavy technical articles. Prefer: new algorithms, novel "
+            "architectures, formal evaluations, benchmarks, methodology-heavy results, and research "
+            "findings whose main value is technical or theoretical. "
+            "REJECT: product launches or applied capability announcements (ai_innovations), general "
+            "AI trend/adoption/news coverage (ai_trends), how-to tutorials or practitioner tool guides "
+            "(genai_tips), company announcements, and non-technical opinion pieces."
         )
     system_prompt = textwrap.dedent(
         f"""
@@ -288,7 +114,7 @@ def evaluate_article(
 
         Your job:
         - Decide if a candidate article is suitable for inclusion.
-        - PRIORITIZE: news that is timely, relevant, and likely getting a lot of attention (trending)—e.g. major announcements, big launches, breakthrough research, significant market or policy moves, widely discussed topics. Prefer stories that would be shared and talked about.{rss_guidance}{category_guidance}
+        - PRIORITIZE: news that is timely, relevant, and likely getting a lot of attention (trending)—e.g. major announcements, big launches, breakthrough research, significant market or policy moves, widely discussed topics. Prefer stories that would be shared and talked about.{collector_guidance}{category_guidance}
         - Rate on a 1-5 scale: 5 = highly relevant + likely trending/high-attention; 4 = strong, timely, relevant; 3 = acceptable and on-topic; 1-2 = niche, outdated, or low relevance.
         - Flag issues (clickbait, low credibility, off-topic, outdated). For known outlets, lean toward accept when the story sounds timely and relevant; use higher scores (4-5) when it sounds like trending or high-impact news.
 
@@ -346,7 +172,7 @@ def summarize_article(
     Create a concise, skimmable summary with an eye-catching headline for a single accepted item.
     Research articles get a dedicated prompt that prioritises what-method-result over plain-English softening.
     """
-    is_research = article.category in ("ai_research", "ai_research_arxiv")
+    is_research = article.category == "ai_research"
 
     if is_research:
         system_prompt = textwrap.dedent(
