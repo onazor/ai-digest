@@ -1,0 +1,52 @@
+[2026-05-22 14:36:13] [image_collector] fetching: Fetching 3 image(s) in parallel...
+  Details:
+  {
+    "count": 3
+  }
+[2026-05-22 14:36:15] [image_collector] saved: Saved image for item 1: images/20260522-143520/1.png
+  Details:
+  {
+    "path": "images/20260522-143520/1.png"
+  }
+[2026-05-22 14:36:15] [image_collector] saved: Saved image for item 3: images/20260522-143520/3.png
+  Details:
+  {
+    "path": "images/20260522-143520/3.png"
+  }
+[2026-05-22 14:36:15] [image_collector] saved: Saved image for item 2: images/20260522-143520/2.png
+  Details:
+  {
+    "path": "images/20260522-143520/2.png"
+  }
+[2026-05-22 14:36:15] [composer] starting: Category=ai_research, audience=Data scientists and AI researchers, tone=technical, concise, research-oriented, sections=3.
+  Details:
+  {
+    "category": "ai_research",
+    "audience": "Data scientists and AI researchers",
+    "tone": "technical, concise, research-oriented",
+    "num_items": 3
+  }
+[2026-05-22 14:36:22] [composer] finished: Draft length: 1305 chars, ~142 words.
+  Details:
+  {
+    "char_count": 1305,
+    "word_count": 142
+  }
+[2026-05-22 14:36:22] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-05-22 14:36:29] [standardizer] finished: Words: 142 -> 276. Changes: ['Cut filler openers', 'Cut redundant qualifiers', 'Tightened wordy phrases', 'Cut less important sentence']
+  Details:
+  {
+    "word_count_before": 142,
+    "word_count_after": 276,
+    "changes_applied": [
+      "Cut filler openers",
+      "Cut redundant qualifiers",
+      "Tightened wordy phrases",
+      "Cut less important sentence"
+    ]
+  }

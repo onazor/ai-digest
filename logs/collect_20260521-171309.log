@@ -1,0 +1,173 @@
+[2026-05-21 17:13:09] [collector] starting: Fetching articles for category 'ai_trends' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-21 17:13:18] [collector] finished: Collected 8 articles for 'ai_trends'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 8
+  }
+[2026-05-21 17:13:18] [quality] evaluating: Article: A Hacker Group Is Poisoning Open Source Code at an Unprecede...
+  Details:
+  {
+    "article_id": "11d66480-a50e-4ace-b538-391bf0704972",
+    "url": "https://www.wired.com/story/teampcp-software-supply-chain-attack-spree-github/"
+  }
+[2026-05-21 17:13:18] [quality] evaluating: Article: Anthropic is reportedly about to have its first profitable q...
+  Details:
+  {
+    "article_id": "469a2dd5-583d-4d74-88f0-267d3548d25a",
+    "url": "https://www.engadget.com/2178340/anthropic-first-profitable-quarter/"
+  }
+[2026-05-21 17:13:18] [quality] evaluating: Article: One Model, Three Modalities: ByteDance Releases Lance for Im...
+  Details:
+  {
+    "article_id": "955f2db3-3d8a-4f1d-8eb6-48e7076aec57",
+    "url": "https://www.marktechpost.com/2026/05/21/one-model-three-modalities-bytedance-releases-lance-for-image-and-video-understanding-generation-and-editing/"
+  }
+[2026-05-21 17:13:19] [quality] evaluating: Article: Truecaller gets into the eSIM business to diversify its reve...
+  Details:
+  {
+    "article_id": "f7ab1527-70ab-4d45-a1d7-566f22dcf849",
+    "url": "https://techcrunch.com/2026/05/20/truecaller-gets-into-the-esim-business-to-diversify-its-revenue-streams/"
+  }
+[2026-05-21 17:13:19] [quality] evaluating: Article: General Catalyst just led a $63M bet on India’s travel payme...
+  Details:
+  {
+    "article_id": "3217cc73-4a88-4371-9bb3-90a38b75db18",
+    "url": "https://techcrunch.com/2026/05/20/indian-travel-fintech-scapia-more-than-doubles-valuation-to-over-500m-in-a-year/"
+  }
+[2026-05-21 17:13:22] [quality] decision: Decision: reject, score=1. The article is about Truecaller entering the eSIM business, which is not directly related to AI trends or developments.
+  Details:
+  {
+    "article_id": "f7ab1527-70ab-4d45-a1d7-566f22dcf849",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article is about Truecaller entering the eSIM business, which is not directly related to AI trends or developments."
+  }
+[2026-05-21 17:13:22] [quality] evaluating: Article: Samsung union suspends strike after reaching tentative deal ...
+  Details:
+  {
+    "article_id": "29d98310-51e7-427b-8dc1-09ed40e1b5bc",
+    "url": "https://www.engadget.com/2178315/samsung-union-strike-suspended-bonuses/"
+  }
+[2026-05-21 17:13:22] [quality] decision: Decision: reject, score=2. While the article discusses a significant cybersecurity issue, it does not specifically relate to AI trends or the adoption of AI technologies. It focuses on software supply chain attacks rather than AI developments or trends.
+  Details:
+  {
+    "article_id": "11d66480-a50e-4ace-b538-391bf0704972",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "While the article discusses a significant cybersecurity issue, it does not specifically relate to AI trends or the adoption of AI technologies. It focuses on software supply chain attacks rather than AI developments or trends."
+  }
+[2026-05-21 17:13:22] [quality] evaluating: Article: 15% Off Adidas Promo Code | May 2026...
+  Details:
+  {
+    "article_id": "19421e9d-1655-4592-80d4-cd18d15677e3",
+    "url": "https://www.wired.com/story/adidas-promo-code/"
+  }
+[2026-05-21 17:13:22] [quality] decision: Decision: accept, score=4. The news about Anthropic reaching profitability is timely and indicates a significant trend in the AI industry, reflecting the financial viability of AI startups. This could spark discussions about the sustainability and growth of AI companies.
+  Details:
+  {
+    "article_id": "469a2dd5-583d-4d74-88f0-267d3548d25a",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The news about Anthropic reaching profitability is timely and indicates a significant trend in the AI industry, reflecting the financial viability of AI startups. This could spark discussions about the sustainability and growth of AI companies."
+  }
+[2026-05-21 17:13:22] [quality] evaluating: Article: What is a Forward Deployed Engineer: The AI Role OpenAI, Ant...
+  Details:
+  {
+    "article_id": "95d54478-4195-4f5d-8c3b-b1807e037b6a",
+    "url": "https://www.marktechpost.com/2026/05/20/what-is-a-forward-deployed-engineer-the-ai-role-openai-anthropic-and-google-are-hiring-in-2026/"
+  }
+[2026-05-21 17:13:23] [quality] decision: Decision: reject, score=2. The article focuses on a specific investment in a travel fintech startup, which does not reflect a broader trend in AI or its applications. It lacks a significant connection to AI developments or trends.
+  Details:
+  {
+    "article_id": "3217cc73-4a88-4371-9bb3-90a38b75db18",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article focuses on a specific investment in a travel fintech startup, which does not reflect a broader trend in AI or its applications. It lacks a significant connection to AI developments or trends."
+  }
+[2026-05-21 17:13:23] [quality] decision: Decision: reject, score=2. While the release of a new multimodal model is interesting, it lacks broader industry impact or trend signals. It appears to be a single product announcement without evidence of wider adoption or significant market implications.
+  Details:
+  {
+    "article_id": "955f2db3-3d8a-4f1d-8eb6-48e7076aec57",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the release of a new multimodal model is interesting, it lacks broader industry impact or trend signals. It appears to be a single product announcement without evidence of wider adoption or significant market implications."
+  }
+[2026-05-21 17:13:24] [quality] decision: Decision: reject, score=1. The article is about a labor strike at Samsung, which is not directly related to AI trends or developments.
+  Details:
+  {
+    "article_id": "29d98310-51e7-427b-8dc1-09ed40e1b5bc",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article is about a labor strike at Samsung, which is not directly related to AI trends or developments."
+  }
+[2026-05-21 17:13:24] [quality] decision: Decision: reject, score=1. The content is a promotional offer for Adidas and does not relate to AI trends or news.
+  Details:
+  {
+    "article_id": "19421e9d-1655-4592-80d4-cd18d15677e3",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic",
+      "low relevance"
+    ],
+    "notes": "The content is a promotional offer for Adidas and does not relate to AI trends or news."
+  }
+[2026-05-21 17:13:24] [quality] decision: Decision: reject, score=2. The article focuses on a specific job role without broader industry trends or significant data to indicate a widespread shift or adoption. It lacks a clear trend angle and is more about individual companies' hiring practices.
+  Details:
+  {
+    "article_id": "95d54478-4195-4f5d-8c3b-b1807e037b6a",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific job role without broader industry trends or significant data to indicate a widespread shift or adoption. It lacks a clear trend angle and is more about individual companies' hiring practices."
+  }
+[2026-05-21 17:13:24] [quality] batch_done: Evaluation complete for 'ai_trends': 1/8 passed quality bar.
+  Details:
+  {
+    "accepted": 1,
+    "total": 8
+  }
+[2026-05-21 17:13:24] [summarizer] summarizing: Article: Anthropic is reportedly about to have its first profitable q...
+  Details:
+  {
+    "article_id": "469a2dd5-583d-4d74-88f0-267d3548d25a"
+  }
+[2026-05-21 17:13:26] [summarizer] finished: Subject: 💰 Anthropic's First Profitable Quarter!
+  Details:
+  {
+    "article_id": "469a2dd5-583d-4d74-88f0-267d3548d25a",
+    "suggested_subject": "💰 Anthropic's First Profitable Quarter!",
+    "summary_preview": "Anthropic is set to achieve profitability for the first time since its founding in 2021. This milestone highlights the growing viability of AI companies in the market."
+  }
+[2026-05-21 17:13:26] [summarizer] batch_done: Summarisation complete for 'ai_trends': 1 summaries so far.
+  Details:
+  {
+    "summaries": 1
+  }

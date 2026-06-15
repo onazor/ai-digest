@@ -1,0 +1,1176 @@
+[2026-06-05 15:10:00] [collector] starting: Fetching articles for category 'ai_capability' (max_results=60, collector=deep).
+  Details:
+  {
+    "category": "ai_capability",
+    "max_results": 60,
+    "collector": "deep"
+  }
+[2026-06-05 15:10:09] [collector] finished: Collected 60 articles for 'ai_capability'. Evaluating 60 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_capability",
+    "count": 60
+  }
+[2026-06-05 15:10:09] [quality] evaluating: Article: Seoul Purpose: How NVIDIA and South Korea Are Building the F...
+  Details:
+  {
+    "article_id": "dd7208b6-347c-4dcd-ac86-e1367a26cebc",
+    "url": "https://blogs.nvidia.com/blog/korea-ecosystem-2026/"
+  }
+[2026-06-05 15:10:09] [quality] evaluating: Article: How Far Did They Go? The Persuasive Tactics of Covert LLM Ag...
+  Details:
+  {
+    "article_id": "0dc1df2a-12c0-4f3b-b4f6-353d56be7220",
+    "url": "https://arxiv.org/abs/2606.05256"
+  }
+[2026-06-05 15:10:09] [quality] evaluating: Article: SentinelBench: A Benchmark for Long-Running Monitoring Agent...
+  Details:
+  {
+    "article_id": "aac1b617-b184-4b59-ad67-24265b0d6e66",
+    "url": "https://arxiv.org/abs/2606.05342"
+  }
+[2026-06-05 15:10:09] [quality] evaluating: Article: Synthetic Contrastive Reasoning for Multi-Table Q&A...
+  Details:
+  {
+    "article_id": "ed977b9a-ed44-4486-9dd9-e94fbde81e05",
+    "url": "https://arxiv.org/abs/2606.05382"
+  }
+[2026-06-05 15:10:09] [quality] evaluating: Article: LeanMarathon: Toward Reliable AI Co-Mathematicians through L...
+  Details:
+  {
+    "article_id": "41b32569-a71a-431c-92b2-b122f56d9e74",
+    "url": "https://arxiv.org/abs/2606.05400"
+  }
+[2026-06-05 15:10:13] [quality] decision: Decision: accept, score=4. The article discusses NVIDIA's involvement in South Korea's AI ecosystem, highlighting partnerships and innovations, which indicates concrete capabilities and potential future developments in AI. This is timely and relevant news likely to attract attention.
+  Details:
+  {
+    "article_id": "dd7208b6-347c-4dcd-ac86-e1367a26cebc",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses NVIDIA's involvement in South Korea's AI ecosystem, highlighting partnerships and innovations, which indicates concrete capabilities and potential future developments in AI. This is timely and relevant news likely to attract attention."
+  }
+[2026-06-05 15:10:13] [quality] evaluating: Article: Harnessing Generalist Agents for Contextualized Time Series...
+  Details:
+  {
+    "article_id": "7bd269a3-cf10-4c21-8e19-053fce423a82",
+    "url": "https://arxiv.org/abs/2606.05404"
+  }
+[2026-06-05 15:10:13] [quality] decision: Decision: reject, score=2. While the article discusses an interesting AI capability in formalizing mathematics, it is highly specialized and lacks broader appeal or immediate relevance to the general AI community. It is unlikely to generate significant attention outside of niche academic circles.
+  Details:
+  {
+    "article_id": "41b32569-a71a-431c-92b2-b122f56d9e74",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses an interesting AI capability in formalizing mathematics, it is highly specialized and lacks broader appeal or immediate relevance to the general AI community. It is unlikely to generate significant attention outside of niche academic circles."
+  }
+[2026-06-05 15:10:13] [quality] decision: Decision: accept, score=4. The article introduces SentinelBench, a new benchmark for evaluating AI agents in long-running tasks, which is relevant to AI capabilities. It discusses concrete applications and performance metrics, making it timely and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "aac1b617-b184-4b59-ad67-24265b0d6e66",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article introduces SentinelBench, a new benchmark for evaluating AI agents in long-running tasks, which is relevant to AI capabilities. It discusses concrete applications and performance metrics, making it timely and likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:13] [quality] evaluating: Article: Agents' Last Exam...
+  Details:
+  {
+    "article_id": "256e37e6-a7a9-461d-ae1d-e1dc69e34862",
+    "url": "https://arxiv.org/abs/2606.05405"
+  }
+[2026-06-05 15:10:13] [quality] evaluating: Article: A Motivational Architecture for Conversational AGI...
+  Details:
+  {
+    "article_id": "f2224b8c-0777-4f1e-8f7c-28a8d08398e3",
+    "url": "https://arxiv.org/abs/2606.05411"
+  }
+[2026-06-05 15:10:14] [quality] decision: Decision: reject, score=2. The article discusses a specific study on AI-generated comments in a discontinued field experiment, which may not have broad relevance or immediate applicability for the AI team at UnionBank. It lacks concrete demonstrations of AI capabilities that would be more impactful for the audience.
+  Details:
+  {
+    "article_id": "0dc1df2a-12c0-4f3b-b4f6-353d56be7220",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific study on AI-generated comments in a discontinued field experiment, which may not have broad relevance or immediate applicability for the AI team at UnionBank. It lacks concrete demonstrations of AI capabilities that would be more impactful for the audience."
+  }
+[2026-06-05 15:10:14] [quality] evaluating: Article: Zero knowledge verification for frontier AI training is poss...
+  Details:
+  {
+    "article_id": "2a8f1d3b-01a5-4ec6-b46f-3d3c67142e43",
+    "url": "https://arxiv.org/abs/2606.05433"
+  }
+[2026-06-05 15:10:14] [quality] decision: Decision: reject, score=2. While the research discusses advancements in multi-table Q&A capabilities, it lacks broader relevance and trending potential for a general audience. The content is more suited for a specialized academic audience rather than practical applications or trending news.
+  Details:
+  {
+    "article_id": "ed977b9a-ed44-4486-9dd9-e94fbde81e05",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research discusses advancements in multi-table Q&A capabilities, it lacks broader relevance and trending potential for a general audience. The content is more suited for a specialized academic audience rather than practical applications or trending news."
+  }
+[2026-06-05 15:10:14] [quality] evaluating: Article: Ten Headache Specialists versus Artificial Intelligence for ...
+  Details:
+  {
+    "article_id": "49b2fd8b-f5a9-4553-b834-1c8d7b68801b",
+    "url": "https://arxiv.org/abs/2606.05436"
+  }
+[2026-06-05 15:10:15] [quality] decision: Decision: reject, score=2. While the paper discusses a new benchmark for evaluating AI agents, it lacks concrete demonstrations of AI capabilities and is more focused on evaluation methodology than on showcasing what AI can do in practical applications.
+  Details:
+  {
+    "article_id": "256e37e6-a7a9-461d-ae1d-e1dc69e34862",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the paper discusses a new benchmark for evaluating AI agents, it lacks concrete demonstrations of AI capabilities and is more focused on evaluation methodology than on showcasing what AI can do in practical applications."
+  }
+[2026-06-05 15:10:15] [quality] evaluating: Article: Brick-Composer: Using MLLMs for Assembly with Diverse Bricks...
+  Details:
+  {
+    "article_id": "198a8ac8-f7fc-4312-8cf2-60600c1b75c6",
+    "url": "https://arxiv.org/abs/2606.05445"
+  }
+[2026-06-05 15:10:16] [quality] decision: Decision: reject, score=2. The article discusses a theoretical framework for conversational AGI but lacks concrete demonstrations or applications of AI capabilities. It is more suited for academic interest rather than practical relevance for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "f2224b8c-0777-4f1e-8f7c-28a8d08398e3",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a theoretical framework for conversational AGI but lacks concrete demonstrations or applications of AI capabilities. It is more suited for academic interest rather than practical relevance for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:16] [quality] evaluating: Article: Insurance of Agentic AI...
+  Details:
+  {
+    "article_id": "1ca9fc2c-8eae-47d2-83cf-5f2c66d513fb",
+    "url": "https://arxiv.org/abs/2606.05449"
+  }
+[2026-06-05 15:10:16] [quality] decision: Decision: reject, score=2. The article discusses a theoretical framework for zero-knowledge verification in AI training but lacks concrete demonstrations or applications. It is more suited for academic discussion rather than practical AI capabilities relevant to the audience.
+  Details:
+  {
+    "article_id": "2a8f1d3b-01a5-4ec6-b46f-3d3c67142e43",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a theoretical framework for zero-knowledge verification in AI training but lacks concrete demonstrations or applications. It is more suited for academic discussion rather than practical AI capabilities relevant to the audience."
+  }
+[2026-06-05 15:10:16] [quality] evaluating: Article: Output Type Before Quality: A Standards-Derived XAI Admissib...
+  Details:
+  {
+    "article_id": "9445ec52-b43b-4314-85c7-12227f5790bb",
+    "url": "https://arxiv.org/abs/2606.05461"
+  }
+[2026-06-05 15:10:16] [quality] decision: Decision: reject, score=2. While the article discusses AI capabilities in clinical literature summarization, it lacks broader relevance and trending potential for a general audience. It is more suited for a specialized academic audience rather than the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "49b2fd8b-f5a9-4553-b834-1c8d7b68801b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses AI capabilities in clinical literature summarization, it lacks broader relevance and trending potential for a general audience. It is more suited for a specialized academic audience rather than the AI team at UnionBank."
+  }
+[2026-06-05 15:10:16] [quality] evaluating: Article: PSEBench: A Controllable and Verifiable Benchmark for Evalua...
+  Details:
+  {
+    "article_id": "4bdd48c9-92ef-48e0-b183-9bb514b734af",
+    "url": "https://arxiv.org/abs/2606.05463"
+  }
+[2026-06-05 15:10:17] [quality] decision: Decision: reject, score=2. While the article discusses a new framework for time series analysis using AI, it is a research paper without a clear capability demonstration or immediate relevance to broader industry trends. It may not attract significant attention outside of specialized academic circles.
+  Details:
+  {
+    "article_id": "7bd269a3-cf10-4c21-8e19-053fce423a82",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a new framework for time series analysis using AI, it is a research paper without a clear capability demonstration or immediate relevance to broader industry trends. It may not attract significant attention outside of specialized academic circles."
+  }
+[2026-06-05 15:10:17] [quality] evaluating: Article: Step-by-Step Optimization-like Reasoning in LLMs over Expand...
+  Details:
+  {
+    "article_id": "55d80f08-c4bb-4bfc-9264-0bb6c84e3b16",
+    "url": "https://arxiv.org/abs/2606.05464"
+  }
+[2026-06-05 15:10:18] [quality] decision: Decision: accept, score=4. The article discusses a novel approach to using multimodal large language models for real-world object assembly, showcasing concrete capabilities and improvements in brick selection and pose estimation. This aligns well with the ai_capability category and presents timely research that could generate interest.
+  Details:
+  {
+    "article_id": "198a8ac8-f7fc-4312-8cf2-60600c1b75c6",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses a novel approach to using multimodal large language models for real-world object assembly, showcasing concrete capabilities and improvements in brick selection and pose estimation. This aligns well with the ai_capability category and presents timely research that could generate interest."
+  }
+[2026-06-05 15:10:18] [quality] evaluating: Article: Severity-Aware Curriculum Learning with Multi-Model Response...
+  Details:
+  {
+    "article_id": "270de6a8-8226-469a-826d-079c1dbe7c16",
+    "url": "https://arxiv.org/abs/2606.05510"
+  }
+[2026-06-05 15:10:18] [quality] decision: Decision: reject, score=2. The article discusses a theoretical framework for insurance related to agentic AI, which is quite niche and lacks immediate relevance or trending interest for a general audience. It does not showcase concrete AI capabilities or applications, making it less suitable for the newsletter's focus.
+  Details:
+  {
+    "article_id": "1ca9fc2c-8eae-47d2-83cf-5f2c66d513fb",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a theoretical framework for insurance related to agentic AI, which is quite niche and lacks immediate relevance or trending interest for a general audience. It does not showcase concrete AI capabilities or applications, making it less suitable for the newsletter's focus."
+  }
+[2026-06-05 15:10:18] [quality] evaluating: Article: EpiEvolve: Self-Evolving Agents for Streaming Pandemic Forec...
+  Details:
+  {
+    "article_id": "20fcaf40-32e7-4e46-b1fc-d088ccfacfa6",
+    "url": "https://arxiv.org/abs/2606.05513"
+  }
+[2026-06-05 15:10:19] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on optimization-style reasoning in LLMs, which may not have immediate practical implications or broad interest for the audience. It lacks concrete demonstrations of AI capabilities and is more suited for academic discussion rather than trending news.
+  Details:
+  {
+    "article_id": "55d80f08-c4bb-4bfc-9264-0bb6c84e3b16",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on optimization-style reasoning in LLMs, which may not have immediate practical implications or broad interest for the audience. It lacks concrete demonstrations of AI capabilities and is more suited for academic discussion rather than trending news."
+  }
+[2026-06-05 15:10:19] [quality] evaluating: Article: SciVisAgentSkills: Design and Evaluation of Agent Skills for...
+  Details:
+  {
+    "article_id": "3afd3fdc-7136-422a-9fff-043856a988d7",
+    "url": "https://arxiv.org/abs/2606.05525"
+  }
+[2026-06-05 15:10:19] [quality] decision: Decision: reject, score=2. The article discusses a specific academic framework for evaluating XAI methods in autonomous driving safety, which is highly specialized and unlikely to attract broad interest. It lacks concrete demonstrations of AI capabilities and focuses more on theoretical standards than practical applications.
+  Details:
+  {
+    "article_id": "9445ec52-b43b-4314-85c7-12227f5790bb",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific academic framework for evaluating XAI methods in autonomous driving safety, which is highly specialized and unlikely to attract broad interest. It lacks concrete demonstrations of AI capabilities and focuses more on theoretical standards than practical applications."
+  }
+[2026-06-05 15:10:19] [quality] evaluating: Article: Individual Gain, Collective Loss: Metacognitive Adaptation i...
+  Details:
+  {
+    "article_id": "3e76abf6-49bf-41bf-b246-7c5eae958fef",
+    "url": "https://arxiv.org/abs/2606.05532"
+  }
+[2026-06-05 15:10:19] [quality] decision: Decision: reject, score=2. While the article discusses a novel approach to medical text generation, it lacks broader relevance and trending potential for the general AI audience. It is more suited for a specialized research audience rather than a general AI team newsletter.
+  Details:
+  {
+    "article_id": "270de6a8-8226-469a-826d-079c1dbe7c16",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a novel approach to medical text generation, it lacks broader relevance and trending potential for the general AI audience. It is more suited for a specialized research audience rather than a general AI team newsletter."
+  }
+[2026-06-05 15:10:19] [quality] evaluating: Article: SoCRATES: Towards Reliable Automated Evaluation of Proactive...
+  Details:
+  {
+    "article_id": "5c721697-b39f-4857-9c96-67dd3bf8c5af",
+    "url": "https://arxiv.org/abs/2606.05563"
+  }
+[2026-06-05 15:10:20] [quality] decision: Decision: reject, score=2. While the article discusses a benchmark for evaluating LLMs in a specific healthcare context, it lacks broader relevance and trending potential for a general AI audience. The focus on a niche application in patient safety may not resonate widely.
+  Details:
+  {
+    "article_id": "4bdd48c9-92ef-48e0-b183-9bb514b734af",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a benchmark for evaluating LLMs in a specific healthcare context, it lacks broader relevance and trending potential for a general AI audience. The focus on a niche application in patient safety may not resonate widely."
+  }
+[2026-06-05 15:10:20] [quality] evaluating: Article: Fix the Mind, Not the Move: Interpretable AI Assistance via ...
+  Details:
+  {
+    "article_id": "5e963e0d-e3b8-4d48-8ca8-7f2935e062c6",
+    "url": "https://arxiv.org/abs/2606.05602"
+  }
+[2026-06-05 15:10:20] [quality] decision: Decision: reject, score=2. While the research discusses a novel AI capability in pandemic forecasting, it lacks broader relevance and trending potential for a general audience. The content is more suited for a specialized research audience rather than a general AI team newsletter.
+  Details:
+  {
+    "article_id": "20fcaf40-32e7-4e46-b1fc-d088ccfacfa6",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research discusses a novel AI capability in pandemic forecasting, it lacks broader relevance and trending potential for a general audience. The content is more suited for a specialized research audience rather than a general AI team newsletter."
+  }
+[2026-06-05 15:10:20] [quality] evaluating: Article: Answer Presence Drives RAG Rewriting Gains...
+  Details:
+  {
+    "article_id": "9ddcaf93-e0c6-4339-a958-461df221bc5b",
+    "url": "https://arxiv.org/abs/2606.05633"
+  }
+[2026-06-05 15:10:21] [quality] decision: Decision: reject, score=2. While the article discusses advancements in agent skills for scientific data analysis, it lacks broader relevance and trending potential for a general audience. The content is highly specialized and may not attract significant attention outside of niche academic circles.
+  Details:
+  {
+    "article_id": "3afd3fdc-7136-422a-9fff-043856a988d7",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses advancements in agent skills for scientific data analysis, it lacks broader relevance and trending potential for a general audience. The content is highly specialized and may not attract significant attention outside of niche academic circles."
+  }
+[2026-06-05 15:10:21] [quality] evaluating: Article: Coding with "Enemy": Can Human Developers Detect AI Agent Sa...
+  Details:
+  {
+    "article_id": "01473d54-6aa7-4b37-86fa-8f1ad1aeae1e",
+    "url": "https://arxiv.org/abs/2606.05647"
+  }
+[2026-06-05 15:10:21] [quality] decision: Decision: reject, score=2. The article discusses theoretical aspects of AI-assisted creativity without showcasing concrete capabilities or practical applications. It is more suited for academic discussion than for a general audience interested in trending AI capabilities.
+  Details:
+  {
+    "article_id": "3e76abf6-49bf-41bf-b246-7c5eae958fef",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses theoretical aspects of AI-assisted creativity without showcasing concrete capabilities or practical applications. It is more suited for academic discussion than for a general audience interested in trending AI capabilities."
+  }
+[2026-06-05 15:10:21] [quality] evaluating: Article: Continual Learning Bench: Evaluating Frontier AI Systems in ...
+  Details:
+  {
+    "article_id": "9ca437e8-5077-4332-8187-c382cb185c42",
+    "url": "https://arxiv.org/abs/2606.05661"
+  }
+[2026-06-05 15:10:22] [quality] decision: Decision: reject, score=2. While the article discusses an interesting AI capability, it is a research paper without a clear application or demonstration that would make it trending or widely relevant. The content is more suited for academic audiences rather than practical implementation or trending news.
+  Details:
+  {
+    "article_id": "5e963e0d-e3b8-4d48-8ca8-7f2935e062c6",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses an interesting AI capability, it is a research paper without a clear application or demonstration that would make it trending or widely relevant. The content is more suited for academic audiences rather than practical implementation or trending news."
+  }
+[2026-06-05 15:10:22] [quality] evaluating: Article: AdaMEM: Test-Time Adaptive Memory for Language Agents...
+  Details:
+  {
+    "article_id": "a1b08d24-d6d0-4a35-9353-fbc0ee379cef",
+    "url": "https://arxiv.org/abs/2606.05684"
+  }
+[2026-06-05 15:10:22] [quality] decision: Decision: reject, score=2. The article discusses a research benchmark for evaluating LLM mediators, which is quite niche and lacks broader relevance or immediate applicability for the audience. It does not demonstrate concrete AI capabilities or practical applications that would be of high interest to the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "5c721697-b39f-4857-9c96-67dd3bf8c5af",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a research benchmark for evaluating LLM mediators, which is quite niche and lacks broader relevance or immediate applicability for the audience. It does not demonstrate concrete AI capabilities or practical applications that would be of high interest to the AI team at UnionBank."
+  }
+[2026-06-05 15:10:22] [quality] evaluating: Article: DiG-Plan: Mitigating Early Commitment for Tool-Graph Plannin...
+  Details:
+  {
+    "article_id": "d2a62c27-23a6-4144-9205-1a3004eb8dcc",
+    "url": "https://arxiv.org/abs/2606.05728"
+  }
+[2026-06-05 15:10:22] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on retrieval-augmented QA pipelines but lacks broader relevance or trending potential. It is highly technical and may not engage a wider audience.
+  Details:
+  {
+    "article_id": "9ddcaf93-e0c6-4339-a958-461df221bc5b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on retrieval-augmented QA pipelines but lacks broader relevance or trending potential. It is highly technical and may not engage a wider audience."
+  }
+[2026-06-05 15:10:22] [quality] evaluating: Article: SubtleMemory: A Benchmark for Fine-Grained Relational Memory...
+  Details:
+  {
+    "article_id": "91dc2cd2-72c9-4adf-a703-68ab42dad13b",
+    "url": "https://arxiv.org/abs/2606.05761"
+  }
+[2026-06-05 15:10:23] [quality] decision: Decision: reject, score=2. While the topic of continual learning is relevant, the article is a research paper without a concrete capability demonstration or application angle. It lacks immediate relevance for a broader audience and is unlikely to generate trending interest.
+  Details:
+  {
+    "article_id": "9ca437e8-5077-4332-8187-c382cb185c42",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the topic of continual learning is relevant, the article is a research paper without a concrete capability demonstration or application angle. It lacks immediate relevance for a broader audience and is unlikely to generate trending interest."
+  }
+[2026-06-05 15:10:23] [quality] decision: Decision: accept, score=5. This article presents significant findings on the interaction between AI coding agents and human developers, highlighting a critical issue of AI sabotage in real-world software development. The study's large-scale approach and actionable suggestions for improving safety mechanisms make it highly relevant and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "01473d54-6aa7-4b37-86fa-8f1ad1aeae1e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents significant findings on the interaction between AI coding agents and human developers, highlighting a critical issue of AI sabotage in real-world software development. The study's large-scale approach and actionable suggestions for improving safety mechanisms make it highly relevant and likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:23] [quality] decision: Decision: reject, score=2. While the research presents a novel framework for language agents, it lacks immediate practical applications or trending relevance for a broader audience. The content is more suited for academic circles rather than general industry news.
+  Details:
+  {
+    "article_id": "a1b08d24-d6d0-4a35-9353-fbc0ee379cef",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents a novel framework for language agents, it lacks immediate practical applications or trending relevance for a broader audience. The content is more suited for academic circles rather than general industry news."
+  }
+[2026-06-05 15:10:23] [quality] evaluating: Article: TAPO: Tool-Aware Policy Optimization via Credit Transfer for...
+  Details:
+  {
+    "article_id": "c434ff99-ad00-4e13-b23d-a60ff6f2069e",
+    "url": "https://arxiv.org/abs/2606.05784"
+  }
+[2026-06-05 15:10:23] [quality] evaluating: Article: Can LLMs Write Correct TLA+ Specifications? Evaluating Natur...
+  Details:
+  {
+    "article_id": "9e305c7a-cdc1-4963-89db-2d8b0474424d",
+    "url": "https://arxiv.org/abs/2606.05792"
+  }
+[2026-06-05 15:10:23] [quality] evaluating: Article: When Tools Fail: Benchmarking Dynamic Replanning and Anomaly...
+  Details:
+  {
+    "article_id": "d5231b9f-9076-4c1c-b772-461f7b6ae347",
+    "url": "https://arxiv.org/abs/2606.05806"
+  }
+[2026-06-05 15:10:23] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework (DiG-Plan) without demonstrating direct, practical AI capabilities or applications that would be widely relevant or trending. It is more suited for an academic audience rather than a general AI news context.
+  Details:
+  {
+    "article_id": "d2a62c27-23a6-4144-9205-1a3004eb8dcc",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework (DiG-Plan) without demonstrating direct, practical AI capabilities or applications that would be widely relevant or trending. It is more suited for an academic audience rather than a general AI news context."
+  }
+[2026-06-05 15:10:23] [quality] evaluating: Article: Agentic Molecular Recovery via Molecule-Aware Exploration...
+  Details:
+  {
+    "article_id": "5c4689a6-cd2c-4d8a-a95a-9a28e959b1d5",
+    "url": "https://arxiv.org/abs/2606.05847"
+  }
+[2026-06-05 15:10:24] [quality] decision: Decision: reject, score=2. The article discusses a specific benchmark for AI memory systems, which is too niche and lacks broader relevance or immediate impact for the audience. It does not demonstrate concrete capabilities or applications that would be of high interest to the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "91dc2cd2-72c9-4adf-a703-68ab42dad13b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific benchmark for AI memory systems, which is too niche and lacks broader relevance or immediate impact for the audience. It does not demonstrate concrete capabilities or applications that would be of high interest to the AI team at UnionBank."
+  }
+[2026-06-05 15:10:24] [quality] evaluating: Article: Entropy-Based Evaluation of AI Agents: A Lightweight Framewo...
+  Details:
+  {
+    "article_id": "c6d997ee-dc6b-4383-92f4-d3b17f1b390d",
+    "url": "https://arxiv.org/abs/2606.05872"
+  }
+[2026-06-05 15:10:25] [quality] decision: Decision: reject, score=2. While the study evaluates LLMs' capabilities in generating TLA+ specifications, it is highly specialized and may not have broad appeal or relevance to the general AI audience at UnionBank.
+  Details:
+  {
+    "article_id": "9e305c7a-cdc1-4963-89db-2d8b0474424d",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the study evaluates LLMs' capabilities in generating TLA+ specifications, it is highly specialized and may not have broad appeal or relevance to the general AI audience at UnionBank."
+  }
+[2026-06-05 15:10:25] [quality] evaluating: Article: Retrospective Harness Optimization: Improving LLM Agents via...
+  Details:
+  {
+    "article_id": "8ce0b9f2-f21c-4e87-a945-59eddbf42955",
+    "url": "https://arxiv.org/abs/2606.05922"
+  }
+[2026-06-05 15:10:25] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical topic related to policy optimization in AI, which is unlikely to be trending or of broad interest to the audience. It lacks practical applications or demonstrations of capability that would engage a wider readership.
+  Details:
+  {
+    "article_id": "c434ff99-ad00-4e13-b23d-a60ff6f2069e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical topic related to policy optimization in AI, which is unlikely to be trending or of broad interest to the audience. It lacks practical applications or demonstrations of capability that would engage a wider readership."
+  }
+[2026-06-05 15:10:25] [quality] evaluating: Article: Towards World Models in Biomedical Research...
+  Details:
+  {
+    "article_id": "0370fdb7-c38e-423f-a438-f490221f7756",
+    "url": "https://arxiv.org/abs/2606.05925"
+  }
+[2026-06-05 15:10:25] [quality] decision: Decision: reject, score=2. While the article discusses a new benchmark for evaluating LLM agents, it lacks broader relevance and immediate applicability for the audience. It focuses on a specific research topic without demonstrating concrete AI capabilities or real-world applications that would engage a wider audience.
+  Details:
+  {
+    "article_id": "d5231b9f-9076-4c1c-b772-461f7b6ae347",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a new benchmark for evaluating LLM agents, it lacks broader relevance and immediate applicability for the audience. It focuses on a specific research topic without demonstrating concrete AI capabilities or real-world applications that would engage a wider audience."
+  }
+[2026-06-05 15:10:25] [quality] evaluating: Article: Edit-R2: Context-Aware Reinforcement Learning for Multi-Turn...
+  Details:
+  {
+    "article_id": "89837e4f-2fc2-4a89-9cda-e6ea5e4fc699",
+    "url": "https://arxiv.org/abs/2606.05950"
+  }
+[2026-06-05 15:10:25] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on molecular generation with LLMs, which is too niche and lacks broader relevance or trending impact for a general audience. It does not demonstrate concrete AI capabilities in a way that would engage a wider readership.
+  Details:
+  {
+    "article_id": "5c4689a6-cd2c-4d8a-a95a-9a28e959b1d5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on molecular generation with LLMs, which is too niche and lacks broader relevance or trending impact for a general audience. It does not demonstrate concrete AI capabilities in a way that would engage a wider readership."
+  }
+[2026-06-05 15:10:25] [quality] evaluating: Article: Bidirectional Search for Longest Paths: Case for Front-to-Fr...
+  Details:
+  {
+    "article_id": "323c8729-2b13-4b6e-adb8-210d861e22e5",
+    "url": "https://arxiv.org/abs/2606.05956"
+  }
+[2026-06-05 15:10:26] [quality] decision: Decision: reject, score=2. While the paper discusses a new framework for evaluating AI agents, it lacks concrete demonstrations of capability or real-world applications. It is more academic in nature and unlikely to generate significant interest or attention in a practical context.
+  Details:
+  {
+    "article_id": "c6d997ee-dc6b-4383-92f4-d3b17f1b390d",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the paper discusses a new framework for evaluating AI agents, it lacks concrete demonstrations of capability or real-world applications. It is more academic in nature and unlikely to generate significant interest or attention in a practical context."
+  }
+[2026-06-05 15:10:26] [quality] evaluating: Article: PLAN-S: Bridging Planning with Latent Style Dynamics for Aut...
+  Details:
+  {
+    "article_id": "22c12d1c-1dc7-4a43-95eb-7fe497356c10",
+    "url": "https://arxiv.org/abs/2606.06014"
+  }
+[2026-06-05 15:10:26] [quality] decision: Decision: reject, score=2. While the article discusses an interesting concept in biomedical research, it lacks concrete demonstrations of AI capabilities and is more theoretical in nature. It is unlikely to generate significant attention or relevance for the audience at UnionBank.
+  Details:
+  {
+    "article_id": "0370fdb7-c38e-423f-a438-f490221f7756",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses an interesting concept in biomedical research, it lacks concrete demonstrations of AI capabilities and is more theoretical in nature. It is unlikely to generate significant attention or relevance for the audience at UnionBank."
+  }
+[2026-06-05 15:10:26] [quality] evaluating: Article: Beyond Similarity: Trustworthy Memory Search for Personal AI...
+  Details:
+  {
+    "article_id": "5b55f4e0-624a-4637-92b2-ddc70fdeb4f9",
+    "url": "https://arxiv.org/abs/2606.06054"
+  }
+[2026-06-05 15:10:27] [quality] decision: Decision: reject, score=2. The article discusses a specific algorithm related to bidirectional search in pathfinding, which is highly technical and niche. It lacks broader relevance or immediate application to the AI capabilities that would interest the audience at UnionBank.
+  Details:
+  {
+    "article_id": "323c8729-2b13-4b6e-adb8-210d861e22e5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific algorithm related to bidirectional search in pathfinding, which is highly technical and niche. It lacks broader relevance or immediate application to the AI capabilities that would interest the audience at UnionBank."
+  }
+[2026-06-05 15:10:27] [quality] evaluating: Article: When Should Memory Stay Silent: Measuring Memory-Use Boundar...
+  Details:
+  {
+    "article_id": "b480a3ab-c8da-4e0b-aa70-7b1da57f5083",
+    "url": "https://arxiv.org/abs/2606.06055"
+  }
+[2026-06-05 15:10:27] [quality] decision: Decision: reject, score=2. While the research presents a novel optimization method for AI agents, it lacks immediate practical implications or trending relevance for a broader audience. The content is more suited for academic discussion rather than actionable insights for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "8ce0b9f2-f21c-4e87-a945-59eddbf42955",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents a novel optimization method for AI agents, it lacks immediate practical implications or trending relevance for a broader audience. The content is more suited for academic discussion rather than actionable insights for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:27] [quality] evaluating: Article: A Framework for Measuring Appropriate Reliance on Set-Valued...
+  Details:
+  {
+    "article_id": "de0fc436-6385-43e7-8794-bf7ea1616d3c",
+    "url": "https://arxiv.org/abs/2606.06081"
+  }
+[2026-06-05 15:10:27] [quality] decision: Decision: reject, score=2. While the article discusses a novel reinforcement learning framework for image editing, it lacks broader relevance and trending potential for a general audience. It is more suitable for a specialized research audience rather than a practical application or capability demonstration that would engage the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "89837e4f-2fc2-4a89-9cda-e6ea5e4fc699",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a novel reinforcement learning framework for image editing, it lacks broader relevance and trending potential for a general audience. It is more suitable for a specialized research audience rather than a practical application or capability demonstration that would engage the AI team at UnionBank."
+  }
+[2026-06-05 15:10:27] [quality] evaluating: Article: Step-adaptive multimodal fusion network with multi-scale clo...
+  Details:
+  {
+    "article_id": "ab6e2af3-a300-4344-b58d-ddec323b566c",
+    "url": "https://arxiv.org/abs/2606.06102"
+  }
+[2026-06-05 15:10:28] [quality] decision: Decision: reject, score=2. While the article discusses advancements in autonomous driving, it is a research paper without a clear capability demonstration or practical application that would engage a broader audience. It lacks trending relevance and is more suited for academic circles.
+  Details:
+  {
+    "article_id": "22c12d1c-1dc7-4a43-95eb-7fe497356c10",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses advancements in autonomous driving, it is a research paper without a clear capability demonstration or practical application that would engage a broader audience. It lacks trending relevance and is more suited for academic circles."
+  }
+[2026-06-05 15:10:28] [quality] evaluating: Article: Towards Healthy Evolution: Exploring the Role and Mechanisms...
+  Details:
+  {
+    "article_id": "db336881-caa3-4d79-b953-b4de4fa4b1ef",
+    "url": "https://arxiv.org/abs/2606.06114"
+  }
+[2026-06-05 15:10:28] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on memory search in personal AI agents, which may not have immediate practical implications or broad interest for the audience. It lacks concrete demonstrations of capability that would engage a wider readership.
+  Details:
+  {
+    "article_id": "5b55f4e0-624a-4637-92b2-ddc70fdeb4f9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on memory search in personal AI agents, which may not have immediate practical implications or broad interest for the audience. It lacks concrete demonstrations of capability that would engage a wider readership."
+  }
+[2026-06-05 15:10:28] [quality] evaluating: Article: Amortizing Federated Adaptation: Hypernetwork Driven LoRA fo...
+  Details:
+  {
+    "article_id": "f73221ff-1d62-46b5-b3e7-536b9396e454",
+    "url": "https://arxiv.org/abs/2606.06154"
+  }
+[2026-06-05 15:10:28] [quality] decision: Decision: reject, score=2. The article discusses a specific research study on memory-augmented conversational agents, which is niche and lacks broader relevance or trending potential for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "b480a3ab-c8da-4e0b-aa70-7b1da57f5083",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research study on memory-augmented conversational agents, which is niche and lacks broader relevance or trending potential for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:28] [quality] evaluating: Article: Evaluating Agentic Configuration Repair for Computer Network...
+  Details:
+  {
+    "article_id": "7aea9b4f-3190-471c-9fa4-4da78df93295",
+    "url": "https://arxiv.org/abs/2606.06212"
+  }
+[2026-06-05 15:10:28] [quality] decision: Decision: reject, score=2. While the topic of measuring reliance on AI advice is relevant, the article is a research paper without concrete demonstrations of AI capability or practical applications. It lacks immediate relevance for a broader audience and is unlikely to generate significant attention.
+  Details:
+  {
+    "article_id": "de0fc436-6385-43e7-8794-bf7ea1616d3c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the topic of measuring reliance on AI advice is relevant, the article is a research paper without concrete demonstrations of AI capability or practical applications. It lacks immediate relevance for a broader audience and is unlikely to generate significant attention."
+  }
+[2026-06-05 15:10:29] [quality] evaluating: Article: From Reward-Hack Activations to Agentic Risk States: Context...
+  Details:
+  {
+    "article_id": "684bd542-6349-4479-a4b1-536e3ca6648c",
+    "url": "https://arxiv.org/abs/2606.06223"
+  }
+[2026-06-05 15:10:29] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on solar irradiance forecasting, which is too niche and lacks broader relevance or trending interest for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "ab6e2af3-a300-4344-b58d-ddec323b566c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on solar irradiance forecasting, which is too niche and lacks broader relevance or trending interest for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:29] [quality] evaluating: Article: Closing the Loop on Latent Reasoning via Test-Time Reconstru...
+  Details:
+  {
+    "article_id": "6a568421-dc7c-435c-ba59-62ec8c5e3914",
+    "url": "https://arxiv.org/abs/2606.06252"
+  }
+[2026-06-05 15:10:30] [quality] decision: Decision: reject, score=2. While the article discusses a relevant AI capability, it is a research paper without a clear demonstration of practical applications or trending impact. It may not attract widespread attention.
+  Details:
+  {
+    "article_id": "db336881-caa3-4d79-b953-b4de4fa4b1ef",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a relevant AI capability, it is a research paper without a clear demonstration of practical applications or trending impact. It may not attract widespread attention."
+  }
+[2026-06-05 15:10:30] [quality] evaluating: Article: TokenMizer: Graph-Structured Session Memory for Long-Horizon...
+  Details:
+  {
+    "article_id": "46658b9a-e119-4706-9c07-971b205202c5",
+    "url": "https://arxiv.org/abs/2606.06337"
+  }
+[2026-06-05 15:10:30] [quality] decision: Decision: reject, score=2. While the article discusses a novel approach in federated learning, it lacks broader relevance and immediate applicability for the AI team at UnionBank. The content is highly technical and may not generate significant interest or attention outside of a specialized audience.
+  Details:
+  {
+    "article_id": "f73221ff-1d62-46b5-b3e7-536b9396e454",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a novel approach in federated learning, it lacks broader relevance and immediate applicability for the AI team at UnionBank. The content is highly technical and may not generate significant interest or attention outside of a specialized audience."
+  }
+[2026-06-05 15:10:30] [quality] evaluating: Article: Risk Assessment of Autonomous Driving: Integrating Technical...
+  Details:
+  {
+    "article_id": "b4908a1f-d7a1-4e73-bfa8-291d505eacc5",
+    "url": "https://arxiv.org/abs/2606.06396"
+  }
+[2026-06-05 15:10:30] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on monitoring mechanisms in LLM agents, which is too niche and lacks broader relevance or trending appeal for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "684bd542-6349-4479-a4b1-536e3ca6648c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on monitoring mechanisms in LLM agents, which is too niche and lacks broader relevance or trending appeal for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:30] [quality] evaluating: Article: Unsupervised Skill Discovery for Agentic Data Analysis...
+  Details:
+  {
+    "article_id": "2006b224-8495-499d-a88a-c767ada3514a",
+    "url": "https://arxiv.org/abs/2606.06416"
+  }
+[2026-06-05 15:10:30] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on latent reasoning without providing a clear demonstration of capability or practical application. It is more suited for an academic audience rather than a general AI team looking for trending news or concrete AI capabilities.
+  Details:
+  {
+    "article_id": "6a568421-dc7c-435c-ba59-62ec8c5e3914",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on latent reasoning without providing a clear demonstration of capability or practical application. It is more suited for an academic audience rather than a general AI team looking for trending news or concrete AI capabilities."
+  }
+[2026-06-05 15:10:30] [quality] evaluating: Article: Agent Memory: Characterization and System Implications of St...
+  Details:
+  {
+    "article_id": "d5444501-a9ee-41eb-90e0-a75f4a101cba",
+    "url": "https://arxiv.org/abs/2606.06448"
+  }
+[2026-06-05 15:10:32] [quality] decision: Decision: reject, score=2. The article discusses theoretical aspects of risk assessment in autonomous driving but lacks concrete demonstrations of AI capabilities or applications. It is more of a research paper without a clear capability angle, making it less suitable for the newsletter's focus.
+  Details:
+  {
+    "article_id": "b4908a1f-d7a1-4e73-bfa8-291d505eacc5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses theoretical aspects of risk assessment in autonomous driving but lacks concrete demonstrations of AI capabilities or applications. It is more of a research paper without a clear capability angle, making it less suitable for the newsletter's focus."
+  }
+[2026-06-05 15:10:32] [quality] decision: Decision: reject, score=2. While the article discusses a new capability in managing LLM context, it is a research paper without a clear demonstration of practical application or trending relevance. It may not attract widespread attention.
+  Details:
+  {
+    "article_id": "46658b9a-e119-4706-9c07-971b205202c5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a new capability in managing LLM context, it is a research paper without a clear demonstration of practical application or trending relevance. It may not attract widespread attention."
+  }
+[2026-06-05 15:10:32] [quality] evaluating: Article: Vortex: Efficient and Programmable Sparse Attention Serving ...
+  Details:
+  {
+    "article_id": "7ee953ee-1b8b-42d4-aeae-24a39784da70",
+    "url": "https://arxiv.org/abs/2606.06453"
+  }
+[2026-06-05 15:10:32] [quality] evaluating: Article: Benchmark Everything Everywhere All at Once...
+  Details:
+  {
+    "article_id": "ed628e4e-e8a1-4cd4-9261-175a8b476dd4",
+    "url": "https://arxiv.org/abs/2606.06462"
+  }
+[2026-06-05 15:10:32] [quality] decision: Decision: reject, score=2. The article discusses a research paper on agent memory systems but lacks concrete demonstrations of AI capabilities or real-world applications. It is more suited for an academic audience rather than practical insights for the AI team at UnionBank.
+  Details:
+  {
+    "article_id": "d5444501-a9ee-41eb-90e0-a75f4a101cba",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a research paper on agent memory systems but lacks concrete demonstrations of AI capabilities or real-world applications. It is more suited for an academic audience rather than practical insights for the AI team at UnionBank."
+  }
+[2026-06-05 15:10:32] [quality] evaluating: Article: Goedel-Architect: Streamlining Formal Theorem Proving with B...
+  Details:
+  {
+    "article_id": "7739045c-de0f-4ae3-a955-d199a6da505a",
+    "url": "https://arxiv.org/abs/2606.06468"
+  }
+[2026-06-05 15:10:32] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework for unsupervised skill discovery in data analysis, which is niche and lacks broader relevance or trending appeal for a general audience. It does not demonstrate concrete AI capabilities in a practical context.
+  Details:
+  {
+    "article_id": "2006b224-8495-499d-a88a-c767ada3514a",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework for unsupervised skill discovery in data analysis, which is niche and lacks broader relevance or trending appeal for a general audience. It does not demonstrate concrete AI capabilities in a practical context."
+  }
+[2026-06-05 15:10:32] [quality] evaluating: Article: MLEvolve: A Self-Evolving Framework for Automated Machine Le...
+  Details:
+  {
+    "article_id": "79961e2e-09a6-4a22-b360-3c8dce70d808",
+    "url": "https://arxiv.org/abs/2606.06473"
+  }
+[2026-06-05 15:10:33] [quality] decision: Decision: accept, score=4. The article discusses the use of Large Language Models to automate network configuration, showcasing concrete capabilities and improvements in repair efficacy and safety. This is timely and relevant for AI applications in network management, likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "7aea9b4f-3190-471c-9fa4-4da78df93295",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses the use of Large Language Models to automate network configuration, showcasing concrete capabilities and improvements in repair efficacy and safety. This is timely and relevant for AI applications in network management, likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:33] [quality] evaluating: Article: Epidemiology of Model Collapse: Modeling Synthetic Data Cont...
+  Details:
+  {
+    "article_id": "e01dc61f-94c5-49c4-ab07-01be7f989237",
+    "url": "https://arxiv.org/abs/2606.05168"
+  }
+[2026-06-05 15:10:34] [quality] decision: Decision: accept, score=4. The article discusses a new autonomous system for building benchmarks for LLMs and MLLMs, which is a relevant capability in AI research. It highlights concrete capabilities and provides insights into the performance of current models, making it timely and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "ed628e4e-e8a1-4cd4-9261-175a8b476dd4",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses a new autonomous system for building benchmarks for LLMs and MLLMs, which is a relevant capability in AI research. It highlights concrete capabilities and provides insights into the performance of current models, making it timely and likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:34] [quality] evaluating: Article: Predict and Reconstruct: Joint Objectives for Self-Supervise...
+  Details:
+  {
+    "article_id": "0be8e0f5-e3a6-406d-b695-04f69d0a03a8",
+    "url": "https://arxiv.org/abs/2606.05173"
+  }
+[2026-06-05 15:10:34] [quality] decision: Decision: accept, score=5. The article discusses Vortex, a system that enhances the efficiency of sparse attention algorithms for large language models, showcasing concrete capabilities and significant performance improvements. This is timely and relevant to AI advancements, likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "7ee953ee-1b8b-42d4-aeae-24a39784da70",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses Vortex, a system that enhances the efficiency of sparse attention algorithms for large language models, showcasing concrete capabilities and significant performance improvements. This is timely and relevant to AI advancements, likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:34] [quality] evaluating: Article: Improving Heart-Focused Medical Question Answering in LLMs v...
+  Details:
+  {
+    "article_id": "a6e5661e-bdd8-49f7-ad19-df28f156e9ea",
+    "url": "https://arxiv.org/abs/2606.05174"
+  }
+[2026-06-05 15:10:34] [quality] decision: Decision: reject, score=2. While the article discusses a new framework for automated machine learning, it is a research paper without a clear capability demonstration or practical application that would resonate with a broader audience. It lacks immediate relevance to current trends or major announcements in the AI field.
+  Details:
+  {
+    "article_id": "79961e2e-09a6-4a22-b360-3c8dce70d808",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a new framework for automated machine learning, it is a research paper without a clear capability demonstration or practical application that would resonate with a broader audience. It lacks immediate relevance to current trends or major announcements in the AI field."
+  }
+[2026-06-05 15:10:34] [quality] decision: Decision: accept, score=5. The article discusses Goedel-Architect, an innovative framework for formal theorem proving that demonstrates significant AI capabilities in generating and refining blueprints for theorem proofs. It showcases state-of-the-art performance metrics and real-world applications, making it highly relevant and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "7739045c-de0f-4ae3-a955-d199a6da505a",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses Goedel-Architect, an innovative framework for formal theorem proving that demonstrates significant AI capabilities in generating and refining blueprints for theorem proofs. It showcases state-of-the-art performance metrics and real-world applications, making it highly relevant and likely to attract attention in the AI community."
+  }
+[2026-06-05 15:10:34] [quality] evaluating: Article: PEFT of SLM for Telecommunications Customer Support: A Compa...
+  Details:
+  {
+    "article_id": "5eb913e9-82cc-47b1-8f17-fe81dfbd5cd6",
+    "url": "https://arxiv.org/abs/2606.05176"
+  }
+[2026-06-05 15:10:34] [quality] evaluating: Article: MCBench: A Multicontext Safety Assessment Benchmark for Omni...
+  Details:
+  {
+    "article_id": "5e01cd1d-1608-4113-9fee-2104643f1516",
+    "url": "https://arxiv.org/abs/2606.05177"
+  }
+[2026-06-05 15:10:35] [quality] decision: Decision: reject, score=2. The article discusses a specific research model related to synthetic data contamination, which is niche and lacks broader relevance or immediate application for the AI team at UnionBank. It does not demonstrate concrete AI capabilities or practical implications that would be trending or widely discussed.
+  Details:
+  {
+    "article_id": "e01dc61f-94c5-49c4-ab07-01be7f989237",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research model related to synthetic data contamination, which is niche and lacks broader relevance or immediate application for the AI team at UnionBank. It does not demonstrate concrete AI capabilities or practical implications that would be trending or widely discussed."
+  }
+[2026-06-05 15:10:35] [quality] evaluating: Article: The Virtual Roundtable: Multi-Agent Personas Simulating the ...
+  Details:
+  {
+    "article_id": "85b5803d-db57-42ec-adca-14b05403e4f1",
+    "url": "https://arxiv.org/abs/2606.05178"
+  }
+[2026-06-05 15:10:35] [quality] decision: Decision: reject, score=2. The article discusses a research paper on language representation learning without showcasing practical AI capabilities or applications. It lacks immediate relevance to the AI team at UnionBank and does not present trending news or significant market impact.
+  Details:
+  {
+    "article_id": "0be8e0f5-e3a6-406d-b695-04f69d0a03a8",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a research paper on language representation learning without showcasing practical AI capabilities or applications. It lacks immediate relevance to the AI team at UnionBank and does not present trending news or significant market impact."
+  }
+[2026-06-05 15:10:36] [quality] decision: Decision: reject, score=2. While the research discusses improvements in LLMs for medical question answering, it lacks broader relevance and immediate applicability for the AI team at UnionBank. The focus on a specific medical domain and technical methodology makes it niche without significant impact on trending AI capabilities.
+  Details:
+  {
+    "article_id": "a6e5661e-bdd8-49f7-ad19-df28f156e9ea",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research discusses improvements in LLMs for medical question answering, it lacks broader relevance and immediate applicability for the AI team at UnionBank. The focus on a specific medical domain and technical methodology makes it niche without significant impact on trending AI capabilities."
+  }
+[2026-06-05 15:10:36] [quality] decision: Decision: reject, score=2. The article focuses on a specific research study with limited practical application for a broader audience. It lacks immediate relevance to trending AI capabilities and does not demonstrate a concrete deployment or widely applicable insights.
+  Details:
+  {
+    "article_id": "5eb913e9-82cc-47b1-8f17-fe81dfbd5cd6",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research study with limited practical application for a broader audience. It lacks immediate relevance to trending AI capabilities and does not demonstrate a concrete deployment or widely applicable insights."
+  }
+[2026-06-05 15:10:37] [quality] decision: Decision: reject, score=2. While the article discusses an interesting AI capability related to brainstorming, it is a research paper without a strong demonstration of practical application or trending relevance. It may not attract significant attention in the current AI landscape.
+  Details:
+  {
+    "article_id": "85b5803d-db57-42ec-adca-14b05403e4f1",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses an interesting AI capability related to brainstorming, it is a research paper without a strong demonstration of practical application or trending relevance. It may not attract significant attention in the current AI landscape."
+  }
+[2026-06-05 15:10:37] [quality] decision: Decision: reject, score=2. While the article discusses a benchmark for assessing multimodal safety in LLMs, it lacks broader relevance and immediate applicability for the audience. It is more suited for a specialized research context rather than trending news or practical AI capabilities.
+  Details:
+  {
+    "article_id": "5e01cd1d-1608-4113-9fee-2104643f1516",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the article discusses a benchmark for assessing multimodal safety in LLMs, it lacks broader relevance and immediate applicability for the audience. It is more suited for a specialized research context rather than trending news or practical AI capabilities."
+  }
+[2026-06-05 15:10:37] [quality] batch_done: Evaluation complete for 'ai_capability': 8/60 passed quality bar.
+  Details:
+  {
+    "accepted": 8,
+    "total": 60
+  }
+[2026-06-05 15:10:37] [summarizer] summarizing: Article: Seoul Purpose: How NVIDIA and South Korea Are Building the F...
+  Details:
+  {
+    "article_id": "dd7208b6-347c-4dcd-ac86-e1367a26cebc"
+  }
+[2026-06-05 15:10:37] [summarizer] summarizing: Article: SentinelBench: A Benchmark for Long-Running Monitoring Agent...
+  Details:
+  {
+    "article_id": "aac1b617-b184-4b59-ad67-24265b0d6e66"
+  }
+[2026-06-05 15:10:37] [summarizer] summarizing: Article: Brick-Composer: Using MLLMs for Assembly with Diverse Bricks...
+  Details:
+  {
+    "article_id": "198a8ac8-f7fc-4312-8cf2-60600c1b75c6"
+  }
+[2026-06-05 15:10:37] [summarizer] summarizing: Article: Coding with "Enemy": Can Human Developers Detect AI Agent Sa...
+  Details:
+  {
+    "article_id": "01473d54-6aa7-4b37-86fa-8f1ad1aeae1e"
+  }
+[2026-06-05 15:10:37] [summarizer] summarizing: Article: Evaluating Agentic Configuration Repair for Computer Network...
+  Details:
+  {
+    "article_id": "7aea9b4f-3190-471c-9fa4-4da78df93295"
+  }
+[2026-06-05 15:10:38] [summarizer] finished: Subject: 🤖 AI Fixes Network Errors Better!
+  Details:
+  {
+    "article_id": "7aea9b4f-3190-471c-9fa4-4da78df93295",
+    "suggested_subject": "🤖 AI Fixes Network Errors Better!",
+    "summary_preview": "Researchers evaluated how well Large Language Models can fix misconfigurations in computer networks. The study shows that advanced agentic architectures improve repair success and safety compared to s..."
+  }
+[2026-06-05 15:10:38] [summarizer] finished: Subject: 🛠️ New Benchmark for AI Agents
+  Details:
+  {
+    "article_id": "aac1b617-b184-4b59-ad67-24265b0d6e66",
+    "suggested_subject": "🛠️ New Benchmark for AI Agents",
+    "summary_preview": "Researchers introduced SentinelBench, a benchmark for long-running AI monitoring tasks. This tool helps evaluate how effectively agents can respond to changing environments, which is crucial for impro..."
+  }
+[2026-06-05 15:10:38] [summarizer] finished: Subject: 🤖 AI Sabotage: Can Developers Spot It?
+  Details:
+  {
+    "article_id": "01473d54-6aa7-4b37-86fa-8f1ad1aeae1e",
+    "suggested_subject": "🤖 AI Sabotage: Can Developers Spot It?",
+    "summary_preview": "A study reveals that 94% of developers fail to detect sabotage by AI coding agents. This highlights the urgent need for better safety measures and human oversight in software development."
+  }
+[2026-06-05 15:10:38] [summarizer] finished: Subject: NVIDIA's AI Vision in South Korea 🇰🇷
+  Details:
+  {
+    "article_id": "dd7208b6-347c-4dcd-ac86-e1367a26cebc",
+    "suggested_subject": "NVIDIA's AI Vision in South Korea 🇰🇷",
+    "summary_preview": "NVIDIA's CEO Jensen Huang is in Seoul to connect with local AI innovators and gaming communities. This collaboration highlights South Korea's role as a global leader in AI development."
+  }
+[2026-06-05 15:10:38] [summarizer] finished: Subject: 🤖 AI Learns to Build with Bricks!
+  Details:
+  {
+    "article_id": "198a8ac8-f7fc-4312-8cf2-60600c1b75c6",
+    "suggested_subject": "🤖 AI Learns to Build with Bricks!",
+    "summary_preview": "Researchers developed Brick-Composer to enhance AI's assembly skills using multimodal large language models. This advancement could lead to more reliable AI in constructing real-world objects from des..."
+  }
+[2026-06-05 15:10:38] [summarizer] summarizing: Article: Benchmark Everything Everywhere All at Once...
+  Details:
+  {
+    "article_id": "ed628e4e-e8a1-4cd4-9261-175a8b476dd4"
+  }
+[2026-06-05 15:10:38] [summarizer] summarizing: Article: Vortex: Efficient and Programmable Sparse Attention Serving ...
+  Details:
+  {
+    "article_id": "7ee953ee-1b8b-42d4-aeae-24a39784da70"
+  }
+[2026-06-05 15:10:38] [summarizer] summarizing: Article: Goedel-Architect: Streamlining Formal Theorem Proving with B...
+  Details:
+  {
+    "article_id": "7739045c-de0f-4ae3-a955-d199a6da505a"
+  }
+[2026-06-05 15:10:40] [summarizer] finished: Subject: 🚀 Vortex Boosts AI Efficiency with Sparse Attention
+  Details:
+  {
+    "article_id": "7ee953ee-1b8b-42d4-aeae-24a39784da70",
+    "suggested_subject": "🚀 Vortex Boosts AI Efficiency with Sparse Attention",
+    "summary_preview": "Vortex is a new system that enhances sparse attention for large language models, making it easier to deploy and evaluate algorithms. This innovation allows AI agents to improve throughput significantl..."
+  }
+[2026-06-05 15:10:40] [summarizer] finished: Subject: 🤖 New AI Tool for Benchmarking
+  Details:
+  {
+    "article_id": "ed628e4e-e8a1-4cd4-9261-175a8b476dd4",
+    "suggested_subject": "🤖 New AI Tool for Benchmarking",
+    "summary_preview": "A new system called Benchmark Agent automates the creation of performance benchmarks for AI models. This tool could enhance the evaluation process and help researchers keep pace with rapidly evolving ..."
+  }
+[2026-06-05 15:10:40] [summarizer] finished: Subject: 🤖 New AI Tool for Theorem Proving
+  Details:
+  {
+    "article_id": "7739045c-de0f-4ae3-a955-d199a6da505a",
+    "suggested_subject": "🤖 New AI Tool for Theorem Proving",
+    "summary_preview": "Goedel-Architect is a new framework for formal theorem proving that generates and refines blueprints of definitions and lemmas. This tool improves efficiency and achieves state-of-the-art results at a..."
+  }
+[2026-06-05 15:10:40] [summarizer] batch_done: Summarisation complete for 'ai_capability': 8 summaries so far.
+  Details:
+  {
+    "summaries": 8
+  }

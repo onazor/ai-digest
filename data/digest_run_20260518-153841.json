@@ -1,0 +1,777 @@
+{
+  "run_id": "20260518-153841",
+  "run_started_at": "2026-05-18T15:38:41.764032+08:00",
+  "categories": [
+    "ai_trends",
+    "ai_innovations",
+    "ai_research",
+    "genai_tips",
+    "ai_capability"
+  ],
+  "collector_type": "deep",
+  "articles": [
+    {
+      "id": "19509627-fc4b-436b-97aa-6c7dfd10c3fc",
+      "category": "ai_trends",
+      "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+      "url": "https://arxiv.org/abs/2605.15204",
+      "snippet": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "content": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "43ce5429-4900-4895-87cd-5eb9505709b0",
+      "category": "ai_trends",
+      "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+      "url": "https://arxiv.org/abs/2605.15205",
+      "snippet": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "content": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "44d578c4-e185-4a20-a0d7-8034c9155f0b",
+      "category": "ai_trends",
+      "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+      "url": "https://arxiv.org/abs/2605.15215",
+      "snippet": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "content": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "bcf47ff2-b8fb-453d-9029-7ca182eb703f",
+      "category": "ai_trends",
+      "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+      "url": "https://arxiv.org/abs/2605.15217",
+      "snippet": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "content": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "3c89c568-a313-48d3-b3a2-8a95c60e1b9c",
+      "category": "ai_trends",
+      "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+      "url": "https://arxiv.org/abs/2605.15218",
+      "snippet": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "content": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "fcac8a6f-339a-4796-815d-43c2efa3ee9e",
+      "category": "ai_trends",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "snippet": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "content": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "5d7bfa92-e5aa-47e0-a699-b443e3b4a2e1",
+      "category": "ai_trends",
+      "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2605.15224",
+      "snippet": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "content": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "11ca78c4-628c-4506-8d00-d5e24487139c",
+      "category": "ai_trends",
+      "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol",
+      "url": "https://arxiv.org/abs/2605.15227",
+      "snippet": "arXiv:2605.15227v1 Announce Type: new Abstract: Self-driving laboratories (SDLs) have attracted increasing attention as a means of accelerating scientific discovery; however, developing SDL software remains technically demanding. To improve accessibility, orchestration software frameworks have been proposed to coordinate SDL components. Nevertheless, existing frameworks are primarily designed for human interaction and do not provide standardized interfaces suitable for AI agents. In this work, we propose an SDL software architecture based on the Model Context Protocol (MCP), in which all SDL functionalities are exposed through MCP servers. Following this design principle, we introduce an MCP-based SDL orchestrator, named NIMO Controller. It provides a visual programming interface automatically generated through MCP-based tool discovery, allowing human users to design experimental workflows without writing code. The same MCP backend can also be accessed by AI agents, providing a unified interface for both human users and AI agents. We demonstrate the proposed system through a case study on a color-matching SDL. The results validate the usability of the proposed MCP-based SDL architecture.",
+      "content": "arXiv:2605.15227v1 Announce Type: new Abstract: Self-driving laboratories (SDLs) have attracted increasing attention as a means of accelerating scientific discovery; however, developing SDL software remains technically demanding. To improve accessibility, orchestration software frameworks have been proposed to coordinate SDL components. Nevertheless, existing frameworks are primarily designed for human interaction and do not provide standardized interfaces suitable for AI agents. In this work, we propose an SDL software architecture based on the Model Context Protocol (MCP), in which all SDL functionalities are exposed through MCP servers. Following this design principle, we introduce an MCP-based SDL orchestrator, named NIMO Controller. It provides a visual programming interface automatically generated through MCP-based tool discovery, allowing human users to design experimental workflows without writing code. The same MCP backend can also be accessed by AI agents, providing a unified interface for both human users and AI agents. We demonstrate the proposed system through a case study on a color-matching SDL. The results validate the usability of the proposed MCP-based SDL architecture.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:38:57.482881+08:00"
+    },
+    {
+      "id": "b6cc75d5-4803-468e-87e0-b055c7d44c79",
+      "category": "ai_innovations",
+      "title": "DeepSlide: From Artifacts to Presentation Delivery",
+      "url": "https://arxiv.org/abs/2605.15202",
+      "snippet": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "content": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "81c956f8-49b8-4bdd-bc9c-adc08c42645a",
+      "category": "ai_innovations",
+      "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+      "url": "https://arxiv.org/abs/2605.15204",
+      "snippet": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "content": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "20d80f6c-550a-4b38-8551-17b818ba4f34",
+      "category": "ai_innovations",
+      "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+      "url": "https://arxiv.org/abs/2605.15205",
+      "snippet": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "content": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "0653e416-b143-4bd3-a49a-b8d5c1e5254f",
+      "category": "ai_innovations",
+      "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+      "url": "https://arxiv.org/abs/2605.15215",
+      "snippet": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "content": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "7617e5a1-269d-4810-81dd-a079d1245a4a",
+      "category": "ai_innovations",
+      "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+      "url": "https://arxiv.org/abs/2605.15217",
+      "snippet": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "content": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "b51ae4af-40fd-4e10-acf1-75115e8c17d9",
+      "category": "ai_innovations",
+      "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+      "url": "https://arxiv.org/abs/2605.15218",
+      "snippet": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "content": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "75bc0e45-97d3-4bb6-a9d0-4ec11dfb430b",
+      "category": "ai_innovations",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "snippet": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "content": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "c838e54e-2ccc-4ebb-97c4-9fdcfd153cbb",
+      "category": "ai_innovations",
+      "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2605.15224",
+      "snippet": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "content": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:12.143475+08:00"
+    },
+    {
+      "id": "5079296b-6c96-4953-9203-91d9f9d99d17",
+      "category": "ai_research",
+      "title": "DeepSlide: From Artifacts to Presentation Delivery",
+      "url": "https://arxiv.org/abs/2605.15202",
+      "snippet": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "content": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "4bf061b1-a52b-47e9-b2dd-6b6a0cc0c8dd",
+      "category": "ai_research",
+      "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+      "url": "https://arxiv.org/abs/2605.15204",
+      "snippet": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "content": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "61921237-36b5-4939-b378-a652bcef79c1",
+      "category": "ai_research",
+      "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+      "url": "https://arxiv.org/abs/2605.15205",
+      "snippet": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "content": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "4b548ca7-ac03-43ef-9b2f-878fe6350ba1",
+      "category": "ai_research",
+      "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+      "url": "https://arxiv.org/abs/2605.15215",
+      "snippet": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "content": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "54f386ba-7385-4f34-9cd6-740a3023df55",
+      "category": "ai_research",
+      "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+      "url": "https://arxiv.org/abs/2605.15217",
+      "snippet": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "content": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "0f1a6429-e836-4bae-8c70-b5ab6a0a5917",
+      "category": "ai_research",
+      "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+      "url": "https://arxiv.org/abs/2605.15218",
+      "snippet": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "content": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "029d1199-c4fa-464f-8d57-4feb85521e88",
+      "category": "ai_research",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "snippet": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "content": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "769376d6-a43a-4c6c-af62-3b1dfcd45791",
+      "category": "ai_research",
+      "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2605.15224",
+      "snippet": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "content": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:28.222788+08:00"
+    },
+    {
+      "id": "3a20ed4d-dfa9-4bb2-b4c9-ba4595afe9b0",
+      "category": "genai_tips",
+      "title": "DeepSlide: From Artifacts to Presentation Delivery",
+      "url": "https://arxiv.org/abs/2605.15202",
+      "snippet": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "content": "arXiv:2605.15202v1 Announce Type: new Abstract: Presentations are a primary medium for scholarly communication, yet most AI slide generators optimize the artifact (a visually plausible deck) while under-optimizing the delivery process (pacing, narrative, and presentation preparation). We present DeepSlide, a human-in-the-loop multi-agent system that supports preparing the full presentation process, from requirement elicitation and time-budgeted narrative planning, to evidence-grounded slide--script generation, attention augmentation, and rehearsal support. DeepSlide integrates (i) a controllable logical-chain planner with per-node time budgets, (ii) a lightweight content-tree retriever for grounding, (iii) Markov-style sequential rendering with style inheritance, and (iv) sandboxed execution with minimal repair to ensure renderability. We further introduce a dual-scoreboard benchmark that cleanly separates static artifact quality from dynamic delivery excellence. Across 20 domains and diverse audience profiles, DeepSlide matches strong baselines on artifact quality while consistently achieving larger gains on delivery metrics, improving narrative flow, pacing precision, and slide--script synergy with clearer attention guidance.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "73f57a2b-6b30-4d9e-9cf6-7e5b6101cd03",
+      "category": "genai_tips",
+      "title": "SDOF: Taming the Alignment Tax in Multi-Agent Orchestration with State-Constrained Dispatch",
+      "url": "https://arxiv.org/abs/2605.15204",
+      "snippet": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "content": "arXiv:2605.15204v1 Announce Type: new Abstract: Multi-agent orchestration frameworks such as LangChain, LangGraph, and CrewAI route tasks through graph-based pipelines but do not enforce the stage constraints that govern real business processes. We present SDOF, a framework that treats multi-agent execution as a constrained state machine. SDOF operates through two primary defensive layers, implemented by three components: (1) an Online-RLHF Specialized Intent Router trained via Generative Reward Modeling (GRPO) and (2) a StateAwareDispatcher with GoalStage finite-automaton checks and precondition/postcondition SkillRegistry validation for auditable execution control. On a recruitment system backed by the Beisen iTalent platform (6000+ enterprises), 185 expert-curated scenarios trigger 1671 live API calls. Our GSPO-aligned 7B Intent Router achieves higher joint accuracy than zero-shot GPT-4o on this FSM-constrained adversarial routing benchmark (80.9% versus 48.9%). In end-to-end execution, SDOF reaches 86.5% task completion (95% confidence interval 80.8 to 90.7) and blocks all 22 operations in the injection, illegal HR subset. Under a broader message-level blocking audit, SDOF attains precision 100% and recall 88%, expert agreement kappa=0.94. A separate evaluation on 960 SGD-derived dialogues spanning 8 service domains surfaces 201 stage-order conflicts under our FSM mapping, 41 of which arise in the normal split. This arXiv version reports the current validated scope; extended multi-seed training comparisons and deeper workflow evaluations will be released in a subsequent update.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "f5798c7d-0aff-4881-a45f-0b54f65d8a57",
+      "category": "genai_tips",
+      "title": "Does Theory of Mind Improvement Really Benefit Human-AI Interactions? Empirical Findings from Interactive Evaluations",
+      "url": "https://arxiv.org/abs/2605.15205",
+      "snippet": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "content": "arXiv:2605.15205v1 Announce Type: new Abstract: Improving the Theory of Mind (ToM) capability of Large Language Models (LLMs) is crucial for effective social interactions between these AI models and humans. However, the existing benchmarks often measure ToM capability improvement through story-reading, multiple-choice questions from a third-person perspective, while ignoring the first-person, dynamic, and open-ended nature of human-AI (HAI) interactions. To directly examine how ToM improvement techniques benefit HAI interactions, we first proposed the new paradigm of interactive ToM evaluation with both perspective and metric shifts. Next, following the paradigm, we conducted a systematic study of four representative ToM enhancement techniques using both four real-world datasets and a user study, covering both goal-oriented tasks (e.g., coding, math) and experience-oriented tasks (e.g., counseling). Our findings reveal that improvements on static benchmarks do not always translate to better performance in dynamic HAI interactions. This paper offers critical insights into ToM evaluation, showing the necessity of interaction-based assessments in developing next-generation, socially aware LLMs for HAI symbiosis.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "2fd99cd9-1b92-40ca-bc1e-c3d427b36b9e",
+      "category": "genai_tips",
+      "title": "SkillSmith: Compiling Agent Skills into Boundary-Guided Runtime Interfaces",
+      "url": "https://arxiv.org/abs/2605.15215",
+      "snippet": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "content": "arXiv:2605.15215v1 Announce Type: new Abstract: Recently, skills have been widely adopted in large language model (LLM)-based agent systems across various domains. In existing frameworks, skills are typically injected into the agent reasoning loop as contextual guidance once matched to a runtime task, enabling specialized task-solving capabilities. We find that this execution paradigm introduces two major sources of redundancy: irrelevant context injection and repeated skill-specific reasoning and planning. To this end, we propose SkillSmith, a boundary-first compiler-runtime framework that compiles skill packages offline into minimal executable interfaces. By extracting fine-grained operational boundaries from skills, SkillSmith enables agents to dynamically access and execute only the relevant components at runtime, thereby minimizing unnecessary context injection and redundant reasoning overhead. In the evaluation on SkillsBench benchmark, SkillSmith reduces solve-stage token usage by 57.44%, thinking iterations by 42.99%, solve time by 50.57% (2.02x faster), and token-proportional monetary cost by 57.44% compared with using raw-skills. Moreover, compiled artifacts produced by a stronger model can be reused by a smaller or more efficient runtime model, improving task accuracy in cases where raw skill interpretation fails. The source code and data are available at https://github.com/AetherHeart-AI/Aeloon.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "4394204b-6d7a-429a-b21d-8d4a73460b9e",
+      "category": "genai_tips",
+      "title": "Fair outputs, Biased Internals: Causal Potency and Asymmetry of Latent Bias in LLMs for High-Stakes Decisions",
+      "url": "https://arxiv.org/abs/2605.15217",
+      "snippet": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "content": "arXiv:2605.15217v1 Announce Type: new Abstract: Instruction-tuned language models exhibit behavioural fairness in high-stakes decisions while retaining biased associations in their internal representations. However, whether these suppressed representations can affect model outputs - and whether such causal potency is symmetric across demographic groups - remains unknown. We investigate the use of open-weight models for mortgage underwriting using matched applications that differ only in racially-associated names and reveal a critical disconnect: models show no output-level bias, yet retain and amplify demographic representations across model layers. Through activation steering and novel cross-layer interventions, we demonstrate that this suppressed information is decision-relevant: when reinjected at critical layers, it produces near-complete decision reversals. Critically, this latent bias is asymmetric - steering interventions affect decisions in one demographic direction, while producing minimal effects in reverse - and susceptible to adversarial prompt engineering and parameter-efficient fine-tuning. These findings demonstrate that behavioural audits focused on outputs are insufficient: fair outputs can mask exploitable internal biases. They also motivate dual-layer testing frameworks combining output evaluation with representational analysis for AI governance in high-stakes decisions.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "35ad2fee-032b-415f-a9f8-d9c412463bf0",
+      "category": "genai_tips",
+      "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+      "url": "https://arxiv.org/abs/2605.15218",
+      "snippet": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "content": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "10ff2b94-5dcb-426a-bcd9-d1a85060cca5",
+      "category": "genai_tips",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "snippet": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "content": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "da6e66e7-d535-49d2-a1e0-21325c36855f",
+      "category": "genai_tips",
+      "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2605.15224",
+      "snippet": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "content": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:38.923948+08:00"
+    },
+    {
+      "id": "c0a7d23c-0374-4d3d-999d-1bbb68597446",
+      "category": "ai_capability",
+      "title": "CAX-Agent: A Lightweight Agent Harness for Reliable APDL Automation",
+      "url": "https://arxiv.org/abs/2605.15218",
+      "snippet": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "content": "arXiv:2605.15218v1 Announce Type: new Abstract: Large language models deployed for MAPDL finite-element simulation face practical reliability challenges: without structured execution control, tool encapsulation, and fault recovery, outputs may be inconsistent and task failures are common. The Agent Harness paradigm addresses this by inserting domain-specific orchestration middleware that manages tool lifecycles, workflow state, and recovery escalation. This paper presents the architecture of CAX-Agent, a lightweight agent harness purpose-built for MAPDL automation, and empirically evaluates one of its core components -- the recovery policy.CAX-Agent organizes execution into three layers -- LLM service, agent harness, and solver backend -- with a recovery ladder that escalates from deterministic rule patching through model-driven regeneration to context enrichment and human intervention. We evaluate three recovery strategies (no_recovery, rule_only, and model_only) on 50 standard structural benchmarks with three repeated runs per strategy (450 case-runs total). Two independent human raters score task completion under blind conditions; inter-rater agreement is strong (quadratic weighted Cohen's kappa = 0.84, 96 percent of score pairs within one point). Model_only achieves the best completion rate (0.9267), task score (3.59/4), total score (9.16/10), and zero-intervention rate (0.84), outperforming rule_only (0.7733, 3.17/4, 7.03/10, 0.00) and no_recovery (0.6933, 2.74/4, 5.60/10, 0.00) with large effect sizes (Cliff's delta = 0.81-0.87). The benchmark uses deliberately simple geometries to isolate recovery-policy effects; we discuss the scope of these findings and directions for broader validation.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "f135a623-270e-4121-b705-41571930e141",
+      "category": "ai_capability",
+      "title": "NOVA: Fundamental Limits of Knowledge Discovery Through AI",
+      "url": "https://arxiv.org/abs/2605.15219",
+      "snippet": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "content": "arXiv:2605.15219v1 Announce Type: new Abstract: Can AI systems discover genuinely new knowledge through iterative self improvement, and if so, at what cost? We introduce the NOVA framework, which models the common ``generate, verify, accumulate, retrain'' loop as an adaptive sampling process over a knowledge space. We identify sufficient conditions under which accumulated genuine knowledge eventually covers a finite domain, and show how their violations produce distinct failure modes: contamination, forgetting, exploration failure, and acceptance failure. We then analyze imperfect verification and identify a contamination trap: as easy-to-find knowledge is exhausted, the model mass assigned to new valid artifacts shrinks, so even small false-positive rates can cause invalid artifacts to enter the knowledge base faster than genuine discoveries. We clarify that Good--Turing estimation is a local batch-diversity diagnostic, not an estimator of the historically undiscovered valid mass that governs long-term discovery. Under a separate tail-equivalence assumption relating the model's effective discovery distribution to a Zipf law with exponent $\\alpha>1$, we prove that the cumulative generation cost required to obtain $D$ distinct genuine discoveries satisfies $R_{\\mathrm{cum}}(D)=\\Theta(c_{\\mathrm{gen}}D^\\alpha)$, where $c_{\\mathrm{gen}}$ is the per-candidate generation cost. This scaling law quantifies asymptotic diminishing returns as the discovery frontier advances. Finally, we formalize human amplification through guidance, generation, and verification, explaining why expert input is most valuable near autonomous exploration barriers.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "731f1965-61ab-431e-9913-651d33a1cf2f",
+      "category": "ai_capability",
+      "title": "ICRL: Learning to Internalize Self-Critique with Reinforcement Learning",
+      "url": "https://arxiv.org/abs/2605.15224",
+      "snippet": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "content": "arXiv:2605.15224v1 Announce Type: new Abstract: Large language model-based agents make mistakes, yet critique can often guide the same model toward correct behavior. However, when critique is removed, the model may fail again on the same query, indicating that it has not internalized the critique's guidance into its underlying capability. Meanwhile, a frozen critic cannot improve its feedback quality over time, limiting the potential for iterative self-improvement. To address this, we propose learning to internalize self-critique with reinforcement learning(ICRL), a novel framework that jointly trains a solver and a critic from a shared backbone to convert critique-induced success into unassisted solver ability. The critic is rewarded based on the solver's subsequent performance gain, incentivizing actionable feedback. To address the distribution shift between critique-conditioned and critique-free behavior, ICRL introduces a distribution-calibration re-weighting ratio that selectively transfers critique-guided improvements compatible with the solver's own prompt distribution. Additionally, a role-wise group advantage estimation stabilizes joint optimization across the two roles. Together, these mechanisms ensure that the solver learns to improve itself without external critique, rather than becoming dependent on critique-conditioned behavior. We evaluate ICRL on diverse benchmarks spanning agentic and mathematical reasoning tasks, using Qwen3-4B and Qwen3-8B as backbones. Results show consistent improvements, with average gains of 6.4 points over GRPO on agentic tasks, and 7.0 points on mathematical reasoning. Notably, the learned 8B critic is comparable to 32B critics while using substantially fewer tokens. The code is available at https://github.com/brick-pid/ICRL.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "374c2c39-15f0-4e11-bb73-d910c4b47ec2",
+      "category": "ai_capability",
+      "title": "NIMO Controller: a self-driving laboratory orchestrator based on the Model Context Protocol",
+      "url": "https://arxiv.org/abs/2605.15227",
+      "snippet": "arXiv:2605.15227v1 Announce Type: new Abstract: Self-driving laboratories (SDLs) have attracted increasing attention as a means of accelerating scientific discovery; however, developing SDL software remains technically demanding. To improve accessibility, orchestration software frameworks have been proposed to coordinate SDL components. Nevertheless, existing frameworks are primarily designed for human interaction and do not provide standardized interfaces suitable for AI agents. In this work, we propose an SDL software architecture based on the Model Context Protocol (MCP), in which all SDL functionalities are exposed through MCP servers. Following this design principle, we introduce an MCP-based SDL orchestrator, named NIMO Controller. It provides a visual programming interface automatically generated through MCP-based tool discovery, allowing human users to design experimental workflows without writing code. The same MCP backend can also be accessed by AI agents, providing a unified interface for both human users and AI agents. We demonstrate the proposed system through a case study on a color-matching SDL. The results validate the usability of the proposed MCP-based SDL architecture.",
+      "content": "arXiv:2605.15227v1 Announce Type: new Abstract: Self-driving laboratories (SDLs) have attracted increasing attention as a means of accelerating scientific discovery; however, developing SDL software remains technically demanding. To improve accessibility, orchestration software frameworks have been proposed to coordinate SDL components. Nevertheless, existing frameworks are primarily designed for human interaction and do not provide standardized interfaces suitable for AI agents. In this work, we propose an SDL software architecture based on the Model Context Protocol (MCP), in which all SDL functionalities are exposed through MCP servers. Following this design principle, we introduce an MCP-based SDL orchestrator, named NIMO Controller. It provides a visual programming interface automatically generated through MCP-based tool discovery, allowing human users to design experimental workflows without writing code. The same MCP backend can also be accessed by AI agents, providing a unified interface for both human users and AI agents. We demonstrate the proposed system through a case study on a color-matching SDL. The results validate the usability of the proposed MCP-based SDL architecture.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "abffd160-4d15-45c2-88b7-a6a69c148b90",
+      "category": "ai_capability",
+      "title": "Verifiable Agentic Infrastructure: Proof-Derived Authorization for Sovereign AI Systems",
+      "url": "https://arxiv.org/abs/2605.15228",
+      "snippet": "arXiv:2605.15228v1 Announce Type: new Abstract: Modern cloud and enterprise systems rely on identity-centric authorization, assuming that callers possessing valid credentials are safe to execute commands. The emergence of autonomous AI agents invalidates this assumption: agents can generate syntactically valid but semantically unsafe actions, making standing privileges a significant operational risk. This risk becomes especially acute in sovereign AI systems, where autonomous agents may interact with cloud infrastructure, regulated data, financial workflows, and national-scale digital services. Governed mutation substrates reduce this risk by interposing on agent actions: agents submit intents, infrastructure evaluates context and policy, and execution is mediated. However, this shifts the trust boundary: how can the decision to authorize an intent be made verifiable, distributed, and replayable? We introduce a Distributed Trust Framework (DTF), a verification framework for governed mutation systems that computes execution authority from structured, verifiable artifacts. DTF introduces a Justification Proof to encode the admissibility basis of an action, a consensus model for independent evaluation, an ephemeral Execution Identity derived from the approved proof, and an append-only Evidence Chain that preserves the authorization lifecycle. Under stated substrate assumptions, this architecture enforces a compact authorization invariant: no high-stakes execution without a proof object, no derived authority without consensus, and no valid mutation detached from evidence. We define the model, instantiate it over an OpenKedge-based governed mutation substrate, and show how it maps onto cloud-native environments. By shifting authorization from standing identity to proof-derived authority, DTF provides an infrastructure foundation for making agentic execution governable, auditable, and bounded in sovereign AI deployments.",
+      "content": "arXiv:2605.15228v1 Announce Type: new Abstract: Modern cloud and enterprise systems rely on identity-centric authorization, assuming that callers possessing valid credentials are safe to execute commands. The emergence of autonomous AI agents invalidates this assumption: agents can generate syntactically valid but semantically unsafe actions, making standing privileges a significant operational risk. This risk becomes especially acute in sovereign AI systems, where autonomous agents may interact with cloud infrastructure, regulated data, financial workflows, and national-scale digital services. Governed mutation substrates reduce this risk by interposing on agent actions: agents submit intents, infrastructure evaluates context and policy, and execution is mediated. However, this shifts the trust boundary: how can the decision to authorize an intent be made verifiable, distributed, and replayable? We introduce a Distributed Trust Framework (DTF), a verification framework for governed mutation systems that computes execution authority from structured, verifiable artifacts. DTF introduces a Justification Proof to encode the admissibility basis of an action, a consensus model for independent evaluation, an ephemeral Execution Identity derived from the approved proof, and an append-only Evidence Chain that preserves the authorization lifecycle. Under stated substrate assumptions, this architecture enforces a compact authorization invariant: no high-stakes execution without a proof object, no derived authority without consensus, and no valid mutation detached from evidence. We define the model, instantiate it over an OpenKedge-based governed mutation substrate, and show how it maps onto cloud-native environments. By shifting authorization from standing identity to proof-derived authority, DTF provides an infrastructure foundation for making agentic execution governable, auditable, and bounded in sovereign AI deployments.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "514276f4-68aa-4241-80ab-5819e064e72a",
+      "category": "ai_capability",
+      "title": "Solvita: Enhancing Large Language Models for Competitive Programming via Agentic Evolution",
+      "url": "https://arxiv.org/abs/2605.15301",
+      "snippet": "arXiv:2605.15301v1 Announce Type: new Abstract: Large language models (LLMs) still struggle with the rigorous reasoning demands of hard competitive programming. While recent multi-agent frameworks attempt to bridge this reliability gap, they remain fundamentally stateless: they rely on static retrieval and discard the valuable problem-solving and debugging experience gained from previous tasks. To address this, we present Solvita, an agentic evolution framework that enables continuous learning without requiring weight updates to the underlying LLM. Solvita reorganizes problem-solving into a closed-loop system of strategy selection, program synthesis, certified supervision, and targeted hacking, executed by four specialized agents: Planner, Solver, Oracle, and Hacker. Crucially, each agent is paired with a trainable, graph-structured knowledge network. As the system operates, outcome signals, such as pass/fail verdicts, test certification quality, and adversarial vulnerabilities discovered by the Hacker, are recast as reinforcement learning updates to these network weights. This allows the agents to dynamically route future queries based on past successes and failures, effectively accumulating transferable reasoning experience over time. Evaluated across CodeContests, APPS, AetherCode, and live Codeforces rounds, Solvita establishes a new state-of-the-art among code-generation agents, outperforming existing multi-agent pipelines and nearly doubling the accuracy of single-pass baselines.",
+      "content": "arXiv:2605.15301v1 Announce Type: new Abstract: Large language models (LLMs) still struggle with the rigorous reasoning demands of hard competitive programming. While recent multi-agent frameworks attempt to bridge this reliability gap, they remain fundamentally stateless: they rely on static retrieval and discard the valuable problem-solving and debugging experience gained from previous tasks. To address this, we present Solvita, an agentic evolution framework that enables continuous learning without requiring weight updates to the underlying LLM. Solvita reorganizes problem-solving into a closed-loop system of strategy selection, program synthesis, certified supervision, and targeted hacking, executed by four specialized agents: Planner, Solver, Oracle, and Hacker. Crucially, each agent is paired with a trainable, graph-structured knowledge network. As the system operates, outcome signals, such as pass/fail verdicts, test certification quality, and adversarial vulnerabilities discovered by the Hacker, are recast as reinforcement learning updates to these network weights. This allows the agents to dynamically route future queries based on past successes and failures, effectively accumulating transferable reasoning experience over time. Evaluated across CodeContests, APPS, AetherCode, and live Codeforces rounds, Solvita establishes a new state-of-the-art among code-generation agents, outperforming existing multi-agent pipelines and nearly doubling the accuracy of single-pass baselines.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "4426e1f1-c074-4e6f-8752-533163f92143",
+      "category": "ai_capability",
+      "title": "SMCEvolve: Principled Scientific Discovery via Sequential Monte Carlo Evolution",
+      "url": "https://arxiv.org/abs/2605.15308",
+      "snippet": "arXiv:2605.15308v1 Announce Type: new Abstract: LLM-driven program evolution has emerged as a powerful tool for automated scientific discovery, yet existing frameworks offer no principled guide for designing their individual components and provide no guarantee that the search converges. We introduce SMCEvolve, which recasts program search as sampling from a reward-tilted target distribution and approximates it with a Sequential Monte Carlo (SMC) sampler. From this view, three core mechanisms emerge as principled components: adaptive parent resampling, mixture of mutation with acceptance, and automatic convergence control. We further provide a finite-sample complexity analysis that bounds the LLM-call budget required to reach a target approximation error. Across math, algorithm efficiency, symbolic regression, and end-to-end ML research benchmarks, SMCEvolve surpasses state-of-the-art evolving systems while using fewer LLM calls under self-determined termination. The code is available at https://github.com/kongwanbianjinyu/SMCEvolve.",
+      "content": "arXiv:2605.15308v1 Announce Type: new Abstract: LLM-driven program evolution has emerged as a powerful tool for automated scientific discovery, yet existing frameworks offer no principled guide for designing their individual components and provide no guarantee that the search converges. We introduce SMCEvolve, which recasts program search as sampling from a reward-tilted target distribution and approximates it with a Sequential Monte Carlo (SMC) sampler. From this view, three core mechanisms emerge as principled components: adaptive parent resampling, mixture of mutation with acceptance, and automatic convergence control. We further provide a finite-sample complexity analysis that bounds the LLM-call budget required to reach a target approximation error. Across math, algorithm efficiency, symbolic regression, and end-to-end ML research benchmarks, SMCEvolve surpasses state-of-the-art evolving systems while using fewer LLM calls under self-determined termination. The code is available at https://github.com/kongwanbianjinyu/SMCEvolve.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    },
+    {
+      "id": "59dcc4ea-153b-4428-a959-db4b16621bcb",
+      "category": "ai_capability",
+      "title": "Ensemble Monitoring for AI Control: Diverse Signals Outweigh More Compute",
+      "url": "https://arxiv.org/abs/2605.15377",
+      "snippet": "arXiv:2605.15377v1 Announce Type: new Abstract: As AI systems are increasingly deployed in autonomous agentic settings at scale, it is important to ensure the actions they take are safe and aligned with user intent. Monitoring agent actions is a key safety mechanism, yet reliable monitors remain difficult to build and the scale of these systems makes human oversight impractical. We show that combining signals from diverse monitors into an ensemble improves detection of misaligned actions. We build 12 GPT-4.1-Mini monitors using both prompting and fine-tuning strategies. We evaluate them on coding tasks where candidate solutions pass standard tests but fail on adversarial inputs. In this setting, diverse ensembles outperform both individual monitors and homogeneous ensembles. Our best 3-monitor ensemble achieves 2.4x greater detection performance gain compared to an ensemble composed of three identical monitors, with the same ensemble performing strongly on an independent dataset. We contend that these results show that diversity - not scale - drives gains. The best ensembles combine strong individual performance with low correlation between monitors. Furthermore, fine-tuned monitors appear in every top-performing ensemble and maintain this advantage on out-of-distribution attack types, suggesting that fine-tuning enables detection capabilities that prompting alone does not elicit. These results support ensemble monitoring as a practical AI control strategy for safety gains at reasonable inference costs.",
+      "content": "arXiv:2605.15377v1 Announce Type: new Abstract: As AI systems are increasingly deployed in autonomous agentic settings at scale, it is important to ensure the actions they take are safe and aligned with user intent. Monitoring agent actions is a key safety mechanism, yet reliable monitors remain difficult to build and the scale of these systems makes human oversight impractical. We show that combining signals from diverse monitors into an ensemble improves detection of misaligned actions. We build 12 GPT-4.1-Mini monitors using both prompting and fine-tuning strategies. We evaluate them on coding tasks where candidate solutions pass standard tests but fail on adversarial inputs. In this setting, diverse ensembles outperform both individual monitors and homogeneous ensembles. Our best 3-monitor ensemble achieves 2.4x greater detection performance gain compared to an ensemble composed of three identical monitors, with the same ensemble performing strongly on an independent dataset. We contend that these results show that diversity - not scale - drives gains. The best ensembles combine strong individual performance with low correlation between monitors. Furthermore, fine-tuned monitors appear in every top-performing ensemble and maintain this advantage on out-of-distribution attack types, suggesting that fine-tuning enables detection capabilities that prompting alone does not elicit. These results support ensemble monitoring as a practical AI control strategy for safety gains at reasonable inference costs.",
+      "source": "cs.AI updates on arXiv.org",
+      "collected_at": "2026-05-18T15:39:51.412654+08:00"
+    }
+  ],
+  "evaluations": [
+    {
+      "article_id": "3c89c568-a313-48d3-b3a2-8a95c60e1b9c",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "43ce5429-4900-4895-87cd-5eb9505709b0",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "44d578c4-e185-4a20-a0d7-8034c9155f0b",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "19509627-fc4b-436b-97aa-6c7dfd10c3fc",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "bcf47ff2-b8fb-453d-9029-7ca182eb703f",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "fcac8a6f-339a-4796-815d-43c2efa3ee9e",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "5d7bfa92-e5aa-47e0-a699-b443e3b4a2e1",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "11ca78c4-628c-4506-8d00-d5e24487139c",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "b6cc75d5-4803-468e-87e0-b055c7d44c79",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "81c956f8-49b8-4bdd-bc9c-adc08c42645a",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "20d80f6c-550a-4b38-8551-17b818ba4f34",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "0653e416-b143-4bd3-a49a-b8d5c1e5254f",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "7617e5a1-269d-4810-81dd-a079d1245a4a",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "c838e54e-2ccc-4ebb-97c4-9fdcfd153cbb",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "b51ae4af-40fd-4e10-acf1-75115e8c17d9",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "75bc0e45-97d3-4bb6-a9d0-4ec11dfb430b",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "4b548ca7-ac03-43ef-9b2f-878fe6350ba1",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "54f386ba-7385-4f34-9cd6-740a3023df55",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "61921237-36b5-4939-b378-a652bcef79c1",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "4bf061b1-a52b-47e9-b2dd-6b6a0cc0c8dd",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "5079296b-6c96-4953-9203-91d9f9d99d17",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "769376d6-a43a-4c6c-af62-3b1dfcd45791",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "0f1a6429-e836-4bae-8c70-b5ab6a0a5917",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "029d1199-c4fa-464f-8d57-4feb85521e88",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "4394204b-6d7a-429a-b21d-8d4a73460b9e",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "73f57a2b-6b30-4d9e-9cf6-7e5b6101cd03",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "3a20ed4d-dfa9-4bb2-b4c9-ba4595afe9b0",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "2fd99cd9-1b92-40ca-bc1e-c3d427b36b9e",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "f5798c7d-0aff-4881-a45f-0b54f65d8a57",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "35ad2fee-032b-415f-a9f8-d9c412463bf0",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "10ff2b94-5dcb-426a-bcd9-d1a85060cca5",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "da6e66e7-d535-49d2-a1e0-21325c36855f",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "731f1965-61ab-431e-9913-651d33a1cf2f",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "c0a7d23c-0374-4d3d-999d-1bbb68597446",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "374c2c39-15f0-4e11-bb73-d910c4b47ec2",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "abffd160-4d15-45c2-88b7-a6a69c148b90",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "f135a623-270e-4121-b705-41571930e141",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "514276f4-68aa-4241-80ab-5819e064e72a",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "4426e1f1-c074-4e6f-8752-533163f92143",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    },
+    {
+      "article_id": "59dcc4ea-153b-4428-a959-db4b16621bcb",
+      "decision": "reject",
+      "quality_score": 0,
+      "flags": [
+        "evaluation_error"
+      ],
+      "notes": "Connection error."
+    }
+  ],
+  "summaries": []
+}

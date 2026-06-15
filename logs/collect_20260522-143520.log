@@ -1,0 +1,834 @@
+[2026-05-22 14:35:20] [collector] starting: Fetching articles for category 'ai_research' (max_results=30, collector=deep).
+  Details:
+  {
+    "category": "ai_research",
+    "max_results": 30,
+    "collector": "deep"
+  }
+[2026-05-22 14:35:43] [collector] finished: Collected 30 articles for 'ai_research'. Evaluating 30 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_research",
+    "count": 30
+  }
+[2026-05-22 14:35:43] [quality] evaluating: Article: SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lif...
+  Details:
+  {
+    "article_id": "781e6172-6e29-4a4c-9757-44918711780c",
+    "url": "https://arxiv.org/abs/2605.20189"
+  }
+[2026-05-22 14:35:43] [quality] evaluating: Article: Tool-Augmented Agent for Closed-loop Optimization,Simulation...
+  Details:
+  {
+    "article_id": "453b14ff-b7d8-4191-b888-6a89f9c6cf28",
+    "url": "https://arxiv.org/abs/2605.20190"
+  }
+[2026-05-22 14:35:43] [quality] evaluating: Article: OSCToM: RL-Guided Adversarial Generation for High-Order Theo...
+  Details:
+  {
+    "article_id": "e128b4e1-3f9e-4bc5-8e43-cf0fbc4fedf3",
+    "url": "https://arxiv.org/abs/2605.20423"
+  }
+[2026-05-22 14:35:43] [quality] evaluating: Article: AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi...
+  Details:
+  {
+    "article_id": "8317d6eb-20db-4e3f-b3f5-5b442442e060",
+    "url": "https://arxiv.org/abs/2605.20425"
+  }
+[2026-05-22 14:35:43] [quality] evaluating: Article: High Quality Embeddings for Horn Logic Reasoning...
+  Details:
+  {
+    "article_id": "dabb9ecb-0d22-4f82-b603-4b7f0782dc46",
+    "url": "https://arxiv.org/abs/2605.20467"
+  }
+[2026-05-22 14:35:47] [quality] decision: Decision: accept, score=5. The article presents a novel framework for multi-agent workflows in scientific settings, showcasing significant results and applications in genomics. This is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "8317d6eb-20db-4e3f-b3f5-5b442442e060",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for multi-agent workflows in scientific settings, showcasing significant results and applications in genomics. This is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:47] [quality] evaluating: Article: $ECUAS_n$: A family of metrics for principled evaluation of ...
+  Details:
+  {
+    "article_id": "391225f7-9f6c-4b2b-be29-2751be78505d",
+    "url": "https://arxiv.org/abs/2605.20490"
+  }
+[2026-05-22 14:35:47] [quality] decision: Decision: accept, score=5. The paper presents novel approaches to creating embeddings for logical reasoning, which is a relevant and timely topic in AI research. It introduces new methods and evaluates their effectiveness, making it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "dabb9ecb-0d22-4f82-b603-4b7f0782dc46",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The paper presents novel approaches to creating embeddings for logical reasoning, which is a relevant and timely topic in AI research. It introduces new methods and evaluates their effectiveness, making it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:47] [quality] evaluating: Article: Open-World Evaluations for Measuring Frontier AI Capabilitie...
+  Details:
+  {
+    "article_id": "c45f0cd3-e613-42f9-89f2-6826b455ab63",
+    "url": "https://arxiv.org/abs/2605.20520"
+  }
+[2026-05-22 14:35:47] [quality] decision: Decision: accept, score=5. The article presents a novel reinforcement learning framework for optimizing industrial design processes, which is highly relevant to current AI research trends. It addresses a significant challenge in CAD-CAE integration and introduces a new dataset, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "453b14ff-b7d8-4191-b888-6a89f9c6cf28",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel reinforcement learning framework for optimizing industrial design processes, which is highly relevant to current AI research trends. It addresses a significant challenge in CAD-CAE integration and introduces a new dataset, making it likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:47] [quality] evaluating: Article: AgentAtlas: Beyond Outcome Leaderboards for LLM Agents...
+  Details:
+  {
+    "article_id": "6acb9fa1-88d1-4bbc-864e-e689dbb53545",
+    "url": "https://arxiv.org/abs/2605.20530"
+  }
+[2026-05-22 14:35:48] [quality] decision: Decision: accept, score=5. The article presents a novel approach to lifelong learning and continual adaptation in AI, addressing significant challenges faced by large language models. It introduces SOLAR, an innovative autonomous agent with promising experimental results, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "781e6172-6e29-4a4c-9757-44918711780c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to lifelong learning and continual adaptation in AI, addressing significant challenges faced by large language models. It introduces SOLAR, an innovative autonomous agent with promising experimental results, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:48] [quality] evaluating: Article: Personality Engineering with AI Agents: A New Methodology fo...
+  Details:
+  {
+    "article_id": "9265990f-5676-4ad9-9603-d8895f7bbf4c",
+    "url": "https://arxiv.org/abs/2605.20554"
+  }
+[2026-05-22 14:35:50] [quality] decision: Decision: accept, score=5. This article presents a novel methodology in negotiation research using AI agents, which is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "9265990f-5676-4ad9-9603-d8895f7bbf4c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel methodology in negotiation research using AI agents, which is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:50] [quality] decision: Decision: accept, score=5. The article presents a novel family of metrics for evaluating uncertainty-augmented systems, which is highly relevant for AI researchers and data scientists. It addresses a critical aspect of decision-making in AI, making it timely and likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "391225f7-9f6c-4b2b-be29-2751be78505d",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel family of metrics for evaluating uncertainty-augmented systems, which is highly relevant for AI researchers and data scientists. It addresses a critical aspect of decision-making in AI, making it timely and likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:50] [quality] decision: Decision: accept, score=5. The article presents a new methodology for evaluating large language model agents, addressing a significant gap in current benchmarking practices. This is highly relevant to AI researchers and likely to generate interest in the community.
+  Details:
+  {
+    "article_id": "6acb9fa1-88d1-4bbc-864e-e689dbb53545",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new methodology for evaluating large language model agents, addressing a significant gap in current benchmarking practices. This is highly relevant to AI researchers and likely to generate interest in the community."
+  }
+[2026-05-22 14:35:50] [quality] evaluating: Article: Mahjax: A GPU-Accelerated Mahjong Simulator for Reinforcemen...
+  Details:
+  {
+    "article_id": "9ba5add3-a0dc-4f63-8fe5-5bd1998eabf1",
+    "url": "https://arxiv.org/abs/2605.20577"
+  }
+[2026-05-22 14:35:50] [quality] evaluating: Article: From Automated to Autonomous: Hierarchical Agent-native Netw...
+  Details:
+  {
+    "article_id": "530ec288-34db-4db5-9244-5c0cf95e1d67",
+    "url": "https://arxiv.org/abs/2605.20608"
+  }
+[2026-05-22 14:35:50] [quality] evaluating: Article: COAgents: Multi-Agent Framework to Learn and Navigate Routin...
+  Details:
+  {
+    "article_id": "ac2bf197-9ee7-40d4-b941-1d9c9da1a92b",
+    "url": "https://arxiv.org/abs/2605.20618"
+  }
+[2026-05-22 14:35:50] [quality] decision: Decision: accept, score=5. The paper presents a novel approach to improving Theory of Mind reasoning in LLMs, which is a trending topic in AI research. The results indicate significant improvements over existing benchmarks, making it highly relevant and likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "e128b4e1-3f9e-4bc5-8e43-cf0fbc4fedf3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The paper presents a novel approach to improving Theory of Mind reasoning in LLMs, which is a trending topic in AI research. The results indicate significant improvements over existing benchmarks, making it highly relevant and likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:50] [quality] evaluating: Article: Evaluating Temporal Semantic Caching and Workflow Optimizati...
+  Details:
+  {
+    "article_id": "372cacce-b1f9-43d5-9c92-4ab91940c5e9",
+    "url": "https://arxiv.org/abs/2605.20630"
+  }
+[2026-05-22 14:35:50] [quality] decision: Decision: accept, score=5. The article presents a new approach to evaluating AI capabilities, which is highly relevant to current discussions in AI research. It introduces a novel concept (open-world evaluations) and includes a specific project (CRUX) that could attract significant interest among researchers and practitioners.
+  Details:
+  {
+    "article_id": "c45f0cd3-e613-42f9-89f2-6826b455ab63",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new approach to evaluating AI capabilities, which is highly relevant to current discussions in AI research. It introduces a novel concept (open-world evaluations) and includes a specific project (CRUX) that could attract significant interest among researchers and practitioners."
+  }
+[2026-05-22 14:35:50] [quality] evaluating: Article: Declarative Data Services: Structured Agentic Discovery for ...
+  Details:
+  {
+    "article_id": "a0e67434-e905-40ed-8128-df75415e05d5",
+    "url": "https://arxiv.org/abs/2605.20690"
+  }
+[2026-05-22 14:35:51] [quality] decision: Decision: accept, score=5. This article presents a new GPU-accelerated Mahjong simulator for reinforcement learning, which is highly relevant to AI researchers. It introduces a novel environment that can facilitate significant advancements in reinforcement learning, making it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "9ba5add3-a0dc-4f63-8fe5-5bd1998eabf1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a new GPU-accelerated Mahjong simulator for reinforcement learning, which is highly relevant to AI researchers. It introduces a novel environment that can facilitate significant advancements in reinforcement learning, making it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:51] [quality] evaluating: Article: VBFDD-Agent for Electric Vehicle Battery Fault Detection and...
+  Details:
+  {
+    "article_id": "f6128187-9f5d-4ada-a7d1-ebc36e4190c1",
+    "url": "https://arxiv.org/abs/2605.20742"
+  }
+[2026-05-22 14:35:51] [quality] decision: Decision: accept, score=5. The article presents a novel hierarchical multi-agent architecture for autonomous networks, which is highly relevant to current AI research trends. It discusses significant innovations and provides empirical validation, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "530ec288-34db-4db5-9244-5c0cf95e1d67",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel hierarchical multi-agent architecture for autonomous networks, which is highly relevant to current AI research trends. It discusses significant innovations and provides empirical validation, making it likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:51] [quality] evaluating: Article: Conflict-Aware Additive Guidance for Flow Models under Compo...
+  Details:
+  {
+    "article_id": "02cdf4ee-e55f-4a6f-b262-b475f0656450",
+    "url": "https://arxiv.org/abs/2605.20758"
+  }
+[2026-05-22 14:35:51] [quality] decision: Decision: accept, score=5. The article presents a novel multi-agent framework for solving Vehicle Routing Problems, showcasing significant improvements over existing methods. It is a timely and relevant research contribution that is likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "ac2bf197-9ee7-40d4-b941-1d9c9da1a92b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel multi-agent framework for solving Vehicle Routing Problems, showcasing significant improvements over existing methods. It is a timely and relevant research contribution that is likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:51] [quality] evaluating: Article: Interaction Locality in Hierarchical Recursive Reasoning...
+  Details:
+  {
+    "article_id": "0d11a431-60a5-473e-8218-1d56af8c78f2",
+    "url": "https://arxiv.org/abs/2605.20784"
+  }
+[2026-05-22 14:35:52] [quality] decision: Decision: accept, score=5. The article presents a new research paper on optimizing workflows in industrial asset operations, which is highly relevant to AI researchers. It discusses novel methods and provides significant performance improvements, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "372cacce-b1f9-43d5-9c92-4ab91940c5e9",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new research paper on optimizing workflows in industrial asset operations, which is highly relevant to AI researchers. It discusses novel methods and provides significant performance improvements, making it likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:52] [quality] evaluating: Article: Conditional Equivalence of DPO and RLHF: Implicit Assumption...
+  Details:
+  {
+    "article_id": "84b4369f-c781-4276-917e-619b2139a4f3",
+    "url": "https://arxiv.org/abs/2605.20834"
+  }
+[2026-05-22 14:35:52] [quality] decision: Decision: accept, score=5. The article presents a novel approach to structured agentic discovery in data systems, which is highly relevant to AI research. The proposed framework and its implications for real-world applications make it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "a0e67434-e905-40ed-8128-df75415e05d5",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to structured agentic discovery in data systems, which is highly relevant to AI research. The proposed framework and its implications for real-world applications make it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:52] [quality] evaluating: Article: PlanningBench: Generating Scalable and Verifiable Planning D...
+  Details:
+  {
+    "article_id": "2c9bcf1e-f104-46db-b8e7-0572101940ab",
+    "url": "https://arxiv.org/abs/2605.20873"
+  }
+[2026-05-22 14:35:54] [quality] decision: Decision: accept, score=5. The article presents a new framework, PlanningBench, for generating scalable and verifiable planning data, which is highly relevant for AI researchers and data scientists. It addresses a significant gap in existing benchmarks for large language models, making it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "2c9bcf1e-f104-46db-b8e7-0572101940ab",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework, PlanningBench, for generating scalable and verifiable planning data, which is highly relevant for AI researchers and data scientists. It addresses a significant gap in existing benchmarks for large language models, making it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:54] [quality] evaluating: Article: Governance by Construction for Generalist Agents...
+  Details:
+  {
+    "article_id": "e03e7641-c9eb-44b0-9f6d-3496b6fd77e6",
+    "url": "https://arxiv.org/abs/2605.20874"
+  }
+[2026-05-22 14:35:54] [quality] decision: Decision: accept, score=5. The article presents a significant theoretical analysis of Direct Preference Optimization (DPO) and its relationship with Reinforcement Learning from Human Feedback (RLHF), addressing important assumptions and introducing a new method (CPO) for alignment. This is highly relevant to AI research and likely to attract attention in the field.
+  Details:
+  {
+    "article_id": "84b4369f-c781-4276-917e-619b2139a4f3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant theoretical analysis of Direct Preference Optimization (DPO) and its relationship with Reinforcement Learning from Human Feedback (RLHF), addressing important assumptions and introducing a new method (CPO) for alignment. This is highly relevant to AI research and likely to attract attention in the field."
+  }
+[2026-05-22 14:35:54] [quality] evaluating: Article: For How Long Should We Be Punching? Learning Action Duration...
+  Details:
+  {
+    "article_id": "9e1ae99d-2a90-4fc8-8aae-843716ca278a",
+    "url": "https://arxiv.org/abs/2605.20911"
+  }
+[2026-05-22 14:35:54] [quality] decision: Decision: accept, score=5. The article presents a new framework for measuring information flow in spatial reasoning, which is a relevant and timely topic in AI research. It discusses novel methods and applications, making it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "0d11a431-60a5-473e-8218-1d56af8c78f2",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework for measuring information flow in spatial reasoning, which is a relevant and timely topic in AI research. It discusses novel methods and applications, making it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:54] [quality] evaluating: Article: Playing Devil's Advocate: Off-the-Shelf Persona Vectors Riva...
+  Details:
+  {
+    "article_id": "55372b10-bb91-480e-880a-727dfe0ccc98",
+    "url": "https://arxiv.org/abs/2605.21006"
+  }
+[2026-05-22 14:35:54] [quality] decision: Decision: accept, score=5. The article presents a novel method in AI research that addresses significant issues in flow models, which is likely to attract attention from data scientists and AI researchers. The findings and proposed method are relevant and timely, making it suitable for inclusion.
+  Details:
+  {
+    "article_id": "02cdf4ee-e55f-4a6f-b262-b475f0656450",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel method in AI research that addresses significant issues in flow models, which is likely to attract attention from data scientists and AI researchers. The findings and proposed method are relevant and timely, making it suitable for inclusion."
+  }
+[2026-05-22 14:35:54] [quality] evaluating: Article: AutoRPA: Efficient GUI Automation through LLM-Driven Code Sy...
+  Details:
+  {
+    "article_id": "a85356b3-f493-4c5d-bfc6-8487df2ce8c0",
+    "url": "https://arxiv.org/abs/2605.21082"
+  }
+[2026-05-22 14:35:55] [quality] decision: Decision: accept, score=5. The article presents a novel approach to battery fault detection and diagnosis using AI, which is timely and relevant given the growing importance of electric vehicles. The integration of descriptive text modeling and large language models makes it a significant contribution to the field, likely to attract attention from data scientists and AI researchers.
+  Details:
+  {
+    "article_id": "f6128187-9f5d-4ada-a7d1-ebc36e4190c1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to battery fault detection and diagnosis using AI, which is timely and relevant given the growing importance of electric vehicles. The integration of descriptive text modeling and large language models makes it a significant contribution to the field, likely to attract attention from data scientists and AI researchers."
+  }
+[2026-05-22 14:35:55] [quality] evaluating: Article: ScenePilot: Controllable Boundary-Driven Critical Scenario G...
+  Details:
+  {
+    "article_id": "d2d7e435-a704-4777-9646-b3860ffbd764",
+    "url": "https://arxiv.org/abs/2605.21168"
+  }
+[2026-05-22 14:35:56] [quality] decision: Decision: accept, score=5. The article presents a novel approach to reinforcement learning in fighting games, addressing a unique challenge and offering insights into action duration. This is likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "9e1ae99d-2a90-4fc8-8aae-843716ca278a",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to reinforcement learning in fighting games, addressing a unique challenge and offering insights into action duration. This is likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:56] [quality] evaluating: Article: Insights Generator: Systematic Corpus-Level Trace Diagnostic...
+  Details:
+  {
+    "article_id": "3b85f45f-9f12-46d0-8f84-8c6a05a7b1aa",
+    "url": "https://arxiv.org/abs/2605.21347"
+  }
+[2026-05-22 14:35:56] [quality] decision: Decision: accept, score=5. The article presents a novel governance framework for autonomous agents, which is highly relevant to current AI research trends. It discusses a specific technical approach and its applications, making it suitable for an audience of data scientists and AI researchers.
+  Details:
+  {
+    "article_id": "e03e7641-c9eb-44b0-9f6d-3496b6fd77e6",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel governance framework for autonomous agents, which is highly relevant to current AI research trends. It discusses a specific technical approach and its applications, making it suitable for an audience of data scientists and AI researchers."
+  }
+[2026-05-22 14:35:56] [quality] evaluating: Article: Towards Resilient and Autonomous Networks: A BlueSky Vision ...
+  Details:
+  {
+    "article_id": "3fd52388-6bf2-45ab-92f2-85f96ef47193",
+    "url": "https://arxiv.org/abs/2605.21395"
+  }
+[2026-05-22 14:35:56] [quality] decision: Decision: accept, score=5. The article presents a novel research study on sycophancy in AI models, comparing traditional methods with off-the-shelf persona vectors. It discusses significant findings that could impact future AI development, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "55372b10-bb91-480e-880a-727dfe0ccc98",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research study on sycophancy in AI models, comparing traditional methods with off-the-shelf persona vectors. It discusses significant findings that could impact future AI development, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:56] [quality] evaluating: Article: Teaching AI Through Benchmark Construction: QuestBench as a ...
+  Details:
+  {
+    "article_id": "ab01805c-1dc4-41b5-8e48-1d9c75463fd1",
+    "url": "https://arxiv.org/abs/2605.21413"
+  }
+[2026-05-22 14:35:57] [quality] decision: Decision: accept, score=5. The article presents a novel framework, AutoRPA, that addresses a significant challenge in GUI automation using LLMs. It introduces innovative methods and demonstrates substantial improvements in efficiency, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a85356b3-f493-4c5d-bfc6-8487df2ce8c0",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework, AutoRPA, that addresses a significant challenge in GUI automation using LLMs. It introduces innovative methods and demonstrates substantial improvements in efficiency, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:57] [quality] evaluating: Article: PALS: Power-Aware LLM Serving for Mixture-of-Experts Models...
+  Details:
+  {
+    "article_id": "6c04ea11-6716-4546-8708-acee3a0efcfd",
+    "url": "https://arxiv.org/abs/2605.21427"
+  }
+[2026-05-22 14:35:57] [quality] decision: Decision: accept, score=5. The article presents a novel framework for generating critical scenarios in autonomous driving, which is highly relevant to current AI research. It introduces a new method and provides experimental results, making it likely to attract attention in the field.
+  Details:
+  {
+    "article_id": "d2d7e435-a704-4777-9646-b3860ffbd764",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for generating critical scenarios in autonomous driving, which is highly relevant to current AI research. It introduces a new method and provides experimental results, making it likely to attract attention in the field."
+  }
+[2026-05-22 14:35:57] [quality] evaluating: Article: Mind the Sim-to-Real Gap & Think Like a Scientist...
+  Details:
+  {
+    "article_id": "0d5e9c41-49a1-49e5-a53e-ddf7c0d1068e",
+    "url": "https://arxiv.org/abs/2605.21458"
+  }
+[2026-05-22 14:35:59] [quality] decision: Decision: accept, score=5. The article presents a novel approach to diagnosing failures in LLM agents, which is highly relevant to current AI research. It introduces the Insights Generator, a systematic method that enhances understanding and performance in AI systems, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "3b85f45f-9f12-46d0-8f84-8c6a05a7b1aa",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to diagnosing failures in LLM agents, which is highly relevant to current AI research. It introduces the Insights Generator, a systematic method that enhances understanding and performance in AI systems, making it likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:59] [quality] evaluating: Article: AiraXiv: An AI-Driven Open-Access Platform for Human and AI ...
+  Details:
+  {
+    "article_id": "c6ee0b6b-5a41-4d78-b971-8652a107c887",
+    "url": "https://arxiv.org/abs/2605.21481"
+  }
+[2026-05-22 14:35:59] [quality] decision: Decision: accept, score=5. The paper presents a forward-looking vision on the integration of AI in 6G networks, which is highly relevant to current trends in AI and telecommunications. It discusses innovative concepts that could significantly impact future network management and resilience, making it likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "3fd52388-6bf2-45ab-92f2-85f96ef47193",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The paper presents a forward-looking vision on the integration of AI in 6G networks, which is highly relevant to current trends in AI and telecommunications. It discusses innovative concepts that could significantly impact future network management and resilience, making it likely to attract attention in the research community."
+  }
+[2026-05-22 14:35:59] [quality] decision: Decision: accept, score=5. The article presents a novel approach to optimizing energy efficiency in large language model serving, which is highly relevant to current trends in AI research focusing on sustainability and efficiency. The findings are significant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "6c04ea11-6716-4546-8708-acee3a0efcfd",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to optimizing energy efficiency in large language model serving, which is highly relevant to current trends in AI research focusing on sustainability and efficiency. The findings are significant and likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:35:59] [quality] decision: Decision: accept, score=5. This article presents a novel approach to AI education through benchmark construction, which is highly relevant for AI researchers and educators. The introduction of QuestBench as a benchmark artifact and its evaluation against current AI systems highlights significant findings that could influence future research and educational practices. The topic is timely and likely to generate interest in the AI community.
+  Details:
+  {
+    "article_id": "ab01805c-1dc4-41b5-8e48-1d9c75463fd1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to AI education through benchmark construction, which is highly relevant for AI researchers and educators. The introduction of QuestBench as a benchmark artifact and its evaluation against current AI systems highlights significant findings that could influence future research and educational practices. The topic is timely and likely to generate interest in the AI community."
+  }
+[2026-05-22 14:35:59] [quality] decision: Decision: accept, score=5. The article presents new research on the sim-to-real gap in decision-making, which is highly relevant for AI researchers and data scientists. It discusses novel methodologies and provides case studies, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "0d5e9c41-49a1-49e5-a53e-ddf7c0d1068e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents new research on the sim-to-real gap in decision-making, which is highly relevant for AI researchers and data scientists. It discusses novel methodologies and provides case studies, making it likely to attract attention in the AI research community."
+  }
+[2026-05-22 14:36:01] [quality] decision: Decision: accept, score=5. The article discusses a new AI-driven open-access platform for research, addressing significant challenges in academic publishing. It presents a novel approach that is timely and relevant to current trends in AI research dissemination, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "c6ee0b6b-5a41-4d78-b971-8652a107c887",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses a new AI-driven open-access platform for research, addressing significant challenges in academic publishing. It presents a novel approach that is timely and relevant to current trends in AI research dissemination, making it likely to attract attention."
+  }
+[2026-05-22 14:36:01] [quality] batch_done: Evaluation complete for 'ai_research': 30/30 passed quality bar.
+  Details:
+  {
+    "accepted": 30,
+    "total": 30
+  }
+[2026-05-22 14:36:01] [summarizer] summarizing: Article: AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi...
+  Details:
+  {
+    "article_id": "8317d6eb-20db-4e3f-b3f5-5b442442e060"
+  }
+[2026-05-22 14:36:01] [summarizer] summarizing: Article: High Quality Embeddings for Horn Logic Reasoning...
+  Details:
+  {
+    "article_id": "dabb9ecb-0d22-4f82-b603-4b7f0782dc46"
+  }
+[2026-05-22 14:36:01] [summarizer] summarizing: Article: Tool-Augmented Agent for Closed-loop Optimization,Simulation...
+  Details:
+  {
+    "article_id": "453b14ff-b7d8-4191-b888-6a89f9c6cf28"
+  }
+[2026-05-22 14:36:01] [summarizer] summarizing: Article: SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lif...
+  Details:
+  {
+    "article_id": "781e6172-6e29-4a4c-9757-44918711780c"
+  }
+[2026-05-22 14:36:01] [summarizer] summarizing: Article: Personality Engineering with AI Agents: A New Methodology fo...
+  Details:
+  {
+    "article_id": "9265990f-5676-4ad9-9603-d8895f7bbf4c"
+  }
+[2026-05-22 14:36:02] [summarizer] finished: Subject: Enhanced Embeddings Boost Horn Logic Reasoning Efficiency 🔬
+  Details:
+  {
+    "article_id": "dabb9ecb-0d22-4f82-b603-4b7f0782dc46",
+    "suggested_subject": "Enhanced Embeddings Boost Horn Logic Reasoning Efficiency 🔬",
+    "summary_preview": "New methods for creating embeddings improve the efficiency of logical reasoning tasks. Experiments show that these embeddings lead to better performance across various knowledge bases."
+  }
+[2026-05-22 14:36:02] [summarizer] summarizing: Article: $ECUAS_n$: A family of metrics for principled evaluation of ...
+  Details:
+  {
+    "article_id": "391225f7-9f6c-4b2b-be29-2751be78505d"
+  }
+[2026-05-22 14:36:02] [summarizer] finished: Subject: AI Agents Enhance Negotiation Research with Personality Engineering 🔬
+  Details:
+  {
+    "article_id": "9265990f-5676-4ad9-9603-d8895f7bbf4c",
+    "suggested_subject": "AI Agents Enhance Negotiation Research with Personality Engineering 🔬",
+    "summary_preview": "Personality engineering utilizes AI agents to systematically manipulate and evaluate negotiator personality traits, addressing gaps in traditional negotiation research. This methodology allows for rig..."
+  }
+[2026-05-22 14:36:02] [summarizer] summarizing: Article: AgentAtlas: Beyond Outcome Leaderboards for LLM Agents...
+  Details:
+  {
+    "article_id": "6acb9fa1-88d1-4bbc-864e-e689dbb53545"
+  }
+[2026-05-22 14:36:03] [summarizer] finished: Subject: Reinforcement Learning Enhances CAD-CAE Optimization Process ⚙️
+  Details:
+  {
+    "article_id": "453b14ff-b7d8-4191-b888-6a89f9c6cf28",
+    "suggested_subject": "Reinforcement Learning Enhances CAD-CAE Optimization Process ⚙️",
+    "summary_preview": "COSMO-Agent leverages reinforcement learning to optimize CAD-CAE processes by orchestrating external tools for iterative design improvements. Training on a specialized dataset, it outperforms both lar..."
+  }
+[2026-05-22 14:36:03] [summarizer] summarizing: Article: OSCToM: RL-Guided Adversarial Generation for High-Order Theo...
+  Details:
+  {
+    "article_id": "e128b4e1-3f9e-4bc5-8e43-cf0fbc4fedf3"
+  }
+[2026-05-22 14:36:03] [summarizer] finished: Subject: Autonomous Agent Adapts Continuously with SOLAR 🔄
+  Details:
+  {
+    "article_id": "781e6172-6e29-4a4c-9757-44918711780c",
+    "suggested_subject": "Autonomous Agent Adapts Continuously with SOLAR 🔄",
+    "summary_preview": "SOLAR is an open-ended autonomous agent that employs parameter-level meta-learning for continual adaptation to dynamic data streams. It outperforms strong baselines across various reasoning tasks, sho..."
+  }
+[2026-05-22 14:36:03] [summarizer] summarizing: Article: Open-World Evaluations for Measuring Frontier AI Capabilitie...
+  Details:
+  {
+    "article_id": "c45f0cd3-e613-42f9-89f2-6826b455ab63"
+  }
+[2026-05-22 14:36:04] [summarizer] finished: Subject: Automated Multi-Agent Workflows via Retrieval Synthesis 🔬
+  Details:
+  {
+    "article_id": "8317d6eb-20db-4e3f-b3f5-5b442442e060",
+    "suggested_subject": "Automated Multi-Agent Workflows via Retrieval Synthesis 🔬",
+    "summary_preview": "AgentCo-op synthesizes multi-agent workflows by composing reusable skills and tools through typed artifact handoffs, applying local repair for execution failures. In genomics case studies, it outperfo..."
+  }
+[2026-05-22 14:36:04] [summarizer] summarizing: Article: Mahjax: A GPU-Accelerated Mahjong Simulator for Reinforcemen...
+  Details:
+  {
+    "article_id": "9ba5add3-a0dc-4f63-8fe5-5bd1998eabf1"
+  }
+[2026-05-22 14:36:04] [summarizer] finished: Subject: New Metrics for Evaluating Uncertainty in Decision-Making Systems 🔬
+  Details:
+  {
+    "article_id": "391225f7-9f6c-4b2b-be29-2751be78505d",
+    "suggested_subject": "New Metrics for Evaluating Uncertainty in Decision-Making Systems 🔬",
+    "summary_preview": "A novel family of metrics, $ECUAS_n$, evaluates uncertainty-augmented systems by balancing prediction costs and uncertainty scores. Empirical results show improved assessment accuracy across various d..."
+  }
+[2026-05-22 14:36:04] [summarizer] summarizing: Article: From Automated to Autonomous: Hierarchical Agent-native Netw...
+  Details:
+  {
+    "article_id": "530ec288-34db-4db5-9244-5c0cf95e1d67"
+  }
+[2026-05-22 14:36:04] [summarizer] finished: Subject: Boosting Theory of Mind in LLMs with OSCToM 🔬
+  Details:
+  {
+    "article_id": "e128b4e1-3f9e-4bc5-8e43-cf0fbc4fedf3",
+    "suggested_subject": "Boosting Theory of Mind in LLMs with OSCToM 🔬",
+    "summary_preview": "OSCToM models nested belief conflicts in language tasks using reinforcement learning and advanced techniques. It achieves 76% accuracy on the FANToM benchmark, a significant improvement over the previ..."
+  }
+[2026-05-22 14:36:04] [summarizer] summarizing: Article: COAgents: Multi-Agent Framework to Learn and Navigate Routin...
+  Details:
+  {
+    "article_id": "ac2bf197-9ee7-40d4-b941-1d9c9da1a92b"
+  }
+[2026-05-22 14:36:05] [summarizer] finished: Subject: New Taxonomy for Evaluating LLM Agents' Performance 📊
+  Details:
+  {
+    "article_id": "6acb9fa1-88d1-4bbc-864e-e689dbb53545",
+    "suggested_subject": "New Taxonomy for Evaluating LLM Agents' Performance 📊",
+    "summary_preview": "AgentAtlas introduces a comprehensive framework for evaluating large language model agents, addressing fragmented benchmarks by proposing a six-state control-decision taxonomy and a nine-category traj..."
+  }
+[2026-05-22 14:36:05] [summarizer] summarizing: Article: Evaluating Temporal Semantic Caching and Workflow Optimizati...
+  Details:
+  {
+    "article_id": "372cacce-b1f9-43d5-9c92-4ab91940c5e9"
+  }
+[2026-05-22 14:36:05] [summarizer] finished: Subject: Open-World Evaluations Reveal AI's Real-World Capabilities 🔍
+  Details:
+  {
+    "article_id": "c45f0cd3-e613-42f9-89f2-6826b455ab63",
+    "suggested_subject": "Open-World Evaluations Reveal AI's Real-World Capabilities 🔍",
+    "summary_preview": "Open-world evaluations assess AI performance on complex, real-world tasks through qualitative analysis rather than traditional benchmarks. An AI agent successfully developed and published an iOS app w..."
+  }
+[2026-05-22 14:36:05] [summarizer] summarizing: Article: Declarative Data Services: Structured Agentic Discovery for ...
+  Details:
+  {
+    "article_id": "a0e67434-e905-40ed-8128-df75415e05d5"
+  }
+[2026-05-22 14:36:05] [summarizer] finished: Subject: GPU-Accelerated Mahjong Simulator Boosts RL Training Speed ⚡
+  Details:
+  {
+    "article_id": "9ba5add3-a0dc-4f63-8fe5-5bd1998eabf1",
+    "suggested_subject": "GPU-Accelerated Mahjong Simulator Boosts RL Training Speed ⚡",
+    "summary_preview": "Mahjax is a fully vectorized Riichi Mahjong environment in JAX that enables large-scale parallelization on GPUs for reinforcement learning. It achieves throughputs of up to 2 million steps per second,..."
+  }
+[2026-05-22 14:36:05] [summarizer] summarizing: Article: PlanningBench: Generating Scalable and Verifiable Planning D...
+  Details:
+  {
+    "article_id": "2c9bcf1e-f104-46db-b8e7-0572101940ab"
+  }
+[2026-05-22 14:36:05] [summarizer] finished: Subject: Autonomous Networks Achieve 86% Faster Repair Times ⚡
+  Details:
+  {
+    "article_id": "530ec288-34db-4db5-9244-5c0cf95e1d67",
+    "suggested_subject": "Autonomous Networks Achieve 86% Faster Repair Times ⚡",
+    "summary_preview": "A hierarchical multi-agent architecture enables high-level autonomy in networks by integrating agent self-awareness for strategic governance and fault recovery. In a 5G Core environment, this approach..."
+  }
+[2026-05-22 14:36:05] [summarizer] summarizing: Article: Conditional Equivalence of DPO and RLHF: Implicit Assumption...
+  Details:
+  {
+    "article_id": "84b4369f-c781-4276-917e-619b2139a4f3"
+  }
+[2026-05-22 14:36:06] [summarizer] finished: Subject: COAgents Boosts Vehicle Routing Solutions by 44% 🚚
+  Details:
+  {
+    "article_id": "ac2bf197-9ee7-40d4-b941-1d9c9da1a92b",
+    "suggested_subject": "COAgents Boosts Vehicle Routing Solutions by 44% 🚚",
+    "summary_preview": "COAgents introduces a multi-agent framework that models the search for vehicle routing problems as a graph, enabling effective solution exploration and refinement. It achieves a 44% improvement on cha..."
+  }
+[2026-05-22 14:36:06] [summarizer] summarizing: Article: Interaction Locality in Hierarchical Recursive Reasoning...
+  Details:
+  {
+    "article_id": "0d11a431-60a5-473e-8218-1d56af8c78f2"
+  }
+[2026-05-22 14:36:07] [summarizer] finished: Subject: 40% Latency Reduction in Industrial Workflows ⚡
+  Details:
+  {
+    "article_id": "372cacce-b1f9-43d5-9c92-4ab91940c5e9",
+    "suggested_subject": "40% Latency Reduction in Industrial Workflows ⚡",
+    "summary_preview": "Two optimization layers for agentic plan-execute pipelines improve efficiency in latency-sensitive industrial workflows. MCP workflow optimizations yield a 1.67x speedup and reduce median end-to-end l..."
+  }
+[2026-05-22 14:36:07] [summarizer] summarizing: Article: Conflict-Aware Additive Guidance for Flow Models under Compo...
+  Details:
+  {
+    "article_id": "02cdf4ee-e55f-4a6f-b262-b475f0656450"
+  }
+[2026-05-22 14:36:07] [summarizer] finished: Subject: Structured Discovery for Data Systems with DDS 🔍
+  Details:
+  {
+    "article_id": "a0e67434-e905-40ed-8128-df75415e05d5",
+    "suggested_subject": "Structured Discovery for Data Systems with DDS 🔍",
+    "summary_preview": "Declarative Data Services (DDS) enables structured discovery of data-system compositions based on user intent, addressing challenges in heterogeneous search spaces and uneven knowledge capture. In a t..."
+  }
+[2026-05-22 14:36:07] [summarizer] summarizing: Article: VBFDD-Agent for Electric Vehicle Battery Fault Detection and...
+  Details:
+  {
+    "article_id": "f6128187-9f5d-4ada-a7d1-ebc36e4190c1"
+  }
+[2026-05-22 14:36:07] [summarizer] finished: Subject: Scalable Planning Data Boosts LLM Training and Evaluation 🔍
+  Details:
+  {
+    "article_id": "2c9bcf1e-f104-46db-b8e7-0572101940ab",
+    "suggested_subject": "Scalable Planning Data Boosts LLM Training and Evaluation 🔍",
+    "summary_preview": "PlanningBench generates diverse and verifiable planning data for training and evaluating large language models. Using this framework, reinforcement learning on verified data enhances performance on un..."
+  }
+[2026-05-22 14:36:07] [summarizer] summarizing: Article: For How Long Should We Be Punching? Learning Action Duration...
+  Details:
+  {
+    "article_id": "9e1ae99d-2a90-4fc8-8aae-843716ca278a"
+  }
+[2026-05-22 14:36:07] [summarizer] finished: Subject: DPO vs. RLHF: Conditional Equivalence Revealed 🔍
+  Details:
+  {
+    "article_id": "84b4369f-c781-4276-917e-619b2139a4f3",
+    "suggested_subject": "DPO vs. RLHF: Conditional Equivalence Revealed 🔍",
+    "summary_preview": "Direct Preference Optimization (DPO) is shown to be conditionally equivalent to Reinforcement Learning from Human Feedback (RLHF), relying on an often-violated assumption about policy preferences. Int..."
+  }
+[2026-05-22 14:36:07] [summarizer] summarizing: Article: Governance by Construction for Generalist Agents...
+  Details:
+  {
+    "article_id": "e03e7641-c9eb-44b0-9f6d-3496b6fd77e6"
+  }
+[2026-05-22 14:36:08] [summarizer] finished: Subject: New Framework Measures Locality in Spatial Reasoning 🔬
+  Details:
+  {
+    "article_id": "0d11a431-60a5-473e-8218-1d56af8c78f2",
+    "suggested_subject": "New Framework Measures Locality in Spatial Reasoning 🔬",
+    "summary_preview": "Interaction locality quantifies how information flows in spatial reasoning tasks, focusing on local computation and structure preservation. It reveals that high-level states in hierarchical models lik..."
+  }
+[2026-05-22 14:36:08] [summarizer] summarizing: Article: Playing Devil's Advocate: Off-the-Shelf Persona Vectors Riva...
+  Details:
+  {
+    "article_id": "55372b10-bb91-480e-880a-727dfe0ccc98"
+  }
+[2026-05-22 14:36:08] [summarizer] finished: Subject: Dynamic Guidance Reduces Drift in Flow Models by 30% ⚡
+  Details:
+  {
+    "article_id": "02cdf4ee-e55f-4a6f-b262-b475f0656450",
+    "suggested_subject": "Dynamic Guidance Reduces Drift in Flow Models by 30% ⚡",
+    "summary_preview": "Conflict-Aware Additive Guidance (g^car) addresses off-manifold drift in flow models by dynamically detecting and resolving gradient conflicts during controlled generation. It improves generation fide..."
+  }
+[2026-05-22 14:36:08] [summarizer] summarizing: Article: AutoRPA: Efficient GUI Automation through LLM-Driven Code Sy...
+  Details:
+  {
+    "article_id": "a85356b3-f493-4c5d-bfc6-8487df2ce8c0"
+  }
+[2026-05-22 14:36:09] [summarizer] finished: Subject: Dynamic Action Timing Boosts RL in Fighting Games ⚔️
+  Details:
+  {
+    "article_id": "9e1ae99d-2a90-4fc8-8aae-843716ca278a",
+    "suggested_subject": "Dynamic Action Timing Boosts RL in Fighting Games ⚔️",
+    "summary_preview": "Agents learn both action and duration to adaptively respond in fighting games. Results show that optimized timing can match fixed frame skips, enhancing performance and strategy exploitation."
+  }
+[2026-05-22 14:36:09] [summarizer] summarizing: Article: ScenePilot: Controllable Boundary-Driven Critical Scenario G...
+  Details:
+  {
+    "article_id": "d2d7e435-a704-4777-9646-b3860ffbd764"
+  }
+[2026-05-22 14:36:09] [summarizer] finished: Subject: AI-Driven Battery Fault Diagnosis Enhances EV Safety ⚡
+  Details:
+  {
+    "article_id": "f6128187-9f5d-4ada-a7d1-ebc36e4190c1",
+    "suggested_subject": "AI-Driven Battery Fault Diagnosis Enhances EV Safety ⚡",
+    "summary_preview": "A descriptive text modeling approach transforms battery signal data into structured natural language for effective fault detection and diagnosis. VBFDD-Agent demonstrates high accuracy in anomaly moni..."
+  }
+[2026-05-22 14:36:09] [summarizer] summarizing: Article: Insights Generator: Systematic Corpus-Level Trace Diagnostic...
+  Details:
+  {
+    "article_id": "3b85f45f-9f12-46d0-8f84-8c6a05a7b1aa"
+  }
+[2026-05-22 14:36:09] [summarizer] finished: Subject: Modular Governance for Autonomous Agents ⚡
+  Details:
+  {
+    "article_id": "e03e7641-c9eb-44b0-9f6d-3496b6fd77e6",
+    "suggested_subject": "Modular Governance for Autonomous Agents ⚡",
+    "summary_preview": "CUGA introduces a policy system that embeds governance into generalist LLM agents, ensuring compliance and oversight without requiring model fine-tuning. In a healthcare demo, it demonstrates enhanced..."
+  }
+[2026-05-22 14:36:09] [summarizer] summarizing: Article: Towards Resilient and Autonomous Networks: A BlueSky Vision ...
+  Details:
+  {
+    "article_id": "3fd52388-6bf2-45ab-92f2-85f96ef47193"
+  }
+[2026-05-22 14:36:10] [summarizer] finished: Subject: Off-the-Shelf Persona Vectors Cut Sycophancy by 68% 🔬
+  Details:
+  {
+    "article_id": "55372b10-bb91-480e-880a-727dfe0ccc98",
+    "suggested_subject": "Off-the-Shelf Persona Vectors Cut Sycophancy by 68% 🔬",
+    "summary_preview": "Evaluating persona steering vectors reveals they can effectively reduce model sycophancy while maintaining accuracy. Steering toward doubt or scrutiny personas achieves approximately 68% to 98% of the..."
+  }
+[2026-05-22 14:36:10] [summarizer] summarizing: Article: PALS: Power-Aware LLM Serving for Mixture-of-Experts Models...
+  Details:
+  {
+    "article_id": "6c04ea11-6716-4546-8708-acee3a0efcfd"
+  }
+[2026-05-22 14:36:10] [summarizer] finished: Subject: Boundary-Driven Scenario Generation Boosts Crash Testing 🚗
+  Details:
+  {
+    "article_id": "d2d7e435-a704-4777-9646-b3860ffbd764",
+    "suggested_subject": "Boundary-Driven Scenario Generation Boosts Crash Testing 🚗",
+    "summary_preview": "ScenePilot generates critical driving scenarios that are physically solvable yet challenging for autonomous systems. It increases collision rates by 6.2 percentage points while ensuring scenarios rema..."
+  }
+[2026-05-22 14:36:10] [summarizer] summarizing: Article: Teaching AI Through Benchmark Construction: QuestBench as a ...
+  Details:
+  {
+    "article_id": "ab01805c-1dc4-41b5-8e48-1d9c75463fd1"
+  }
+[2026-05-22 14:36:10] [summarizer] finished: Subject: AutoRPA Cuts GUI Task Token Usage by Up to 96% ⚡
+  Details:
+  {
+    "article_id": "a85356b3-f493-4c5d-bfc6-8487df2ce8c0",
+    "suggested_subject": "AutoRPA Cuts GUI Task Token Usage by Up to 96% ⚡",
+    "summary_preview": "AutoRPA automates GUI tasks by converting LLM-driven interactions into efficient RPA functions. Experiments show it reduces token usage by 82% to 96%, enhancing runtime efficiency and reusability."
+  }
+[2026-05-22 14:36:10] [summarizer] summarizing: Article: Mind the Sim-to-Real Gap & Think Like a Scientist...
+  Details:
+  {
+    "article_id": "0d5e9c41-49a1-49e5-a53e-ddf7c0d1068e"
+  }
+[2026-05-22 14:36:10] [summarizer] finished: Subject: Automated Insights Generator Boosts LLM Diagnostics by 30% 📊
+  Details:
+  {
+    "article_id": "3b85f45f-9f12-46d0-8f84-8c6a05a7b1aa",
+    "suggested_subject": "Automated Insights Generator Boosts LLM Diagnostics by 30% 📊",
+    "summary_preview": "Corpus-level trace diagnostics are automated using the Insights Generator, which identifies systematic behavioral patterns in LLM agents. Implementing insights from IG improves scaffold performance by..."
+  }
+[2026-05-22 14:36:10] [summarizer] summarizing: Article: AiraXiv: An AI-Driven Open-Access Platform for Human and AI ...
+  Details:
+  {
+    "article_id": "c6ee0b6b-5a41-4d78-b971-8652a107c887"
+  }
+[2026-05-22 14:36:11] [summarizer] finished: Subject: AI-Native 6G Networks Enable Autonomous Operations 🤖
+  Details:
+  {
+    "article_id": "3fd52388-6bf2-45ab-92f2-85f96ef47193",
+    "suggested_subject": "AI-Native 6G Networks Enable Autonomous Operations 🤖",
+    "summary_preview": "Integrating AI into 6G networks shifts from using AI for tasks to using AI for network management, enabling a unified, multi-task optimization approach. This vision supports the development of a found..."
+  }
+[2026-05-22 14:36:12] [summarizer] finished: Subject: Boost Energy Efficiency in LLMs by 26.3% with PALS ⚡
+  Details:
+  {
+    "article_id": "6c04ea11-6716-4546-8708-acee3a0efcfd",
+    "suggested_subject": "Boost Energy Efficiency in LLMs by 26.3% with PALS ⚡",
+    "summary_preview": "PALS introduces a power-aware runtime for large language model serving that optimizes GPU power alongside software parameters like batch size. It achieves up to 26.3% improved energy efficiency and re..."
+  }
+[2026-05-22 14:36:12] [summarizer] finished: Subject: Optimize Simulators with Real Experiments for Better Decisions ⚡
+  Details:
+  {
+    "article_id": "0d5e9c41-49a1-49e5-a53e-ddf7c0d1068e",
+    "suggested_subject": "Optimize Simulators with Real Experiments for Better Decisions ⚡",
+    "summary_preview": "A planner can enhance a pre-trained simulator by strategically conducting real experiments to address calibration errors and improve decision-making. Using the Fisher-SEP method, the approach demonstr..."
+  }
+[2026-05-22 14:36:13] [summarizer] finished: Subject: AI-Driven Open-Access Platform Enhances Research Collaboration 🤝
+  Details:
+  {
+    "article_id": "c6ee0b6b-5a41-4d78-b971-8652a107c887",
+    "suggested_subject": "AI-Driven Open-Access Platform Enhances Research Collaboration 🤝",
+    "summary_preview": "AiraXiv introduces an AI-driven open-access platform that facilitates collaboration between human and AI authors through continuous feedback and iteration. Real-world deployments, including its use fo..."
+  }
+[2026-05-22 14:36:13] [summarizer] finished: Subject: Empowering Students to Evaluate AI with QuestBench 📊
+  Details:
+  {
+    "article_id": "ab01805c-1dc4-41b5-8e48-1d9c75463fd1",
+    "suggested_subject": "Empowering Students to Evaluate AI with QuestBench 📊",
+    "summary_preview": "A course-based practice teaches students to create benchmarks for evaluating AI systems, enhancing their understanding of machine-generated knowledge. QuestBench, comprising 256 questions across 14 do..."
+  }
+[2026-05-22 14:36:13] [summarizer] batch_done: Summarisation complete for 'ai_research': 30 summaries so far.
+  Details:
+  {
+    "summaries": 30
+  }

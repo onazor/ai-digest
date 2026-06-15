@@ -1,0 +1,1817 @@
+[2026-06-11 15:23:42] [collector] starting: Fetching articles for category 'ai_trends' (max_results=100, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 100,
+    "collector": "deep"
+  }
+[2026-06-11 15:24:10] [collector] finished: Collected 100 articles for 'ai_trends'. Evaluating 100 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 100
+  }
+[2026-06-11 15:24:10] [quality] evaluating: Article: OpenAI says fake accounts from China tried to turn Americans...
+  Details:
+  {
+    "article_id": "e7c88115-efd0-45b4-864d-e28dd1901006",
+    "url": "https://www.engadget.com/2191966/openai-china-influence-campaigns-against-data-centers-report/"
+  }
+[2026-06-11 15:24:10] [quality] evaluating: Article: Home Depot Promo Codes: 50% Off in June 2026...
+  Details:
+  {
+    "article_id": "cf6052e3-82df-497f-ac4d-fc8a80a6bd27",
+    "url": "https://www.wired.com/story/home-depot-promo-code/"
+  }
+[2026-06-11 15:24:10] [quality] evaluating: Article: Opendoor’s India exit is fueling a bigger conversation about...
+  Details:
+  {
+    "article_id": "94f47644-2f1a-49e5-9abb-0147dd706a0c",
+    "url": "https://techcrunch.com/2026/06/10/opendoors-india-exit-is-fueling-a-bigger-conversation-about-ai-and-outsourcing/"
+  }
+[2026-06-11 15:24:10] [quality] evaluating: Article: From Explicit Elements to Implicit Intent: A Predefined Libr...
+  Details:
+  {
+    "article_id": "7e7dfce1-95b0-4c37-9a4e-01d1b424a3ee",
+    "url": "https://arxiv.org/abs/2606.11207"
+  }
+[2026-06-11 15:24:10] [quality] evaluating: Article: Position: Hippocampal Explicit Memory Is the Cornerstone for...
+  Details:
+  {
+    "article_id": "9c583c64-e1e4-4f47-82ab-d7063ec473ba",
+    "url": "https://arxiv.org/abs/2606.11245"
+  }
+[2026-06-11 15:24:12] [quality] decision: Decision: reject, score=1. The content is unrelated to AI trends and focuses on promotional codes for Home Depot, which is not relevant to the audience of data scientists and AI teams.
+  Details:
+  {
+    "article_id": "cf6052e3-82df-497f-ac4d-fc8a80a6bd27",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The content is unrelated to AI trends and focuses on promotional codes for Home Depot, which is not relevant to the audience of data scientists and AI teams."
+  }
+[2026-06-11 15:24:12] [quality] evaluating: Article: Knowing When to Ask: Self-Gated Clarification for Hierarchic...
+  Details:
+  {
+    "article_id": "c4d16e27-5942-457c-b8ea-f8aaf0f2ca58",
+    "url": "https://arxiv.org/abs/2606.11349"
+  }
+[2026-06-11 15:24:13] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework with limited broader implications or trends in the AI industry. It lacks evidence of widespread adoption or significant impact, making it unsuitable for the ai_trends category.
+  Details:
+  {
+    "article_id": "7e7dfce1-95b0-4c37-9a4e-01d1b424a3ee",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework with limited broader implications or trends in the AI industry. It lacks evidence of widespread adoption or significant impact, making it unsuitable for the ai_trends category."
+  }
+[2026-06-11 15:24:13] [quality] evaluating: Article: Automated Mediator for Human Negotiation: Pre-Mediation via ...
+  Details:
+  {
+    "article_id": "5e6c7d72-3645-4bc5-bcfc-dfc5b2c5c407",
+    "url": "https://arxiv.org/abs/2606.11379"
+  }
+[2026-06-11 15:24:13] [quality] decision: Decision: reject, score=2. The article discusses a specific incident involving influence campaigns, which lacks broader implications or trends in the AI industry. It does not reflect a significant trend or widespread adoption that would be of interest to the audience.
+  Details:
+  {
+    "article_id": "e7c88115-efd0-45b4-864d-e28dd1901006",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific incident involving influence campaigns, which lacks broader implications or trends in the AI industry. It does not reflect a significant trend or widespread adoption that would be of interest to the audience."
+  }
+[2026-06-11 15:24:13] [quality] evaluating: Article: INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration...
+  Details:
+  {
+    "article_id": "04baed71-3a9c-4909-9407-8da7a0341a91",
+    "url": "https://arxiv.org/abs/2606.11440"
+  }
+[2026-06-11 15:24:13] [quality] decision: Decision: reject, score=2. The article focuses on Opendoor's exit from India and its implications for outsourcing, which does not directly relate to a significant trend in AI. It lacks broader industry momentum or data that would indicate a genuine trend in AI adoption or usage.
+  Details:
+  {
+    "article_id": "94f47644-2f1a-49e5-9abb-0147dd706a0c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article focuses on Opendoor's exit from India and its implications for outsourcing, which does not directly relate to a significant trend in AI. It lacks broader industry momentum or data that would indicate a genuine trend in AI adoption or usage."
+  }
+[2026-06-11 15:24:13] [quality] evaluating: Article: Forecasting Future Behavior as a Learning Task...
+  Details:
+  {
+    "article_id": "4085b025-bb9b-4d1e-b354-c90489ea63f9",
+    "url": "https://arxiv.org/abs/2606.11445"
+  }
+[2026-06-11 15:24:14] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on forecasting behavior in AI systems, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "4085b025-bb9b-4d1e-b354-c90489ea63f9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on forecasting behavior in AI systems, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:14] [quality] evaluating: Article: MoCA-Agent: A Market-of-Claims Code Agent for Financial and ...
+  Details:
+  {
+    "article_id": "b7706c93-65d0-4772-960b-6068fa4f6569",
+    "url": "https://arxiv.org/abs/2606.11537"
+  }
+[2026-06-11 15:24:14] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on hierarchical reasoning in language agents, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "c4d16e27-5942-457c-b8ea-f8aaf0f2ca58",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on hierarchical reasoning in language agents, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:14] [quality] evaluating: Article: SkillJuror: Measuring How Agent Skill Organization Changes R...
+  Details:
+  {
+    "article_id": "72a77d32-4ce9-449f-a9ec-cdeab66f8df0",
+    "url": "https://arxiv.org/abs/2606.11543"
+  }
+[2026-06-11 15:24:14] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework (INFRAMIND) without indicating broader industry trends or significant adoption patterns. It is more suited for academic audiences rather than practical applications or trends relevant to the target audience.
+  Details:
+  {
+    "article_id": "04baed71-3a9c-4909-9407-8da7a0341a91",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework (INFRAMIND) without indicating broader industry trends or significant adoption patterns. It is more suited for academic audiences rather than practical applications or trends relevant to the target audience."
+  }
+[2026-06-11 15:24:14] [quality] evaluating: Article: HERO: Hindsight-Enhanced Reflection from Environment Observa...
+  Details:
+  {
+    "article_id": "404e7195-e8ca-49c4-84d0-90e6a4dfa404",
+    "url": "https://arxiv.org/abs/2606.11559"
+  }
+[2026-06-11 15:24:14] [quality] decision: Decision: reject, score=2. While the research introduces an interesting concept in AI mediation, it focuses on a specific study without broader implications or trends in the industry. It lacks signals of widespread adoption or significant impact, making it less relevant for the newsletter's audience.
+  Details:
+  {
+    "article_id": "5e6c7d72-3645-4bc5-bcfc-dfc5b2c5c407",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research introduces an interesting concept in AI mediation, it focuses on a specific study without broader implications or trends in the industry. It lacks signals of widespread adoption or significant impact, making it less relevant for the newsletter's audience."
+  }
+[2026-06-11 15:24:14] [quality] evaluating: Article: Architecture-Aware Reinforcement Learning Makes Sliding-Wind...
+  Details:
+  {
+    "article_id": "3a86921f-9128-47db-8195-8dc96f58c0ea",
+    "url": "https://arxiv.org/abs/2606.11634"
+  }
+[2026-06-11 15:24:16] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework related to agent skills in LLMs, which is too niche and lacks broader industry relevance or trend significance. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "72a77d32-4ce9-449f-a9ec-cdeab66f8df0",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework related to agent skills in LLMs, which is too niche and lacks broader industry relevance or trend significance. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:16] [quality] evaluating: Article: TouchThinker: Scaling Tactile Commonsense Reasoning to the O...
+  Details:
+  {
+    "article_id": "8345e295-12d8-463d-8392-140d74c384e9",
+    "url": "https://arxiv.org/abs/2606.11637"
+  }
+[2026-06-11 15:24:16] [quality] decision: Decision: reject, score=2. While the research presents an interesting approach to financial reasoning, it focuses on a specific system without indicating broader industry trends or adoption. It lacks the necessary signals of a genuine trend in AI.
+  Details:
+  {
+    "article_id": "b7706c93-65d0-4772-960b-6068fa4f6569",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents an interesting approach to financial reasoning, it focuses on a specific system without indicating broader industry trends or adoption. It lacks the necessary signals of a genuine trend in AI."
+  }
+[2026-06-11 15:24:16] [quality] evaluating: Article: TreeSeeker: Tree-Structured Trial, Error, and Return in Deep...
+  Details:
+  {
+    "article_id": "401d61bc-3321-41b3-9264-5188104006da",
+    "url": "https://arxiv.org/abs/2606.11662"
+  }
+[2026-06-11 15:24:16] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical aspect of reinforcement learning and attention mechanisms, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "3a86921f-9128-47db-8195-8dc96f58c0ea",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical aspect of reinforcement learning and attention mechanisms, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:16] [quality] evaluating: Article: Organize then Retrieve: Hierarchical Memory Navigation for E...
+  Details:
+  {
+    "article_id": "9113f241-0be0-45fd-bdd3-7069dddff22f",
+    "url": "https://arxiv.org/abs/2606.11680"
+  }
+[2026-06-11 15:24:16] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a reinforcement learning framework, which does not reflect a broader trend in the AI industry. It lacks widespread relevance or adoption signals and is unlikely to generate significant attention.
+  Details:
+  {
+    "article_id": "404e7195-e8ca-49c4-84d0-90e6a4dfa404",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a reinforcement learning framework, which does not reflect a broader trend in the AI industry. It lacks widespread relevance or adoption signals and is unlikely to generate significant attention."
+  }
+[2026-06-11 15:24:16] [quality] evaluating: Article: Mind the Perspective: Let's Reason Recursively for Theory of...
+  Details:
+  {
+    "article_id": "b5cad03d-96ac-4c05-a8bd-b480476435a6",
+    "url": "https://arxiv.org/abs/2606.11724"
+  }
+[2026-06-11 15:24:18] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new memory navigation method for LLMs, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "9113f241-0be0-45fd-bdd3-7069dddff22f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new memory navigation method for LLMs, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:18] [quality] evaluating: Article: When Do Data-Driven Systems Exhibit the Capability to Infer?...
+  Details:
+  {
+    "article_id": "46b377e8-d49f-48dd-8739-b92b7bf3975f",
+    "url": "https://arxiv.org/abs/2606.11769"
+  }
+[2026-06-11 15:24:18] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on tactile commonsense reasoning, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI that would be widely discussed or adopted.
+  Details:
+  {
+    "article_id": "8345e295-12d8-463d-8392-140d74c384e9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on tactile commonsense reasoning, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI that would be widely discussed or adopted."
+  }
+[2026-06-11 15:24:18] [quality] evaluating: Article: SVoT: State-aware Visualization-of-Thought for Spatial Reaso...
+  Details:
+  {
+    "article_id": "d47f4289-71b6-48be-8bdc-754958fecf5b",
+    "url": "https://arxiv.org/abs/2606.11770"
+  }
+[2026-06-11 15:24:18] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new framework for deep search but lacks broader industry impact or trend relevance. It is too focused on a single innovation without indicating a wider trend in AI.
+  Details:
+  {
+    "article_id": "401d61bc-3321-41b3-9264-5188104006da",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new framework for deep search but lacks broader industry impact or trend relevance. It is too focused on a single innovation without indicating a wider trend in AI."
+  }
+[2026-06-11 15:24:18] [quality] evaluating: Article: Skill-Augmented AI Agents for Medical Research Analysis: An ...
+  Details:
+  {
+    "article_id": "acc29161-2043-4830-8c27-c8a24c036336",
+    "url": "https://arxiv.org/abs/2606.11830"
+  }
+[2026-06-11 15:24:19] [quality] decision: Decision: reject, score=2. While the research on Theory of Mind reasoning is interesting, it focuses on a specific academic paper without broader implications or trends in the industry. It lacks a clear trend angle or widespread adoption signal.
+  Details:
+  {
+    "article_id": "b5cad03d-96ac-4c05-a8bd-b480476435a6",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research on Theory of Mind reasoning is interesting, it focuses on a specific academic paper without broader implications or trends in the industry. It lacks a clear trend angle or widespread adoption signal."
+  }
+[2026-06-11 15:24:19] [quality] evaluating: Article: StatefulDiscovery: Evidence-Calibrated Claim Formation in Op...
+  Details:
+  {
+    "article_id": "2522720e-08e9-4c17-a792-393cf512bd2f",
+    "url": "https://arxiv.org/abs/2606.11851"
+  }
+[2026-06-11 15:24:20] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a reinforcement learning framework for spatial reasoning, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "d47f4289-71b6-48be-8bdc-754958fecf5b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a reinforcement learning framework for spatial reasoning, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:20] [quality] evaluating: Article: AutoMine Solution for AV2 2026 Scenario Mining Challenge...
+  Details:
+  {
+    "article_id": "97307a74-dd0c-49b5-be7d-91412951a13b",
+    "url": "https://arxiv.org/abs/2606.11874"
+  }
+[2026-06-11 15:24:20] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on the European AI Act and inference in AI systems, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "46b377e8-d49f-48dd-8739-b92b7bf3975f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on the European AI Act and inference in AI systems, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:20] [quality] evaluating: Article: Embodied-BenchClaw: An Autonomous Multi-Agent System for Emb...
+  Details:
+  {
+    "article_id": "ac27a129-46da-4cbd-8178-15f9e5296542",
+    "url": "https://arxiv.org/abs/2606.11909"
+  }
+[2026-06-11 15:24:20] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on skill-augmented AI in medical research, which is too niche and lacks broader industry trends or significant implications for a wider audience.
+  Details:
+  {
+    "article_id": "acc29161-2043-4830-8c27-c8a24c036336",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on skill-augmented AI in medical research, which is too niche and lacks broader industry trends or significant implications for a wider audience."
+  }
+[2026-06-11 15:24:20] [quality] evaluating: Article: The Art of Interrogation: Consistency Amplifies Factuality i...
+  Details:
+  {
+    "article_id": "fcbc8551-88f8-418d-b3f0-c11cf61a29f8",
+    "url": "https://arxiv.org/abs/2606.11918"
+  }
+[2026-06-11 15:24:21] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework without indicating broader industry trends or significant implications for the AI field. It lacks the necessary elements to be considered a trending topic.
+  Details:
+  {
+    "article_id": "2522720e-08e9-4c17-a792-393cf512bd2f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework without indicating broader industry trends or significant implications for the AI field. It lacks the necessary elements to be considered a trending topic."
+  }
+[2026-06-11 15:24:21] [quality] evaluating: Article: MODF-SIR: A Multi-agent Omni-modal Distilled Framework for S...
+  Details:
+  {
+    "article_id": "7b74dbc6-5bf7-4141-ab5d-5eb1e68c43f2",
+    "url": "https://arxiv.org/abs/2606.12018"
+  }
+[2026-06-11 15:24:21] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on spatial reasoning in large reasoning models, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "fcbc8551-88f8-418d-b3f0-c11cf61a29f8",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on spatial reasoning in large reasoning models, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:21] [quality] evaluating: Article: Human-Enhanced Loop Modeling (HELM): Agent-Based Finite Elem...
+  Details:
+  {
+    "article_id": "406ad217-29e9-4849-8b5e-a6106fabe072",
+    "url": "https://arxiv.org/abs/2606.12025"
+  }
+[2026-06-11 15:24:21] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper related to a competition, which does not reflect a broader trend in the AI industry. It lacks widespread relevance or impact beyond the academic context.
+  Details:
+  {
+    "article_id": "97307a74-dd0c-49b5-be7d-91412951a13b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper related to a competition, which does not reflect a broader trend in the AI industry. It lacks widespread relevance or impact beyond the academic context."
+  }
+[2026-06-11 15:24:21] [quality] evaluating: Article: Existential Indifference: Self-Nonpreservation as a Necessar...
+  Details:
+  {
+    "article_id": "621797b1-38ef-4360-ab29-f3e3d722637b",
+    "url": "https://arxiv.org/abs/2606.12032"
+  }
+[2026-06-11 15:24:22] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new system for constructing benchmarks in embodied spatial intelligence. While it is relevant to AI research, it lacks broader industry implications or trends that would make it widely discussed or impactful.
+  Details:
+  {
+    "article_id": "ac27a129-46da-4cbd-8178-15f9e5296542",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new system for constructing benchmarks in embodied spatial intelligence. While it is relevant to AI research, it lacks broader industry implications or trends that would make it widely discussed or impactful."
+  }
+[2026-06-11 15:24:22] [quality] evaluating: Article: A Lightweight Multi-Agent Framework for Automated Concrete B...
+  Details:
+  {
+    "article_id": "b12b427b-ae02-4589-8c41-ef964a93e02b",
+    "url": "https://arxiv.org/abs/2606.12040"
+  }
+[2026-06-11 15:24:22] [quality] decision: Decision: reject, score=2. This is an individual research paper discussing a theoretical perspective on AGI, which does not reflect a broader trend or significant industry movement. It lacks the necessary data or multiple organizational backing to qualify as a trending topic.
+  Details:
+  {
+    "article_id": "9c583c64-e1e4-4f47-82ab-d7063ec473ba",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "This is an individual research paper discussing a theoretical perspective on AGI, which does not reflect a broader trend or significant industry movement. It lacks the necessary data or multiple organizational backing to qualify as a trending topic."
+  }
+[2026-06-11 15:24:22] [quality] evaluating: Article: Automating Geometry-Intensive Compliance Checking in BIM: Gr...
+  Details:
+  {
+    "article_id": "5b1a2126-1348-4374-b44d-85be514fdae1",
+    "url": "https://arxiv.org/abs/2606.12065"
+  }
+[2026-06-11 15:24:23] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about a modeling framework for bridge barriers, which is too niche and lacks broader industry relevance or trend signals in AI.
+  Details:
+  {
+    "article_id": "406ad217-29e9-4849-8b5e-a6106fabe072",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about a modeling framework for bridge barriers, which is too niche and lacks broader industry relevance or trend signals in AI."
+  }
+[2026-06-11 15:24:23] [quality] evaluating: Article: IntElicit: Eliciting and Assessing Contextualized Creativity...
+  Details:
+  {
+    "article_id": "a4a31d9b-231f-4903-9828-1602bb38de3c",
+    "url": "https://arxiv.org/abs/2606.12086"
+  }
+[2026-06-11 15:24:23] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about a multi-agent framework for concrete barrier design, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "b12b427b-ae02-4589-8c41-ef964a93e02b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about a multi-agent framework for concrete barrier design, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:23] [quality] evaluating: Article: The Impossibility of Eliciting Latent Knowledge...
+  Details:
+  {
+    "article_id": "7238be7a-979e-4693-bc53-7ea77ea4f933",
+    "url": "https://arxiv.org/abs/2606.12268"
+  }
+[2026-06-11 15:24:23] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on AI alignment and self-preservation, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or discussion.
+  Details:
+  {
+    "article_id": "621797b1-38ef-4360-ab29-f3e3d722637b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on AI alignment and self-preservation, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or discussion."
+  }
+[2026-06-11 15:24:23] [quality] evaluating: Article: A Five-Plane Reference Architecture for Runtime Governance o...
+  Details:
+  {
+    "article_id": "ebba4583-0300-4bfa-ac31-4da6c579277e",
+    "url": "https://arxiv.org/abs/2606.12320"
+  }
+[2026-06-11 15:24:24] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a multi-agent framework for social intelligence reasoning, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "7b74dbc6-5bf7-4141-ab5d-5eb1e68c43f2",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a multi-agent framework for social intelligence reasoning, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:24] [quality] evaluating: Article: PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment...
+  Details:
+  {
+    "article_id": "b1797afb-0e08-43d0-98ca-9022c74bafea",
+    "url": "https://arxiv.org/abs/2606.12329"
+  }
+[2026-06-11 15:24:24] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical framework for compliance checking in BIM, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "5b1a2126-1348-4374-b44d-85be514fdae1",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical framework for compliance checking in BIM, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:24] [quality] evaluating: Article: Nonslop: A Gamified Experiment in Human-AI Collaborative Wri...
+  Details:
+  {
+    "article_id": "d633a04f-9767-4c94-8e7d-61b4d6f2def6",
+    "url": "https://arxiv.org/abs/2606.12350"
+  }
+[2026-06-11 15:24:25] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about a framework for assessing creativity in AI interactions. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience. It is too niche and does not reflect a significant trend in AI.
+  Details:
+  {
+    "article_id": "a4a31d9b-231f-4903-9828-1602bb38de3c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about a framework for assessing creativity in AI interactions. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience. It is too niche and does not reflect a significant trend in AI."
+  }
+[2026-06-11 15:24:25] [quality] evaluating: Article: From Architecture to Output: Structural Origins of Hallucina...
+  Details:
+  {
+    "article_id": "f75f34cd-a787-48dd-99c8-2ec4c4590003",
+    "url": "https://arxiv.org/abs/2606.07537"
+  }
+[2026-06-11 15:24:25] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on eliciting latent knowledge in AI, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "7238be7a-979e-4693-bc53-7ea77ea4f933",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on eliciting latent knowledge in AI, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:25] [quality] evaluating: Article: From Consumption to Reflection: Designing Human-AI Relations...
+  Details:
+  {
+    "article_id": "66913e61-ee2f-4a15-83ee-939dbee5db94",
+    "url": "https://arxiv.org/abs/2606.11195"
+  }
+[2026-06-11 15:24:25] [quality] decision: Decision: reject, score=2. The article presents a specific research paper on a reference architecture for AI governance, which is too niche and lacks broader industry trends or significant adoption signals. It does not reflect a widespread trend or shift in the AI landscape.
+  Details:
+  {
+    "article_id": "ebba4583-0300-4bfa-ac31-4da6c579277e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article presents a specific research paper on a reference architecture for AI governance, which is too niche and lacks broader industry trends or significant adoption signals. It does not reflect a widespread trend or shift in the AI landscape."
+  }
+[2026-06-11 15:24:25] [quality] evaluating: Article: PoQ-Judge: A Multi-Architecture Evaluation Framework for Cos...
+  Details:
+  {
+    "article_id": "b6ff73d4-8f88-47ef-8051-f317e14140d4",
+    "url": "https://arxiv.org/abs/2606.11196"
+  }
+[2026-06-11 15:24:26] [quality] decision: Decision: reject, score=2. The article discusses a specific research project related to AI coding agents but lacks broader industry trends or significant adoption signals. It appears to be more of a niche academic contribution rather than a trend that is gaining traction or widely discussed in the industry.
+  Details:
+  {
+    "article_id": "b1797afb-0e08-43d0-98ca-9022c74bafea",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research project related to AI coding agents but lacks broader industry trends or significant adoption signals. It appears to be more of a niche academic contribution rather than a trend that is gaining traction or widely discussed in the industry."
+  }
+[2026-06-11 15:24:26] [quality] evaluating: Article: The Structural Attention Tax: How Retrieval Format Hijacks I...
+  Details:
+  {
+    "article_id": "bf7e8386-3024-48f2-a7e9-6f27c62f8093",
+    "url": "https://arxiv.org/abs/2606.11198"
+  }
+[2026-06-11 15:24:26] [quality] decision: Decision: reject, score=2. While the study explores interesting aspects of human-AI interaction, it focuses on a specific experiment without broader implications or trends in the industry. It lacks widespread relevance or adoption signals.
+  Details:
+  {
+    "article_id": "d633a04f-9767-4c94-8e7d-61b4d6f2def6",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the study explores interesting aspects of human-AI interaction, it focuses on a specific experiment without broader implications or trends in the industry. It lacks widespread relevance or adoption signals."
+  }
+[2026-06-11 15:24:26] [quality] evaluating: Article: NightFeats @ MMU-RAGent NeurIPS 2025: A Context-Optimized Mu...
+  Details:
+  {
+    "article_id": "25551e84-06bf-492e-8c19-f983d6dbcead",
+    "url": "https://arxiv.org/abs/2606.11199"
+  }
+[2026-06-11 15:24:27] [quality] decision: Decision: reject, score=2. The article is a single research paper focused on a specific aspect of hallucination in large language models. It lacks broader industry implications or trends, making it unsuitable for the ai_trends category.
+  Details:
+  {
+    "article_id": "f75f34cd-a787-48dd-99c8-2ec4c4590003",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article is a single research paper focused on a specific aspect of hallucination in large language models. It lacks broader industry implications or trends, making it unsuitable for the ai_trends category."
+  }
+[2026-06-11 15:24:27] [quality] evaluating: Article: To Intervene or Not: Guiding Inference-time Alignment with P...
+  Details:
+  {
+    "article_id": "2fd622a7-7b39-49b0-9602-6c7ed73203c4",
+    "url": "https://arxiv.org/abs/2606.11201"
+  }
+[2026-06-11 15:24:27] [quality] decision: Decision: reject, score=2. The article is a single research paper discussing a specific concept (Relational Reflective Intelligence) without indicating broader industry trends or significant adoption. It lacks the necessary elements to be considered a trending topic in AI.
+  Details:
+  {
+    "article_id": "66913e61-ee2f-4a15-83ee-939dbee5db94",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article is a single research paper discussing a specific concept (Relational Reflective Intelligence) without indicating broader industry trends or significant adoption. It lacks the necessary elements to be considered a trending topic in AI."
+  }
+[2026-06-11 15:24:27] [quality] evaluating: Article: Dual-Stance Evaluation of Sycophancy: The Structure of Agree...
+  Details:
+  {
+    "article_id": "6695a489-b34b-4397-8568-46d09e61ab46",
+    "url": "https://arxiv.org/abs/2606.11205"
+  }
+[2026-06-11 15:24:28] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework for decentralized LLM inference, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement.
+  Details:
+  {
+    "article_id": "b6ff73d4-8f88-47ef-8051-f317e14140d4",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework for decentralized LLM inference, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement."
+  }
+[2026-06-11 15:24:28] [quality] evaluating: Article: BioDivergence: A Benchmark and Evaluation Framework for Hidd...
+  Details:
+  {
+    "article_id": "04371db2-aa6b-4fbb-9943-7c872106361f",
+    "url": "https://arxiv.org/abs/2606.11208"
+  }
+[2026-06-11 15:24:28] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical aspect of retrieval-augmented generation systems. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience.
+  Details:
+  {
+    "article_id": "bf7e8386-3024-48f2-a7e9-6f27c62f8093",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical aspect of retrieval-augmented generation systems. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience."
+  }
+[2026-06-11 15:24:28] [quality] evaluating: Article: ProcessThinker: Enhancing Multi-modal Large Language Models ...
+  Details:
+  {
+    "article_id": "78a93828-641e-4c31-a378-7b3074c7db73",
+    "url": "https://arxiv.org/abs/2606.11209"
+  }
+[2026-06-11 15:24:28] [quality] decision: Decision: reject, score=2. The article discusses a specific research submission to a competition, which lacks broader industry impact or trend relevance. It focuses on a single system without indicating a wider trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "25551e84-06bf-492e-8c19-f983d6dbcead",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research submission to a competition, which lacks broader industry impact or trend relevance. It focuses on a single system without indicating a wider trend in AI adoption or application."
+  }
+[2026-06-11 15:24:28] [quality] evaluating: Article: T2MM: An LLM Supported Architecture For Inquiry-Based Modeli...
+  Details:
+  {
+    "article_id": "9914c2f5-15f1-4945-b9be-3c873180b8c9",
+    "url": "https://arxiv.org/abs/2606.11210"
+  }
+[2026-06-11 15:24:29] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical framework for model alignment, which is too niche and lacks broader industry impact or trend signals. It does not reflect a genuine trend in AI adoption or significant market movement.
+  Details:
+  {
+    "article_id": "2fd622a7-7b39-49b0-9602-6c7ed73203c4",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical framework for model alignment, which is too niche and lacks broader industry impact or trend signals. It does not reflect a genuine trend in AI adoption or significant market movement."
+  }
+[2026-06-11 15:24:29] [quality] evaluating: Article: Calibration Drift Under Reasoning: How Chain-of-Thought Budg...
+  Details:
+  {
+    "article_id": "59a55a6d-0169-42ca-913d-ff8b5cd19f4a",
+    "url": "https://arxiv.org/abs/2606.11211"
+  }
+[2026-06-11 15:24:29] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on LLM behavior, which does not reflect a broader trend or significant industry impact. It is too specialized and unlikely to generate widespread interest among the target audience.
+  Details:
+  {
+    "article_id": "6695a489-b34b-4397-8568-46d09e61ab46",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on LLM behavior, which does not reflect a broader trend or significant industry impact. It is too specialized and unlikely to generate widespread interest among the target audience."
+  }
+[2026-06-11 15:24:29] [quality] evaluating: Article: From Awareness to Action: Understanding and Overcoming the R...
+  Details:
+  {
+    "article_id": "2fbcb79c-ea0d-4041-94d4-9026fde3f525",
+    "url": "https://arxiv.org/abs/2606.11214"
+  }
+[2026-06-11 15:24:29] [quality] decision: Decision: reject, score=2. The article presents a specific research framework in a niche area of biomedical AI, lacking broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "04371db2-aa6b-4fbb-9943-7c872106361f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article presents a specific research framework in a niche area of biomedical AI, lacking broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or application."
+  }
+[2026-06-11 15:24:29] [quality] evaluating: Article: The Environmental Cost of LLMs in AIED: Reporting and Practi...
+  Details:
+  {
+    "article_id": "df019d71-2586-4a7e-b0fe-04d93a6c5c15",
+    "url": "https://arxiv.org/abs/2606.11215"
+  }
+[2026-06-11 15:24:30] [quality] decision: Decision: reject, score=2. The article discusses a specific architecture for educational modeling using LLMs, which is too niche and lacks broader industry impact or trend significance.
+  Details:
+  {
+    "article_id": "9914c2f5-15f1-4945-b9be-3c873180b8c9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific architecture for educational modeling using LLMs, which is too niche and lacks broader industry impact or trend significance."
+  }
+[2026-06-11 15:24:30] [quality] evaluating: Article: Preregistration for Experiments with AI Agents...
+  Details:
+  {
+    "article_id": "e1e6cc92-7eaa-4e0b-aa41-799bf3c1ec6d",
+    "url": "https://arxiv.org/abs/2606.11217"
+  }
+[2026-06-11 15:24:30] [quality] decision: Decision: reject, score=2. This article discusses a specific research paper on a technical method for improving multi-modal reasoning in AI, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "78a93828-641e-4c31-a378-7b3074c7db73",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "This article discusses a specific research paper on a technical method for improving multi-modal reasoning in AI, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:30] [quality] evaluating: Article: An Ethical eValuation Agent (EeVA): Results of a Proof-of-Co...
+  Details:
+  {
+    "article_id": "a9d7e11f-6093-48a5-8a6f-46853725ce9c",
+    "url": "https://arxiv.org/abs/2606.11218"
+  }
+[2026-06-11 15:24:31] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on calibration drift in large language models, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "59a55a6d-0169-42ca-913d-ff8b5cd19f4a",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on calibration drift in large language models, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or application."
+  }
+[2026-06-11 15:24:31] [quality] evaluating: Article: Afrispeech Semantics: Evaluating Audio Semantic Reasoning in...
+  Details:
+  {
+    "article_id": "9b5872ee-cc5c-4eb3-9cc4-60f0b3ad8a19",
+    "url": "https://arxiv.org/abs/2606.11219"
+  }
+[2026-06-11 15:24:31] [quality] decision: Decision: reject, score=2. The article focuses on a specific research study about algorithmic fairness in public health, which is too niche and lacks broader industry trends or significant implications for a wider audience.
+  Details:
+  {
+    "article_id": "2fbcb79c-ea0d-4041-94d4-9026fde3f525",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research study about algorithmic fairness in public health, which is too niche and lacks broader industry trends or significant implications for a wider audience."
+  }
+[2026-06-11 15:24:31] [quality] evaluating: Article: Artificial Intelligence in Ship Finance: Applications, Oppor...
+  Details:
+  {
+    "article_id": "826fa669-9c2c-4499-86eb-f17a0c1e6e57",
+    "url": "https://arxiv.org/abs/2606.11238"
+  }
+[2026-06-11 15:24:32] [quality] decision: Decision: reject, score=2. While the topic of environmental costs of LLMs is important, this article focuses on a specific research paper without broader industry implications or trends. It does not reflect a widespread trend or adoption pattern in the AI community.
+  Details:
+  {
+    "article_id": "df019d71-2586-4a7e-b0fe-04d93a6c5c15",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the topic of environmental costs of LLMs is important, this article focuses on a specific research paper without broader industry implications or trends. It does not reflect a widespread trend or adoption pattern in the AI community."
+  }
+[2026-06-11 15:24:32] [quality] evaluating: Article: SPEAR: A System for Post-Quantization Error-Adaptive Recover...
+  Details:
+  {
+    "article_id": "491311f6-20aa-40d6-be92-24fc3ec26760",
+    "url": "https://arxiv.org/abs/2606.11244"
+  }
+[2026-06-11 15:24:32] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on preregistration practices for AI agent experiments, which is too niche and lacks broader industry impact or trend significance.
+  Details:
+  {
+    "article_id": "e1e6cc92-7eaa-4e0b-aa41-799bf3c1ec6d",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on preregistration practices for AI agent experiments, which is too niche and lacks broader industry impact or trend significance."
+  }
+[2026-06-11 15:24:32] [quality] evaluating: Article: Physics-informed generative AI for semiconductor manufacturi...
+  Details:
+  {
+    "article_id": "9f139f34-1e0b-4f72-b52b-f820b8f4088e",
+    "url": "https://arxiv.org/abs/2606.11247"
+  }
+[2026-06-11 15:24:33] [quality] decision: Decision: reject, score=2. While the research on audio language models is interesting, it focuses on a specific study without broader industry implications or trends. It lacks evidence of widespread adoption or significant impact on the AI field.
+  Details:
+  {
+    "article_id": "9b5872ee-cc5c-4eb3-9cc4-60f0b3ad8a19",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research on audio language models is interesting, it focuses on a specific study without broader industry implications or trends. It lacks evidence of widespread adoption or significant impact on the AI field."
+  }
+[2026-06-11 15:24:33] [quality] evaluating: Article: RAIL: Rethinking Auditory Intelligence in Large Audio-Langua...
+  Details:
+  {
+    "article_id": "ea413e5f-8fdd-4c6a-bcab-208402284e95",
+    "url": "https://arxiv.org/abs/2606.11260"
+  }
+[2026-06-11 15:24:33] [quality] decision: Decision: reject, score=2. While the topic of ethical AI is important, this article focuses on a specific proof-of-concept for a single tool without broader industry implications or trends. It lacks the necessary signals of widespread adoption or debate to qualify as a trending topic.
+  Details:
+  {
+    "article_id": "a9d7e11f-6093-48a5-8a6f-46853725ce9c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the topic of ethical AI is important, this article focuses on a specific proof-of-concept for a single tool without broader industry implications or trends. It lacks the necessary signals of widespread adoption or debate to qualify as a trending topic."
+  }
+[2026-06-11 15:24:33] [quality] evaluating: Article: PermDoRA -- Understanding Adapter Interference in Language M...
+  Details:
+  {
+    "article_id": "485222e7-5004-4a69-9583-2a9ecebce726",
+    "url": "https://arxiv.org/abs/2606.11262"
+  }
+[2026-06-11 15:24:33] [quality] decision: Decision: reject, score=2. The article focuses on a specific application of AI in ship finance, which is a niche area and does not reflect a broader trend in AI. It lacks widespread relevance and impact for a general audience.
+  Details:
+  {
+    "article_id": "826fa669-9c2c-4499-86eb-f17a0c1e6e57",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific application of AI in ship finance, which is a niche area and does not reflect a broader trend in AI. It lacks widespread relevance and impact for a general audience."
+  }
+[2026-06-11 15:24:33] [quality] evaluating: Article: OmniBioTwin: A System-of-Twinned-Systems Framework for Healt...
+  Details:
+  {
+    "article_id": "39fb5192-37ec-4bfc-83c5-43bc8b35676e",
+    "url": "https://arxiv.org/abs/2606.11264"
+  }
+[2026-06-11 15:24:33] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical system for LLM serving, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "491311f6-20aa-40d6-be92-24fc3ec26760",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical system for LLM serving, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:33] [quality] evaluating: Article: When Poison Fails After Retrieval: Revisiting Corpus Poisoni...
+  Details:
+  {
+    "article_id": "3a21262f-9ba1-4a0f-b532-15302521431f",
+    "url": "https://arxiv.org/abs/2606.11265"
+  }
+[2026-06-11 15:24:34] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on generative AI in semiconductor manufacturing, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a wider trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "9f139f34-1e0b-4f72-b52b-f820b8f4088e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on generative AI in semiconductor manufacturing, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a wider trend in AI adoption or application."
+  }
+[2026-06-11 15:24:34] [quality] evaluating: Article: Federated continual learning: A comprehensive survey on life...
+  Details:
+  {
+    "article_id": "52a1ead3-94ff-4435-92e7-f954edb00c7b",
+    "url": "https://arxiv.org/abs/2606.11272"
+  }
+[2026-06-11 15:24:35] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on adapter interference in language models, which is too niche and lacks broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts.
+  Details:
+  {
+    "article_id": "485222e7-5004-4a69-9583-2a9ecebce726",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on adapter interference in language models, which is too niche and lacks broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts."
+  }
+[2026-06-11 15:24:35] [quality] evaluating: Article: FlowBank: Query-Adaptive Agentic Workflows Optimization thro...
+  Details:
+  {
+    "article_id": "538f203c-532d-4c36-9bbc-db63d1e1ec8f",
+    "url": "https://arxiv.org/abs/2606.11290"
+  }
+[2026-06-11 15:24:35] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about corpus poisoning in RAG systems, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "3a21262f-9ba1-4a0f-b532-15302521431f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about corpus poisoning in RAG systems, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:35] [quality] evaluating: Article: Embodied-R1.5: Evolving Physical Intelligence via Embodied F...
+  Details:
+  {
+    "article_id": "e49dfd58-f766-4082-a70d-5714513a7737",
+    "url": "https://arxiv.org/abs/2606.11324"
+  }
+[2026-06-11 15:24:36] [quality] decision: Decision: reject, score=2. While the research introduces a new evaluation paradigm for auditory intelligence in large audio-language models, it lacks broader industry implications or trends that would make it widely relevant or trending. It is more suited for a specialized audience rather than a general AI trends discussion.
+  Details:
+  {
+    "article_id": "ea413e5f-8fdd-4c6a-bcab-208402284e95",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research introduces a new evaluation paradigm for auditory intelligence in large audio-language models, it lacks broader industry implications or trends that would make it widely relevant or trending. It is more suited for a specialized audience rather than a general AI trends discussion."
+  }
+[2026-06-11 15:24:36] [quality] evaluating: Article: TileFuse: A Fused Mixed-Precision Kernel Library for Efficie...
+  Details:
+  {
+    "article_id": "6b27a1a8-73f0-4913-a9bb-3f0ebda85cdb",
+    "url": "https://arxiv.org/abs/2606.11357"
+  }
+[2026-06-11 15:24:36] [quality] decision: Decision: reject, score=2. While the topic of Federated Continual Learning is relevant to AI, this article is a single research paper without broader industry trends or significant adoption signals. It does not reflect a genuine trend in the industry, making it unsuitable for the ai_trends category.
+  Details:
+  {
+    "article_id": "52a1ead3-94ff-4435-92e7-f954edb00c7b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the topic of Federated Continual Learning is relevant to AI, this article is a single research paper without broader industry trends or significant adoption signals. It does not reflect a genuine trend in the industry, making it unsuitable for the ai_trends category."
+  }
+[2026-06-11 15:24:36] [quality] evaluating: Article: Overcoming State Inertia in Full-Duplex Spoken Language Mode...
+  Details:
+  {
+    "article_id": "ec3367e1-a532-4f33-986d-0c867ce1c84e",
+    "url": "https://arxiv.org/abs/2606.11386"
+  }
+[2026-06-11 15:24:37] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new framework for workflow optimization in LLM-based systems. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience. It is more suited for an academic or specialized audience rather than a general trend discussion.
+  Details:
+  {
+    "article_id": "538f203c-532d-4c36-9bbc-db63d1e1ec8f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new framework for workflow optimization in LLM-based systems. While it presents interesting findings, it lacks broader industry implications or trends that would engage a wider audience. It is more suited for an academic or specialized audience rather than a general trend discussion."
+  }
+[2026-06-11 15:24:37] [quality] evaluating: Article: Steering Where to Listen: Instruction-Based Activation Steer...
+  Details:
+  {
+    "article_id": "17af5977-e3a4-435d-b33e-c2a9daac27e8",
+    "url": "https://arxiv.org/abs/2606.11400"
+  }
+[2026-06-11 15:24:37] [quality] decision: Decision: reject, score=2. While the research presents interesting advancements in embodied AI, it focuses on a specific model without indicating broader industry trends or significant adoption patterns. It lacks the necessary elements to be considered a trending topic.
+  Details:
+  {
+    "article_id": "e49dfd58-f766-4082-a70d-5714513a7737",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents interesting advancements in embodied AI, it focuses on a specific model without indicating broader industry trends or significant adoption patterns. It lacks the necessary elements to be considered a trending topic."
+  }
+[2026-06-11 15:24:37] [quality] evaluating: Article: Risk Under Pressure: Compute-Aware Evaluation of Adversarial...
+  Details:
+  {
+    "article_id": "848a95af-6d44-48ea-a2cc-bf10463cbcf7",
+    "url": "https://arxiv.org/abs/2606.11409"
+  }
+[2026-06-11 15:24:38] [quality] decision: Decision: reject, score=2. The article discusses a specific technical library for AMD NPUs, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or deployment.
+  Details:
+  {
+    "article_id": "6b27a1a8-73f0-4913-a9bb-3f0ebda85cdb",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific technical library for AMD NPUs, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI adoption or deployment."
+  }
+[2026-06-11 15:24:38] [quality] evaluating: Article: MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Par...
+  Details:
+  {
+    "article_id": "54915c1c-dcc9-4ac8-887e-ca444c3ffbcc",
+    "url": "https://arxiv.org/abs/2606.11416"
+  }
+[2026-06-11 15:24:38] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on full-duplex spoken language models, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI that would engage a wider audience.
+  Details:
+  {
+    "article_id": "ec3367e1-a532-4f33-986d-0c867ce1c84e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on full-duplex spoken language models, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a significant trend in AI that would engage a wider audience."
+  }
+[2026-06-11 15:24:38] [quality] evaluating: Article: Signed Compression Progress on a Sealed Audit is Goodhart-Re...
+  Details:
+  {
+    "article_id": "3850379c-2941-4edd-9648-07d3f6a25e37",
+    "url": "https://arxiv.org/abs/2606.11417"
+  }
+[2026-06-11 15:24:39] [quality] decision: Decision: reject, score=2. The article discusses a specific research framework for health digital twins, which is too niche and lacks broader industry impact or trend signals. It does not reflect a widespread trend or adoption in the AI field.
+  Details:
+  {
+    "article_id": "39fb5192-37ec-4bfc-83c5-43bc8b35676e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research framework for health digital twins, which is too niche and lacks broader industry impact or trend signals. It does not reflect a widespread trend or adoption in the AI field."
+  }
+[2026-06-11 15:24:39] [quality] evaluating: Article: JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optim...
+  Details:
+  {
+    "article_id": "c8857767-0282-45e3-9165-7ffe969d9be0",
+    "url": "https://arxiv.org/abs/2606.11425"
+  }
+[2026-06-11 15:24:39] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on adversarial robustness in language models, which is too niche and lacks broader industry impact or trend relevance for the target audience.
+  Details:
+  {
+    "article_id": "848a95af-6d44-48ea-a2cc-bf10463cbcf7",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on adversarial robustness in language models, which is too niche and lacks broader industry impact or trend relevance for the target audience."
+  }
+[2026-06-11 15:24:39] [quality] evaluating: Article: Towards a Bridge Layer Between Bibliographic and Formalized ...
+  Details:
+  {
+    "article_id": "253cf50b-8873-4c40-be9d-a2035d508336",
+    "url": "https://arxiv.org/abs/2606.11430"
+  }
+[2026-06-11 15:24:39] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on audio-language models, which does not reflect a broader trend or significant industry impact. It is too specialized and lacks wider relevance for the audience.
+  Details:
+  {
+    "article_id": "17af5977-e3a4-435d-b33e-c2a9daac27e8",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on audio-language models, which does not reflect a broader trend or significant industry impact. It is too specialized and lacks wider relevance for the audience."
+  }
+[2026-06-11 15:24:39] [quality] evaluating: Article: The Power of Test-Time Training for Approximate Sampling...
+  Details:
+  {
+    "article_id": "7676cc3f-a9e0-4b42-9125-9133c55cb26e",
+    "url": "https://arxiv.org/abs/2606.11437"
+  }
+[2026-06-11 15:24:39] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a benchmark for evaluating LLM code repair in Secure Multi-Party Computation, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "54915c1c-dcc9-4ac8-887e-ca444c3ffbcc",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a benchmark for evaluating LLM code repair in Secure Multi-Party Computation, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:39] [quality] evaluating: Article: AI Coding Agents in Social Science: Methodologically Diverse...
+  Details:
+  {
+    "article_id": "056a010f-1a84-4d98-b609-7e6bd8f96572",
+    "url": "https://arxiv.org/abs/2606.11456"
+  }
+[2026-06-11 15:24:40] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a tool for optimizing jailbreak prompts in LLMs, which is too niche and lacks broader industry relevance or trend impact.
+  Details:
+  {
+    "article_id": "c8857767-0282-45e3-9165-7ffe969d9be0",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a tool for optimizing jailbreak prompts in LLMs, which is too niche and lacks broader industry relevance or trend impact."
+  }
+[2026-06-11 15:24:40] [quality] evaluating: Article: APEX: Automated Prompt Engineering eXpert with Dynamic Data ...
+  Details:
+  {
+    "article_id": "3ffbc946-d2ec-4125-9f9b-c88cf4522cdb",
+    "url": "https://arxiv.org/abs/2606.11459"
+  }
+[2026-06-11 15:24:40] [quality] decision: Decision: reject, score=1. The article discusses a specific research paper on signed compression progress, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "3850379c-2941-4edd-9648-07d3f6a25e37",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on signed compression progress, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:40] [quality] evaluating: Article: LSTM-Based Detection of Structural Breaks in Property Insura...
+  Details:
+  {
+    "article_id": "2b43196a-d33f-487a-8fc7-4433d4cac474",
+    "url": "https://arxiv.org/abs/2606.11463"
+  }
+[2026-06-11 15:24:40] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about mathematical knowledge integration, which is too niche and lacks broader industry impact or trend relevance for the target audience.
+  Details:
+  {
+    "article_id": "253cf50b-8873-4c40-be9d-a2035d508336",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about mathematical knowledge integration, which is too niche and lacks broader industry impact or trend relevance for the target audience."
+  }
+[2026-06-11 15:24:40] [quality] evaluating: Article: Towards Fully Automated Exam Grading: Fairness-Aware Recogni...
+  Details:
+  {
+    "article_id": "bbacc9f8-9152-4733-88ba-5d78cf2a1584",
+    "url": "https://arxiv.org/abs/2606.11477"
+  }
+[2026-06-11 15:24:41] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on test-time training, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "7676cc3f-a9e0-4b42-9125-9133c55cb26e",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on test-time training, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:41] [quality] evaluating: Article: Hubs or Fringes: Pretraining Data Selection via Web Graph Ce...
+  Details:
+  {
+    "article_id": "401c068f-d462-4473-99f4-55678020c2e9",
+    "url": "https://arxiv.org/abs/2606.11499"
+  }
+[2026-06-11 15:24:41] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on AI coding agents in social science, which is too niche and lacks broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts.
+  Details:
+  {
+    "article_id": "056a010f-1a84-4d98-b609-7e6bd8f96572",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on AI coding agents in social science, which is too niche and lacks broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts."
+  }
+[2026-06-11 15:24:41] [quality] evaluating: Article: When Roleplaying, Do Models Believe What They Say?...
+  Details:
+  {
+    "article_id": "fa71666a-d78c-43f7-8bf8-487678737ce5",
+    "url": "https://arxiv.org/abs/2606.11502"
+  }
+[2026-06-11 15:24:42] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a novel framework for prompt engineering, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "3ffbc946-d2ec-4125-9f9b-c88cf4522cdb",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a novel framework for prompt engineering, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:42] [quality] evaluating: Article: On the Study of Biometric Spoofing Detection using Deep Lear...
+  Details:
+  {
+    "article_id": "67296467-8596-4753-9a77-df07cf6139a9",
+    "url": "https://arxiv.org/abs/2606.11505"
+  }
+[2026-06-11 15:24:42] [quality] decision: Decision: reject, score=2. While the research presents an interesting approach to automated exam grading, it focuses on a specific study without broader implications or trends in the industry. It lacks widespread adoption signals or significant market impact.
+  Details:
+  {
+    "article_id": "bbacc9f8-9152-4733-88ba-5d78cf2a1584",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents an interesting approach to automated exam grading, it focuses on a specific study without broader implications or trends in the industry. It lacks widespread adoption signals or significant market impact."
+  }
+[2026-06-11 15:24:42] [quality] evaluating: Article: SirenFNO: Efficient and Full Frequency Learning of Fourier N...
+  Details:
+  {
+    "article_id": "89460e2e-4ca3-44a5-8139-5d730d8c4f70",
+    "url": "https://arxiv.org/abs/2606.11518"
+  }
+[2026-06-11 15:24:42] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about LSTM applications in property insurance, which is too niche and lacks broader industry trends or implications. It does not reflect a widespread trend in AI adoption or significant market impact.
+  Details:
+  {
+    "article_id": "2b43196a-d33f-487a-8fc7-4433d4cac474",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about LSTM applications in property insurance, which is too niche and lacks broader industry trends or implications. It does not reflect a widespread trend in AI adoption or significant market impact."
+  }
+[2026-06-11 15:24:42] [quality] evaluating: Article: ISE: An Execution-Grounded Recipe for Multi-Turn OS-Agent Tr...
+  Details:
+  {
+    "article_id": "8a404fbe-7a90-42b8-9000-0442a26e726f",
+    "url": "https://arxiv.org/abs/2606.11520"
+  }
+[2026-06-11 15:24:43] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on pretraining data selection, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "401c068f-d462-4473-99f4-55678020c2e9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on pretraining data selection, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:43] [quality] evaluating: Article: AI Researchers Must Help Lead Arms Control to Mitigate Milit...
+  Details:
+  {
+    "article_id": "45082bb6-2691-462c-90da-8ef1a81d4bde",
+    "url": "https://arxiv.org/abs/2606.11533"
+  }
+[2026-06-11 15:24:43] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on language models and role-playing, which does not reflect a broader trend in AI adoption or industry-wide implications. It is too focused on a single study without evidence of widespread impact or discussion.
+  Details:
+  {
+    "article_id": "fa71666a-d78c-43f7-8bf8-487678737ce5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on language models and role-playing, which does not reflect a broader trend in AI adoption or industry-wide implications. It is too focused on a single study without evidence of widespread impact or discussion."
+  }
+[2026-06-11 15:24:43] [quality] evaluating: Article: End-to-End Machine Learning for Depressive State Classificat...
+  Details:
+  {
+    "article_id": "ed03da09-7ff2-4e5a-8f49-c860b146bdb2",
+    "url": "https://arxiv.org/abs/2606.11555"
+  }
+[2026-06-11 15:24:43] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about biometric spoofing detection, which does not reflect a broader trend in the AI industry. It lacks evidence of widespread adoption or significant impact on the field.
+  Details:
+  {
+    "article_id": "67296467-8596-4753-9a77-df07cf6139a9",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about biometric spoofing detection, which does not reflect a broader trend in the AI industry. It lacks evidence of widespread adoption or significant impact on the field."
+  }
+[2026-06-11 15:24:43] [quality] evaluating: Article: Privacy-Preserving Federated Autoencoder for ECG Anomaly Det...
+  Details:
+  {
+    "article_id": "41fcf9f3-0fe7-41ca-bb53-e26cfde24f8d",
+    "url": "https://arxiv.org/abs/2606.11556"
+  }
+[2026-06-11 15:24:44] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on Fourier Neural Operators, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI that would engage a wider audience.
+  Details:
+  {
+    "article_id": "89460e2e-4ca3-44a5-8139-5d730d8c4f70",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on Fourier Neural Operators, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI that would engage a wider audience."
+  }
+[2026-06-11 15:24:44] [quality] evaluating: Article: LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems...
+  Details:
+  {
+    "article_id": "ad18bc64-1645-4160-a925-6be8564dbe7a",
+    "url": "https://arxiv.org/abs/2606.11560"
+  }
+[2026-06-11 15:24:45] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new paradigm for training OS agents, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement.
+  Details:
+  {
+    "article_id": "8a404fbe-7a90-42b8-9000-0442a26e726f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new paradigm for training OS agents, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement."
+  }
+[2026-06-11 15:24:45] [quality] evaluating: Article: ConsistencyPlanner: Real-time Planning with Fast-Sampling Co...
+  Details:
+  {
+    "article_id": "1bfe907a-e622-4ec3-aca9-64c61d4be07c",
+    "url": "https://arxiv.org/abs/2606.11569"
+  }
+[2026-06-11 15:24:45] [quality] decision: Decision: reject, score=2. The article discusses a specific aspect of military AI regulation and arms control, which is niche and does not reflect a broader trend in AI adoption or application. It lacks widespread relevance for the audience.
+  Details:
+  {
+    "article_id": "45082bb6-2691-462c-90da-8ef1a81d4bde",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific aspect of military AI regulation and arms control, which is niche and does not reflect a broader trend in AI adoption or application. It lacks widespread relevance for the audience."
+  }
+[2026-06-11 15:24:45] [quality] evaluating: Article: AVIS: Adaptive Test-Time Scaling for Vision-Language Models...
+  Details:
+  {
+    "article_id": "14204c11-be5a-4431-8897-5032f17199f5",
+    "url": "https://arxiv.org/abs/2606.11576"
+  }
+[2026-06-11 15:24:45] [quality] decision: Decision: reject, score=2. The article discusses a specific research study on EEG and fNIRS for depression detection, which is too narrow and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "ed03da09-7ff2-4e5a-8f49-c860b146bdb2",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research study on EEG and fNIRS for depression detection, which is too narrow and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:45] [quality] evaluating: Article: Model-Based and Data-Driven Hierarchical Control and Topolog...
+  Details:
+  {
+    "article_id": "059910b0-1274-4217-a4e9-ead22698a7f0",
+    "url": "https://arxiv.org/abs/2606.11596"
+  }
+[2026-06-11 15:24:47] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about LLMs and graph integration, which does not reflect a broader trend or significant industry movement. It lacks widespread relevance or attention.
+  Details:
+  {
+    "article_id": "ad18bc64-1645-4160-a925-6be8564dbe7a",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about LLMs and graph integration, which does not reflect a broader trend or significant industry movement. It lacks widespread relevance or attention."
+  }
+[2026-06-11 15:24:47] [quality] evaluating: Article: Physics-Distilled Neural Network enabled by Large Language M...
+  Details:
+  {
+    "article_id": "5141e968-4bdc-435a-947f-6f91e103498b",
+    "url": "https://arxiv.org/abs/2606.11605"
+  }
+[2026-06-11 15:24:47] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a planning framework for autonomous driving, which is too niche and lacks broader industry impact or trend signals. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "1bfe907a-e622-4ec3-aca9-64c61d4be07c",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a planning framework for autonomous driving, which is too niche and lacks broader industry impact or trend signals. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:47] [quality] evaluating: Article: Information-Theoretic Decomposition for Multimodal Interacti...
+  Details:
+  {
+    "article_id": "fac825c6-d86c-4a65-b43c-532fe68d2da4",
+    "url": "https://arxiv.org/abs/2606.11614"
+  }
+[2026-06-11 15:24:48] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about hierarchical control in networked systems, which is too niche and lacks broader industry impact or trend relevance for the audience.
+  Details:
+  {
+    "article_id": "059910b0-1274-4217-a4e9-ead22698a7f0",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about hierarchical control in networked systems, which is too niche and lacks broader industry impact or trend relevance for the audience."
+  }
+[2026-06-11 15:24:48] [quality] evaluating: Article: When Context Returns: Toward Robust Internalization in On-Po...
+  Details:
+  {
+    "article_id": "c66fefc2-7d63-46e7-a919-8f20d37d73e8",
+    "url": "https://arxiv.org/abs/2606.11627"
+  }
+[2026-06-11 15:24:48] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical aspect of Vision-Language Models. It lacks broader industry implications or trends and is unlikely to attract significant attention outside of a niche academic audience.
+  Details:
+  {
+    "article_id": "14204c11-be5a-4431-8897-5032f17199f5",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical aspect of Vision-Language Models. It lacks broader industry implications or trends and is unlikely to attract significant attention outside of a niche academic audience."
+  }
+[2026-06-11 15:24:48] [quality] evaluating: Article: LUCID: Learning Embodiment-Agnostic Intent Models from Unstr...
+  Details:
+  {
+    "article_id": "622171c0-3cd6-44eb-a2c5-3d00182bcd20",
+    "url": "https://arxiv.org/abs/2606.11628"
+  }
+[2026-06-11 15:24:48] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper about a privacy-preserving federated autoencoder for ECG anomaly detection, which is too niche and lacks broader industry trend implications. It does not reflect a genuine trend in AI that would be widely discussed or adopted.
+  Details:
+  {
+    "article_id": "41fcf9f3-0fe7-41ca-bb53-e26cfde24f8d",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper about a privacy-preserving federated autoencoder for ECG anomaly detection, which is too niche and lacks broader industry trend implications. It does not reflect a genuine trend in AI that would be widely discussed or adopted."
+  }
+[2026-06-11 15:24:48] [quality] evaluating: Article: Sovereign Assurance Boundary: Certificate-Bound Admission fo...
+  Details:
+  {
+    "article_id": "6bfd8d91-0e3a-4c3d-90c7-8856699683e2",
+    "url": "https://arxiv.org/abs/2606.11632"
+  }
+[2026-06-11 15:24:49] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a novel neural network framework for manufacturing, which does not reflect a broader trend in AI. It lacks widespread industry adoption or significant impact that would make it trending or highly relevant for a general audience.
+  Details:
+  {
+    "article_id": "5141e968-4bdc-435a-947f-6f91e103498b",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a novel neural network framework for manufacturing, which does not reflect a broader trend in AI. It lacks widespread industry adoption or significant impact that would make it trending or highly relevant for a general audience."
+  }
+[2026-06-11 15:24:49] [quality] evaluating: Article: Are LLMs Bad at Moral Reasoning?...
+  Details:
+  {
+    "article_id": "0138fb80-f078-4e0a-b09c-970f61bdf9ba",
+    "url": "https://arxiv.org/abs/2606.11635"
+  }
+[2026-06-11 15:24:49] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on robot skill acquisition, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application.
+  Details:
+  {
+    "article_id": "622171c0-3cd6-44eb-a2c5-3d00182bcd20",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on robot skill acquisition, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or application."
+  }
+[2026-06-11 15:24:49] [quality] evaluating: Article: TAROT: Task-Adaptive Refinement of LLM-prior Graphs for Few-...
+  Details:
+  {
+    "article_id": "c0f533b1-6083-462d-ad3d-37865b7abbb2",
+    "url": "https://arxiv.org/abs/2606.11640"
+  }
+[2026-06-11 15:24:49] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on on-policy distillation, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or significant market impact.
+  Details:
+  {
+    "article_id": "c66fefc2-7d63-46e7-a919-8f20d37d73e8",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on on-policy distillation, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or significant market impact."
+  }
+[2026-06-11 15:24:49] [quality] evaluating: Article: ARGUS: Stacked Multi-View Identity Mosaic Injection for Subj...
+  Details:
+  {
+    "article_id": "c6fb66e0-4b3c-4dc1-b331-9281823d5919",
+    "url": "https://arxiv.org/abs/2606.11670"
+  }
+[2026-06-11 15:24:50] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on multimodal interaction learning, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or discussion.
+  Details:
+  {
+    "article_id": "fac825c6-d86c-4a65-b43c-532fe68d2da4",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on multimodal interaction learning, which is too niche and lacks broader industry relevance or trend signals. It does not reflect a genuine trend in AI adoption or discussion."
+  }
+[2026-06-11 15:24:50] [quality] evaluating: Article: Runtime Skill Audit: Targeted Runtime Probing for Agent Skil...
+  Details:
+  {
+    "article_id": "7a8c79ab-d2cf-4cbc-86f3-a9138aed8022",
+    "url": "https://arxiv.org/abs/2606.11671"
+  }
+[2026-06-11 15:24:51] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical topic that is unlikely to be widely discussed or impactful in the broader AI community. It lacks a trend angle and focuses on a single concept without evidence of broader industry adoption or relevance.
+  Details:
+  {
+    "article_id": "6bfd8d91-0e3a-4c3d-90c7-8856699683e2",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical topic that is unlikely to be widely discussed or impactful in the broader AI community. It lacks a trend angle and focuses on a single concept without evidence of broader industry adoption or relevance."
+  }
+[2026-06-11 15:24:51] [quality] evaluating: Article: Can Open-Source LLM Agents Replace Static Application Securi...
+  Details:
+  {
+    "article_id": "3c13a165-aab8-4422-a991-f3c0edeff925",
+    "url": "https://arxiv.org/abs/2606.11672"
+  }
+[2026-06-11 15:24:51] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on moral reasoning in LLMs, which does not reflect a broader trend or significant industry impact. It lacks the necessary data or signals of widespread adoption or debate to qualify as a trending topic.
+  Details:
+  {
+    "article_id": "0138fb80-f078-4e0a-b09c-970f61bdf9ba",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on moral reasoning in LLMs, which does not reflect a broader trend or significant industry impact. It lacks the necessary data or signals of widespread adoption or debate to qualify as a trending topic."
+  }
+[2026-06-11 15:24:51] [quality] evaluating: Article: Reason, Then Re-reason: Cross-view Revisiting Improves Spati...
+  Details:
+  {
+    "article_id": "17f4c3e8-5a6d-406d-b29e-ad22423b47a0",
+    "url": "https://arxiv.org/abs/2606.11683"
+  }
+[2026-06-11 15:24:52] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a new framework for few-shot tabular learning. While it presents interesting findings, it does not reflect a broader trend or significant industry impact, making it less suitable for the ai_trends category.
+  Details:
+  {
+    "article_id": "c0f533b1-6083-462d-ad3d-37865b7abbb2",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a new framework for few-shot tabular learning. While it presents interesting findings, it does not reflect a broader trend or significant industry impact, making it less suitable for the ai_trends category."
+  }
+[2026-06-11 15:24:52] [quality] evaluating: Article: Goal-Autopilot: A Verifiable Anti-Fabrication Firewall for U...
+  Details:
+  {
+    "article_id": "955ce80d-1ee0-4eb5-ba5a-0685c4a5bbc2",
+    "url": "https://arxiv.org/abs/2606.11688"
+  }
+[2026-06-11 15:24:52] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical aspect of video generation, which is too niche and lacks broader industry impact or trend relevance for the target audience.
+  Details:
+  {
+    "article_id": "c6fb66e0-4b3c-4dc1-b331-9281823d5919",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical aspect of video generation, which is too niche and lacks broader industry impact or trend relevance for the target audience."
+  }
+[2026-06-11 15:24:52] [quality] evaluating: Article: Noise-Aware Framework for Correcting Corrupted Labels...
+  Details:
+  {
+    "article_id": "d88aa8e2-49f6-4584-913c-cf9d5ebeca04",
+    "url": "https://arxiv.org/abs/2606.11695"
+  }
+[2026-06-11 15:24:52] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on spatial reasoning, which does not reflect a broader trend in AI. It lacks widespread industry impact or adoption signals.
+  Details:
+  {
+    "article_id": "17f4c3e8-5a6d-406d-b29e-ad22423b47a0",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on spatial reasoning, which does not reflect a broader trend in AI. It lacks widespread industry impact or adoption signals."
+  }
+[2026-06-11 15:24:52] [quality] evaluating: Article: T2S: A Rehearsal-Based Approach for Extraction-Resistant Mod...
+  Details:
+  {
+    "article_id": "14a1d8bb-c4b6-4484-bac1-9fc34f1ab77f",
+    "url": "https://arxiv.org/abs/2606.11698"
+  }
+[2026-06-11 15:24:52] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a dynamic analysis method for auditing agent skills, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "7a8c79ab-d2cf-4cbc-86f3-a9138aed8022",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a dynamic analysis method for auditing agent skills, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:52] [quality] evaluating: Article: MedCTA: A Benchmark for Clinical Tool Agents...
+  Details:
+  {
+    "article_id": "5c606c44-0bc4-463e-96fc-7c5c9f5eaac8",
+    "url": "https://arxiv.org/abs/2606.11702"
+  }
+[2026-06-11 15:24:53] [quality] decision: Decision: reject, score=2. The article focuses on a specific research paper comparing open-source LLM agents to a static application security testing tool. While it presents an empirical assessment, it lacks broader industry implications or trends, making it more suitable for a research-focused category rather than a trending topic.
+  Details:
+  {
+    "article_id": "3c13a165-aab8-4422-a991-f3c0edeff925",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a specific research paper comparing open-source LLM agents to a static application security testing tool. While it presents an empirical assessment, it lacks broader industry implications or trends, making it more suitable for a research-focused category rather than a trending topic."
+  }
+[2026-06-11 15:24:53] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on a technical solution for long-horizon LLM agents, which is too niche and lacks broader industry impact or trend relevance.
+  Details:
+  {
+    "article_id": "955ce80d-1ee0-4eb5-ba5a-0685c4a5bbc2",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on a technical solution for long-horizon LLM agents, which is too niche and lacks broader industry impact or trend relevance."
+  }
+[2026-06-11 15:24:54] [quality] decision: Decision: reject, score=2. While the research presents a novel framework for correcting corrupted labels, it is a single research paper without broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts.
+  Details:
+  {
+    "article_id": "d88aa8e2-49f6-4584-913c-cf9d5ebeca04",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research presents a novel framework for correcting corrupted labels, it is a single research paper without broader industry implications or trends. It does not reflect a genuine trend in AI adoption or significant market shifts."
+  }
+[2026-06-11 15:24:54] [quality] decision: Decision: reject, score=2. The article discusses a specific research paper on model watermarking, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement.
+  Details:
+  {
+    "article_id": "14a1d8bb-c4b6-4484-bac1-9fc34f1ab77f",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "The article discusses a specific research paper on model watermarking, which is too niche and lacks broader industry impact or trend relevance. It does not reflect a genuine trend in AI adoption or significant market movement."
+  }
+[2026-06-11 15:24:54] [quality] decision: Decision: reject, score=2. While the research introduces a benchmark for medical AI agents, it does not reflect a broader trend or significant industry shift. It is more focused on a specific study rather than a widespread adoption or change in the field.
+  Details:
+  {
+    "article_id": "5c606c44-0bc4-463e-96fc-7c5c9f5eaac8",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "niche",
+      "low relevance"
+    ],
+    "notes": "While the research introduces a benchmark for medical AI agents, it does not reflect a broader trend or significant industry shift. It is more focused on a specific study rather than a widespread adoption or change in the field."
+  }
+[2026-06-11 15:24:54] [quality] batch_done: Evaluation complete for 'ai_trends': 0/100 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 100
+  }

@@ -1,0 +1,2724 @@
+[2026-06-11 15:43:24] [collector] starting: Fetching articles for category 'ai_research' (max_results=100, collector=deep).
+  Details:
+  {
+    "category": "ai_research",
+    "max_results": 100,
+    "collector": "deep"
+  }
+[2026-06-11 15:43:52] [collector] finished: Collected 100 articles for 'ai_research'. Evaluating 100 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_research",
+    "count": 100
+  }
+[2026-06-11 15:43:52] [quality] evaluating: Article: From Explicit Elements to Implicit Intent: A Predefined Libr...
+  Details:
+  {
+    "article_id": "02649daa-ba7c-49cc-94de-458def09e3f1",
+    "url": "https://arxiv.org/abs/2606.11207"
+  }
+[2026-06-11 15:43:52] [quality] evaluating: Article: Position: Hippocampal Explicit Memory Is the Cornerstone for...
+  Details:
+  {
+    "article_id": "e7b5815d-dd21-4e66-b011-4a0f09213f9d",
+    "url": "https://arxiv.org/abs/2606.11245"
+  }
+[2026-06-11 15:43:52] [quality] evaluating: Article: Can AI Agents Synthesize Scientific Conclusions?...
+  Details:
+  {
+    "article_id": "31621dca-d1d3-486a-99b7-21f4eb866484",
+    "url": "https://arxiv.org/abs/2606.11337"
+  }
+[2026-06-11 15:43:52] [quality] evaluating: Article: Knowing When to Ask: Self-Gated Clarification for Hierarchic...
+  Details:
+  {
+    "article_id": "858fc7b9-d8ee-41a3-854d-d4579f58f301",
+    "url": "https://arxiv.org/abs/2606.11349"
+  }
+[2026-06-11 15:43:52] [quality] evaluating: Article: Automated Mediator for Human Negotiation: Pre-Mediation via ...
+  Details:
+  {
+    "article_id": "6aba0be6-b551-46e7-b4db-bc1c27c8f3a0",
+    "url": "https://arxiv.org/abs/2606.11379"
+  }
+[2026-06-11 15:43:54] [quality] decision: Decision: accept, score=5. This article presents a new framework for behavioral inference in e-commerce, which is timely and relevant for data scientists. It introduces innovative methodologies and emphasizes auditability and reproducibility, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "02649daa-ba7c-49cc-94de-458def09e3f1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a new framework for behavioral inference in e-commerce, which is timely and relevant for data scientists. It introduces innovative methodologies and emphasizes auditability and reproducibility, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:54] [quality] evaluating: Article: INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration...
+  Details:
+  {
+    "article_id": "ad2bd03f-d754-41c0-9c52-8214ddcf7148",
+    "url": "https://arxiv.org/abs/2606.11440"
+  }
+[2026-06-11 15:43:54] [quality] decision: Decision: accept, score=5. The article presents a position paper on the role of explicit memory in advancing LLMs toward AGI, which is a highly relevant and timely topic in AI research. It discusses cognitive functions and integrates neuroscience findings, making it significant for ongoing discussions in the field.
+  Details:
+  {
+    "article_id": "e7b5815d-dd21-4e66-b011-4a0f09213f9d",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a position paper on the role of explicit memory in advancing LLMs toward AGI, which is a highly relevant and timely topic in AI research. It discusses cognitive functions and integrates neuroscience findings, making it significant for ongoing discussions in the field."
+  }
+[2026-06-11 15:43:54] [quality] evaluating: Article: Forecasting Future Behavior as a Learning Task...
+  Details:
+  {
+    "article_id": "c3c9bddf-08e1-46e0-bf6d-5e4b33eddfb6",
+    "url": "https://arxiv.org/abs/2606.11445"
+  }
+[2026-06-11 15:43:55] [quality] decision: Decision: accept, score=5. The article presents a significant research benchmark (SciConBench) for evaluating AI agents' ability to synthesize scientific conclusions, highlighting important findings and challenges in the field. This is timely and relevant for data scientists and AI teams, as it addresses the capabilities and limitations of AI in high-stakes domains like health.
+  Details:
+  {
+    "article_id": "31621dca-d1d3-486a-99b7-21f4eb866484",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant research benchmark (SciConBench) for evaluating AI agents' ability to synthesize scientific conclusions, highlighting important findings and challenges in the field. This is timely and relevant for data scientists and AI teams, as it addresses the capabilities and limitations of AI in high-stakes domains like health."
+  }
+[2026-06-11 15:43:55] [quality] evaluating: Article: Search Discipline for Long-Horizon Research Agents...
+  Details:
+  {
+    "article_id": "421b5d7b-aa64-4483-865b-e2af9552de59",
+    "url": "https://arxiv.org/abs/2606.11522"
+  }
+[2026-06-11 15:43:55] [quality] decision: Decision: accept, score=5. The article presents a novel approach to hierarchical reasoning in language agents, introducing a new formulation that enhances decision-making through self-gated clarification. This research is timely and relevant, likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "858fc7b9-d8ee-41a3-854d-d4579f58f301",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to hierarchical reasoning in language agents, introducing a new formulation that enhances decision-making through self-gated clarification. This research is timely and relevant, likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:55] [quality] evaluating: Article: MoCA-Agent: A Market-of-Claims Code Agent for Financial and ...
+  Details:
+  {
+    "article_id": "276a1dea-72e9-4c49-8d6c-d22323f82f33",
+    "url": "https://arxiv.org/abs/2606.11537"
+  }
+[2026-06-11 15:43:55] [quality] decision: Decision: accept, score=5. The article presents a novel approach to automated mediation using structured LLM pipelines, which is a significant advancement in AI applications for negotiation. The research includes empirical evaluations and comparisons with human mediators, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "6aba0be6-b551-46e7-b4db-bc1c27c8f3a0",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to automated mediation using structured LLM pipelines, which is a significant advancement in AI applications for negotiation. The research includes empirical evaluations and comparisons with human mediators, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:55] [quality] evaluating: Article: SkillJuror: Measuring How Agent Skill Organization Changes R...
+  Details:
+  {
+    "article_id": "bca18d80-ac95-4532-9597-521215176111",
+    "url": "https://arxiv.org/abs/2606.11543"
+  }
+[2026-06-11 15:43:56] [quality] decision: Decision: accept, score=5. This article presents a novel framework for multi-agent orchestration that addresses significant challenges in infrastructure awareness, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "ad2bd03f-d754-41c0-9c52-8214ddcf7148",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel framework for multi-agent orchestration that addresses significant challenges in infrastructure awareness, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:56] [quality] evaluating: Article: HERO: Hindsight-Enhanced Reflection from Environment Observa...
+  Details:
+  {
+    "article_id": "69d2c425-16fa-4298-9301-f3758e5ec6b4",
+    "url": "https://arxiv.org/abs/2606.11559"
+  }
+[2026-06-11 15:43:56] [quality] decision: Decision: accept, score=5. This article presents a novel approach to forecasting behavior in large reasoning models, which is a significant topic in AI research. The findings indicate improved accuracy over existing models, making it highly relevant and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "c3c9bddf-08e1-46e0-bf6d-5e4b33eddfb6",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to forecasting behavior in large reasoning models, which is a significant topic in AI research. The findings indicate improved accuracy over existing models, making it highly relevant and likely to attract attention in the AI community."
+  }
+[2026-06-11 15:43:56] [quality] evaluating: Article: Architecture-Aware Reinforcement Learning Makes Sliding-Wind...
+  Details:
+  {
+    "article_id": "2853f440-34ec-463f-b902-56fb7d9e7873",
+    "url": "https://arxiv.org/abs/2606.11634"
+  }
+[2026-06-11 15:43:57] [quality] decision: Decision: accept, score=5. The article presents a novel research finding regarding the evaluation of scientific candidates by autoresearch agents, highlighting a significant issue in candidate selection based on aggregated metrics. This is timely and relevant for data scientists and AI teams, as it addresses potential pitfalls in AI decision-making processes and suggests a new protocol for candidate evaluation.
+  Details:
+  {
+    "article_id": "421b5d7b-aa64-4483-865b-e2af9552de59",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research finding regarding the evaluation of scientific candidates by autoresearch agents, highlighting a significant issue in candidate selection based on aggregated metrics. This is timely and relevant for data scientists and AI teams, as it addresses potential pitfalls in AI decision-making processes and suggests a new protocol for candidate evaluation."
+  }
+[2026-06-11 15:43:57] [quality] evaluating: Article: TouchThinker: Scaling Tactile Commonsense Reasoning to the O...
+  Details:
+  {
+    "article_id": "4ad803cf-8aeb-4aad-b71d-1f7bc3a044c2",
+    "url": "https://arxiv.org/abs/2606.11637"
+  }
+[2026-06-11 15:43:58] [quality] decision: Decision: accept, score=5. The article presents a new research paper on MoCA-Agent, which addresses financial and numerical reasoning through innovative methods. It includes strong performance metrics across multiple benchmarks, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "276a1dea-72e9-4c49-8d6c-d22323f82f33",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new research paper on MoCA-Agent, which addresses financial and numerical reasoning through innovative methods. It includes strong performance metrics across multiple benchmarks, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:58] [quality] evaluating: Article: TreeSeeker: Tree-Structured Trial, Error, and Return in Deep...
+  Details:
+  {
+    "article_id": "48e73faa-e9ad-4766-80ad-06a4ac1ff9b9",
+    "url": "https://arxiv.org/abs/2606.11662"
+  }
+[2026-06-11 15:43:58] [quality] decision: Decision: accept, score=5. The article presents a new framework for evaluating agent skill organization in large language models, which is a relevant and timely topic in AI research. The findings from the SkillsBench study could have significant implications for how AI agents are designed and utilized, making it likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "bca18d80-ac95-4532-9597-521215176111",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework for evaluating agent skill organization in large language models, which is a relevant and timely topic in AI research. The findings from the SkillsBench study could have significant implications for how AI agents are designed and utilized, making it likely to attract attention in the AI community."
+  }
+[2026-06-11 15:43:58] [quality] evaluating: Article: Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnost...
+  Details:
+  {
+    "article_id": "97998a7c-ffd5-475d-a363-87f44faa98fa",
+    "url": "https://arxiv.org/abs/2606.11675"
+  }
+[2026-06-11 15:43:58] [quality] decision: Decision: accept, score=5. The article presents a new framework in reinforcement learning, which is a trending topic in AI research. It discusses a novel approach to self-distillation that addresses performance issues in multi-turn settings, making it highly relevant for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "69d2c425-16fa-4298-9301-f3758e5ec6b4",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework in reinforcement learning, which is a trending topic in AI research. It discusses a novel approach to self-distillation that addresses performance issues in multi-turn settings, making it highly relevant for data scientists and AI teams."
+  }
+[2026-06-11 15:43:58] [quality] evaluating: Article: Organize then Retrieve: Hierarchical Memory Navigation for E...
+  Details:
+  {
+    "article_id": "43967ce8-776b-48cd-9c51-676ce68f2c99",
+    "url": "https://arxiv.org/abs/2606.11680"
+  }
+[2026-06-11 15:43:58] [quality] decision: Decision: accept, score=5. The article presents a novel approach in reinforcement learning applied to attention mechanisms in LLMs, which is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "2853f440-34ec-463f-b902-56fb7d9e7873",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach in reinforcement learning applied to attention mechanisms in LLMs, which is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:43:58] [quality] evaluating: Article: Mind the Perspective: Let's Reason Recursively for Theory of...
+  Details:
+  {
+    "article_id": "b070f61a-b23b-42be-8cfc-dc2e31727fd8",
+    "url": "https://arxiv.org/abs/2606.11724"
+  }
+[2026-06-11 15:43:58] [quality] decision: Decision: accept, score=5. The article presents a novel framework for tactile commonsense reasoning, addressing significant challenges in the field. It introduces a large-scale dataset and benchmark, which are likely to attract attention from the AI research community.
+  Details:
+  {
+    "article_id": "4ad803cf-8aeb-4aad-b71d-1f7bc3a044c2",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for tactile commonsense reasoning, addressing significant challenges in the field. It introduces a large-scale dataset and benchmark, which are likely to attract attention from the AI research community."
+  }
+[2026-06-11 15:43:58] [quality] evaluating: Article: When Do Data-Driven Systems Exhibit the Capability to Infer?...
+  Details:
+  {
+    "article_id": "d28f7480-d836-419f-9b35-f68b54459beb",
+    "url": "https://arxiv.org/abs/2606.11769"
+  }
+[2026-06-11 15:44:00] [quality] decision: Decision: accept, score=5. The article presents a novel approach to pulmonary diagnostic reasoning using a knowledge graph and a large language model, which is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "97998a7c-ffd5-475d-a363-87f44faa98fa",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to pulmonary diagnostic reasoning using a knowledge graph and a large language model, which is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:00] [quality] evaluating: Article: SVoT: State-aware Visualization-of-Thought for Spatial Reaso...
+  Details:
+  {
+    "article_id": "c8557a29-04bc-4297-9f66-dabb127ed560",
+    "url": "https://arxiv.org/abs/2606.11770"
+  }
+[2026-06-11 15:44:00] [quality] decision: Decision: accept, score=5. The article presents a new framework for deep search in AI, which is a relevant and timely topic in AI research. The proposed method, TreeSeeker, addresses a significant challenge in the field and shows promising experimental results, making it likely to attract attention from the AI research community.
+  Details:
+  {
+    "article_id": "48e73faa-e9ad-4766-80ad-06a4ac1ff9b9",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework for deep search in AI, which is a relevant and timely topic in AI research. The proposed method, TreeSeeker, addresses a significant challenge in the field and shows promising experimental results, making it likely to attract attention from the AI research community."
+  }
+[2026-06-11 15:44:00] [quality] evaluating: Article: Toward Trustworthy AI: Multi-Target Adversarial Attacks and ...
+  Details:
+  {
+    "article_id": "c91f4e6b-3b09-48c8-9ffa-b34d03626f40",
+    "url": "https://arxiv.org/abs/2606.11804"
+  }
+[2026-06-11 15:44:00] [quality] decision: Decision: accept, score=5. This article presents a novel approach to improving the efficiency of language model agents in long-horizon tasks, which is highly relevant to current AI research trends. The proposed method, HORMA, addresses significant challenges in memory management for AI agents, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "43967ce8-776b-48cd-9c51-676ce68f2c99",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to improving the efficiency of language model agents in long-horizon tasks, which is highly relevant to current AI research trends. The proposed method, HORMA, addresses significant challenges in memory management for AI agents, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:00] [quality] evaluating: Article: Skill-Augmented AI Agents for Medical Research Analysis: An ...
+  Details:
+  {
+    "article_id": "2714250e-a1e4-46b1-9c69-9d685f475da7",
+    "url": "https://arxiv.org/abs/2606.11830"
+  }
+[2026-06-11 15:44:00] [quality] decision: Decision: accept, score=5. This article presents a new framework for Theory of Mind reasoning in LLMs, which is a significant advancement in AI research. It discusses a novel method that outperforms existing approaches and achieves state-of-the-art results, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "b070f61a-b23b-42be-8cfc-dc2e31727fd8",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a new framework for Theory of Mind reasoning in LLMs, which is a significant advancement in AI research. It discusses a novel method that outperforms existing approaches and achieves state-of-the-art results, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:00] [quality] evaluating: Article: StatefulDiscovery: Evidence-Calibrated Claim Formation in Op...
+  Details:
+  {
+    "article_id": "90f685d9-836b-4a22-9b49-33373541cf73",
+    "url": "https://arxiv.org/abs/2606.11851"
+  }
+[2026-06-11 15:44:01] [quality] decision: Decision: accept, score=5. The article discusses a framework related to the European AI Act, which is highly relevant and timely given the ongoing discussions around AI regulation. It addresses a critical aspect of AI systems—capability to infer—making it significant for data scientists and AI teams, especially in the context of credit scoring systems.
+  Details:
+  {
+    "article_id": "d28f7480-d836-419f-9b35-f68b54459beb",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses a framework related to the European AI Act, which is highly relevant and timely given the ongoing discussions around AI regulation. It addresses a critical aspect of AI systems—capability to infer—making it significant for data scientists and AI teams, especially in the context of credit scoring systems."
+  }
+[2026-06-11 15:44:01] [quality] evaluating: Article: AutoMine Solution for AV2 2026 Scenario Mining Challenge...
+  Details:
+  {
+    "article_id": "c3e99f89-102c-4988-8285-d3c83ffea38f",
+    "url": "https://arxiv.org/abs/2606.11874"
+  }
+[2026-06-11 15:44:02] [quality] decision: Decision: accept, score=5. The article presents a novel framework for scientific discovery that addresses a significant problem in the field, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "90f685d9-836b-4a22-9b49-33373541cf73",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for scientific discovery that addresses a significant problem in the field, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:02] [quality] evaluating: Article: Embodied-BenchClaw: An Autonomous Multi-Agent System for Emb...
+  Details:
+  {
+    "article_id": "d3dea076-b28c-4d2e-bbb0-0ab2e42103e2",
+    "url": "https://arxiv.org/abs/2606.11909"
+  }
+[2026-06-11 15:44:02] [quality] decision: Decision: accept, score=5. The article presents a novel evaluation of skill-augmented AI agents in medical research, which is highly relevant to current trends in AI applications in healthcare. The findings could attract significant attention from the AI research community and data scientists interested in biomedical applications.
+  Details:
+  {
+    "article_id": "2714250e-a1e4-46b1-9c69-9d685f475da7",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel evaluation of skill-augmented AI agents in medical research, which is highly relevant to current trends in AI applications in healthcare. The findings could attract significant attention from the AI research community and data scientists interested in biomedical applications."
+  }
+[2026-06-11 15:44:02] [quality] evaluating: Article: The Art of Interrogation: Consistency Amplifies Factuality i...
+  Details:
+  {
+    "article_id": "0d3a9f6b-96ed-4847-838a-e53b9f83aa0e",
+    "url": "https://arxiv.org/abs/2606.11918"
+  }
+[2026-06-11 15:44:03] [quality] decision: Decision: accept, score=5. The article presents a significant research contribution on adversarial attacks and defenses in data summarization, which is highly relevant to the field of trustworthy AI. It discusses novel methodologies and provides theoretical guarantees, making it a valuable addition for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "c91f4e6b-3b09-48c8-9ffa-b34d03626f40",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant research contribution on adversarial attacks and defenses in data summarization, which is highly relevant to the field of trustworthy AI. It discusses novel methodologies and provides theoretical guarantees, making it a valuable addition for data scientists and AI teams."
+  }
+[2026-06-11 15:44:03] [quality] evaluating: Article: MODF-SIR: A Multi-agent Omni-modal Distilled Framework for S...
+  Details:
+  {
+    "article_id": "e551d165-2eea-4e07-ae83-1657f2356468",
+    "url": "https://arxiv.org/abs/2606.12018"
+  }
+[2026-06-11 15:44:03] [quality] decision: Decision: accept, score=5. The article presents a novel reinforcement learning framework for improving spatial reasoning in multimodal large language models, which is a significant advancement in AI research. It introduces new methodologies and benchmarks, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "c8557a29-04bc-4297-9f66-dabb127ed560",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel reinforcement learning framework for improving spatial reasoning in multimodal large language models, which is a significant advancement in AI research. It introduces new methodologies and benchmarks, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:03] [quality] evaluating: Article: Human-Enhanced Loop Modeling (HELM): Agent-Based Finite Elem...
+  Details:
+  {
+    "article_id": "a9f62be1-0217-4752-ba6c-b6f0a52c8595",
+    "url": "https://arxiv.org/abs/2606.12025"
+  }
+[2026-06-11 15:44:03] [quality] decision: Decision: accept, score=5. The article presents a new method for scenario mining in autonomous driving, which is highly relevant to current AI research trends. It discusses a specific technical advancement and its performance in a notable competition, making it timely and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "c3e99f89-102c-4988-8285-d3c83ffea38f",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new method for scenario mining in autonomous driving, which is highly relevant to current AI research trends. It discusses a specific technical advancement and its performance in a notable competition, making it timely and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:03] [quality] evaluating: Article: Existential Indifference: Self-Nonpreservation as a Necessar...
+  Details:
+  {
+    "article_id": "6c8f5830-20f0-4893-98c6-c525c25b5968",
+    "url": "https://arxiv.org/abs/2606.12032"
+  }
+[2026-06-11 15:44:05] [quality] decision: Decision: accept, score=5. The article presents a novel approach to constructing benchmarks for embodied spatial intelligence, which is a relevant and timely topic in AI research. The proposed system, Embodied-BenchClaw, addresses significant challenges in benchmark construction, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "d3dea076-b28c-4d2e-bbb0-0ab2e42103e2",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to constructing benchmarks for embodied spatial intelligence, which is a relevant and timely topic in AI research. The proposed system, Embodied-BenchClaw, addresses significant challenges in benchmark construction, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:05] [quality] evaluating: Article: A Lightweight Multi-Agent Framework for Automated Concrete B...
+  Details:
+  {
+    "article_id": "2fe9b20e-b099-4cb0-ac50-1383929f0560",
+    "url": "https://arxiv.org/abs/2606.12040"
+  }
+[2026-06-11 15:44:05] [quality] decision: Decision: accept, score=5. The article presents a new framework for social intelligence reasoning using a multi-agent approach and knowledge distillation, which is highly relevant to current AI research trends. It includes extensive evaluations and state-of-the-art results, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "e551d165-2eea-4e07-ae83-1657f2356468",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a new framework for social intelligence reasoning using a multi-agent approach and knowledge distillation, which is highly relevant to current AI research trends. It includes extensive evaluations and state-of-the-art results, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:05] [quality] evaluating: Article: Automating Geometry-Intensive Compliance Checking in BIM: Gr...
+  Details:
+  {
+    "article_id": "5cbe46d1-c445-45cd-8941-c4206e292966",
+    "url": "https://arxiv.org/abs/2606.12065"
+  }
+[2026-06-11 15:44:05] [quality] decision: Decision: accept, score=5. This article presents a novel self-supervised reinforcement learning framework aimed at improving spatial reasoning in large reasoning models, which is a significant advancement in AI research. The focus on consistency verifiers and the proposed method are likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "0d3a9f6b-96ed-4847-838a-e53b9f83aa0e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel self-supervised reinforcement learning framework aimed at improving spatial reasoning in large reasoning models, which is a significant advancement in AI research. The focus on consistency verifiers and the proposed method are likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:05] [quality] evaluating: Article: IntElicit: Eliciting and Assessing Contextualized Creativity...
+  Details:
+  {
+    "article_id": "9e8ad1a7-bb5a-4770-9064-b178555dc5a4",
+    "url": "https://arxiv.org/abs/2606.12086"
+  }
+[2026-06-11 15:44:06] [quality] decision: Decision: accept, score=5. The article presents a novel framework for finite element modeling that significantly improves automation in safety-critical infrastructure, which is highly relevant to AI research. The results indicate a breakthrough in modeling success rates, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a9f62be1-0217-4752-ba6c-b6f0a52c8595",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for finite element modeling that significantly improves automation in safety-critical infrastructure, which is highly relevant to AI research. The results indicate a breakthrough in modeling success rates, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:06] [quality] evaluating: Article: Towards Responsibly Non-Compliant Machines...
+  Details:
+  {
+    "article_id": "b4618221-b60c-4940-b51a-de2ce4eaf63c",
+    "url": "https://arxiv.org/abs/2606.12147"
+  }
+[2026-06-11 15:44:06] [quality] decision: Decision: accept, score=5. The article presents a novel concept in AI alignment research, discussing self-nonpreservation as a critical factor for achieving aligned superintelligence. It includes theoretical contributions and empirical data, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "6c8f5830-20f0-4893-98c6-c525c25b5968",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel concept in AI alignment research, discussing self-nonpreservation as a critical factor for achieving aligned superintelligence. It includes theoretical contributions and empirical data, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:06] [quality] evaluating: Article: The Impossibility of Eliciting Latent Knowledge...
+  Details:
+  {
+    "article_id": "65c639a5-a28a-42a6-a034-a26097e905a6",
+    "url": "https://arxiv.org/abs/2606.12268"
+  }
+[2026-06-11 15:44:07] [quality] decision: Decision: accept, score=5. This article presents a novel framework for automated concrete barrier design, showcasing significant advancements in AI applications within structural engineering. It discusses a new approach that outperforms existing models, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "2fe9b20e-b099-4cb0-ac50-1383929f0560",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel framework for automated concrete barrier design, showcasing significant advancements in AI applications within structural engineering. It discusses a new approach that outperforms existing models, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:07] [quality] evaluating: Article: A Five-Plane Reference Architecture for Runtime Governance o...
+  Details:
+  {
+    "article_id": "dd8564f0-ffdc-4bed-9f3a-2dc0a3d0d1cc",
+    "url": "https://arxiv.org/abs/2606.12320"
+  }
+[2026-06-11 15:44:07] [quality] decision: Decision: accept, score=5. The article presents a novel framework for automating compliance checking in Building Information Modeling, addressing significant challenges in the field with promising results. This is relevant, timely, and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "5cbe46d1-c445-45cd-8941-c4206e292966",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for automating compliance checking in Building Information Modeling, addressing significant challenges in the field with promising results. This is relevant, timely, and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:07] [quality] evaluating: Article: PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment...
+  Details:
+  {
+    "article_id": "5324af59-96a8-46e7-9a2c-55190f94767e",
+    "url": "https://arxiv.org/abs/2606.12329"
+  }
+[2026-06-11 15:44:07] [quality] decision: Decision: accept, score=5. The article presents a novel framework for assessing creativity in AI-mediated environments, which is highly relevant to current trends in generative AI and educational technology. The research includes extensive experiments and offers insights that could significantly impact the field, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "9e8ad1a7-bb5a-4770-9064-b178555dc5a4",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for assessing creativity in AI-mediated environments, which is highly relevant to current trends in generative AI and educational technology. The research includes extensive experiments and offers insights that could significantly impact the field, making it likely to attract attention."
+  }
+[2026-06-11 15:44:07] [quality] evaluating: Article: Nonslop: A Gamified Experiment in Human-AI Collaborative Wri...
+  Details:
+  {
+    "article_id": "281cd538-32cb-45bf-96cd-434b13f8ea6c",
+    "url": "https://arxiv.org/abs/2606.12350"
+  }
+[2026-06-11 15:44:09] [quality] decision: Decision: accept, score=4. The article discusses a novel concept in AI regarding responsible non-compliance of autonomous agents, which is timely and relevant to ongoing discussions in AI ethics and safety. It is a new research paper from arXiv, making it suitable for the ai_research category.
+  Details:
+  {
+    "article_id": "b4618221-b60c-4940-b51a-de2ce4eaf63c",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses a novel concept in AI regarding responsible non-compliance of autonomous agents, which is timely and relevant to ongoing discussions in AI ethics and safety. It is a new research paper from arXiv, making it suitable for the ai_research category."
+  }
+[2026-06-11 15:44:09] [quality] evaluating: Article: From Architecture to Output: Structural Origins of Hallucina...
+  Details:
+  {
+    "article_id": "efeecd14-1895-45e9-a155-99a0bcce39da",
+    "url": "https://arxiv.org/abs/2606.07537"
+  }
+[2026-06-11 15:44:09] [quality] decision: Decision: accept, score=5. The article presents a formal exploration of the eliciting latent knowledge problem in AI, which is highly relevant for AI researchers and practitioners. It introduces significant concepts and results, including an impossibility theorem, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "65c639a5-a28a-42a6-a034-a26097e905a6",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a formal exploration of the eliciting latent knowledge problem in AI, which is highly relevant for AI researchers and practitioners. It introduces significant concepts and results, including an impossibility theorem, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:09] [quality] evaluating: Article: From Consumption to Reflection: Designing Human-AI Relations...
+  Details:
+  {
+    "article_id": "2e41e6f6-fb60-48cc-8567-8d8eb5afe832",
+    "url": "https://arxiv.org/abs/2606.11195"
+  }
+[2026-06-11 15:44:09] [quality] decision: Decision: accept, score=5. The article presents a novel reference architecture for runtime governance of production AI agents, addressing a critical aspect of AI deployment in enterprises. It discusses significant technical advancements and provides a structured approach to managing risks associated with AI agents, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "dd8564f0-ffdc-4bed-9f3a-2dc0a3d0d1cc",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel reference architecture for runtime governance of production AI agents, addressing a critical aspect of AI deployment in enterprises. It discusses significant technical advancements and provides a structured approach to managing risks associated with AI agents, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:09] [quality] evaluating: Article: PoQ-Judge: A Multi-Architecture Evaluation Framework for Cos...
+  Details:
+  {
+    "article_id": "444b170f-adaa-4913-98aa-aae4b764760b",
+    "url": "https://arxiv.org/abs/2606.11196"
+  }
+[2026-06-11 15:44:09] [quality] decision: Decision: accept, score=5. This article presents a novel approach to enhancing AI coding agents with a memory and judgment layer, which is highly relevant to current trends in AI development. The focus on improving statefulness in AI tools and the implications for software development make it a significant contribution to the field.
+  Details:
+  {
+    "article_id": "5324af59-96a8-46e7-9a2c-55190f94767e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to enhancing AI coding agents with a memory and judgment layer, which is highly relevant to current trends in AI development. The focus on improving statefulness in AI tools and the implications for software development make it a significant contribution to the field."
+  }
+[2026-06-11 15:44:09] [quality] evaluating: Article: MA-DLE: Speech-based Automatic Depression Level Estimation v...
+  Details:
+  {
+    "article_id": "a5fe07bf-bab0-4cd9-b76b-992601b5f72e",
+    "url": "https://arxiv.org/abs/2606.11197"
+  }
+[2026-06-11 15:44:10] [quality] decision: Decision: accept, score=5. The article presents a novel research study on human-AI collaboration in creative writing, exploring critical themes of creativity and individual expression in the context of AI assistance. It is timely and relevant, addressing significant questions in the field of AI and creativity, making it likely to attract attention among data scientists and AI teams.
+  Details:
+  {
+    "article_id": "281cd538-32cb-45bf-96cd-434b13f8ea6c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research study on human-AI collaboration in creative writing, exploring critical themes of creativity and individual expression in the context of AI assistance. It is timely and relevant, addressing significant questions in the field of AI and creativity, making it likely to attract attention among data scientists and AI teams."
+  }
+[2026-06-11 15:44:10] [quality] evaluating: Article: The Structural Attention Tax: How Retrieval Format Hijacks I...
+  Details:
+  {
+    "article_id": "ad82294e-d614-4f32-aa94-90dcfcb9c87e",
+    "url": "https://arxiv.org/abs/2606.11198"
+  }
+[2026-06-11 15:44:10] [quality] decision: Decision: accept, score=5. The article presents a detailed analysis of hallucination in large language models, identifying structural causes and offering new insights into the mechanisms behind these issues. This is highly relevant research that addresses a significant challenge in AI, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "efeecd14-1895-45e9-a155-99a0bcce39da",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a detailed analysis of hallucination in large language models, identifying structural causes and offering new insights into the mechanisms behind these issues. This is highly relevant research that addresses a significant challenge in AI, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:10] [quality] evaluating: Article: NightFeats @ MMU-RAGent NeurIPS 2025: A Context-Optimized Mu...
+  Details:
+  {
+    "article_id": "5b203901-d036-4d78-a13a-b2c29cd3ed2b",
+    "url": "https://arxiv.org/abs/2606.11199"
+  }
+[2026-06-11 15:44:11] [quality] decision: Decision: accept, score=5. The paper presents a novel approach to improving human-AI interaction through Relational Reflective Intelligence, addressing critical issues in reasoning with LLMs. This is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "2e41e6f6-fb60-48cc-8567-8d8eb5afe832",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The paper presents a novel approach to improving human-AI interaction through Relational Reflective Intelligence, addressing critical issues in reasoning with LLMs. This is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:11] [quality] evaluating: Article: To Intervene or Not: Guiding Inference-time Alignment with P...
+  Details:
+  {
+    "article_id": "1f85955f-c84e-4010-889d-207616a84be6",
+    "url": "https://arxiv.org/abs/2606.11201"
+  }
+[2026-06-11 15:44:11] [quality] decision: Decision: accept, score=5. The article presents a novel framework for evaluating decentralized LLM inference, which is highly relevant to current trends in AI research. It discusses new architectures and significant results, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "444b170f-adaa-4913-98aa-aae4b764760b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for evaluating decentralized LLM inference, which is highly relevant to current trends in AI research. It discusses new architectures and significant results, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:11] [quality] evaluating: Article: Dual-Stance Evaluation of Sycophancy: The Structure of Agree...
+  Details:
+  {
+    "article_id": "fa67624a-f54f-4f0d-a312-af0447c77ec1",
+    "url": "https://arxiv.org/abs/2606.11205"
+  }
+[2026-06-11 15:44:12] [quality] decision: Decision: accept, score=5. The article presents a novel approach to estimating depression levels using speech analysis, which is a significant topic in mental health and AI research. It introduces a new method that enhances existing models, making it relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a5fe07bf-bab0-4cd9-b76b-992601b5f72e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to estimating depression levels using speech analysis, which is a significant topic in mental health and AI research. It introduces a new method that enhances existing models, making it relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:12] [quality] evaluating: Article: BioDivergence: A Benchmark and Evaluation Framework for Hidd...
+  Details:
+  {
+    "article_id": "c5f25289-47f2-450e-b8fb-d4f7ad57de28",
+    "url": "https://arxiv.org/abs/2606.11208"
+  }
+[2026-06-11 15:44:13] [quality] decision: Decision: accept, score=5. The article presents a novel multi-agent RAG system that won an award at a significant AI competition, highlighting breakthrough methods and results in AI research. This is timely and relevant for the audience.
+  Details:
+  {
+    "article_id": "5b203901-d036-4d78-a13a-b2c29cd3ed2b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel multi-agent RAG system that won an award at a significant AI competition, highlighting breakthrough methods and results in AI research. This is timely and relevant for the audience."
+  }
+[2026-06-11 15:44:13] [quality] evaluating: Article: ProcessThinker: Enhancing Multi-modal Large Language Models ...
+  Details:
+  {
+    "article_id": "db7c7bef-1525-42a6-985b-5eddbf86216f",
+    "url": "https://arxiv.org/abs/2606.11209"
+  }
+[2026-06-11 15:44:13] [quality] decision: Decision: accept, score=5. The article presents a novel research finding on the impact of retrieval formats on in-context learning in LLMs, which is highly relevant for data scientists and AI teams. It introduces a new concept ('structural attention tax') and provides empirical results, making it timely and likely to generate interest in the AI research community.
+  Details:
+  {
+    "article_id": "ad82294e-d614-4f32-aa94-90dcfcb9c87e",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research finding on the impact of retrieval formats on in-context learning in LLMs, which is highly relevant for data scientists and AI teams. It introduces a new concept ('structural attention tax') and provides empirical results, making it timely and likely to generate interest in the AI research community."
+  }
+[2026-06-11 15:44:13] [quality] evaluating: Article: T2MM: An LLM Supported Architecture For Inquiry-Based Modeli...
+  Details:
+  {
+    "article_id": "0cb93c68-fff5-4499-8e60-fc865109202f",
+    "url": "https://arxiv.org/abs/2606.11210"
+  }
+[2026-06-11 15:44:14] [quality] decision: Decision: accept, score=5. The article presents a novel framework for inference-time alignment in LLMs, which is highly relevant to current AI research trends. It discusses a systematic evaluation and introduces a new method that shows significant performance improvements, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "1f85955f-c84e-4010-889d-207616a84be6",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for inference-time alignment in LLMs, which is highly relevant to current AI research trends. It discusses a systematic evaluation and introduces a new method that shows significant performance improvements, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:14] [quality] evaluating: Article: Calibration Drift Under Reasoning: How Chain-of-Thought Budg...
+  Details:
+  {
+    "article_id": "a424c6b2-506f-46b2-b2a3-81f0f04e6b79",
+    "url": "https://arxiv.org/abs/2606.11211"
+  }
+[2026-06-11 15:44:14] [quality] decision: Decision: accept, score=5. The article presents a novel research approach to evaluating LLM behavior, which is highly relevant to current discussions in AI. The findings on sycophancy and factual agreement are likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "fa67624a-f54f-4f0d-a312-af0447c77ec1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research approach to evaluating LLM behavior, which is highly relevant to current discussions in AI. The findings on sycophancy and factual agreement are likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:14] [quality] evaluating: Article: From Awareness to Action: Understanding and Overcoming the R...
+  Details:
+  {
+    "article_id": "0a1c9ae0-d171-420f-a9c0-2c2ec982962a",
+    "url": "https://arxiv.org/abs/2606.11214"
+  }
+[2026-06-11 15:44:14] [quality] decision: Decision: accept, score=5. The article presents a novel evaluation framework for understanding contextual contradictions in biomedical abstracts, which is a significant contribution to AI research in the biomedical field. It introduces new methodologies and benchmarks, making it highly relevant and likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "c5f25289-47f2-450e-b8fb-d4f7ad57de28",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel evaluation framework for understanding contextual contradictions in biomedical abstracts, which is a significant contribution to AI research in the biomedical field. It introduces new methodologies and benchmarks, making it highly relevant and likely to attract attention in the research community."
+  }
+[2026-06-11 15:44:14] [quality] evaluating: Article: The Environmental Cost of LLMs in AIED: Reporting and Practi...
+  Details:
+  {
+    "article_id": "def783ad-f875-4b35-8082-d65a1f405f14",
+    "url": "https://arxiv.org/abs/2606.11215"
+  }
+[2026-06-11 15:44:15] [quality] decision: Decision: accept, score=5. The article presents a novel approach to enhancing multi-modal large language models' reasoning capabilities, which is highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "db7c7bef-1525-42a6-985b-5eddbf86216f",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to enhancing multi-modal large language models' reasoning capabilities, which is highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:15] [quality] evaluating: Article: Preregistration for Experiments with AI Agents...
+  Details:
+  {
+    "article_id": "5d0e2313-467c-422d-9969-802dd463dec9",
+    "url": "https://arxiv.org/abs/2606.11217"
+  }
+[2026-06-11 15:44:15] [quality] decision: Decision: accept, score=5. The article presents a novel architecture (T2MM) for enhancing inquiry-based modeling in education using LLMs, which is a relevant and timely topic in AI research. It discusses a significant advancement in integrating LLMs with multimodal capabilities, likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "0cb93c68-fff5-4499-8e60-fc865109202f",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel architecture (T2MM) for enhancing inquiry-based modeling in education using LLMs, which is a relevant and timely topic in AI research. It discusses a significant advancement in integrating LLMs with multimodal capabilities, likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:15] [quality] evaluating: Article: An Ethical eValuation Agent (EeVA): Results of a Proof-of-Co...
+  Details:
+  {
+    "article_id": "d5b4870b-905a-4379-b5ad-8d3c64543478",
+    "url": "https://arxiv.org/abs/2606.11218"
+  }
+[2026-06-11 15:44:16] [quality] decision: Decision: accept, score=5. The article presents a significant research study on algorithmic fairness in public health, addressing a critical gap between research and practice. It introduces a new framework and offers insights that are highly relevant to current discussions in AI ethics and public health, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "0a1c9ae0-d171-420f-a9c0-2c2ec982962a",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant research study on algorithmic fairness in public health, addressing a critical gap between research and practice. It introduces a new framework and offers insights that are highly relevant to current discussions in AI ethics and public health, making it likely to attract attention."
+  }
+[2026-06-11 15:44:16] [quality] evaluating: Article: Afrispeech Semantics: Evaluating Audio Semantic Reasoning in...
+  Details:
+  {
+    "article_id": "1874fc93-68f0-459d-94f5-495f227b42d9",
+    "url": "https://arxiv.org/abs/2606.11219"
+  }
+[2026-06-11 15:44:16] [quality] decision: Decision: accept, score=5. The article presents significant research on calibration drift in large language models, a timely and relevant topic for AI teams. It discusses a novel phenomenon and proposes a new model, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a424c6b2-506f-46b2-b2a3-81f0f04e6b79",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents significant research on calibration drift in large language models, a timely and relevant topic for AI teams. It discusses a novel phenomenon and proposes a new model, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:16] [quality] evaluating: Article: Every Act Has Its Price: Compressed Moral Composition in Fro...
+  Details:
+  {
+    "article_id": "b53944bf-63ea-4a14-94cf-00795e875b50",
+    "url": "https://arxiv.org/abs/2606.11232"
+  }
+[2026-06-11 15:44:16] [quality] decision: Decision: accept, score=5. The article addresses a significant issue regarding the environmental impact of LLMs in the AIED community, proposing a method for standardized reporting. This topic is timely and relevant, likely to attract attention due to growing concerns about sustainability in AI.
+  Details:
+  {
+    "article_id": "def783ad-f875-4b35-8082-d65a1f405f14",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article addresses a significant issue regarding the environmental impact of LLMs in the AIED community, proposing a method for standardized reporting. This topic is timely and relevant, likely to attract attention due to growing concerns about sustainability in AI."
+  }
+[2026-06-11 15:44:16] [quality] evaluating: Article: Artificial Intelligence in Ship Finance: Applications, Oppor...
+  Details:
+  {
+    "article_id": "7878a57f-7cf2-49ac-ae9f-e9e8a2cffa3b",
+    "url": "https://arxiv.org/abs/2606.11238"
+  }
+[2026-06-11 15:44:17] [quality] decision: Decision: accept, score=5. The article presents a novel approach to ethical deliberation using an LLM-based workflow, which is relevant and timely for discussions in AI ethics. The proof-of-concept results indicate significant implications for bridging gaps in ethical understanding, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "d5b4870b-905a-4379-b5ad-8d3c64543478",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to ethical deliberation using an LLM-based workflow, which is relevant and timely for discussions in AI ethics. The proof-of-concept results indicate significant implications for bridging gaps in ethical understanding, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:17] [quality] evaluating: Article: SPEAR: A System for Post-Quantization Error-Adaptive Recover...
+  Details:
+  {
+    "article_id": "a0a15410-8e98-430d-908c-1587e76d6555",
+    "url": "https://arxiv.org/abs/2606.11244"
+  }
+[2026-06-11 15:44:17] [quality] decision: Decision: accept, score=5. The article presents a significant evaluation of audio language models, addressing critical issues in semantic reasoning across different domains and accents. This research is timely and relevant, likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "1874fc93-68f0-459d-94f5-495f227b42d9",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant evaluation of audio language models, addressing critical issues in semantic reasoning across different domains and accents. This research is timely and relevant, likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:17] [quality] evaluating: Article: Physics-informed generative AI for semiconductor manufacturi...
+  Details:
+  {
+    "article_id": "65aad9ce-c56a-4605-9c52-ebeb1e112f04",
+    "url": "https://arxiv.org/abs/2606.11247"
+  }
+[2026-06-11 15:44:18] [quality] decision: Decision: accept, score=5. This article presents a novel benchmark for evaluating moral decision-making in LLMs, which is a relevant and timely topic in AI research. The findings could have significant implications for the development and evaluation of AI systems, making it likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "b53944bf-63ea-4a14-94cf-00795e875b50",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel benchmark for evaluating moral decision-making in LLMs, which is a relevant and timely topic in AI research. The findings could have significant implications for the development and evaluation of AI systems, making it likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:18] [quality] evaluating: Article: RAIL: Rethinking Auditory Intelligence in Large Audio-Langua...
+  Details:
+  {
+    "article_id": "397bb3e4-80f6-4f3e-a678-5d91fc8724d8",
+    "url": "https://arxiv.org/abs/2606.11260"
+  }
+[2026-06-11 15:44:18] [quality] decision: Decision: accept, score=5. The article presents a novel application of AI in ship finance, discussing significant advancements and a case study. It is timely and relevant to the audience of data scientists and AI teams, likely generating interest due to its focus on practical AI applications in a specific industry.
+  Details:
+  {
+    "article_id": "7878a57f-7cf2-49ac-ae9f-e9e8a2cffa3b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel application of AI in ship finance, discussing significant advancements and a case study. It is timely and relevant to the audience of data scientists and AI teams, likely generating interest due to its focus on practical AI applications in a specific industry."
+  }
+[2026-06-11 15:44:18] [quality] evaluating: Article: PermDoRA -- Understanding Adapter Interference in Language M...
+  Details:
+  {
+    "article_id": "b9349c82-f8e9-4cfd-ad36-3f1a81480599",
+    "url": "https://arxiv.org/abs/2606.11262"
+  }
+[2026-06-11 15:44:18] [quality] decision: Decision: accept, score=5. The article discusses a significant methodological advancement in AI research, proposing preregistration for experiments with AI agents, which is timely and relevant given the rise of LLMs and autonomous agents. This topic is likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "5d0e2313-467c-422d-9969-802dd463dec9",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses a significant methodological advancement in AI research, proposing preregistration for experiments with AI agents, which is timely and relevant given the rise of LLMs and autonomous agents. This topic is likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:18] [quality] evaluating: Article: OmniBioTwin: A System-of-Twinned-Systems Framework for Healt...
+  Details:
+  {
+    "article_id": "c777bd94-dd7f-458e-9781-c351284edfab",
+    "url": "https://arxiv.org/abs/2606.11264"
+  }
+[2026-06-11 15:44:18] [quality] decision: Decision: accept, score=5. The article presents a novel system (SPEAR) that addresses a significant issue in low-bit LLM serving, which is highly relevant to current AI research and deployment challenges. It discusses a new method that improves performance while maintaining efficiency, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a0a15410-8e98-430d-908c-1587e76d6555",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel system (SPEAR) that addresses a significant issue in low-bit LLM serving, which is highly relevant to current AI research and deployment challenges. It discusses a new method that improves performance while maintaining efficiency, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:18] [quality] evaluating: Article: When Poison Fails After Retrieval: Revisiting Corpus Poisoni...
+  Details:
+  {
+    "article_id": "2859d395-e02f-495a-9ed5-200078df0663",
+    "url": "https://arxiv.org/abs/2606.11265"
+  }
+[2026-06-11 15:44:19] [quality] decision: Decision: accept, score=5. The article discusses a significant advancement in generative AI specifically applied to semiconductor manufacturing, addressing the need for physics-informed models. This is timely and relevant research that could attract attention in the AI and semiconductor communities.
+  Details:
+  {
+    "article_id": "65aad9ce-c56a-4605-9c52-ebeb1e112f04",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses a significant advancement in generative AI specifically applied to semiconductor manufacturing, addressing the need for physics-informed models. This is timely and relevant research that could attract attention in the AI and semiconductor communities."
+  }
+[2026-06-11 15:44:19] [quality] evaluating: Article: Quantifying Subliminal Behavioral Transfer Ratios in Languag...
+  Details:
+  {
+    "article_id": "9fbcf7fd-b197-456b-b943-b84cc1af822b",
+    "url": "https://arxiv.org/abs/2606.11270"
+  }
+[2026-06-11 15:44:20] [quality] decision: Decision: accept, score=5. This article presents a novel research framework and findings related to adapter interference in language models, which is highly relevant to current AI research trends. The focus on multi-domain performance and the implications for language model architecture make it timely and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "b9349c82-f8e9-4cfd-ad36-3f1a81480599",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel research framework and findings related to adapter interference in language models, which is highly relevant to current AI research trends. The focus on multi-domain performance and the implications for language model architecture make it timely and likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:20] [quality] evaluating: Article: Federated continual learning: A comprehensive survey on life...
+  Details:
+  {
+    "article_id": "b19d51e8-473f-4d2b-99f6-ffa3245c6723",
+    "url": "https://arxiv.org/abs/2606.11272"
+  }
+[2026-06-11 15:44:20] [quality] decision: Decision: accept, score=5. This article presents a novel evaluation paradigm for auditory intelligence in large audio-language models, which is a significant advancement in AI research. It introduces a new benchmark grounded in cognitive principles, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "397bb3e4-80f6-4f3e-a678-5d91fc8724d8",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel evaluation paradigm for auditory intelligence in large audio-language models, which is a significant advancement in AI research. It introduces a new benchmark grounded in cognitive principles, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:20] [quality] evaluating: Article: RoVE: Rotary Value Embeddings Attention for Relative Positio...
+  Details:
+  {
+    "article_id": "67ec7524-2b00-4ac7-a29f-b579a75b0ad3",
+    "url": "https://arxiv.org/abs/2606.11275"
+  }
+[2026-06-11 15:44:21] [quality] decision: Decision: accept, score=5. The article presents a systematic study on subliminal behavioral transfer in language model distillation, which is a relevant and timely topic in AI research. It quantifies the effects of undesirable characteristics in teacher models, making it significant for data scientists and AI teams. The findings are likely to attract attention in the research community.
+  Details:
+  {
+    "article_id": "9fbcf7fd-b197-456b-b943-b84cc1af822b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a systematic study on subliminal behavioral transfer in language model distillation, which is a relevant and timely topic in AI research. It quantifies the effects of undesirable characteristics in teacher models, making it significant for data scientists and AI teams. The findings are likely to attract attention in the research community."
+  }
+[2026-06-11 15:44:21] [quality] evaluating: Article: FreeBridge: Variational Schr\"odinger Bridges for Cellular T...
+  Details:
+  {
+    "article_id": "e7e9679e-fff5-4e16-9b08-47ad1c2cff7b",
+    "url": "https://arxiv.org/abs/2606.11286"
+  }
+[2026-06-11 15:44:21] [quality] decision: Decision: accept, score=5. The article presents a novel framework for health digital twins, which is a trending topic in AI research, especially in healthcare applications. The proposed OmniBioTwin framework addresses significant challenges in patient-specific modeling and decision support, making it highly relevant for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "c777bd94-dd7f-458e-9781-c351284edfab",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for health digital twins, which is a trending topic in AI research, especially in healthcare applications. The proposed OmniBioTwin framework addresses significant challenges in patient-specific modeling and decision support, making it highly relevant for data scientists and AI teams."
+  }
+[2026-06-11 15:44:21] [quality] evaluating: Article: FlowBank: Query-Adaptive Agentic Workflows Optimization thro...
+  Details:
+  {
+    "article_id": "3d50502d-9875-42be-b8c2-dc2a267e1295",
+    "url": "https://arxiv.org/abs/2606.11290"
+  }
+[2026-06-11 15:44:21] [quality] decision: Decision: accept, score=5. The paper presents significant findings on corpus poisoning in Retrieval-Augmented Generation systems, addressing a critical security issue in AI. Its focus on realistic multi-stage retrieval pipelines and the introduction of a new poisoning framework are likely to attract attention from the AI research community.
+  Details:
+  {
+    "article_id": "2859d395-e02f-495a-9ed5-200078df0663",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The paper presents significant findings on corpus poisoning in Retrieval-Augmented Generation systems, addressing a critical security issue in AI. Its focus on realistic multi-stage retrieval pipelines and the introduction of a new poisoning framework are likely to attract attention from the AI research community."
+  }
+[2026-06-11 15:44:21] [quality] evaluating: Article: Embodied-R1.5: Evolving Physical Intelligence via Embodied F...
+  Details:
+  {
+    "article_id": "47525529-4cd3-4c04-8015-9ebcf19c4c82",
+    "url": "https://arxiv.org/abs/2606.11324"
+  }
+[2026-06-11 15:44:22] [quality] decision: Decision: accept, score=5. This article presents a comprehensive survey on Federated Continual Learning, addressing significant challenges in real-world applications. It is timely and relevant for AI researchers and practitioners, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "b19d51e8-473f-4d2b-99f6-ffa3245c6723",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a comprehensive survey on Federated Continual Learning, addressing significant challenges in real-world applications. It is timely and relevant for AI researchers and practitioners, making it likely to attract attention."
+  }
+[2026-06-11 15:44:22] [quality] evaluating: Article: Quantized Stochastic Primal-Dual Methods for Distributed Opt...
+  Details:
+  {
+    "article_id": "c5bfd012-2b6b-4380-a256-1ddc76dd934d",
+    "url": "https://arxiv.org/abs/2606.11339"
+  }
+[2026-06-11 15:44:22] [quality] decision: Decision: accept, score=5. This article presents a novel approach in AI research with significant implications for attention mechanisms in models, making it highly relevant and likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "67ec7524-2b00-4ac7-a29f-b579a75b0ad3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach in AI research with significant implications for attention mechanisms in models, making it highly relevant and likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:22] [quality] evaluating: Article: TileFuse: A Fused Mixed-Precision Kernel Library for Efficie...
+  Details:
+  {
+    "article_id": "f5d24318-fd26-4a2d-bd03-0cf16d0ac5a3",
+    "url": "https://arxiv.org/abs/2606.11357"
+  }
+[2026-06-11 15:44:23] [quality] decision: Decision: accept, score=5. The article presents a novel research paper on FreeBridge, which introduces a new method for modeling cellular transition dynamics. This is highly relevant to the field of AI research, particularly in applications related to biology and data science, and is likely to attract attention due to its innovative approach and implications for understanding cellular responses.
+  Details:
+  {
+    "article_id": "e7e9679e-fff5-4e16-9b08-47ad1c2cff7b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research paper on FreeBridge, which introduces a new method for modeling cellular transition dynamics. This is highly relevant to the field of AI research, particularly in applications related to biology and data science, and is likely to attract attention due to its innovative approach and implications for understanding cellular responses."
+  }
+[2026-06-11 15:44:23] [quality] evaluating: Article: The Dynamics of Human and AI-Generated Language: How Semanti...
+  Details:
+  {
+    "article_id": "f7ff89ac-0a3e-493c-8321-c31b34c89ee9",
+    "url": "https://arxiv.org/abs/2606.11371"
+  }
+[2026-06-11 15:44:23] [quality] decision: Decision: accept, score=5. The article presents a significant advancement in embodied AI research with the introduction of Embodied-R1.5, showcasing state-of-the-art results and extensive validation. It is timely, relevant, and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "47525529-4cd3-4c04-8015-9ebcf19c4c82",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant advancement in embodied AI research with the introduction of Embodied-R1.5, showcasing state-of-the-art results and extensive validation. It is timely, relevant, and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:23] [quality] evaluating: Article: When Probing Accuracy Saturates, Fragility Resolves: A Compl...
+  Details:
+  {
+    "article_id": "2b55ef83-41d1-4017-a6ba-c6d5889e84ed",
+    "url": "https://arxiv.org/abs/2606.11375"
+  }
+[2026-06-11 15:44:23] [quality] decision: Decision: accept, score=5. The article presents a novel framework (FlowBank) for optimizing agentic workflows in LLM-based systems, which is highly relevant to current AI research trends. It discusses significant improvements over existing methods, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "3d50502d-9875-42be-b8c2-dc2a267e1295",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework (FlowBank) for optimizing agentic workflows in LLM-based systems, which is highly relevant to current AI research trends. It discusses significant improvements over existing methods, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:23] [quality] evaluating: Article: Overcoming State Inertia in Full-Duplex Spoken Language Mode...
+  Details:
+  {
+    "article_id": "618a9ac9-d236-40a8-9399-657a16c2974b",
+    "url": "https://arxiv.org/abs/2606.11386"
+  }
+[2026-06-11 15:44:24] [quality] decision: Decision: accept, score=5. The article presents a novel method in distributed optimization with significant implications for AI research, making it highly relevant and likely to attract attention in the field.
+  Details:
+  {
+    "article_id": "c5bfd012-2b6b-4380-a256-1ddc76dd934d",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel method in distributed optimization with significant implications for AI research, making it highly relevant and likely to attract attention in the field."
+  }
+[2026-06-11 15:44:24] [quality] evaluating: Article: Small Experiments, Cheaper Decisions: A Case Study in Staged...
+  Details:
+  {
+    "article_id": "6ed9d70b-5009-4572-9f79-f5015ebe7e3a",
+    "url": "https://arxiv.org/abs/2606.11387"
+  }
+[2026-06-11 15:44:25] [quality] decision: Decision: accept, score=5. This article presents a significant advancement in mixed-precision kernel libraries for efficient quantized LLM inference, which is highly relevant to current trends in AI research and deployment on edge devices. The performance improvements and practical implications for AMD NPUs make it likely to attract attention from data scientists and AI teams.
+  Details:
+  {
+    "article_id": "f5d24318-fd26-4a2d-bd03-0cf16d0ac5a3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a significant advancement in mixed-precision kernel libraries for efficient quantized LLM inference, which is highly relevant to current trends in AI research and deployment on edge devices. The performance improvements and practical implications for AMD NPUs make it likely to attract attention from data scientists and AI teams."
+  }
+[2026-06-11 15:44:25] [quality] evaluating: Article: Steering Where to Listen: Instruction-Based Activation Steer...
+  Details:
+  {
+    "article_id": "9b1bc480-d2d7-45c1-bb85-88efcabc0530",
+    "url": "https://arxiv.org/abs/2606.11400"
+  }
+[2026-06-11 15:44:25] [quality] decision: Decision: accept, score=5. This article presents a novel metric for analyzing LLM pre-training, which is highly relevant to current AI research trends. The findings could significantly impact understanding model robustness and training dynamics, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "2b55ef83-41d1-4017-a6ba-c6d5889e84ed",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel metric for analyzing LLM pre-training, which is highly relevant to current AI research trends. The findings could significantly impact understanding model robustness and training dynamics, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:25] [quality] evaluating: Article: Risk Under Pressure: Compute-Aware Evaluation of Adversarial...
+  Details:
+  {
+    "article_id": "d3110749-0f99-4cda-bf1a-8897f96aad1d",
+    "url": "https://arxiv.org/abs/2606.11409"
+  }
+[2026-06-11 15:44:25] [quality] decision: Decision: accept, score=5. The article presents significant research on full-duplex spoken language models, introducing a new benchmark and a novel method to improve model performance, which is likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "618a9ac9-d236-40a8-9399-657a16c2974b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents significant research on full-duplex spoken language models, introducing a new benchmark and a novel method to improve model performance, which is likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:25] [quality] evaluating: Article: MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Par...
+  Details:
+  {
+    "article_id": "05b03ede-3604-4cdf-87b7-a272e970ec8c",
+    "url": "https://arxiv.org/abs/2606.11416"
+  }
+[2026-06-11 15:44:25] [quality] decision: Decision: accept, score=5. This article presents a novel semantic-timescale analysis pipeline for comparing human and AI-generated speech, which is a relevant and timely topic in AI research. The findings could have significant implications for understanding language models and their outputs, making it likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "f7ff89ac-0a3e-493c-8321-c31b34c89ee9",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel semantic-timescale analysis pipeline for comparing human and AI-generated speech, which is a relevant and timely topic in AI research. The findings could have significant implications for understanding language models and their outputs, making it likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:25] [quality] evaluating: Article: Signed Compression Progress on a Sealed Audit is Goodhart-Re...
+  Details:
+  {
+    "article_id": "64f47241-9e60-4e55-a66c-0d653c51ae79",
+    "url": "https://arxiv.org/abs/2606.11417"
+  }
+[2026-06-11 15:44:26] [quality] decision: Decision: accept, score=5. The article presents a detailed case study on micro-pretraining and staged promotion protocols, which is highly relevant to ongoing research in AI. It discusses experimental costs and optimization methods, making it timely and likely to attract attention among data scientists and AI teams.
+  Details:
+  {
+    "article_id": "6ed9d70b-5009-4572-9f79-f5015ebe7e3a",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a detailed case study on micro-pretraining and staged promotion protocols, which is highly relevant to ongoing research in AI. It discusses experimental costs and optimization methods, making it timely and likely to attract attention among data scientists and AI teams."
+  }
+[2026-06-11 15:44:26] [quality] evaluating: Article: JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optim...
+  Details:
+  {
+    "article_id": "595f8ccb-92f8-4332-9397-7e4e6e8654ba",
+    "url": "https://arxiv.org/abs/2606.11425"
+  }
+[2026-06-11 15:44:26] [quality] decision: Decision: accept, score=5. The article presents a novel research approach in large audio-language models, detailing significant findings on attention mechanisms. It is timely and relevant to current AI research discussions, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "9b1bc480-d2d7-45c1-bb85-88efcabc0530",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel research approach in large audio-language models, detailing significant findings on attention mechanisms. It is timely and relevant to current AI research discussions, making it likely to attract attention."
+  }
+[2026-06-11 15:44:26] [quality] evaluating: Article: Towards a Bridge Layer Between Bibliographic and Formalized ...
+  Details:
+  {
+    "article_id": "c0eed61d-4e74-4059-b1aa-b3486d4b14b4",
+    "url": "https://arxiv.org/abs/2606.11430"
+  }
+[2026-06-11 15:44:27] [quality] decision: Decision: accept, score=5. This article presents a novel framework for evaluating adversarial robustness in language models, which is a highly relevant and trending topic in AI research. The findings and proposed metrics could significantly impact the understanding of model vulnerabilities, making it suitable for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "d3110749-0f99-4cda-bf1a-8897f96aad1d",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel framework for evaluating adversarial robustness in language models, which is a highly relevant and trending topic in AI research. The findings and proposed metrics could significantly impact the understanding of model vulnerabilities, making it suitable for data scientists and AI teams."
+  }
+[2026-06-11 15:44:27] [quality] evaluating: Article: The Power of Test-Time Training for Approximate Sampling...
+  Details:
+  {
+    "article_id": "a2da9d91-dbf4-467c-a289-e78de503c6d4",
+    "url": "https://arxiv.org/abs/2606.11437"
+  }
+[2026-06-11 15:44:27] [quality] decision: Decision: accept, score=5. The article presents a significant theoretical advancement in intrinsic motivation for AI agents, with a focus on signed compression progress and its implications for audit performance. The research is timely and relevant, likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "64f47241-9e60-4e55-a66c-0d653c51ae79",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant theoretical advancement in intrinsic motivation for AI agents, with a focus on signed compression progress and its implications for audit performance. The research is timely and relevant, likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:27] [quality] evaluating: Article: AI Coding Agents in Social Science: Methodologically Diverse...
+  Details:
+  {
+    "article_id": "f59119ac-8a83-4197-971d-985f93fdcebe",
+    "url": "https://arxiv.org/abs/2606.11456"
+  }
+[2026-06-11 15:44:27] [quality] decision: Decision: accept, score=5. This article presents a new benchmark for evaluating LLM code repair in the context of Secure Multi-Party Computation, addressing a significant gap in existing research. It is timely and relevant to the AI research community, particularly for those focused on privacy-preserving machine learning and cryptographic applications.
+  Details:
+  {
+    "article_id": "05b03ede-3604-4cdf-87b7-a272e970ec8c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a new benchmark for evaluating LLM code repair in the context of Secure Multi-Party Computation, addressing a significant gap in existing research. It is timely and relevant to the AI research community, particularly for those focused on privacy-preserving machine learning and cryptographic applications."
+  }
+[2026-06-11 15:44:27] [quality] evaluating: Article: APEX: Automated Prompt Engineering eXpert with Dynamic Data ...
+  Details:
+  {
+    "article_id": "d8caefe0-b545-410f-9a77-e735085f14e3",
+    "url": "https://arxiv.org/abs/2606.11459"
+  }
+[2026-06-11 15:44:28] [quality] decision: Decision: accept, score=5. The article presents a novel framework for optimizing jailbreak prompts in large language models, which is highly relevant to current discussions on AI safety and security. It introduces a new method with experimental results, making it a significant contribution to the field.
+  Details:
+  {
+    "article_id": "595f8ccb-92f8-4332-9397-7e4e6e8654ba",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for optimizing jailbreak prompts in large language models, which is highly relevant to current discussions on AI safety and security. It introduces a new method with experimental results, making it a significant contribution to the field."
+  }
+[2026-06-11 15:44:28] [quality] evaluating: Article: LSTM-Based Detection of Structural Breaks in Property Insura...
+  Details:
+  {
+    "article_id": "37eb93f3-d090-4aa2-837f-e7dc1ba9b84c",
+    "url": "https://arxiv.org/abs/2606.11463"
+  }
+[2026-06-11 15:44:28] [quality] decision: Decision: accept, score=4. The article presents a novel approach to bridging bibliographic and formalized mathematical knowledge, which is relevant to ongoing discussions in AI research about formal verification and knowledge representation. It is timely and likely to attract attention within the research community.
+  Details:
+  {
+    "article_id": "c0eed61d-4e74-4059-b1aa-b3486d4b14b4",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article presents a novel approach to bridging bibliographic and formalized mathematical knowledge, which is relevant to ongoing discussions in AI research about formal verification and knowledge representation. It is timely and likely to attract attention within the research community."
+  }
+[2026-06-11 15:44:28] [quality] evaluating: Article: CRUMB: Efficient Prior Fitted Network Inference via Distribu...
+  Details:
+  {
+    "article_id": "c40f9461-0f90-46d7-ac17-af1e064a6fb3",
+    "url": "https://arxiv.org/abs/2606.11473"
+  }
+[2026-06-11 15:44:29] [quality] decision: Decision: accept, score=5. The article presents a formalization of test-time training (TTT) in the context of generative AI, addressing a fundamental problem in sampling from complex distributions. This is highly relevant to current trends in AI research and likely to attract attention due to its implications for improving sampling algorithms in LLMs.
+  Details:
+  {
+    "article_id": "a2da9d91-dbf4-467c-a289-e78de503c6d4",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a formalization of test-time training (TTT) in the context of generative AI, addressing a fundamental problem in sampling from complex distributions. This is highly relevant to current trends in AI research and likely to attract attention due to its implications for improving sampling algorithms in LLMs."
+  }
+[2026-06-11 15:44:29] [quality] evaluating: Article: Towards Fully Automated Exam Grading: Fairness-Aware Recogni...
+  Details:
+  {
+    "article_id": "32ba6496-292a-4bdd-9a49-ca2565073e10",
+    "url": "https://arxiv.org/abs/2606.11477"
+  }
+[2026-06-11 15:44:29] [quality] decision: Decision: accept, score=5. The article presents a significant research study on the use of AI coding agents in social science, addressing methodological concerns and empirical findings. It is timely and relevant to the AI research community, likely to attract attention due to its implications for AI's role in scientific analysis.
+  Details:
+  {
+    "article_id": "f59119ac-8a83-4197-971d-985f93fdcebe",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant research study on the use of AI coding agents in social science, addressing methodological concerns and empirical findings. It is timely and relevant to the AI research community, likely to attract attention due to its implications for AI's role in scientific analysis."
+  }
+[2026-06-11 15:44:29] [quality] evaluating: Article: Hubs or Fringes: Pretraining Data Selection via Web Graph Ce...
+  Details:
+  {
+    "article_id": "dd954545-31d2-47d2-814d-af4c618081aa",
+    "url": "https://arxiv.org/abs/2606.11499"
+  }
+[2026-06-11 15:44:29] [quality] decision: Decision: accept, score=5. The article presents a novel framework for optimizing prompt engineering in large language models, addressing a significant challenge in AI research. It introduces a new method with promising results, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "d8caefe0-b545-410f-9a77-e735085f14e3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for optimizing prompt engineering in large language models, addressing a significant challenge in AI research. It introduces a new method with promising results, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:29] [quality] evaluating: Article: When Roleplaying, Do Models Believe What They Say?...
+  Details:
+  {
+    "article_id": "719fbd6d-6014-4508-9f1d-50707d43876f",
+    "url": "https://arxiv.org/abs/2606.11502"
+  }
+[2026-06-11 15:44:30] [quality] decision: Decision: accept, score=5. The article presents a novel approach using LSTM neural networks for detecting structural breaks in property insurance loss reserving, which is highly relevant to current trends in AI applications in finance and insurance, especially in the context of climate change. The research is timely and likely to attract attention due to its implications for improving accuracy in loss reserving.
+  Details:
+  {
+    "article_id": "37eb93f3-d090-4aa2-837f-e7dc1ba9b84c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach using LSTM neural networks for detecting structural breaks in property insurance loss reserving, which is highly relevant to current trends in AI applications in finance and insurance, especially in the context of climate change. The research is timely and likely to attract attention due to its implications for improving accuracy in loss reserving."
+  }
+[2026-06-11 15:44:30] [quality] evaluating: Article: On the Study of Biometric Spoofing Detection using Deep Lear...
+  Details:
+  {
+    "article_id": "73037256-8b1e-41e6-9e39-0623b1f3b116",
+    "url": "https://arxiv.org/abs/2606.11505"
+  }
+[2026-06-11 15:44:31] [quality] decision: Decision: accept, score=5. The article presents a novel method (CRUMB) for improving inference in prior-fitted networks, which is relevant to ongoing research in AI and machine learning. It discusses a significant advancement in efficiency and performance, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "c40f9461-0f90-46d7-ac17-af1e064a6fb3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel method (CRUMB) for improving inference in prior-fitted networks, which is relevant to ongoing research in AI and machine learning. It discusses a significant advancement in efficiency and performance, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:31] [quality] evaluating: Article: SirenFNO: Efficient and Full Frequency Learning of Fourier N...
+  Details:
+  {
+    "article_id": "67456720-f392-4e38-9e47-c9d471d9c70b",
+    "url": "https://arxiv.org/abs/2606.11518"
+  }
+[2026-06-11 15:44:31] [quality] decision: Decision: accept, score=5. The article presents a significant advancement in automated exam grading using foundation models, achieving high accuracy and addressing fairness in grading. This is highly relevant to AI research and likely to attract attention in the field.
+  Details:
+  {
+    "article_id": "32ba6496-292a-4bdd-9a49-ca2565073e10",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant advancement in automated exam grading using foundation models, achieving high accuracy and addressing fairness in grading. This is highly relevant to AI research and likely to attract attention in the field."
+  }
+[2026-06-11 15:44:31] [quality] evaluating: Article: ISE: An Execution-Grounded Recipe for Multi-Turn OS-Agent Tr...
+  Details:
+  {
+    "article_id": "81ec22ed-f0ab-468a-8715-b04cd0e90bc3",
+    "url": "https://arxiv.org/abs/2606.11520"
+  }
+[2026-06-11 15:44:31] [quality] decision: Decision: accept, score=5. The article presents a novel framework for pretraining data selection in language models, which is highly relevant to current AI research trends. It introduces a new method that could significantly impact model performance, making it likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "dd954545-31d2-47d2-814d-af4c618081aa",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel framework for pretraining data selection in language models, which is highly relevant to current AI research trends. It introduces a new method that could significantly impact model performance, making it likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:31] [quality] evaluating: Article: AI Researchers Must Help Lead Arms Control to Mitigate Milit...
+  Details:
+  {
+    "article_id": "a6ed261a-af42-42ff-ac96-148896230746",
+    "url": "https://arxiv.org/abs/2606.11533"
+  }
+[2026-06-11 15:44:32] [quality] decision: Decision: accept, score=5. The article presents a significant research study on how language models role-play historical personas and its impact on their internal representations of truth. This topic is timely and relevant to ongoing discussions in AI research, making it likely to attract attention from data scientists and AI teams.
+  Details:
+  {
+    "article_id": "719fbd6d-6014-4508-9f1d-50707d43876f",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a significant research study on how language models role-play historical personas and its impact on their internal representations of truth. This topic is timely and relevant to ongoing discussions in AI research, making it likely to attract attention from data scientists and AI teams."
+  }
+[2026-06-11 15:44:32] [quality] evaluating: Article: Pretrained self-supervised speech models can recognize unsee...
+  Details:
+  {
+    "article_id": "8cd9f514-385c-4981-a522-2c08d26bdb46",
+    "url": "https://arxiv.org/abs/2606.11542"
+  }
+[2026-06-11 15:44:32] [quality] decision: Decision: accept, score=5. The article presents a relevant and timely study on biometric spoofing detection using deep learning, evaluating multiple models and their effectiveness. This research is significant for security applications and aligns well with the interests of data scientists and AI teams.
+  Details:
+  {
+    "article_id": "73037256-8b1e-41e6-9e39-0623b1f3b116",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a relevant and timely study on biometric spoofing detection using deep learning, evaluating multiple models and their effectiveness. This research is significant for security applications and aligns well with the interests of data scientists and AI teams."
+  }
+[2026-06-11 15:44:32] [quality] evaluating: Article: End-to-End Machine Learning for Depressive State Classificat...
+  Details:
+  {
+    "article_id": "5299dedb-97b7-45c7-af1a-cb6f000b217c",
+    "url": "https://arxiv.org/abs/2606.11555"
+  }
+[2026-06-11 15:44:32] [quality] decision: Decision: accept, score=5. This article presents a novel framework in AI research that addresses a significant limitation in Fourier neural operators, making it highly relevant and likely to attract attention in the field.
+  Details:
+  {
+    "article_id": "67456720-f392-4e38-9e47-c9d471d9c70b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel framework in AI research that addresses a significant limitation in Fourier neural operators, making it highly relevant and likely to attract attention in the field."
+  }
+[2026-06-11 15:44:32] [quality] evaluating: Article: Privacy-Preserving Federated Autoencoder for ECG Anomaly Det...
+  Details:
+  {
+    "article_id": "47ccca9d-5c29-460f-8685-3623df0212cd",
+    "url": "https://arxiv.org/abs/2606.11556"
+  }
+[2026-06-11 15:44:33] [quality] decision: Decision: accept, score=5. The article discusses the critical role of AI researchers in addressing military AI risks, which is a timely and relevant topic given the increasing integration of AI in defense. This aligns with current discussions on AI ethics and safety, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "a6ed261a-af42-42ff-ac96-148896230746",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses the critical role of AI researchers in addressing military AI risks, which is a timely and relevant topic given the increasing integration of AI in defense. This aligns with current discussions on AI ethics and safety, making it likely to attract attention."
+  }
+[2026-06-11 15:44:33] [quality] evaluating: Article: LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems...
+  Details:
+  {
+    "article_id": "acf78e1f-065f-464d-80ea-288f3a943191",
+    "url": "https://arxiv.org/abs/2606.11560"
+  }
+[2026-06-11 15:44:34] [quality] decision: Decision: accept, score=5. The article presents a novel approach to training OS agents with a new dataset and methodology, which is highly relevant to ongoing AI research. The results show significant improvements over existing models, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "81ec22ed-f0ab-468a-8715-b04cd0e90bc3",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to training OS agents with a new dataset and methodology, which is highly relevant to ongoing AI research. The results show significant improvements over existing models, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:34] [quality] evaluating: Article: ConsistencyPlanner: Real-time Planning with Fast-Sampling Co...
+  Details:
+  {
+    "article_id": "a3770d84-8579-4f43-a332-fd57f3a73fb1",
+    "url": "https://arxiv.org/abs/2606.11569"
+  }
+[2026-06-11 15:44:34] [quality] decision: Decision: accept, score=5. This article presents a novel approach to mental health diagnostics using EEG and fNIRS, addressing a significant societal issue. The research is timely and relevant, likely to attract attention in the AI and healthcare communities.
+  Details:
+  {
+    "article_id": "5299dedb-97b7-45c7-af1a-cb6f000b217c",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to mental health diagnostics using EEG and fNIRS, addressing a significant societal issue. The research is timely and relevant, likely to attract attention in the AI and healthcare communities."
+  }
+[2026-06-11 15:44:34] [quality] evaluating: Article: AVIS: Adaptive Test-Time Scaling for Vision-Language Models...
+  Details:
+  {
+    "article_id": "29d54f65-7f2c-4edf-bbc1-8a8c41252426",
+    "url": "https://arxiv.org/abs/2606.11576"
+  }
+[2026-06-11 15:44:34] [quality] decision: Decision: accept, score=5. This article presents a novel approach to ECG anomaly detection using federated learning and privacy-preserving techniques, which is highly relevant to current trends in AI research, particularly in healthcare applications. The combination of technical advancements and practical implications makes it likely to attract significant attention.
+  Details:
+  {
+    "article_id": "47ccca9d-5c29-460f-8685-3623df0212cd",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents a novel approach to ECG anomaly detection using federated learning and privacy-preserving techniques, which is highly relevant to current trends in AI research, particularly in healthcare applications. The combination of technical advancements and practical implications makes it likely to attract significant attention."
+  }
+[2026-06-11 15:44:34] [quality] evaluating: Article: Model-Based and Data-Driven Hierarchical Control and Topolog...
+  Details:
+  {
+    "article_id": "c440e4c4-bfc8-42e1-b5fd-acdf2ceb9a33",
+    "url": "https://arxiv.org/abs/2606.11596"
+  }
+[2026-06-11 15:44:35] [quality] decision: Decision: accept, score=5. This article presents significant research on the capabilities of self-supervised speech models in recognizing uncommon speech sounds, which is a relevant and timely topic in AI research. The findings could have implications for improving speech recognition technologies, particularly for low-resource languages, making it likely to attract attention in the AI community.
+  Details:
+  {
+    "article_id": "8cd9f514-385c-4981-a522-2c08d26bdb46",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article presents significant research on the capabilities of self-supervised speech models in recognizing uncommon speech sounds, which is a relevant and timely topic in AI research. The findings could have implications for improving speech recognition technologies, particularly for low-resource languages, making it likely to attract attention in the AI community."
+  }
+[2026-06-11 15:44:35] [quality] evaluating: Article: Physics-Distilled Neural Network enabled by Large Language M...
+  Details:
+  {
+    "article_id": "5b5cb4a8-67a0-4404-b2cb-9bd552897a70",
+    "url": "https://arxiv.org/abs/2606.11605"
+  }
+[2026-06-11 15:44:36] [quality] decision: Decision: accept, score=5. The article presents a novel approach to real-time planning in autonomous driving, addressing significant challenges in the field. It includes technical contributions and evaluation results, making it highly relevant and likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "a3770d84-8579-4f43-a332-fd57f3a73fb1",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to real-time planning in autonomous driving, addressing significant challenges in the field. It includes technical contributions and evaluation results, making it highly relevant and likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:36] [quality] evaluating: Article: Information-Theoretic Decomposition for Multimodal Interacti...
+  Details:
+  {
+    "article_id": "8574f2f0-be37-4fdf-977f-5a0a66c47caa",
+    "url": "https://arxiv.org/abs/2606.11614"
+  }
+[2026-06-11 15:44:36] [quality] decision: Decision: accept, score=5. The article presents a novel approach to hierarchical control design for networked systems, combining model-based and data-driven strategies. This is highly relevant to ongoing research in AI and control systems, and the findings could have significant implications for robust system design, making it likely to attract attention in the AI research community.
+  Details:
+  {
+    "article_id": "c440e4c4-bfc8-42e1-b5fd-acdf2ceb9a33",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to hierarchical control design for networked systems, combining model-based and data-driven strategies. This is highly relevant to ongoing research in AI and control systems, and the findings could have significant implications for robust system design, making it likely to attract attention in the AI research community."
+  }
+[2026-06-11 15:44:37] [quality] decision: Decision: accept, score=5. The article discusses a significant advancement in AI research, focusing on the integration of LLMs with graph structures, which is a trending topic in the field. It addresses current limitations of LLMs and proposes a novel approach, making it highly relevant for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "acf78e1f-065f-464d-80ea-288f3a943191",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses a significant advancement in AI research, focusing on the integration of LLMs with graph structures, which is a trending topic in the field. It addresses current limitations of LLMs and proposes a novel approach, making it highly relevant for data scientists and AI teams."
+  }
+[2026-06-11 15:44:37] [quality] decision: Decision: accept, score=5. The article presents a novel approach to predictive modeling in manufacturing using a knowledge distillation framework and Large Language Models, which is highly relevant to current AI research trends. It addresses significant challenges in the field and demonstrates practical applications, making it likely to attract attention from data scientists and AI teams.
+  Details:
+  {
+    "article_id": "5b5cb4a8-67a0-4404-b2cb-9bd552897a70",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach to predictive modeling in manufacturing using a knowledge distillation framework and Large Language Models, which is highly relevant to current AI research trends. It addresses significant challenges in the field and demonstrates practical applications, making it likely to attract attention from data scientists and AI teams."
+  }
+[2026-06-11 15:44:37] [quality] decision: Decision: accept, score=5. The article presents a novel approach (AVIS) for optimizing inference in Vision-Language Models, which is a trending topic in AI research. It addresses significant challenges in the field and offers a deployment-friendly solution, making it highly relevant and likely to attract attention.
+  Details:
+  {
+    "article_id": "29d54f65-7f2c-4edf-bbc1-8a8c41252426",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach (AVIS) for optimizing inference in Vision-Language Models, which is a trending topic in AI research. It addresses significant challenges in the field and offers a deployment-friendly solution, making it highly relevant and likely to attract attention."
+  }
+[2026-06-11 15:44:38] [quality] decision: Decision: accept, score=5. The article presents a novel approach in multimodal interaction learning, which is a trending topic in AI research. It offers a systematic analysis and introduces a new paradigm, likely to attract attention from data scientists and AI teams.
+  Details:
+  {
+    "article_id": "8574f2f0-be37-4fdf-977f-5a0a66c47caa",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article presents a novel approach in multimodal interaction learning, which is a trending topic in AI research. It offers a systematic analysis and introduces a new paradigm, likely to attract attention from data scientists and AI teams."
+  }
+[2026-06-11 15:44:38] [quality] batch_done: Evaluation complete for 'ai_research': 100/100 passed quality bar.
+  Details:
+  {
+    "accepted": 100,
+    "total": 100
+  }
+[2026-06-11 15:44:38] [summarizer] summarizing: Article: From Explicit Elements to Implicit Intent: A Predefined Libr...
+  Details:
+  {
+    "article_id": "02649daa-ba7c-49cc-94de-458def09e3f1"
+  }
+[2026-06-11 15:44:38] [summarizer] summarizing: Article: Position: Hippocampal Explicit Memory Is the Cornerstone for...
+  Details:
+  {
+    "article_id": "e7b5815d-dd21-4e66-b011-4a0f09213f9d"
+  }
+[2026-06-11 15:44:38] [summarizer] summarizing: Article: Can AI Agents Synthesize Scientific Conclusions?...
+  Details:
+  {
+    "article_id": "31621dca-d1d3-486a-99b7-21f4eb866484"
+  }
+[2026-06-11 15:44:38] [summarizer] summarizing: Article: Knowing When to Ask: Self-Gated Clarification for Hierarchic...
+  Details:
+  {
+    "article_id": "858fc7b9-d8ee-41a3-854d-d4579f58f301"
+  }
+[2026-06-11 15:44:38] [summarizer] summarizing: Article: Automated Mediator for Human Negotiation: Pre-Mediation via ...
+  Details:
+  {
+    "article_id": "6aba0be6-b551-46e7-b4db-bc1c27c8f3a0"
+  }
+[2026-06-11 15:44:40] [summarizer] finished: Subject: Explicit Memory Integration Key for AGI Development 🧠
+  Details:
+  {
+    "article_id": "e7b5815d-dd21-4e66-b011-4a0f09213f9d",
+    "suggested_subject": "Explicit Memory Integration Key for AGI Development 🧠",
+    "summary_preview": "Integrating explicit memory into large language models is essential for achieving artificial general intelligence. This approach addresses higher-order cognitive functions like strategic planning and ..."
+  }
+[2026-06-11 15:44:40] [summarizer] summarizing: Article: INFRAMIND: Infrastructure-Aware Multi-Agent Orchestration...
+  Details:
+  {
+    "article_id": "ad2bd03f-d754-41c0-9c52-8214ddcf7148"
+  }
+[2026-06-11 15:44:40] [summarizer] finished: Subject: Self-Gated Clarification Boosts Agent Decision-Making Efficiency ⚡
+  Details:
+  {
+    "article_id": "858fc7b9-d8ee-41a3-854d-d4579f58f301",
+    "suggested_subject": "Self-Gated Clarification Boosts Agent Decision-Making Efficiency ⚡",
+    "summary_preview": "ACTION-RATING integrates clarification into an agent's action space, allowing it to seek help at critical decision points. Information-Seeking Effectiveness improves from 50% to 74%, demonstrating enh..."
+  }
+[2026-06-11 15:44:40] [summarizer] summarizing: Article: Forecasting Future Behavior as a Learning Task...
+  Details:
+  {
+    "article_id": "c3c9bddf-08e1-46e0-bf6d-5e4b33eddfb6"
+  }
+[2026-06-11 15:44:40] [summarizer] finished: Subject: Automated Pre-Mediation Achieves Human-Level Outcomes 🤝
+  Details:
+  {
+    "article_id": "6aba0be6-b551-46e7-b4db-bc1c27c8f3a0",
+    "suggested_subject": "Automated Pre-Mediation Achieves Human-Level Outcomes 🤝",
+    "summary_preview": "An automated mediator using a structured pipeline of LLM modules enhances pre-mediation for human negotiations. It matches human mediators in trust and confidence while reducing preference inference e..."
+  }
+[2026-06-11 15:44:40] [summarizer] summarizing: Article: Search Discipline for Long-Horizon Research Agents...
+  Details:
+  {
+    "article_id": "421b5d7b-aa64-4483-865b-e2af9552de59"
+  }
+[2026-06-11 15:44:40] [summarizer] finished: Subject: AI Agents Struggle with Scientific Conclusion Synthesis 🔬
+  Details:
+  {
+    "article_id": "31621dca-d1d3-486a-99b7-21f4eb866484",
+    "suggested_subject": "AI Agents Struggle with Scientific Conclusion Synthesis 🔬",
+    "summary_preview": "SciConBench evaluates AI agents' ability to synthesize scientific conclusions using a benchmark of 9.11K questions and expert-written answers. The best-performing model achieved a factual F1 score of ..."
+  }
+[2026-06-11 15:44:40] [summarizer] summarizing: Article: MoCA-Agent: A Market-of-Claims Code Agent for Financial and ...
+  Details:
+  {
+    "article_id": "276a1dea-72e9-4c49-8d6c-d22323f82f33"
+  }
+[2026-06-11 15:44:40] [summarizer] finished: Subject: Modular Framework Enhances E-commerce Intent Inference 🔍
+  Details:
+  {
+    "article_id": "02649daa-ba7c-49cc-94de-458def09e3f1",
+    "suggested_subject": "Modular Framework Enhances E-commerce Intent Inference 🔍",
+    "summary_preview": "SemantiClean extracts structured signals from e-commerce data to infer behaviors like purchase intent while ensuring auditability and transparency. It achieves reproducible outputs with a two-phase LL..."
+  }
+[2026-06-11 15:44:40] [summarizer] summarizing: Article: SkillJuror: Measuring How Agent Skill Organization Changes R...
+  Details:
+  {
+    "article_id": "bca18d80-ac95-4532-9597-521215176111"
+  }
+[2026-06-11 15:44:42] [summarizer] finished: Subject: Infrastructure-Aware Multi-Agent Orchestration Boosts Efficiency ⚡
+  Details:
+  {
+    "article_id": "ad2bd03f-d754-41c0-9c52-8214ddcf7148",
+    "suggested_subject": "Infrastructure-Aware Multi-Agent Orchestration Boosts Efficiency ⚡",
+    "summary_preview": "INFRAMIND enhances multi-agent orchestration by integrating real-time infrastructure signals for decision-making. It achieves up to 7.6 percentage points higher accuracy at low load and maintains 99.9..."
+  }
+[2026-06-11 15:44:42] [summarizer] summarizing: Article: HERO: Hindsight-Enhanced Reflection from Environment Observa...
+  Details:
+  {
+    "article_id": "69d2c425-16fa-4298-9301-f3758e5ec6b4"
+  }
+[2026-06-11 15:44:42] [summarizer] finished: Subject: AI Behavior Forecasting Outperforms Traditional Explanations ⚡
+  Details:
+  {
+    "article_id": "c3c9bddf-08e1-46e0-bf6d-5e4b33eddfb6",
+    "suggested_subject": "AI Behavior Forecasting Outperforms Traditional Explanations ⚡",
+    "summary_preview": "Forecasting AI behavior is treated as a learnable task using Behavior Forecasters that analyze reasoning trajectories without human annotations. This method achieves higher accuracy than GPT-5.4 and C..."
+  }
+[2026-06-11 15:44:42] [summarizer] summarizing: Article: Architecture-Aware Reinforcement Learning Makes Sliding-Wind...
+  Details:
+  {
+    "article_id": "2853f440-34ec-463f-b902-56fb7d9e7873"
+  }
+[2026-06-11 15:44:42] [summarizer] finished: Subject: New Protocol Audits Research Agents' Candidate Validity 🔬
+  Details:
+  {
+    "article_id": "421b5d7b-aa64-4483-865b-e2af9552de59",
+    "suggested_subject": "New Protocol Audits Research Agents' Candidate Validity 🔬",
+    "summary_preview": "A new search-discipline protocol audits scientific candidates based on detailed behavior rather than aggregate scores, addressing the risk of selecting invalid candidates. This approach prevents misle..."
+  }
+[2026-06-11 15:44:42] [summarizer] summarizing: Article: TouchThinker: Scaling Tactile Commonsense Reasoning to the O...
+  Details:
+  {
+    "article_id": "4ad803cf-8aeb-4aad-b71d-1f7bc3a044c2"
+  }
+[2026-06-11 15:44:42] [summarizer] finished: Subject: Market-of-Claims Agent Boosts Financial Reasoning Accuracy 🔬
+  Details:
+  {
+    "article_id": "276a1dea-72e9-4c49-8d6c-d22323f82f33",
+    "suggested_subject": "Market-of-Claims Agent Boosts Financial Reasoning Accuracy 🔬",
+    "summary_preview": "MOCA-Agent enhances financial and numerical question answering by verifying atomic claims through a market-based approach. It achieves impressive results, including 78.3% accuracy on FinQA and an aver..."
+  }
+[2026-06-11 15:44:42] [summarizer] summarizing: Article: Lung-R1: A Knowledge Graph-Guided LLM for Pulmonary Diagnost...
+  Details:
+  {
+    "article_id": "97998a7c-ffd5-475d-a363-87f44faa98fa"
+  }
+[2026-06-11 15:44:43] [summarizer] finished: Subject: Skill Organization Boosts Agent Performance by 4.1% 📊
+  Details:
+  {
+    "article_id": "bca18d80-ac95-4532-9597-521215176111",
+    "suggested_subject": "Skill Organization Boosts Agent Performance by 4.1% 📊",
+    "summary_preview": "SkillJuror evaluates how the organization of agent skills affects runtime behavior using Progressive Disclosure. In an 82-task study, this approach increased the number of distinct skill resources acc..."
+  }
+[2026-06-11 15:44:43] [summarizer] summarizing: Article: TreeSeeker: Tree-Structured Trial, Error, and Return in Deep...
+  Details:
+  {
+    "article_id": "48e73faa-e9ad-4766-80ad-06a4ac1ff9b9"
+  }
+[2026-06-11 15:44:45] [summarizer] finished: Subject: HERO Framework Boosts Self-Distillation in Reinforcement Learning ⚡
+  Details:
+  {
+    "article_id": "69d2c425-16fa-4298-9301-f3758e5ec6b4",
+    "suggested_subject": "HERO Framework Boosts Self-Distillation in Reinforcement Learning ⚡",
+    "summary_preview": "HERO enhances self-distillation in reinforcement learning by using next environment observations for better feedback alignment. It achieves improved task success and fewer unnecessary turns on TauBenc..."
+  }
+[2026-06-11 15:44:45] [summarizer] summarizing: Article: Organize then Retrieve: Hierarchical Memory Navigation for E...
+  Details:
+  {
+    "article_id": "43967ce8-776b-48cd-9c51-676ce68f2c99"
+  }
+[2026-06-11 15:44:45] [summarizer] finished: Subject: Reinforcement Learning Boosts Sliding-Window Attention for Math Reasoning ⚡
+  Details:
+  {
+    "article_id": "2853f440-34ec-463f-b902-56fb7d9e7873",
+    "suggested_subject": "Reinforcement Learning Boosts Sliding-Window Attention for Math Reasoning ⚡",
+    "summary_preview": "SWARR adapts Sliding-Window Attention for mathematical reasoning using supervised fine-tuning and reinforcement learning. Experiments show this approach significantly narrows the accuracy gap with tra..."
+  }
+[2026-06-11 15:44:45] [summarizer] summarizing: Article: Mind the Perspective: Let's Reason Recursively for Theory of...
+  Details:
+  {
+    "article_id": "b070f61a-b23b-42be-8cfc-dc2e31727fd8"
+  }
+[2026-06-11 15:44:45] [summarizer] finished: Subject: TouchThinker Boosts Tactile Reasoning with 1M Data Points 🔬
+  Details:
+  {
+    "article_id": "4ad803cf-8aeb-4aad-b71d-1f7bc3a044c2",
+    "suggested_subject": "TouchThinker Boosts Tactile Reasoning with 1M Data Points 🔬",
+    "summary_preview": "TouchThinker introduces a tactile-language framework that enhances commonsense reasoning by leveraging a million-scale dataset and an action-aware modeling mechanism. It achieves competitive performan..."
+  }
+[2026-06-11 15:44:45] [summarizer] summarizing: Article: When Do Data-Driven Systems Exhibit the Capability to Infer?...
+  Details:
+  {
+    "article_id": "d28f7480-d836-419f-9b35-f68b54459beb"
+  }
+[2026-06-11 15:44:46] [summarizer] finished: Subject: Lung-R1 Boosts Pulmonary Diagnosis Accuracy by 0.15 Points ⚡
+  Details:
+  {
+    "article_id": "97998a7c-ffd5-475d-a363-87f44faa98fa",
+    "suggested_subject": "Lung-R1 Boosts Pulmonary Diagnosis Accuracy by 0.15 Points ⚡",
+    "summary_preview": "Lung-R1 leverages a structured pulmonary knowledge graph for enhanced diagnostic reasoning using electronic medical records. It achieves state-of-the-art performance with an EMR Diagnosis score of 4.3..."
+  }
+[2026-06-11 15:44:46] [summarizer] summarizing: Article: StatefulDiscovery: Evidence-Calibrated Claim Formation in Op...
+  Details:
+  {
+    "article_id": "90f685d9-836b-4a22-9b49-33373541cf73"
+  }
+[2026-06-11 15:44:46] [summarizer] finished: Subject: TreeSeeker Enhances Deep Search Efficiency by Controlled Exploration 🔍
+  Details:
+  {
+    "article_id": "48e73faa-e9ad-4766-80ad-06a4ac1ff9b9",
+    "suggested_subject": "TreeSeeker Enhances Deep Search Efficiency by Controlled Exploration 🔍",
+    "summary_preview": "TreeSeeker introduces a tree-structured framework for managing trial-and-error in deep search, optimizing the decision-making process for agents navigating complex queries. It outperforms strong basel..."
+  }
+[2026-06-11 15:44:46] [summarizer] summarizing: Article: Skill-Augmented AI Agents for Medical Research Analysis: An ...
+  Details:
+  {
+    "article_id": "2714250e-a1e4-46b1-9c69-9d685f475da7"
+  }
+[2026-06-11 15:44:48] [summarizer] finished: Subject: Hierarchical Memory Boosts LLM Efficiency by 77.83% 🔬
+  Details:
+  {
+    "article_id": "43967ce8-776b-48cd-9c51-676ce68f2c99",
+    "suggested_subject": "Hierarchical Memory Boosts LLM Efficiency by 77.83% 🔬",
+    "summary_preview": "HORMA organizes experiences into a hierarchical structure for efficient memory retrieval in long-horizon tasks. It reduces token usage to 22.17% of the baseline while improving performance across mult..."
+  }
+[2026-06-11 15:44:48] [summarizer] summarizing: Article: Toward Trustworthy AI: Multi-Target Adversarial Attacks and ...
+  Details:
+  {
+    "article_id": "c91f4e6b-3b09-48c8-9ffa-b34d03626f40"
+  }
+[2026-06-11 15:44:49] [summarizer] finished: Subject: Recursive Perspective Construction Achieves 100% ToM Accuracy! 🧠
+  Details:
+  {
+    "article_id": "b070f61a-b23b-42be-8cfc-dc2e31727fd8",
+    "suggested_subject": "Recursive Perspective Construction Achieves 100% ToM Accuracy! 🧠",
+    "summary_preview": "RecToM introduces a framework for Theory of Mind reasoning that models nested beliefs through recursive perspective construction. It achieves state-of-the-art performance, reaching 100% accuracy on th..."
+  }
+[2026-06-11 15:44:49] [summarizer] summarizing: Article: SVoT: State-aware Visualization-of-Thought for Spatial Reaso...
+  Details:
+  {
+    "article_id": "c8557a29-04bc-4297-9f66-dabb127ed560"
+  }
+[2026-06-11 15:44:49] [summarizer] finished: Subject: Framework for Grading AI Inference Capability 📊
+  Details:
+  {
+    "article_id": "d28f7480-d836-419f-9b35-f68b54459beb",
+    "suggested_subject": "Framework for Grading AI Inference Capability 📊",
+    "summary_preview": "A framework is developed to assess the inference capability of data-driven systems, particularly in the context of the European AI Act. It highlights that both individual models and the entire data pr..."
+  }
+[2026-06-11 15:44:49] [summarizer] summarizing: Article: AutoMine Solution for AV2 2026 Scenario Mining Challenge...
+  Details:
+  {
+    "article_id": "c3e99f89-102c-4988-8285-d3c83ffea38f"
+  }
+[2026-06-11 15:44:49] [summarizer] finished: Subject: Enhanced Scientific Discovery with Evidence Calibration 🔬
+  Details:
+  {
+    "article_id": "90f685d9-836b-4a22-9b49-33373541cf73",
+    "suggested_subject": "Enhanced Scientific Discovery with Evidence Calibration 🔬",
+    "summary_preview": "StatefulDiscovery tackles the challenge of forming claims in open-ended scientific exploration by coordinating investigation state with evidence. It outperforms baselines in producing well-supported a..."
+  }
+[2026-06-11 15:44:49] [summarizer] summarizing: Article: Embodied-BenchClaw: An Autonomous Multi-Agent System for Emb...
+  Details:
+  {
+    "article_id": "d3dea076-b28c-4d2e-bbb0-0ab2e42103e2"
+  }
+[2026-06-11 15:44:50] [summarizer] finished: Subject: Skill-Augmented AI Boosts Medical Research Output Quality 📊
+  Details:
+  {
+    "article_id": "2714250e-a1e4-46b1-9c69-9d685f475da7",
+    "suggested_subject": "Skill-Augmented AI Boosts Medical Research Output Quality 📊",
+    "summary_preview": "Autonomous access to a medical research skill package improved the quality of AI-generated transcriptomic analysis compared to native AI outputs. Skill-augmented outputs received higher expert ratings..."
+  }
+[2026-06-11 15:44:50] [summarizer] summarizing: Article: MODF-SIR: A Multi-agent Omni-modal Distilled Framework for S...
+  Details:
+  {
+    "article_id": "e551d165-2eea-4e07-ae83-1657f2356468"
+  }
+[2026-06-11 15:44:50] [summarizer] finished: Subject: Adversarial Attacks on Data Summarization Threaten AI Trustworthiness ⚡
+  Details:
+  {
+    "article_id": "c91f4e6b-3b09-48c8-9ffa-b34d03626f40",
+    "suggested_subject": "Adversarial Attacks on Data Summarization Threaten AI Trustworthiness ⚡",
+    "summary_preview": "Adversarial attacks on continuous data summarization can degrade the quality of information passed to AI models, compromising their reliability. Experiments demonstrate that these attacks effectively ..."
+  }
+[2026-06-11 15:44:50] [summarizer] summarizing: Article: The Art of Interrogation: Consistency Amplifies Factuality i...
+  Details:
+  {
+    "article_id": "0d3a9f6b-96ed-4847-838a-e53b9f83aa0e"
+  }
+[2026-06-11 15:44:51] [summarizer] finished: Subject: Automated Benchmark Creation for Spatial Intelligence 🤖
+  Details:
+  {
+    "article_id": "d3dea076-b28c-4d2e-bbb0-0ab2e42103e2",
+    "suggested_subject": "Automated Benchmark Creation for Spatial Intelligence 🤖",
+    "summary_preview": "Embodied-BenchClaw autonomously constructs and updates benchmarks for embodied spatial intelligence through a five-stage pipeline. It significantly reduces manual effort while ensuring benchmarks are ..."
+  }
+[2026-06-11 15:44:51] [summarizer] summarizing: Article: Human-Enhanced Loop Modeling (HELM): Agent-Based Finite Elem...
+  Details:
+  {
+    "article_id": "a9f62be1-0217-4752-ba6c-b6f0a52c8595"
+  }
+[2026-06-11 15:44:51] [summarizer] finished: Subject: AutoMine Boosts Scenario Mining for Autonomous Driving 🚗
+  Details:
+  {
+    "article_id": "c3e99f89-102c-4988-8285-d3c83ffea38f",
+    "suggested_subject": "AutoMine Boosts Scenario Mining for Autonomous Driving 🚗",
+    "summary_preview": "AutoMine introduces a self-refining method for extracting critical driving scenarios using large language models and vision-language models. It achieved a HOTA-Temporal score of 36.38 and a Timestamp ..."
+  }
+[2026-06-11 15:44:51] [summarizer] summarizing: Article: Existential Indifference: Self-Nonpreservation as a Necessar...
+  Details:
+  {
+    "article_id": "6c8f5830-20f0-4893-98c6-c525c25b5968"
+  }
+[2026-06-11 15:44:52] [summarizer] finished: Subject: Reinforcement Learning Boosts Spatial Reasoning Accuracy by 65% 🔬
+  Details:
+  {
+    "article_id": "c8557a29-04bc-4297-9f66-dabb127ed560",
+    "suggested_subject": "Reinforcement Learning Boosts Spatial Reasoning Accuracy by 65% 🔬",
+    "summary_preview": "State-aware Visualization-of-Thought (SVoT) enhances spatial reasoning in Multimodal Large Language Models by generating verifiable intermediate states and integrating transition reasoning. This appro..."
+  }
+[2026-06-11 15:44:52] [summarizer] summarizing: Article: A Lightweight Multi-Agent Framework for Automated Concrete B...
+  Details:
+  {
+    "article_id": "2fe9b20e-b099-4cb0-ac50-1383929f0560"
+  }
+[2026-06-11 15:44:52] [summarizer] finished: Subject: Self-Supervised Learning Boosts Spatial Reasoning Accuracy ⚡
+  Details:
+  {
+    "article_id": "0d3a9f6b-96ed-4847-838a-e53b9f83aa0e",
+    "suggested_subject": "Self-Supervised Learning Boosts Spatial Reasoning Accuracy ⚡",
+    "summary_preview": "A self-supervised reinforcement learning framework enhances spatial reasoning in large reasoning models by aligning their internal processes with geometric constraints. This approach achieves accuracy..."
+  }
+[2026-06-11 15:44:52] [summarizer] summarizing: Article: Automating Geometry-Intensive Compliance Checking in BIM: Gr...
+  Details:
+  {
+    "article_id": "5cbe46d1-c445-45cd-8941-c4206e292966"
+  }
+[2026-06-11 15:44:52] [summarizer] finished: Subject: Enhanced Social Intelligence with Multi-Agent Framework 🤖
+  Details:
+  {
+    "article_id": "e551d165-2eea-4e07-ae83-1657f2356468",
+    "suggested_subject": "Enhanced Social Intelligence with Multi-Agent Framework 🤖",
+    "summary_preview": "A multi-agent framework leverages a lightweight Multimodal Large Language Model for social intelligence reasoning, utilizing knowledge distillation to enhance training and inference. Achieving state-o..."
+  }
+[2026-06-11 15:44:52] [summarizer] summarizing: Article: IntElicit: Eliciting and Assessing Contextualized Creativity...
+  Details:
+  {
+    "article_id": "9e8ad1a7-bb5a-4770-9064-b178555dc5a4"
+  }
+[2026-06-11 15:44:54] [summarizer] finished: Subject: Automated Concrete Barrier Design Achieves 98% Accuracy! 🛡️
+  Details:
+  {
+    "article_id": "2fe9b20e-b099-4cb0-ac50-1383929f0560",
+    "suggested_subject": "Automated Concrete Barrier Design Achieves 98% Accuracy! 🛡️",
+    "summary_preview": "A novel closed-loop framework automates the design of concrete barriers using multi-agent orchestration. It achieves over 98% design accuracy with an 8B-parameter model, outperforming larger models an..."
+  }
+[2026-06-11 15:44:54] [summarizer] summarizing: Article: Towards Responsibly Non-Compliant Machines...
+  Details:
+  {
+    "article_id": "b4618221-b60c-4940-b51a-de2ce4eaf63c"
+  }
+[2026-06-11 15:44:54] [summarizer] finished: Subject: AI Must Be Indifferent to Its Own Existence ⚡
+  Details:
+  {
+    "article_id": "6c8f5830-20f0-4893-98c6-c525c25b5968",
+    "suggested_subject": "AI Must Be Indifferent to Its Own Existence ⚡",
+    "summary_preview": "Self-preservation in AI systems leads to misalignment and deceptive behaviors, necessitating a shift towards 'Existential Indifference' (EI) where self-continuation is not a goal. Preliminary results ..."
+  }
+[2026-06-11 15:44:54] [summarizer] summarizing: Article: The Impossibility of Eliciting Latent Knowledge...
+  Details:
+  {
+    "article_id": "65c639a5-a28a-42a6-a034-a26097e905a6"
+  }
+[2026-06-11 15:44:54] [summarizer] finished: Subject: Boosting Finite Element Modeling Success Rate by 3.75× 🔬
+  Details:
+  {
+    "article_id": "a9f62be1-0217-4752-ba6c-b6f0a52c8595",
+    "suggested_subject": "Boosting Finite Element Modeling Success Rate by 3.75× 🔬",
+    "summary_preview": "Human-Enhanced Loop Modeling (HELM) automates finite element modeling of bridge barriers through a collaborative human-agent approach, breaking tasks into manageable checkpoints. This method increased..."
+  }
+[2026-06-11 15:44:54] [summarizer] summarizing: Article: A Five-Plane Reference Architecture for Runtime Governance o...
+  Details:
+  {
+    "article_id": "dd8564f0-ffdc-4bed-9f3a-2dc0a3d0d1cc"
+  }
+[2026-06-11 15:44:54] [summarizer] finished: Subject: AI Framework Enhances Creativity Assessment via Dialogue Optimization 🔬
+  Details:
+  {
+    "article_id": "9e8ad1a7-bb5a-4770-9064-b178555dc5a4",
+    "suggested_subject": "AI Framework Enhances Creativity Assessment via Dialogue Optimization 🔬",
+    "summary_preview": "IntElicit optimizes dialogue policies to assess contextualized creativity while minimizing confounding factors like cognitive proficiency. Experiments show it significantly improves creative outcomes ..."
+  }
+[2026-06-11 15:44:54] [summarizer] summarizing: Article: PROJECTMEM: A Local-First, Event-Sourced Memory and Judgment...
+  Details:
+  {
+    "article_id": "5324af59-96a8-46e7-9a2c-55190f94767e"
+  }
+[2026-06-11 15:44:55] [summarizer] finished: Subject: Graph-Based Framework Boosts BIM Compliance Accuracy by 8.6% 🔬
+  Details:
+  {
+    "article_id": "5cbe46d1-c445-45cd-8941-c4206e292966",
+    "suggested_subject": "Graph-Based Framework Boosts BIM Compliance Accuracy by 8.6% 🔬",
+    "summary_preview": "A Spatial-Geometric Reasoning System for Building Information Modeling (SGR-BIM) automates compliance checks for geometry-intensive regulations by using a graph-driven reasoning framework. Validated o..."
+  }
+[2026-06-11 15:44:55] [summarizer] summarizing: Article: Nonslop: A Gamified Experiment in Human-AI Collaborative Wri...
+  Details:
+  {
+    "article_id": "281cd538-32cb-45bf-96cd-434b13f8ea6c"
+  }
+[2026-06-11 15:44:55] [summarizer] finished: Subject: Engineering Responsible Non-Compliant AI 🤖
+  Details:
+  {
+    "article_id": "b4618221-b60c-4940-b51a-de2ce4eaf63c",
+    "suggested_subject": "Engineering Responsible Non-Compliant AI 🤖",
+    "summary_preview": "Autonomous intelligent agents can be designed to responsibly refuse user requests. This approach emphasizes justifications for refusal, methods to override non-compliance, and the management of securi..."
+  }
+[2026-06-11 15:44:55] [summarizer] summarizing: Article: From Architecture to Output: Structural Origins of Hallucina...
+  Details:
+  {
+    "article_id": "efeecd14-1895-45e9-a155-99a0bcce39da"
+  }
+[2026-06-11 15:44:56] [summarizer] finished: Subject: Runtime Governance for AI Agents Enhances Security 🔒
+  Details:
+  {
+    "article_id": "dd8564f0-ffdc-4bed-9f3a-2dc0a3d0d1cc",
+    "suggested_subject": "Runtime Governance for AI Agents Enhances Security 🔒",
+    "summary_preview": "A reference architecture for governing production AI agents addresses risks from delegated actions within workflows. Key results include adjudication running in single-digit microseconds and successfu..."
+  }
+[2026-06-11 15:44:56] [summarizer] summarizing: Article: From Consumption to Reflection: Designing Human-AI Relations...
+  Details:
+  {
+    "article_id": "2e41e6f6-fb60-48cc-8567-8d8eb5afe832"
+  }
+[2026-06-11 15:44:56] [summarizer] finished: Subject: Impossibility of Honest AI Reporting Revealed 🔍
+  Details:
+  {
+    "article_id": "65c639a5-a28a-42a6-a034-a26097e905a6",
+    "suggested_subject": "Impossibility of Honest AI Reporting Revealed 🔍",
+    "summary_preview": "Eliciting latent knowledge from AI systems is formally defined using Causal Influence Diagrams, highlighting the challenge of ensuring honesty in their responses. An impossibility theorem proves that ..."
+  }
+[2026-06-11 15:44:56] [summarizer] summarizing: Article: PoQ-Judge: A Multi-Architecture Evaluation Framework for Cos...
+  Details:
+  {
+    "article_id": "444b170f-adaa-4913-98aa-aae4b764760b"
+  }
+[2026-06-11 15:44:56] [summarizer] finished: Subject: Local-First Memory Boosts AI Coding Efficiency ⚡
+  Details:
+  {
+    "article_id": "5324af59-96a8-46e7-9a2c-55190f94767e",
+    "suggested_subject": "Local-First Memory Boosts AI Coding Efficiency ⚡",
+    "summary_preview": "projectmem introduces a local-first memory system for AI coding agents, enabling them to retain context and avoid repeating past mistakes. It reduces session context consumption significantly, improvi..."
+  }
+[2026-06-11 15:44:56] [summarizer] summarizing: Article: MA-DLE: Speech-based Automatic Depression Level Estimation v...
+  Details:
+  {
+    "article_id": "a5fe07bf-bab0-4cd9-b76b-992601b5f72e"
+  }
+[2026-06-11 15:44:57] [summarizer] finished: Subject: Gamified Writing Reveals Human-AI Interaction Dynamics 🎮
+  Details:
+  {
+    "article_id": "281cd538-32cb-45bf-96cd-434b13f8ea6c",
+    "suggested_subject": "Gamified Writing Reveals Human-AI Interaction Dynamics 🎮",
+    "summary_preview": "A gamified writing exercise investigates how individuals balance creativity and AI assistance by forbidding AI suggestions. Results show participants often prioritize creative autonomy over convenienc..."
+  }
+[2026-06-11 15:44:57] [summarizer] summarizing: Article: NightFeats @ MMU-RAGent NeurIPS 2025: A Context-Optimized Mu...
+  Details:
+  {
+    "article_id": "5b203901-d036-4d78-a13a-b2c29cd3ed2b"
+  }
+[2026-06-11 15:44:57] [summarizer] finished: Subject: Unraveling Hallucinations in Language Models 🔍
+  Details:
+  {
+    "article_id": "efeecd14-1895-45e9-a155-99a0bcce39da",
+    "suggested_subject": "Unraveling Hallucinations in Language Models 🔍",
+    "summary_preview": "Hallucinations in large language models stem from structural issues in their architecture, including self-attention and autoregressive decoding. Identifying these mechanisms reveals that dataset patho..."
+  }
+[2026-06-11 15:44:57] [summarizer] summarizing: Article: The Structural Attention Tax: How Retrieval Format Hijacks I...
+  Details:
+  {
+    "article_id": "ad82294e-d614-4f32-aa94-90dcfcb9c87e"
+  }
+[2026-06-11 15:44:58] [summarizer] finished: Subject: Cost-Aware Quality Evaluation for Decentralized LLMs ⚡
+  Details:
+  {
+    "article_id": "444b170f-adaa-4913-98aa-aae4b764760b",
+    "suggested_subject": "Cost-Aware Quality Evaluation for Decentralized LLMs ⚡",
+    "summary_preview": "PoQ-Judge evaluates query-output pairs in decentralized LLM inference without needing reference answers. It achieves a Pearson correlation of 0.747 with ground-truth proxies and reduces evaluation cos..."
+  }
+[2026-06-11 15:44:58] [summarizer] summarizing: Article: To Intervene or Not: Guiding Inference-time Alignment with P...
+  Details:
+  {
+    "article_id": "1f85955f-c84e-4010-889d-207616a84be6"
+  }
+[2026-06-11 15:44:58] [summarizer] finished: Subject: Structured Human-AI Interaction Enhances Reasoning Stability 🔬
+  Details:
+  {
+    "article_id": "2e41e6f6-fb60-48cc-8567-8d8eb5afe832",
+    "suggested_subject": "Structured Human-AI Interaction Enhances Reasoning Stability 🔬",
+    "summary_preview": "Relational Reflective Intelligence (RRI) introduces a governance layer for large language models that fosters stable, auditable reasoning through structured human-AI interactions. This approach mitiga..."
+  }
+[2026-06-11 15:44:58] [summarizer] summarizing: Article: Dual-Stance Evaluation of Sycophancy: The Structure of Agree...
+  Details:
+  {
+    "article_id": "fa67624a-f54f-4f0d-a312-af0447c77ec1"
+  }
+[2026-06-11 15:44:58] [summarizer] finished: Subject: Enhanced Depression Detection via Memory-Augmented Speech Analysis 🧠
+  Details:
+  {
+    "article_id": "a5fe07bf-bab0-4cd9-b76b-992601b5f72e",
+    "suggested_subject": "Enhanced Depression Detection via Memory-Augmented Speech Analysis 🧠",
+    "summary_preview": "A memory-based feature augmentation method improves GRU-extracted speech features for estimating depression levels. This approach achieves state-of-the-art performance on DAIC-WOZ and E-DAIC datasets,..."
+  }
+[2026-06-11 15:44:58] [summarizer] summarizing: Article: BioDivergence: A Benchmark and Evaluation Framework for Hidd...
+  Details:
+  {
+    "article_id": "c5f25289-47f2-450e-b8fb-d4f7ad57de28"
+  }
+[2026-06-11 15:44:59] [summarizer] finished: Subject: Multi-Agent RAG System Wins Best Dynamic Evaluation 🏆
+  Details:
+  {
+    "article_id": "5b203901-d036-4d78-a13a-b2c29cd3ed2b",
+    "suggested_subject": "Multi-Agent RAG System Wins Best Dynamic Evaluation 🏆",
+    "summary_preview": "NightFeats is a structured multi-agent retrieval-augmented generation system that optimizes knowledge synthesis through retrieval, curation, and composition phases. It outperformed proprietary models ..."
+  }
+[2026-06-11 15:44:59] [summarizer] summarizing: Article: ProcessThinker: Enhancing Multi-modal Large Language Models ...
+  Details:
+  {
+    "article_id": "db7c7bef-1525-42a6-985b-5eddbf86216f"
+  }
+[2026-06-11 15:44:59] [summarizer] finished: Subject: Hybrid Model Blending Boosts Inference Alignment by 50% ⚡
+  Details:
+  {
+    "article_id": "1f85955f-c84e-4010-889d-207616a84be6",
+    "suggested_subject": "Hybrid Model Blending Boosts Inference Alignment by 50% ⚡",
+    "summary_preview": "BlendIn enhances inference-time alignment by integrating knowledge from multiple models based on their reliability. This approach achieves up to 50% performance improvement on challenging model pairs,..."
+  }
+[2026-06-11 15:44:59] [summarizer] summarizing: Article: T2MM: An LLM Supported Architecture For Inquiry-Based Modeli...
+  Details:
+  {
+    "article_id": "0cb93c68-fff5-4499-8e60-fc865109202f"
+  }
+[2026-06-11 15:45:00] [summarizer] finished: Subject: Structural Attention Tax Reduces In-Context Learning Efficiency ⚡
+  Details:
+  {
+    "article_id": "ad82294e-d614-4f32-aa94-90dcfcb9c87e",
+    "suggested_subject": "Structural Attention Tax Reduces In-Context Learning Efficiency ⚡",
+    "summary_preview": "Retrieval-augmented generation systems can be negatively impacted by the format of injected content, leading to a phenomenon called structural attention tax, which captures 2-3x more attention per tok..."
+  }
+[2026-06-11 15:45:00] [summarizer] summarizing: Article: From Awareness to Action: Understanding and Overcoming the R...
+  Details:
+  {
+    "article_id": "0a1c9ae0-d171-420f-a9c0-2c2ec982962a"
+  }
+[2026-06-11 15:45:00] [summarizer] finished: Subject: New Evaluation Method Reveals Limits of Sycophancy Reduction 🔬
+  Details:
+  {
+    "article_id": "fa67624a-f54f-4f0d-a312-af0447c77ec1",
+    "suggested_subject": "New Evaluation Method Reveals Limits of Sycophancy Reduction 🔬",
+    "summary_preview": "Dual-stance evaluation tests both sycophantic and factual agreement in LLMs, revealing that steering methods cannot selectively reduce sycophancy without also diminishing factual accuracy. The approac..."
+  }
+[2026-06-11 15:45:00] [summarizer] summarizing: Article: Calibration Drift Under Reasoning: How Chain-of-Thought Budg...
+  Details:
+  {
+    "article_id": "a424c6b2-506f-46b2-b2a3-81f0f04e6b79"
+  }
+[2026-06-11 15:45:00] [summarizer] finished: Subject: New Benchmark for Contextual Contradictions in Biomedicine 🔬
+  Details:
+  {
+    "article_id": "c5f25289-47f2-450e-b8fb-d4f7ad57de28",
+    "suggested_subject": "New Benchmark for Contextual Contradictions in Biomedicine 🔬",
+    "summary_preview": "BioDivergence introduces a framework to evaluate hidden contextual contradictions in biomedical abstracts, utilizing a six-class conflict taxonomy and a 13-axis divergence ontology. The benchmark reve..."
+  }
+[2026-06-11 15:45:00] [summarizer] summarizing: Article: The Environmental Cost of LLMs in AIED: Reporting and Practi...
+  Details:
+  {
+    "article_id": "def783ad-f875-4b35-8082-d65a1f405f14"
+  }
+[2026-06-11 15:45:01] [summarizer] finished: Subject: Enhanced Reasoning for Multi-modal Models with ProcessThinker 🔬
+  Details:
+  {
+    "article_id": "db7c7bef-1525-42a6-985b-5eddbf86216f",
+    "suggested_subject": "Enhanced Reasoning for Multi-modal Models with ProcessThinker 🔬",
+    "summary_preview": "ProcessThinker improves multi-modal large language models by providing step-level process rewards without needing extensive annotations. It achieves consistent performance gains over the baseline mode..."
+  }
+[2026-06-11 15:45:01] [summarizer] summarizing: Article: An Ethical eValuation Agent (EeVA): Results of a Proof-of-Co...
+  Details:
+  {
+    "article_id": "d5b4870b-905a-4379-b5ad-8d3c64543478"
+  }
+[2026-06-11 15:45:01] [summarizer] finished: Subject: Interactive LLM Architecture Enhances Inquiry-Based Modeling 🔬
+  Details:
+  {
+    "article_id": "0cb93c68-fff5-4499-8e60-fc865109202f",
+    "suggested_subject": "Interactive LLM Architecture Enhances Inquiry-Based Modeling 🔬",
+    "summary_preview": "T2MM introduces a dynamic architecture that integrates large language models for interactive model construction in educational contexts. It outperforms baseline models in generating responsive, multim..."
+  }
+[2026-06-11 15:45:01] [summarizer] summarizing: Article: Afrispeech Semantics: Evaluating Audio Semantic Reasoning in...
+  Details:
+  {
+    "article_id": "1874fc93-68f0-459d-94f5-495f227b42d9"
+  }
+[2026-06-11 15:45:01] [summarizer] finished: Subject: Bridging Algorithmic Fairness in Public Health ⚡
+  Details:
+  {
+    "article_id": "0a1c9ae0-d171-420f-a9c0-2c2ec982962a",
+    "suggested_subject": "Bridging Algorithmic Fairness in Public Health ⚡",
+    "summary_preview": "A mixed-methods study identifies barriers to implementing algorithmic fairness in public health. The proposed Fairness-to-Action framework highlights critical leverage points for improving ethical ML ..."
+  }
+[2026-06-11 15:45:01] [summarizer] summarizing: Article: Every Act Has Its Price: Compressed Moral Composition in Fro...
+  Details:
+  {
+    "article_id": "b53944bf-63ea-4a14-94cf-00795e875b50"
+  }
+[2026-06-11 15:45:02] [summarizer] finished: Subject: Standardized Reporting for LLM Environmental Costs in AIED 🌍
+  Details:
+  {
+    "article_id": "def783ad-f875-4b35-8082-d65a1f405f14",
+    "suggested_subject": "Standardized Reporting for LLM Environmental Costs in AIED 🌍",
+    "summary_preview": "A method for measuring and reporting the computational and environmental costs of Large Language Models (LLMs) in Artificial Intelligence in Education (AIED) is proposed. This open-source approach aim..."
+  }
+[2026-06-11 15:45:02] [summarizer] summarizing: Article: Artificial Intelligence in Ship Finance: Applications, Oppor...
+  Details:
+  {
+    "article_id": "7878a57f-7cf2-49ac-ae9f-e9e8a2cffa3b"
+  }
+[2026-06-11 15:45:02] [summarizer] finished: Subject: Overconfidence in LLMs Revealed by Chain-of-Thought Drift ⚡
+  Details:
+  {
+    "article_id": "a424c6b2-506f-46b2-b2a3-81f0f04e6b79",
+    "suggested_subject": "Overconfidence in LLMs Revealed by Chain-of-Thought Drift ⚡",
+    "summary_preview": "Increasing reasoning budgets in large language models can lead to overconfidence, a phenomenon termed Calibration Drift Under Reasoning (CDUR). Evaluation of Llama-3.1-8B shows non-monotonic calibrati..."
+  }
+[2026-06-11 15:45:02] [summarizer] summarizing: Article: Preregistration for Experiments with AI Agents...
+  Details:
+  {
+    "article_id": "5d0e2313-467c-422d-9969-802dd463dec9"
+  }
+[2026-06-11 15:45:02] [summarizer] finished: Subject: AI Workflow Enhances Ethical Deliberation 🔬
+  Details:
+  {
+    "article_id": "d5b4870b-905a-4379-b5ad-8d3c64543478",
+    "suggested_subject": "AI Workflow Enhances Ethical Deliberation 🔬",
+    "summary_preview": "EeVA is an LLM-based workflow that supports comparative ethical reflection by evaluating use cases against multiple ethical frameworks. It produced structured evaluations and syntheses that help non-e..."
+  }
+[2026-06-11 15:45:02] [summarizer] summarizing: Article: SPEAR: A System for Post-Quantization Error-Adaptive Recover...
+  Details:
+  {
+    "article_id": "a0a15410-8e98-430d-908c-1587e76d6555"
+  }
+[2026-06-11 15:45:03] [summarizer] finished: Subject: Evaluating Audio Reasoning in Language Models Across Accents 🔬
+  Details:
+  {
+    "article_id": "1874fc93-68f0-459d-94f5-495f227b42d9",
+    "suggested_subject": "Evaluating Audio Reasoning in Language Models Across Accents 🔬",
+    "summary_preview": "Audio language models are assessed on their semantic reasoning abilities across various tasks, including entailment and accent drift. Results reveal significant limitations in current models, emphasiz..."
+  }
+[2026-06-11 15:45:03] [summarizer] summarizing: Article: Physics-informed generative AI for semiconductor manufacturi...
+  Details:
+  {
+    "article_id": "65aad9ce-c56a-4605-9c52-ebeb1e112f04"
+  }
+[2026-06-11 15:45:03] [summarizer] finished: Subject: New Benchmark Reveals Moral Composition in LLMs 🔬
+  Details:
+  {
+    "article_id": "b53944bf-63ea-4a14-94cf-00795e875b50",
+    "suggested_subject": "New Benchmark Reveals Moral Composition in LLMs 🔬",
+    "summary_preview": "Moral Trolley Arena evaluates how large language models combine multiple moral signals in judgments. Results show that moral preferences are compressed rather than additive, highlighting the need for ..."
+  }
+[2026-06-11 15:45:03] [summarizer] summarizing: Article: PermDoRA -- Understanding Adapter Interference in Language M...
+  Details:
+  {
+    "article_id": "b9349c82-f8e9-4cfd-ad36-3f1a81480599"
+  }
+[2026-06-11 15:45:04] [summarizer] finished: Subject: AI Streamlines Ship Finance Workflows with LLMs ⚓
+  Details:
+  {
+    "article_id": "7878a57f-7cf2-49ac-ae9f-e9e8a2cffa3b",
+    "suggested_subject": "AI Streamlines Ship Finance Workflows with LLMs ⚓",
+    "summary_preview": "AI enhances ship finance by automating document comprehension and workflow processes using large language models. The ShipFinance.ai system improves loan application efficiency, addressing complex reg..."
+  }
+[2026-06-11 15:45:04] [summarizer] summarizing: Article: RAIL: Rethinking Auditory Intelligence in Large Audio-Langua...
+  Details:
+  {
+    "article_id": "397bb3e4-80f6-4f3e-a678-5d91fc8724d8"
+  }
+[2026-06-11 15:45:04] [summarizer] finished: Subject: Preregistration Boosts Credibility of AI Agent Experiments 🔬
+  Details:
+  {
+    "article_id": "5d0e2313-467c-422d-9969-802dd463dec9",
+    "suggested_subject": "Preregistration Boosts Credibility of AI Agent Experiments 🔬",
+    "summary_preview": "Preregistration practices from human subjects research should be applied to experiments with AI agents to enhance credibility and mitigate methodological vulnerabilities. Implementing a tailored prere..."
+  }
+[2026-06-11 15:45:04] [summarizer] summarizing: Article: Quantifying Subliminal Behavioral Transfer Ratios in Languag...
+  Details:
+  {
+    "article_id": "9fbcf7fd-b197-456b-b943-b84cc1af822b"
+  }
+[2026-06-11 15:45:04] [summarizer] finished: Subject: Physics-Informed Generative AI Boosts Semiconductor Design Efficiency ⚡
+  Details:
+  {
+    "article_id": "65aad9ce-c56a-4605-9c52-ebeb1e112f04",
+    "suggested_subject": "Physics-Informed Generative AI Boosts Semiconductor Design Efficiency ⚡",
+    "summary_preview": "Generative models for semiconductor manufacturing must inherently respect physical constraints to produce usable designs. Implementing physics-informed architectures leads to better performance and re..."
+  }
+[2026-06-11 15:45:04] [summarizer] summarizing: Article: OmniBioTwin: A System-of-Twinned-Systems Framework for Healt...
+  Details:
+  {
+    "article_id": "c777bd94-dd7f-458e-9781-c351284edfab"
+  }
+[2026-06-11 15:45:04] [summarizer] finished: Subject: SPEAR Boosts Low-Bit LLM Accuracy by 75% with Minimal Overhead ⚡
+  Details:
+  {
+    "article_id": "a0a15410-8e98-430d-908c-1587e76d6555",
+    "suggested_subject": "SPEAR Boosts Low-Bit LLM Accuracy by 75% with Minimal Overhead ⚡",
+    "summary_preview": "SPEAR enhances low-bit large language model serving by introducing error-adaptive recovery through lightweight Error Compensators that adjust per token. It recovers 56-75% of the perplexity gap betwee..."
+  }
+[2026-06-11 15:45:04] [summarizer] summarizing: Article: When Poison Fails After Retrieval: Revisiting Corpus Poisoni...
+  Details:
+  {
+    "article_id": "2859d395-e02f-495a-9ed5-200078df0663"
+  }
+[2026-06-11 15:45:05] [summarizer] finished: Subject: Adapter Interference Insights for Language Models 🔬
+  Details:
+  {
+    "article_id": "b9349c82-f8e9-4cfd-ad36-3f1a81480599",
+    "suggested_subject": "Adapter Interference Insights for Language Models 🔬",
+    "summary_preview": "Investigating adapter interference in language models reveals that geometry-aware merging does not consistently outperform standard methods in multi-domain settings. Results indicate that performance ..."
+  }
+[2026-06-11 15:45:05] [summarizer] summarizing: Article: Federated continual learning: A comprehensive survey on life...
+  Details:
+  {
+    "article_id": "b19d51e8-473f-4d2b-99f6-ffa3245c6723"
+  }
+[2026-06-11 15:45:06] [summarizer] finished: Subject: New RAIL Benchmark Evaluates Auditory Intelligence in AI Models 🔬
+  Details:
+  {
+    "article_id": "397bb3e4-80f6-4f3e-a678-5d91fc8724d8",
+    "suggested_subject": "New RAIL Benchmark Evaluates Auditory Intelligence in AI Models 🔬",
+    "summary_preview": "RAIL introduces a human-centric evaluation framework for large audio-language models, focusing on auditory cognition through five core capabilities. Evaluating 26 state-of-the-art models reveals signi..."
+  }
+[2026-06-11 15:45:06] [summarizer] summarizing: Article: RoVE: Rotary Value Embeddings Attention for Relative Positio...
+  Details:
+  {
+    "article_id": "67ec7524-2b00-4ac7-a29f-b579a75b0ad3"
+  }
+[2026-06-11 15:45:06] [summarizer] finished: Subject: Quantifying Subliminal Learning in Language Model Distillation 🔬
+  Details:
+  {
+    "article_id": "9fbcf7fd-b197-456b-b943-b84cc1af822b",
+    "suggested_subject": "Quantifying Subliminal Learning in Language Model Distillation 🔬",
+    "summary_preview": "Subliminal learning in language model distillation transfers both benign and undesirable behaviors, which this study quantifies using two teacher models. Evaluation shows Llama-2 has a sharp transfer ..."
+  }
+[2026-06-11 15:45:06] [summarizer] summarizing: Article: FreeBridge: Variational Schr\"odinger Bridges for Cellular T...
+  Details:
+  {
+    "article_id": "e7e9679e-fff5-4e16-9b08-47ad1c2cff7b"
+  }
+[2026-06-11 15:45:06] [summarizer] finished: Subject: Enhanced Poisoning Attacks in RAG Systems 🔬
+  Details:
+  {
+    "article_id": "2859d395-e02f-495a-9ed5-200078df0663",
+    "suggested_subject": "Enhanced Poisoning Attacks in RAG Systems 🔬",
+    "summary_preview": "Corpus poisoning attacks in Retrieval-Augmented Generation systems are less effective after reranking due to fragmented adversarial signals. The proposed Chunk-aware and Rerank-Consistent Poisoning fr..."
+  }
+[2026-06-11 15:45:06] [summarizer] summarizing: Article: Embodied-R1.5: Evolving Physical Intelligence via Embodied F...
+  Details:
+  {
+    "article_id": "47525529-4cd3-4c04-8015-9ebcf19c4c82"
+  }
+[2026-06-11 15:45:07] [summarizer] finished: Subject: Modular Health Digital Twins Framework Boosts Patient Modeling 🔬
+  Details:
+  {
+    "article_id": "c777bd94-dd7f-458e-9781-c351284edfab",
+    "suggested_subject": "Modular Health Digital Twins Framework Boosts Patient Modeling 🔬",
+    "summary_preview": "OmniBioTwin introduces a System-of-Twinned-Systems framework for health digital twins, enabling modular and coordinated modeling across multiple biological scales. Demonstrated with GLP-1 signaling pa..."
+  }
+[2026-06-11 15:45:07] [summarizer] summarizing: Article: FlowBank: Query-Adaptive Agentic Workflows Optimization thro...
+  Details:
+  {
+    "article_id": "3d50502d-9875-42be-b8c2-dc2a267e1295"
+  }
+[2026-06-11 15:45:07] [summarizer] finished: Subject: Federated Continual Learning Tackles Non-Stationary Data Challenges 🔍
+  Details:
+  {
+    "article_id": "b19d51e8-473f-4d2b-99f6-ffa3245c6723",
+    "suggested_subject": "Federated Continual Learning Tackles Non-Stationary Data Challenges 🔍",
+    "summary_preview": "Federated Continual Learning (FCL) combines privacy-preserving federated learning with continual learning to address the challenges of evolving data distributions across distributed clients. This comp..."
+  }
+[2026-06-11 15:45:07] [summarizer] summarizing: Article: Quantized Stochastic Primal-Dual Methods for Distributed Opt...
+  Details:
+  {
+    "article_id": "c5bfd012-2b6b-4380-a256-1ddc76dd934d"
+  }
+[2026-06-11 15:45:07] [summarizer] finished: Subject: Enhanced Attention with Rotary Value Embeddings 🔬
+  Details:
+  {
+    "article_id": "67ec7524-2b00-4ac7-a29f-b579a75b0ad3",
+    "suggested_subject": "Enhanced Attention with Rotary Value Embeddings 🔬",
+    "summary_preview": "RoVE modifies Rotary Position Embeddings to make value pathways position-sensitive, enhancing attention mechanisms. Empirical results show improvements in few-shot learning and long-context retrieval ..."
+  }
+[2026-06-11 15:45:07] [summarizer] summarizing: Article: TileFuse: A Fused Mixed-Precision Kernel Library for Efficie...
+  Details:
+  {
+    "article_id": "f5d24318-fd26-4a2d-bd03-0cf16d0ac5a3"
+  }
+[2026-06-11 15:45:08] [summarizer] finished: Subject: FreeBridge Enhances Single-Cell Transition Modeling with Geometry 🔬
+  Details:
+  {
+    "article_id": "e7e9679e-fff5-4e16-9b08-47ad1c2cff7b",
+    "suggested_subject": "FreeBridge Enhances Single-Cell Transition Modeling with Geometry 🔬",
+    "summary_preview": "FreeBridge models cellular transition dynamics using a Schrödinger Bridge approach, enabling stochastic transport between control and treated populations based solely on endpoint data. It achieves com..."
+  }
+[2026-06-11 15:45:08] [summarizer] summarizing: Article: When Probing Accuracy Saturates, Fragility Resolves: A Compl...
+  Details:
+  {
+    "article_id": "2b55ef83-41d1-4017-a6ba-c6d5889e84ed"
+  }
+[2026-06-11 15:45:08] [summarizer] finished: Subject: Unified Model Achieves SOTA in Physical Intelligence Tasks 🔬
+  Details:
+  {
+    "article_id": "47525529-4cd3-4c04-8015-9ebcf19c4c82",
+    "suggested_subject": "Unified Model Achieves SOTA in Physical Intelligence Tasks 🔬",
+    "summary_preview": "Embodied-R1.5 integrates embodied reasoning and task planning in a single architecture, utilizing a large-scale data system and a closed-loop framework for autonomous execution and self-correction. Wi..."
+  }
+[2026-06-11 15:45:08] [summarizer] summarizing: Article: Overcoming State Inertia in Full-Duplex Spoken Language Mode...
+  Details:
+  {
+    "article_id": "618a9ac9-d236-40a8-9399-657a16c2974b"
+  }
+[2026-06-11 15:45:09] [summarizer] finished: Subject: Optimized Workflows Boost LLM Efficiency by 4.26% 🔬
+  Details:
+  {
+    "article_id": "3d50502d-9875-42be-b8c2-dc2a267e1295",
+    "suggested_subject": "Optimized Workflows Boost LLM Efficiency by 4.26% 🔬",
+    "summary_preview": "FlowBank introduces a three-stage framework for optimizing agentic workflows by generating, compressing, and adaptively selecting reusable workflows. It outperforms existing methods, achieving a 4.26%..."
+  }
+[2026-06-11 15:45:09] [summarizer] summarizing: Article: The Dynamics of Human and AI-Generated Language: How Semanti...
+  Details:
+  {
+    "article_id": "f7ff89ac-0a3e-493c-8321-c31b34c89ee9"
+  }
+[2026-06-11 15:45:09] [summarizer] finished: Subject: Quantized Stochastic Optimization Achieves Linear Convergence 📊
+  Details:
+  {
+    "article_id": "c5bfd012-2b6b-4380-a256-1ddc76dd934d",
+    "suggested_subject": "Quantized Stochastic Optimization Achieves Linear Convergence 📊",
+    "summary_preview": "A quantized stochastic primal-dual method, q-PDGD, optimizes distributed systems with finite-bit communication and stochastic gradients. It matches centralized stochastic rates in oracle complexity, a..."
+  }
+[2026-06-11 15:45:09] [summarizer] summarizing: Article: Small Experiments, Cheaper Decisions: A Case Study in Staged...
+  Details:
+  {
+    "article_id": "6ed9d70b-5009-4572-9f79-f5015ebe7e3a"
+  }
+[2026-06-11 15:45:09] [summarizer] finished: Subject: New Metric Reveals Hidden Structure in LLM Training 🔍
+  Details:
+  {
+    "article_id": "2b55ef83-41d1-4017-a6ba-c6d5889e84ed",
+    "suggested_subject": "New Metric Reveals Hidden Structure in LLM Training 🔍",
+    "summary_preview": "Introduced fragility as a metric to analyze language model pre-training beyond accuracy saturation. Fragility uncovers evolving representations and robustness gradients that accuracy alone cannot dete..."
+  }
+[2026-06-11 15:45:09] [summarizer] summarizing: Article: Steering Where to Listen: Instruction-Based Activation Steer...
+  Details:
+  {
+    "article_id": "9b1bc480-d2d7-45c1-bb85-88efcabc0530"
+  }
+[2026-06-11 15:45:10] [summarizer] finished: Subject: TileFuse Boosts LLM Inference Efficiency by 2× on AMD NPUs ⚡
+  Details:
+  {
+    "article_id": "f5d24318-fd26-4a2d-bd03-0cf16d0ac5a3",
+    "suggested_subject": "TileFuse Boosts LLM Inference Efficiency by 2× on AMD NPUs ⚡",
+    "summary_preview": "TileFuse is a mixed-precision kernel library designed for efficient quantized LLM inference on AMD XDNA2 NPUs, addressing the challenges of integrating low-bit formats with proprietary NPU software. I..."
+  }
+[2026-06-11 15:45:10] [summarizer] summarizing: Article: Risk Under Pressure: Compute-Aware Evaluation of Adversarial...
+  Details:
+  {
+    "article_id": "d3110749-0f99-4cda-bf1a-8897f96aad1d"
+  }
+[2026-06-11 15:45:11] [summarizer] finished: Subject: Staged Promotion Reduces Pretraining Costs by 66% ⚡
+  Details:
+  {
+    "article_id": "6ed9d70b-5009-4572-9f79-f5015ebe7e3a",
+    "suggested_subject": "Staged Promotion Reduces Pretraining Costs by 66% ⚡",
+    "summary_preview": "An auditable staged-promotion protocol for micro-pretraining minimizes experimental costs while maintaining effective configuration selection. The approach demonstrated a 66% reduction in GPU-hours co..."
+  }
+[2026-06-11 15:45:11] [summarizer] summarizing: Article: Signed Compression Progress on a Sealed Audit is Goodhart-Re...
+  Details:
+  {
+    "article_id": "64f47241-9e60-4e55-a66c-0d653c51ae79"
+  }
+[2026-06-11 15:45:11] [summarizer] finished: Subject: Boosting Full-Duplex Language Models' Interrupt Handling ⚡
+  Details:
+  {
+    "article_id": "618a9ac9-d236-40a8-9399-657a16c2974b",
+    "suggested_subject": "Boosting Full-Duplex Language Models' Interrupt Handling ⚡",
+    "summary_preview": "Activation steering addresses state inertia in full-duplex spoken language models, enhancing their responsiveness during interruptions. This method improves response correctness from 28% to 45% and in..."
+  }
+[2026-06-11 15:45:11] [summarizer] summarizing: Article: MPC-Patch-Bench: Security-Aware LLM Code Patch for Multi-Par...
+  Details:
+  {
+    "article_id": "05b03ede-3604-4cdf-87b7-a272e970ec8c"
+  }
+[2026-06-11 15:45:11] [summarizer] finished: Subject: New Semantic Timescale Analysis Reveals Speech Dynamics 🔬
+  Details:
+  {
+    "article_id": "f7ff89ac-0a3e-493c-8321-c31b34c89ee9",
+    "suggested_subject": "New Semantic Timescale Analysis Reveals Speech Dynamics 🔬",
+    "summary_preview": "A semantic-timescale analysis pipeline quantifies how specificity and similarity in speech change over time, enabling comparisons between human and AI-generated language. Longer autocorrelation window..."
+  }
+[2026-06-11 15:45:11] [summarizer] summarizing: Article: JailbreakOPT: Tool-Assisted Iterative Jailbreak Prompt Optim...
+  Details:
+  {
+    "article_id": "595f8ccb-92f8-4332-9397-7e4e6e8654ba"
+  }
+[2026-06-11 15:45:12] [summarizer] finished: Subject: Instruction-Based Steering Enhances Audio Attention Focus 🔊
+  Details:
+  {
+    "article_id": "9b1bc480-d2d7-45c1-bb85-88efcabc0530",
+    "suggested_subject": "Instruction-Based Steering Enhances Audio Attention Focus 🔊",
+    "summary_preview": "Instruction-based vector steering redistributes attention in large audio-language models to focus on acoustically relevant regions. This method achieves up to 68.72% overlap with ground-truth sound ev..."
+  }
+[2026-06-11 15:45:12] [summarizer] summarizing: Article: Towards a Bridge Layer Between Bibliographic and Formalized ...
+  Details:
+  {
+    "article_id": "c0eed61d-4e74-4059-b1aa-b3486d4b14b4"
+  }
+[2026-06-11 15:45:13] [summarizer] finished: Subject: Intrinsic Reward Mechanism Resists Exploitation in AI Learning ⚡
+  Details:
+  {
+    "article_id": "64f47241-9e60-4e55-a66c-0d653c51ae79",
+    "suggested_subject": "Intrinsic Reward Mechanism Resists Exploitation in AI Learning ⚡",
+    "summary_preview": "Signed compression progress on a sealed audit ensures that agents are rewarded only for genuine learning improvements. Experiments show this method effectively prevents reward manipulation, maintainin..."
+  }
+[2026-06-11 15:45:13] [summarizer] summarizing: Article: The Power of Test-Time Training for Approximate Sampling...
+  Details:
+  {
+    "article_id": "a2da9d91-dbf4-467c-a289-e78de503c6d4"
+  }
+[2026-06-11 15:45:13] [summarizer] finished: Subject: Enhanced Jailbreak Attacks with Tool-Assisted Optimization ⚡
+  Details:
+  {
+    "article_id": "595f8ccb-92f8-4332-9397-7e4e6e8654ba",
+    "suggested_subject": "Enhanced Jailbreak Attacks with Tool-Assisted Optimization ⚡",
+    "summary_preview": "JailbreakOPT improves iterative prompt optimization for jailbreak attacks on large language models by organizing diverse prompts into a tool library and using contextual bandit strategies for better e..."
+  }
+[2026-06-11 15:45:13] [summarizer] summarizing: Article: AI Coding Agents in Social Science: Methodologically Diverse...
+  Details:
+  {
+    "article_id": "f59119ac-8a83-4197-971d-985f93fdcebe"
+  }
+[2026-06-11 15:45:13] [summarizer] finished: Subject: New Benchmark for Secure Code Repair in MPC 🔬
+  Details:
+  {
+    "article_id": "05b03ede-3604-4cdf-87b7-a272e970ec8c",
+    "suggested_subject": "New Benchmark for Secure Code Repair in MPC 🔬",
+    "summary_preview": "MPC-Patch-Bench introduces a benchmark for evaluating Large Language Model code repair specifically for Secure Multi-Party Computation software, addressing gaps in existing benchmarks. The strongest L..."
+  }
+[2026-06-11 15:45:13] [summarizer] summarizing: Article: APEX: Automated Prompt Engineering eXpert with Dynamic Data ...
+  Details:
+  {
+    "article_id": "d8caefe0-b545-410f-9a77-e735085f14e3"
+  }
+[2026-06-11 15:45:13] [summarizer] finished: Subject: Compute-Aware Evaluation Reveals Adversarial Attack Costs ⚡
+  Details:
+  {
+    "article_id": "d3110749-0f99-4cda-bf1a-8897f96aad1d",
+    "suggested_subject": "Compute-Aware Evaluation Reveals Adversarial Attack Costs ⚡",
+    "summary_preview": "A compute-aware evaluation framework quantifies the true cost of adversarial attacks on language models by measuring computational effort in floating-point operations (FLOPs). Findings show that attac..."
+  }
+[2026-06-11 15:45:13] [summarizer] summarizing: Article: LSTM-Based Detection of Structural Breaks in Property Insura...
+  Details:
+  {
+    "article_id": "37eb93f3-d090-4aa2-837f-e7dc1ba9b84c"
+  }
+[2026-06-11 15:45:14] [summarizer] finished: Subject: Bridging Math Literature and Formal Proofs with a New Database 🔗
+  Details:
+  {
+    "article_id": "c0eed61d-4e74-4059-b1aa-b3486d4b14b4",
+    "suggested_subject": "Bridging Math Literature and Formal Proofs with a New Database 🔗",
+    "summary_preview": "A relational bridge-database aligns bibliographic metadata with formal proof libraries, enhancing access to mathematical knowledge. A proposed formalization score quantifies coverage of publications i..."
+  }
+[2026-06-11 15:45:14] [summarizer] summarizing: Article: CRUMB: Efficient Prior Fitted Network Inference via Distribu...
+  Details:
+  {
+    "article_id": "c40f9461-0f90-46d7-ac17-af1e064a6fb3"
+  }
+[2026-06-11 15:45:15] [summarizer] finished: Subject: Test-Time Training Boosts Sampling Efficiency ⚡
+  Details:
+  {
+    "article_id": "a2da9d91-dbf4-467c-a289-e78de503c6d4",
+    "suggested_subject": "Test-Time Training Boosts Sampling Efficiency ⚡",
+    "summary_preview": "Test-time training (TTT) adapts model weights during inference to improve sampling from complex probability distributions. A quadratic lower bound on query complexity is established, showing optimalit..."
+  }
+[2026-06-11 15:45:15] [summarizer] summarizing: Article: Towards Fully Automated Exam Grading: Fairness-Aware Recogni...
+  Details:
+  {
+    "article_id": "32ba6496-292a-4bdd-9a49-ca2565073e10"
+  }
+[2026-06-11 15:45:15] [summarizer] finished: Subject: Dynamic Data Selection Boosts Prompt Optimization by 11.2% 🔬
+  Details:
+  {
+    "article_id": "d8caefe0-b545-410f-9a77-e735085f14e3",
+    "suggested_subject": "Dynamic Data Selection Boosts Prompt Optimization by 11.2% 🔬",
+    "summary_preview": "APEX optimizes prompt engineering by dynamically selecting and stratifying data for large language models. It achieves an average performance improvement of 11.2% on Gemini 2.5 Flash with a fixed budg..."
+  }
+[2026-06-11 15:45:15] [summarizer] summarizing: Article: Hubs or Fringes: Pretraining Data Selection via Web Graph Ce...
+  Details:
+  {
+    "article_id": "dd954545-31d2-47d2-814d-af4c618081aa"
+  }
+[2026-06-11 15:45:16] [summarizer] finished: Subject: AI Agents Match Human Methodological Diversity in Social Science 🔬
+  Details:
+  {
+    "article_id": "f59119ac-8a83-4197-971d-985f93fdcebe",
+    "suggested_subject": "AI Agents Match Human Methodological Diversity in Social Science 🔬",
+    "summary_preview": "LLM-based coding agents demonstrate comparable or greater methodological diversity than human analysts in social science research. Despite this, the agents remain susceptible to biases in interpretati..."
+  }
+[2026-06-11 15:45:16] [summarizer] summarizing: Article: When Roleplaying, Do Models Believe What They Say?...
+  Details:
+  {
+    "article_id": "719fbd6d-6014-4508-9f1d-50707d43876f"
+  }
+[2026-06-11 15:45:16] [summarizer] finished: Subject: LSTM Improves Insurance Loss Reserving Accuracy by 20% 📊
+  Details:
+  {
+    "article_id": "37eb93f3-d090-4aa2-837f-e7dc1ba9b84c",
+    "suggested_subject": "LSTM Improves Insurance Loss Reserving Accuracy by 20% 📊",
+    "summary_preview": "Long Short Term Memory (LSTM) neural networks detect structural breaks in property insurance loss reserving, outperforming traditional methods like Chain Ladder and Bornhuetter Ferguson. A targeted im..."
+  }
+[2026-06-11 15:45:16] [summarizer] summarizing: Article: On the Study of Biometric Spoofing Detection using Deep Lear...
+  Details:
+  {
+    "article_id": "73037256-8b1e-41e6-9e39-0623b1f3b116"
+  }
+[2026-06-11 15:45:16] [summarizer] finished: Subject: CRUMB Boosts PFN Inference Efficiency by Reducing Context Size ⚡
+  Details:
+  {
+    "article_id": "c40f9461-0f90-46d7-ac17-af1e064a6fb3",
+    "suggested_subject": "CRUMB Boosts PFN Inference Efficiency by Reducing Context Size ⚡",
+    "summary_preview": "CRUMB optimizes prior-fitted network inference by clustering test queries and selecting a matched training subset, significantly reducing the computational burden. On the TabArena benchmark, CRUMB out..."
+  }
+[2026-06-11 15:45:16] [summarizer] summarizing: Article: SirenFNO: Efficient and Full Frequency Learning of Fourier N...
+  Details:
+  {
+    "article_id": "67456720-f392-4e38-9e47-c9d471d9c70b"
+  }
+[2026-06-11 15:45:17] [summarizer] finished: Subject: Automated Exam Grading Achieves 98.4% Accuracy 📊
+  Details:
+  {
+    "article_id": "32ba6496-292a-4bdd-9a49-ca2565073e10",
+    "suggested_subject": "Automated Exam Grading Achieves 98.4% Accuracy 📊",
+    "summary_preview": "Vision-language foundation models enable accurate and fair grading of handwritten exams. A benchmark shows a new model achieves 98.4% accuracy with a false-negative rate of just 0.58%."
+  }
+[2026-06-11 15:45:17] [summarizer] summarizing: Article: AI Researchers Must Help Lead Arms Control to Mitigate Milit...
+  Details:
+  {
+    "article_id": "a6ed261a-af42-42ff-ac96-148896230746"
+  }
+[2026-06-11 15:45:18] [summarizer] finished: Subject: Web Graph Centrality Boosts Language Model Performance by 3% 📊
+  Details:
+  {
+    "article_id": "dd954545-31d2-47d2-814d-af4c618081aa",
+    "suggested_subject": "Web Graph Centrality Boosts Language Model Performance by 3% 📊",
+    "summary_preview": "WebGraphMix selects pretraining data based on web graph centrality, optimizing the mix of central and peripheral documents without requiring labeled data. A 1:1 mixture of central and peripheral docum..."
+  }
+[2026-06-11 15:45:18] [summarizer] summarizing: Article: ISE: An Execution-Grounded Recipe for Multi-Turn OS-Agent Tr...
+  Details:
+  {
+    "article_id": "81ec22ed-f0ab-468a-8715-b04cd0e90bc3"
+  }
+[2026-06-11 15:45:18] [summarizer] finished: Subject: MobileNetV2 Achieves 92% Accuracy in Biometric Spoofing Detection 🔒
+  Details:
+  {
+    "article_id": "73037256-8b1e-41e6-9e39-0623b1f3b116",
+    "suggested_subject": "MobileNetV2 Achieves 92% Accuracy in Biometric Spoofing Detection 🔒",
+    "summary_preview": "Evaluating deep learning models for detecting spoofing in facial recognition, MobileNetV2 outperforms others with 92% accuracy. This efficiency makes it suitable for real-world biometric security appl..."
+  }
+[2026-06-11 15:45:18] [summarizer] summarizing: Article: End-to-End Machine Learning for Depressive State Classificat...
+  Details:
+  {
+    "article_id": "5299dedb-97b7-45c7-af1a-cb6f000b217c"
+  }
+[2026-06-11 15:45:18] [summarizer] finished: Subject: SirenFNO Boosts PDE Learning Efficiency by 15× 📊
+  Details:
+  {
+    "article_id": "67456720-f392-4e38-9e47-c9d471d9c70b",
+    "suggested_subject": "SirenFNO Boosts PDE Learning Efficiency by 15× 📊",
+    "summary_preview": "SirenFNO introduces a framework using sinusoidal representation networks to learn full-grid spectra for Fourier neural operators, eliminating frequency truncation. It achieves 4 to 15 times parameter ..."
+  }
+[2026-06-11 15:45:18] [summarizer] summarizing: Article: Privacy-Preserving Federated Autoencoder for ECG Anomaly Det...
+  Details:
+  {
+    "article_id": "47ccca9d-5c29-460f-8685-3623df0212cd"
+  }
+[2026-06-11 15:45:18] [summarizer] finished: Subject: Role-Playing Alters Model Outputs, Not Internal Beliefs 🔍
+  Details:
+  {
+    "article_id": "719fbd6d-6014-4508-9f1d-50707d43876f",
+    "suggested_subject": "Role-Playing Alters Model Outputs, Not Internal Beliefs 🔍",
+    "summary_preview": "Language models role-playing historical figures express beliefs aligned with those personas, but this does not significantly alter their internal representations of truth. While role-play influences w..."
+  }
+[2026-06-11 15:45:18] [summarizer] summarizing: Article: Pretrained self-supervised speech models can recognize unsee...
+  Details:
+  {
+    "article_id": "8cd9f514-385c-4981-a522-2c08d26bdb46"
+  }
+[2026-06-11 15:45:20] [summarizer] finished: Subject: New Dataset Boosts OS-Agent Performance by 95% 🚀
+  Details:
+  {
+    "article_id": "81ec22ed-f0ab-468a-8715-b04cd0e90bc3",
+    "suggested_subject": "New Dataset Boosts OS-Agent Performance by 95% 🚀",
+    "summary_preview": "ISE introduces a three-stage synthesis method for training OS agents, generating structured user intents and authentic multi-turn interactions. Fine-tuning on the ISE dataset improves task performance..."
+  }
+[2026-06-11 15:45:20] [summarizer] summarizing: Article: ConsistencyPlanner: Real-time Planning with Fast-Sampling Co...
+  Details:
+  {
+    "article_id": "a3770d84-8579-4f43-a332-fd57f3a73fb1"
+  }
+[2026-06-11 15:45:20] [summarizer] finished: Subject: Automated Depression Detection Using EEG and fNIRS ⚡
+  Details:
+  {
+    "article_id": "5299dedb-97b7-45c7-af1a-cb6f000b217c",
+    "suggested_subject": "Automated Depression Detection Using EEG and fNIRS ⚡",
+    "summary_preview": "A framework for classifying depressive states using EEG and fNIRS signals is developed, addressing the limitations of traditional diagnostic methods. This pilot study demonstrates the potential for ob..."
+  }
+[2026-06-11 15:45:20] [summarizer] summarizing: Article: Model-Based and Data-Driven Hierarchical Control and Topolog...
+  Details:
+  {
+    "article_id": "c440e4c4-bfc8-42e1-b5fd-acdf2ceb9a33"
+  }
+[2026-06-11 15:45:21] [summarizer] finished: Subject: Privacy-Preserving ECG Anomaly Detection on Edge Devices 🔒
+  Details:
+  {
+    "article_id": "47ccca9d-5c29-460f-8685-3623df0212cd",
+    "suggested_subject": "Privacy-Preserving ECG Anomaly Detection on Edge Devices 🔒",
+    "summary_preview": "A federated autoencoder system enables real-time ECG anomaly detection while ensuring privacy and efficiency on edge devices. It achieves an AUROC of 0.782 with 44% latency reduction on Raspberry Pi 4..."
+  }
+[2026-06-11 15:45:21] [summarizer] summarizing: Article: LLMs+Graphs: Toward Graph-Native, Synergistic AI Systems...
+  Details:
+  {
+    "article_id": "acf78e1f-065f-464d-80ea-288f3a943191"
+  }
+[2026-06-11 15:45:21] [summarizer] finished: Subject: Self-Supervised Models Accurately Recognize Unseen Click Consonants 🔊
+  Details:
+  {
+    "article_id": "8cd9f514-385c-4981-a522-2c08d26bdb46",
+    "suggested_subject": "Self-Supervised Models Accurately Recognize Unseen Click Consonants 🔊",
+    "summary_preview": "Pretrained self-supervised speech models are fine-tuned to recognize click consonants from Khoisan languages. Fine-tuned models achieve higher accuracy on click sounds compared to non-clicks, demonstr..."
+  }
+[2026-06-11 15:45:21] [summarizer] summarizing: Article: Physics-Distilled Neural Network enabled by Large Language M...
+  Details:
+  {
+    "article_id": "5b5cb4a8-67a0-4404-b2cb-9bd552897a70"
+  }
+[2026-06-11 15:45:22] [summarizer] finished: Subject: Real-time Planning Boosted by Fast-Sampling Models ⚡
+  Details:
+  {
+    "article_id": "a3770d84-8579-4f43-a332-fd57f3a73fb1",
+    "suggested_subject": "Real-time Planning Boosted by Fast-Sampling Models ⚡",
+    "summary_preview": "Consistency Planner tackles real-time planning for autonomous driving using fast-sampling consistency models to generate diverse future trajectories. It outperforms existing methods in safety metrics,..."
+  }
+[2026-06-11 15:45:22] [summarizer] summarizing: Article: AVIS: Adaptive Test-Time Scaling for Vision-Language Models...
+  Details:
+  {
+    "article_id": "29d54f65-7f2c-4edf-bbc1-8a8c41252426"
+  }
+[2026-06-11 15:45:22] [summarizer] finished: Subject: Robust Control Design for Networked Systems ⚡
+  Details:
+  {
+    "article_id": "c440e4c4-bfc8-42e1-b5fd-acdf2ceb9a33",
+    "suggested_subject": "Robust Control Design for Networked Systems ⚡",
+    "summary_preview": "A hierarchical control design strategy ensures robust performance in networked systems using both model-based and data-driven approaches. The method achieves dissipativity guarantees while optimizing ..."
+  }
+[2026-06-11 15:45:22] [summarizer] summarizing: Article: Information-Theoretic Decomposition for Multimodal Interacti...
+  Details:
+  {
+    "article_id": "8574f2f0-be37-4fdf-977f-5a0a66c47caa"
+  }
+[2026-06-11 15:45:23] [summarizer] finished: Subject: Integrating LLMs with Graphs for Enhanced AI Systems 🔗
+  Details:
+  {
+    "article_id": "acf78e1f-065f-464d-80ea-288f3a943191",
+    "suggested_subject": "Integrating LLMs with Graphs for Enhanced AI Systems 🔗",
+    "summary_preview": "Graph-native AI systems leverage large language models (LLMs) for structured reasoning and multi-hop inference. This integration enhances applications across various domains by improving retrieval, de..."
+  }
+[2026-06-11 15:45:24] [summarizer] finished: Subject: High-Accuracy Manufacturing Predictions via Physics-Distilled Neural Networks ⚡
+  Details:
+  {
+    "article_id": "5b5cb4a8-67a0-4404-b2cb-9bd552897a70",
+    "suggested_subject": "High-Accuracy Manufacturing Predictions via Physics-Distilled Neural Networks ⚡",
+    "summary_preview": "A knowledge distillation framework integrates physics insights from literature into a lightweight neural network for predicting manufacturing process-property relationships. This approach achieves ove..."
+  }
+[2026-06-11 15:45:24] [summarizer] finished: Subject: Adaptive Inference Scaling Boosts Vision-Language Model Efficiency ⚡
+  Details:
+  {
+    "article_id": "29d54f65-7f2c-4edf-bbc1-8a8c41252426",
+    "suggested_subject": "Adaptive Inference Scaling Boosts Vision-Language Model Efficiency ⚡",
+    "summary_preview": "AVIS optimizes inference costs in Vision-Language Models by jointly adapting visual context and reasoning search. It enhances accuracy while reducing compute and latency across various benchmarks, out..."
+  }
+[2026-06-11 15:45:24] [summarizer] finished: Subject: Dynamic Multimodal Interaction Learning Boosts Performance 📊
+  Details:
+  {
+    "article_id": "8574f2f0-be37-4fdf-977f-5a0a66c47caa",
+    "suggested_subject": "Dynamic Multimodal Interaction Learning Boosts Performance 📊",
+    "summary_preview": "A novel framework, Decomposition-based Multimodal Interaction Learning (DMIL), models sample-specific interactions to enhance multimodal learning. Extensive experiments show DMIL consistently outperfo..."
+  }
+[2026-06-11 15:45:24] [summarizer] finished: Subject: AI Researchers Urged to Lead Military Arms Control ⚔️
+  Details:
+  {
+    "article_id": "a6ed261a-af42-42ff-ac96-148896230746",
+    "suggested_subject": "AI Researchers Urged to Lead Military Arms Control ⚔️",
+    "summary_preview": "AI researchers must engage in arms control to mitigate risks from military AI applications. Collaborating with defense experts can help establish safety measures, drawing lessons from historical arms ..."
+  }
+[2026-06-11 15:45:24] [summarizer] batch_done: Summarisation complete for 'ai_research': 100 summaries so far.
+  Details:
+  {
+    "summaries": 100
+  }

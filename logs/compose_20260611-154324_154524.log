@@ -1,0 +1,52 @@
+[2026-06-11 15:45:24] [image_collector] fetching: Fetching 3 image(s) in parallel...
+  Details:
+  {
+    "count": 3
+  }
+[2026-06-11 15:45:26] [image_collector] saved: Saved image for item 3: images/20260611-154324/3.png
+  Details:
+  {
+    "path": "images/20260611-154324/3.png"
+  }
+[2026-06-11 15:45:26] [image_collector] saved: Saved image for item 1: images/20260611-154324/1.png
+  Details:
+  {
+    "path": "images/20260611-154324/1.png"
+  }
+[2026-06-11 15:45:26] [image_collector] saved: Saved image for item 2: images/20260611-154324/2.png
+  Details:
+  {
+    "path": "images/20260611-154324/2.png"
+  }
+[2026-06-11 15:45:26] [composer] starting: Category=ai_research, audience=Data Scientists and AI teams at UnionBank, tone=professional, concise, practical, sections=3.
+  Details:
+  {
+    "category": "ai_research",
+    "audience": "Data Scientists and AI teams at UnionBank",
+    "tone": "professional, concise, practical",
+    "num_items": 3
+  }
+[2026-06-11 15:45:35] [composer] finished: Draft length: 1338 chars, ~144 words.
+  Details:
+  {
+    "char_count": 1338,
+    "word_count": 144
+  }
+[2026-06-11 15:45:35] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-06-11 15:45:40] [standardizer] finished: Words: 144 -> 144. Changes: ['Cut filler openers in all items', 'Removed redundant qualifiers in all items', 'Tightened wordy phrases in all items', 'Cut least informative sentences in all items']
+  Details:
+  {
+    "word_count_before": 144,
+    "word_count_after": 144,
+    "changes_applied": [
+      "Cut filler openers in all items",
+      "Removed redundant qualifiers in all items",
+      "Tightened wordy phrases in all items",
+      "Cut least informative sentences in all items"
+    ]
+  }

@@ -1,0 +1,569 @@
+[2026-05-22 14:55:40] [collector] starting: Fetching articles for category 'ai_technology' (max_results=50, collector=deep).
+  Details:
+  {
+    "category": "ai_technology",
+    "max_results": 50,
+    "collector": "deep"
+  }
+[2026-05-22 14:56:13] [collector] finished: Collected 50 articles for 'ai_technology'. Evaluating 50 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_technology",
+    "count": 50
+  }
+[2026-05-22 14:56:13] [quality] evaluating: Article: Finnish phone-maker HMD bundles Indian AI chatbot onto new s...
+  Details:
+  {
+    "article_id": "569e5070-906a-4000-a5fa-4a9fc409d08f",
+    "url": "https://techcrunch.com/2026/05/21/finnish-phone-maker-hmd-bundles-indian-ai-chatbot-onto-new-smartphone-in-push-to-reach-local-market/"
+  }
+[2026-05-22 14:56:13] [quality] evaluating: Article: Nike Promo Codes and Discounts: 30% for May 2026...
+  Details:
+  {
+    "article_id": "9d6db2ed-09af-479b-b527-536584063aaf",
+    "url": "https://www.wired.com/story/nike-promo-code/"
+  }
+[2026-05-22 14:56:13] [quality] evaluating: Article: Google Workspace Promo Codes: 14% Off for May...
+  Details:
+  {
+    "article_id": "66140a8f-a6d2-49da-a316-1a1681535f04",
+    "url": "https://www.wired.com/story/google-workspace-promo-code/"
+  }
+[2026-05-22 14:56:13] [quality] evaluating: Article: Chewy Promo Codes: $20 Off May 2026...
+  Details:
+  {
+    "article_id": "4138dc0b-db69-42db-abbe-0e32e406b498",
+    "url": "https://www.wired.com/story/chewy-promo-code/"
+  }
+[2026-05-22 14:56:13] [quality] evaluating: Article: Peacock Promo Codes: 40% Off May 2026...
+  Details:
+  {
+    "article_id": "51d685e2-0045-4646-afd1-61b853860772",
+    "url": "https://www.wired.com/story/peacock-promo-code/"
+  }
+[2026-05-22 14:56:21] [quality] error: Article 569e5070-906a-4000-a5fa-4a9fc409d08f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:21] [quality] evaluating: Article: 30% Off Samsung Promo Code | May 2026...
+  Details:
+  {
+    "article_id": "4a59322f-705f-4429-aa8c-d8908f84da58",
+    "url": "https://www.wired.com/story/samsung-promo-codes/"
+  }
+[2026-05-22 14:56:21] [quality] error: Article 66140a8f-a6d2-49da-a316-1a1681535f04: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:21] [quality] evaluating: Article: AT&T Promo Codes: $50 Off This May 2026...
+  Details:
+  {
+    "article_id": "07797eb5-1ccd-4130-be7d-8e35f22d63e4",
+    "url": "https://www.wired.com/story/att-promo-code/"
+  }
+[2026-05-22 14:56:22] [quality] error: Article 4a59322f-705f-4429-aa8c-d8908f84da58: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:22] [quality] evaluating: Article: Dyson Promo Codes: 25% Off in May 2026...
+  Details:
+  {
+    "article_id": "b460abd3-eb3d-487c-a718-c5a25c27e246",
+    "url": "https://www.wired.com/story/dyson-cordless-vacuum-promo-code/"
+  }
+[2026-05-22 14:56:22] [quality] error: Article 07797eb5-1ccd-4130-be7d-8e35f22d63e4: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:22] [quality] evaluating: Article: SOLAR: A Self-Optimizing Open-Ended Autonomous Agent for Lif...
+  Details:
+  {
+    "article_id": "a83d65b9-9c1a-49ac-9b54-1c590a8e1d83",
+    "url": "https://arxiv.org/abs/2605.20189"
+  }
+[2026-05-22 14:56:23] [quality] error: Article b460abd3-eb3d-487c-a718-c5a25c27e246: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:23] [quality] evaluating: Article: Tool-Augmented Agent for Closed-loop Optimization,Simulation...
+  Details:
+  {
+    "article_id": "a236137a-7c8a-455f-8f98-b8ac81dfa34f",
+    "url": "https://arxiv.org/abs/2605.20190"
+  }
+[2026-05-22 14:56:23] [quality] error: Article a83d65b9-9c1a-49ac-9b54-1c590a8e1d83: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:23] [quality] evaluating: Article: OSCToM: RL-Guided Adversarial Generation for High-Order Theo...
+  Details:
+  {
+    "article_id": "eaa1ce39-9bd2-44ca-9f6f-d2469b35a3ce",
+    "url": "https://arxiv.org/abs/2605.20423"
+  }
+[2026-05-22 14:56:24] [quality] error: Article a236137a-7c8a-455f-8f98-b8ac81dfa34f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:24] [quality] evaluating: Article: AgentCo-op: Retrieval-Based Synthesis of Interoperable Multi...
+  Details:
+  {
+    "article_id": "5d07d75b-2982-425f-8fd2-241abedc3030",
+    "url": "https://arxiv.org/abs/2605.20425"
+  }
+[2026-05-22 14:56:25] [quality] error: Article eaa1ce39-9bd2-44ca-9f6f-d2469b35a3ce: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:25] [quality] evaluating: Article: High Quality Embeddings for Horn Logic Reasoning...
+  Details:
+  {
+    "article_id": "fedacd84-0dde-476a-b158-76cb5563936a",
+    "url": "https://arxiv.org/abs/2605.20467"
+  }
+[2026-05-22 14:56:26] [quality] error: Article 5d07d75b-2982-425f-8fd2-241abedc3030: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:26] [quality] evaluating: Article: $ECUAS_n$: A family of metrics for principled evaluation of ...
+  Details:
+  {
+    "article_id": "0f2a1c2e-46c9-4e8e-a711-b3be0d565e29",
+    "url": "https://arxiv.org/abs/2605.20490"
+  }
+[2026-05-22 14:56:26] [quality] error: Article fedacd84-0dde-476a-b158-76cb5563936a: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:26] [quality] evaluating: Article: Open-World Evaluations for Measuring Frontier AI Capabilitie...
+  Details:
+  {
+    "article_id": "fa6e5ce2-97f4-43f4-88e1-902e9dc8732c",
+    "url": "https://arxiv.org/abs/2605.20520"
+  }
+[2026-05-22 14:56:27] [quality] error: Article 0f2a1c2e-46c9-4e8e-a711-b3be0d565e29: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:27] [quality] evaluating: Article: AgentAtlas: Beyond Outcome Leaderboards for LLM Agents...
+  Details:
+  {
+    "article_id": "badc45b2-3ce3-4231-bcf1-aa69c7fad104",
+    "url": "https://arxiv.org/abs/2605.20530"
+  }
+[2026-05-22 14:56:27] [quality] error: Article 51d685e2-0045-4646-afd1-61b853860772: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:27] [quality] evaluating: Article: Personality Engineering with AI Agents: A New Methodology fo...
+  Details:
+  {
+    "article_id": "46d27259-7290-46e7-8a72-b3a8dbd905c7",
+    "url": "https://arxiv.org/abs/2605.20554"
+  }
+[2026-05-22 14:56:27] [quality] error: Article 4138dc0b-db69-42db-abbe-0e32e406b498: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:27] [quality] evaluating: Article: Mahjax: A GPU-Accelerated Mahjong Simulator for Reinforcemen...
+  Details:
+  {
+    "article_id": "bf6ffc8e-874d-4751-9fc0-8cc580a07121",
+    "url": "https://arxiv.org/abs/2605.20577"
+  }
+[2026-05-22 14:56:28] [quality] error: Article 9d6db2ed-09af-479b-b527-536584063aaf: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:28] [quality] evaluating: Article: From Automated to Autonomous: Hierarchical Agent-native Netw...
+  Details:
+  {
+    "article_id": "6d94a78f-1432-4d8c-8d98-c731eb77b2e5",
+    "url": "https://arxiv.org/abs/2605.20608"
+  }
+[2026-05-22 14:56:28] [quality] error: Article fa6e5ce2-97f4-43f4-88e1-902e9dc8732c: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:28] [quality] evaluating: Article: COAgents: Multi-Agent Framework to Learn and Navigate Routin...
+  Details:
+  {
+    "article_id": "6334cc7b-bf8f-4dd9-a40f-5dfe6abee04a",
+    "url": "https://arxiv.org/abs/2605.20618"
+  }
+[2026-05-22 14:56:28] [quality] error: Article badc45b2-3ce3-4231-bcf1-aa69c7fad104: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:28] [quality] evaluating: Article: Evaluating Temporal Semantic Caching and Workflow Optimizati...
+  Details:
+  {
+    "article_id": "3cc1610b-b207-4e17-88b1-098ef78f889f",
+    "url": "https://arxiv.org/abs/2605.20630"
+  }
+[2026-05-22 14:56:29] [quality] error: Article 46d27259-7290-46e7-8a72-b3a8dbd905c7: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:29] [quality] evaluating: Article: Declarative Data Services: Structured Agentic Discovery for ...
+  Details:
+  {
+    "article_id": "eb05910a-258d-48d4-b05a-65d06e20f9d1",
+    "url": "https://arxiv.org/abs/2605.20690"
+  }
+[2026-05-22 14:56:29] [quality] error: Article bf6ffc8e-874d-4751-9fc0-8cc580a07121: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:29] [quality] evaluating: Article: VBFDD-Agent for Electric Vehicle Battery Fault Detection and...
+  Details:
+  {
+    "article_id": "13b027da-3626-445f-8b4f-f22cba83c812",
+    "url": "https://arxiv.org/abs/2605.20742"
+  }
+[2026-05-22 14:56:29] [quality] error: Article 6d94a78f-1432-4d8c-8d98-c731eb77b2e5: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:29] [quality] evaluating: Article: Conflict-Aware Additive Guidance for Flow Models under Compo...
+  Details:
+  {
+    "article_id": "01a4265e-9003-4639-897c-82095e669eb7",
+    "url": "https://arxiv.org/abs/2605.20758"
+  }
+[2026-05-22 14:56:29] [quality] error: Article 6334cc7b-bf8f-4dd9-a40f-5dfe6abee04a: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:29] [quality] evaluating: Article: Interaction Locality in Hierarchical Recursive Reasoning...
+  Details:
+  {
+    "article_id": "22ff8c7c-bce6-47a2-ba55-480b9e498103",
+    "url": "https://arxiv.org/abs/2605.20784"
+  }
+[2026-05-22 14:56:30] [quality] error: Article 3cc1610b-b207-4e17-88b1-098ef78f889f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:30] [quality] evaluating: Article: Conditional Equivalence of DPO and RLHF: Implicit Assumption...
+  Details:
+  {
+    "article_id": "ee4013a3-4eb2-4418-831a-4aad5b3a5548",
+    "url": "https://arxiv.org/abs/2605.20834"
+  }
+[2026-05-22 14:56:30] [quality] error: Article eb05910a-258d-48d4-b05a-65d06e20f9d1: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:30] [quality] evaluating: Article: PlanningBench: Generating Scalable and Verifiable Planning D...
+  Details:
+  {
+    "article_id": "79af1f9c-e18d-4e1a-94ed-35fda412418c",
+    "url": "https://arxiv.org/abs/2605.20873"
+  }
+[2026-05-22 14:56:30] [quality] error: Article 13b027da-3626-445f-8b4f-f22cba83c812: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:30] [quality] evaluating: Article: Governance by Construction for Generalist Agents...
+  Details:
+  {
+    "article_id": "767aa41d-b39c-4b99-a9c9-cd8bf8c3b2dc",
+    "url": "https://arxiv.org/abs/2605.20874"
+  }
+[2026-05-22 14:56:30] [quality] error: Article 01a4265e-9003-4639-897c-82095e669eb7: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:30] [quality] evaluating: Article: For How Long Should We Be Punching? Learning Action Duration...
+  Details:
+  {
+    "article_id": "b6da7e05-8567-4cb3-b4da-d922f0173604",
+    "url": "https://arxiv.org/abs/2605.20911"
+  }
+[2026-05-22 14:56:30] [quality] error: Article 22ff8c7c-bce6-47a2-ba55-480b9e498103: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:30] [quality] evaluating: Article: Playing Devil's Advocate: Off-the-Shelf Persona Vectors Riva...
+  Details:
+  {
+    "article_id": "7a449b95-967c-418f-8f3d-e015e2d7edcc",
+    "url": "https://arxiv.org/abs/2605.21006"
+  }
+[2026-05-22 14:56:31] [quality] error: Article ee4013a3-4eb2-4418-831a-4aad5b3a5548: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:31] [quality] evaluating: Article: AutoRPA: Efficient GUI Automation through LLM-Driven Code Sy...
+  Details:
+  {
+    "article_id": "287199e5-d17f-4953-b188-fa36839a71c6",
+    "url": "https://arxiv.org/abs/2605.21082"
+  }
+[2026-05-22 14:56:31] [quality] error: Article 767aa41d-b39c-4b99-a9c9-cd8bf8c3b2dc: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:31] [quality] evaluating: Article: ScenePilot: Controllable Boundary-Driven Critical Scenario G...
+  Details:
+  {
+    "article_id": "8197cd81-66d1-4e84-82f7-084415ff98a4",
+    "url": "https://arxiv.org/abs/2605.21168"
+  }
+[2026-05-22 14:56:31] [quality] error: Article 79af1f9c-e18d-4e1a-94ed-35fda412418c: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:31] [quality] evaluating: Article: Insights Generator: Systematic Corpus-Level Trace Diagnostic...
+  Details:
+  {
+    "article_id": "4e98d96b-8e1e-49c7-b5d9-f1be30b3f77f",
+    "url": "https://arxiv.org/abs/2605.21347"
+  }
+[2026-05-22 14:56:31] [quality] error: Article b6da7e05-8567-4cb3-b4da-d922f0173604: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:31] [quality] evaluating: Article: Towards Resilient and Autonomous Networks: A BlueSky Vision ...
+  Details:
+  {
+    "article_id": "3e97e322-588f-42a7-ae43-1097df2c8933",
+    "url": "https://arxiv.org/abs/2605.21395"
+  }
+[2026-05-22 14:56:32] [quality] error: Article 7a449b95-967c-418f-8f3d-e015e2d7edcc: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:32] [quality] evaluating: Article: Teaching AI Through Benchmark Construction: QuestBench as a ...
+  Details:
+  {
+    "article_id": "8c46e2ea-6cde-4b65-b848-9d1e47db20f8",
+    "url": "https://arxiv.org/abs/2605.21413"
+  }
+[2026-05-22 14:56:32] [quality] error: Article 287199e5-d17f-4953-b188-fa36839a71c6: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:32] [quality] evaluating: Article: PALS: Power-Aware LLM Serving for Mixture-of-Experts Models...
+  Details:
+  {
+    "article_id": "a4ff6cea-a3a7-41ea-81ce-627107159071",
+    "url": "https://arxiv.org/abs/2605.21427"
+  }
+[2026-05-22 14:56:33] [quality] error: Article 3e97e322-588f-42a7-ae43-1097df2c8933: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:33] [quality] evaluating: Article: Mind the Sim-to-Real Gap & Think Like a Scientist...
+  Details:
+  {
+    "article_id": "1ef490c4-f001-4842-be66-938aad91ec7a",
+    "url": "https://arxiv.org/abs/2605.21458"
+  }
+[2026-05-22 14:56:33] [quality] error: Article 8197cd81-66d1-4e84-82f7-084415ff98a4: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:33] [quality] evaluating: Article: AiraXiv: An AI-Driven Open-Access Platform for Human and AI ...
+  Details:
+  {
+    "article_id": "1a0c1237-527c-4be5-8b4e-6f39246a5137",
+    "url": "https://arxiv.org/abs/2605.21481"
+  }
+[2026-05-22 14:56:33] [quality] error: Article 4e98d96b-8e1e-49c7-b5d9-f1be30b3f77f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:33] [quality] evaluating: Article: DeepWeb-Bench: A Deep Research Benchmark Demanding Massive C...
+  Details:
+  {
+    "article_id": "612b3bfe-da17-4023-91f7-74c50804195c",
+    "url": "https://arxiv.org/abs/2605.21482"
+  }
+[2026-05-22 14:56:33] [quality] error: Article 8c46e2ea-6cde-4b65-b848-9d1e47db20f8: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:33] [quality] evaluating: Article: Diverge to Induce Prompting: Multi-Rationale Induction for Z...
+  Details:
+  {
+    "article_id": "c47996e1-6fed-4af1-8d40-d2037d8a1759",
+    "url": "https://arxiv.org/abs/2602.08028"
+  }
+[2026-05-22 14:56:34] [quality] error: Article a4ff6cea-a3a7-41ea-81ce-627107159071: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:34] [quality] evaluating: Article: Neural Estimation of Pairwise Mutual Information in Masked D...
+  Details:
+  {
+    "article_id": "a7b12603-bbbc-45ca-ab4b-d91e41fe7276",
+    "url": "https://arxiv.org/abs/2605.20187"
+  }
+[2026-05-22 14:56:34] [quality] error: Article 612b3bfe-da17-4023-91f7-74c50804195c: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:34] [quality] evaluating: Article: GraphDiffMed: Knowledge-Constrained Differential Attention w...
+  Details:
+  {
+    "article_id": "2a188d45-2ee6-492d-874d-00cea4dad629",
+    "url": "https://arxiv.org/abs/2605.20188"
+  }
+[2026-05-22 14:56:34] [quality] error: Article 1a0c1237-527c-4be5-8b4e-6f39246a5137: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:34] [quality] evaluating: Article: Improving Quantized Model Performance in Qualitative Analysi...
+  Details:
+  {
+    "article_id": "b5f609e7-e085-44fb-b716-2feb7ebc73a7",
+    "url": "https://arxiv.org/abs/2605.20193"
+  }
+[2026-05-22 14:56:34] [quality] error: Article 1ef490c4-f001-4842-be66-938aad91ec7a: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:34] [quality] evaluating: Article: Parallel LLM Reasoning for Bias-Resilient, Robust Conceptual...
+  Details:
+  {
+    "article_id": "7245ee4a-4221-4284-94bd-0e1e9be43007",
+    "url": "https://arxiv.org/abs/2605.20194"
+  }
+[2026-05-22 14:56:34] [quality] error: Article c47996e1-6fed-4af1-8d40-d2037d8a1759: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:34] [quality] evaluating: Article: Pseudo-Siamese Network for Planning in Target-Oriented Proac...
+  Details:
+  {
+    "article_id": "20e2f3ba-befb-4f58-ab01-dbcca564d90a",
+    "url": "https://arxiv.org/abs/2605.20195"
+  }
+[2026-05-22 14:56:35] [quality] error: Article a7b12603-bbbc-45ca-ab4b-d91e41fe7276: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:35] [quality] evaluating: Article: Data Scaling as Progressive Coverage of a Predictive Contrib...
+  Details:
+  {
+    "article_id": "345bf76e-15fc-418b-bfdb-78ce5b9487f1",
+    "url": "https://arxiv.org/abs/2605.20196"
+  }
+[2026-05-22 14:56:35] [quality] error: Article 2a188d45-2ee6-492d-874d-00cea4dad629: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:35] [quality] evaluating: Article: FlowLM: Few-Step Language Modeling via Diffusion-to-Flow Ada...
+  Details:
+  {
+    "article_id": "2c8eb5bd-65f4-4144-97cd-dfd0144cc5c5",
+    "url": "https://arxiv.org/abs/2605.20199"
+  }
+[2026-05-22 14:56:35] [quality] error: Article b5f609e7-e085-44fb-b716-2feb7ebc73a7: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:35] [quality] evaluating: Article: Evaluating multimodal emotion recognition in proactive conve...
+  Details:
+  {
+    "article_id": "3baeb0ff-dbaa-4ca2-8619-96a6314bf45f",
+    "url": "https://arxiv.org/abs/2605.20200"
+  }
+[2026-05-22 14:56:35] [quality] error: Article 7245ee4a-4221-4284-94bd-0e1e9be43007: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:35] [quality] evaluating: Article: Long-Context Reasoning Through Proxy-Based Chain-of-Thought ...
+  Details:
+  {
+    "article_id": "db1d1900-3226-4afb-bd6b-a96eb50a0aab",
+    "url": "https://arxiv.org/abs/2605.20201"
+  }
+[2026-05-22 14:56:36] [quality] error: Article 20e2f3ba-befb-4f58-ab01-dbcca564d90a: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:36] [quality] evaluating: Article: Under Pressure: Emotional Framing Induces Measurable Behavio...
+  Details:
+  {
+    "article_id": "8c2b1c60-f4f4-4695-85cb-c3db0c6acb50",
+    "url": "https://arxiv.org/abs/2605.20202"
+  }
+[2026-05-22 14:56:36] [quality] error: Article 345bf76e-15fc-418b-bfdb-78ce5b9487f1: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:37] [quality] error: Article 3baeb0ff-dbaa-4ca2-8619-96a6314bf45f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:37] [quality] error: Article 2c8eb5bd-65f4-4144-97cd-dfd0144cc5c5: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:37] [quality] error: Article db1d1900-3226-4afb-bd6b-a96eb50a0aab: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:37] [quality] error: Article 8c2b1c60-f4f4-4695-85cb-c3db0c6acb50: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-22 14:56:37] [quality] batch_done: Evaluation complete for 'ai_technology': 0/50 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 50
+  }

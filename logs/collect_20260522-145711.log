@@ -1,0 +1,19 @@
+[2026-05-22 14:57:11] [collector] starting: Fetching articles for category 'ai_trends' (max_results=50, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 50,
+    "collector": "deep"
+  }
+[2026-05-22 14:57:11] [collector] finished: Collected 0 articles for 'ai_trends'. Evaluating 0 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 0
+  }
+[2026-05-22 14:57:11] [quality] batch_done: Evaluation complete for 'ai_trends': 0/0 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 0
+  }

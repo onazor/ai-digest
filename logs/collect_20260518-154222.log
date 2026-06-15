@@ -1,0 +1,535 @@
+[2026-05-18 15:42:22] [collector] starting: Fetching articles for category 'ai_trends' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:42:30] [collector] finished: Collected 8 articles for 'ai_trends'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 8
+  }
+[2026-05-18 15:42:30] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "c1a90bfb-7d89-4643-8159-ea0e2c919d1f",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:42:30] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "914bfdd8-4642-402a-8428-b28511aefcce",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:42:30] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "aa809601-2085-4495-91ec-433f89322d81",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:42:30] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "88810534-6c19-491c-9708-d8b35fc63778",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:42:30] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "991d986c-42b4-49e9-8e26-facdae000e4b",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:42:32] [quality] error: Article c1a90bfb-7d89-4643-8159-ea0e2c919d1f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:32] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "4ff3d2c9-7035-4d3d-8cbf-ada8a1bb3768",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:42:32] [quality] error: Article 991d986c-42b4-49e9-8e26-facdae000e4b: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:32] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "51805f91-e516-467b-99e2-afaf7c985852",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:42:32] [quality] error: Article 914bfdd8-4642-402a-8428-b28511aefcce: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:32] [quality] evaluating: Article: NIMO Controller: a self-driving laboratory orchestrator base...
+  Details:
+  {
+    "article_id": "f1bcb5b6-3afe-4369-8990-1b1ba5b196e5",
+    "url": "https://arxiv.org/abs/2605.15227"
+  }
+[2026-05-18 15:42:32] [quality] error: Article 88810534-6c19-491c-9708-d8b35fc63778: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:32] [quality] error: Article aa809601-2085-4495-91ec-433f89322d81: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:33] [quality] error: Article 51805f91-e516-467b-99e2-afaf7c985852: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:34] [quality] error: Article 4ff3d2c9-7035-4d3d-8cbf-ada8a1bb3768: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:34] [quality] error: Article f1bcb5b6-3afe-4369-8990-1b1ba5b196e5: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:34] [quality] batch_done: Evaluation complete for 'ai_trends': 0/8 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 8
+  }
+[2026-05-18 15:42:34] [collector] starting: Fetching articles for category 'ai_innovations' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_innovations",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:42:42] [collector] finished: Collected 8 articles for 'ai_innovations'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_innovations",
+    "count": 8
+  }
+[2026-05-18 15:42:42] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "623c8ae4-893d-44e3-a2a7-11f1b8a4bdb7",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:42:42] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "254ee15f-33d5-42f3-a233-4a9bf84ff20f",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:42:42] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "5f317c81-8562-4a56-8261-a28cad5f16ec",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:42:42] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "3f3bad7d-5980-4e16-ada3-262a406f8739",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:42:42] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "586ce00f-fd8e-4d45-816d-8519044a4abe",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:42:44] [quality] error: Article 5f317c81-8562-4a56-8261-a28cad5f16ec: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:44] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "97d07b88-bae4-401f-9e5e-90d78027f5a3",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:42:44] [quality] error: Article 623c8ae4-893d-44e3-a2a7-11f1b8a4bdb7: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:44] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "8aee66aa-f719-4fd3-88fd-76c39d19ce3b",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:42:44] [quality] error: Article 254ee15f-33d5-42f3-a233-4a9bf84ff20f: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:44] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "3111d40f-7f76-4ced-a914-ca5252162c79",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:42:44] [quality] error: Article 3f3bad7d-5980-4e16-ada3-262a406f8739: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:44] [quality] error: Article 586ce00f-fd8e-4d45-816d-8519044a4abe: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:45] [quality] error: Article 97d07b88-bae4-401f-9e5e-90d78027f5a3: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:45] [quality] error: Article 8aee66aa-f719-4fd3-88fd-76c39d19ce3b: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:45] [quality] error: Article 3111d40f-7f76-4ced-a914-ca5252162c79: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:45] [quality] batch_done: Evaluation complete for 'ai_innovations': 0/8 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 8
+  }
+[2026-05-18 15:42:45] [collector] starting: Fetching articles for category 'ai_research' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_research",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:42:54] [collector] finished: Collected 8 articles for 'ai_research'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_research",
+    "count": 8
+  }
+[2026-05-18 15:42:54] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "0d743d56-07a9-45df-a597-f7f11d3d6547",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:42:54] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "a2d2f180-3d65-4366-ad47-b0669941ae30",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:42:54] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "2948056d-1e11-4c31-996b-5ec0dc698c02",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:42:54] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "4d7192a0-b592-4175-a386-d66375eeb424",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:42:54] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "47c27c7f-346a-4d36-ae36-9a2669ac7730",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:42:55] [quality] error: Article a2d2f180-3d65-4366-ad47-b0669941ae30: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:55] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "64de379f-22f9-40d5-90e7-17daca322f81",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:42:55] [quality] error: Article 0d743d56-07a9-45df-a597-f7f11d3d6547: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:55] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "91e543de-c89a-4050-9b76-2272558506ed",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:42:56] [quality] error: Article 4d7192a0-b592-4175-a386-d66375eeb424: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:56] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "62eec8cd-5cc3-4ac5-b699-760f94d4862d",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:42:56] [quality] error: Article 2948056d-1e11-4c31-996b-5ec0dc698c02: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:56] [quality] error: Article 47c27c7f-346a-4d36-ae36-9a2669ac7730: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:57] [quality] error: Article 91e543de-c89a-4050-9b76-2272558506ed: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:57] [quality] error: Article 62eec8cd-5cc3-4ac5-b699-760f94d4862d: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:57] [quality] error: Article 64de379f-22f9-40d5-90e7-17daca322f81: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:42:57] [quality] batch_done: Evaluation complete for 'ai_research': 0/8 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 8
+  }
+[2026-05-18 15:42:57] [collector] starting: Fetching articles for category 'genai_tips' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "genai_tips",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:43:04] [collector] finished: Collected 8 articles for 'genai_tips'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "genai_tips",
+    "count": 8
+  }
+[2026-05-18 15:43:04] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "1e7f129b-b3c6-441c-bda8-81f681f4fdf2",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:43:04] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "6a455682-7e9c-44b2-afdc-dfd41ca2e07c",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:43:04] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "4ce5dede-c65f-4a1d-82f2-c4268378896a",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:43:04] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "211b5e29-2e40-4e6c-89bb-06673288fb83",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:43:04] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "f3d848c1-4d01-47b9-9bc7-c7b31439caa6",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:43:11] [quality] error: Article f3d848c1-4d01-47b9-9bc7-c7b31439caa6: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:11] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "ef563b49-a619-4325-a15c-733efccf69df",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:43:11] [quality] error: Article 4ce5dede-c65f-4a1d-82f2-c4268378896a: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:11] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "d0d14f54-ab93-47cd-9053-4f8230e5ef6b",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:43:16] [quality] error: Article 1e7f129b-b3c6-441c-bda8-81f681f4fdf2: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:16] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "15bdbe80-7a68-4b09-9264-4e82c08e013b",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:43:16] [quality] error: Article 211b5e29-2e40-4e6c-89bb-06673288fb83: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:16] [quality] error: Article 6a455682-7e9c-44b2-afdc-dfd41ca2e07c: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:17] [quality] error: Article d0d14f54-ab93-47cd-9053-4f8230e5ef6b: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:17] [quality] error: Article ef563b49-a619-4325-a15c-733efccf69df: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:18] [quality] error: Article 15bdbe80-7a68-4b09-9264-4e82c08e013b: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:18] [quality] batch_done: Evaluation complete for 'genai_tips': 0/8 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 8
+  }
+[2026-05-18 15:43:18] [collector] starting: Fetching articles for category 'ai_capability' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_capability",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:43:23] [collector] finished: Collected 8 articles for 'ai_capability'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_capability",
+    "count": 8
+  }
+[2026-05-18 15:43:23] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "9be4a48e-a981-462e-9d42-6cd35c853607",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:43:23] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "d59eb031-b1cb-4864-b949-345eac9db7c0",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:43:23] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "98c3f7fb-85b9-4627-b3a8-a2560f86ae9c",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:43:23] [quality] evaluating: Article: NIMO Controller: a self-driving laboratory orchestrator base...
+  Details:
+  {
+    "article_id": "427ef388-2737-4c16-93f0-ccdddee593de",
+    "url": "https://arxiv.org/abs/2605.15227"
+  }
+[2026-05-18 15:43:23] [quality] evaluating: Article: Verifiable Agentic Infrastructure: Proof-Derived Authorizati...
+  Details:
+  {
+    "article_id": "7310f8c8-e4c5-42d4-a002-42b6026f1add",
+    "url": "https://arxiv.org/abs/2605.15228"
+  }
+[2026-05-18 15:43:24] [quality] error: Article 98c3f7fb-85b9-4627-b3a8-a2560f86ae9c: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:24] [quality] evaluating: Article: Solvita: Enhancing Large Language Models for Competitive Pro...
+  Details:
+  {
+    "article_id": "945a9b05-c16e-488e-bc7d-853497e1e1d5",
+    "url": "https://arxiv.org/abs/2605.15301"
+  }
+[2026-05-18 15:43:25] [quality] error: Article 9be4a48e-a981-462e-9d42-6cd35c853607: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:25] [quality] evaluating: Article: SMCEvolve: Principled Scientific Discovery via Sequential Mo...
+  Details:
+  {
+    "article_id": "519fc1e7-8e47-46b1-82dd-a6d5c9763475",
+    "url": "https://arxiv.org/abs/2605.15308"
+  }
+[2026-05-18 15:43:25] [quality] error: Article 7310f8c8-e4c5-42d4-a002-42b6026f1add: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:25] [quality] evaluating: Article: Ensemble Monitoring for AI Control: Diverse Signals Outweigh...
+  Details:
+  {
+    "article_id": "04219de7-8d05-40ec-91c4-2422e3f9ea58",
+    "url": "https://arxiv.org/abs/2605.15377"
+  }
+[2026-05-18 15:43:25] [quality] error: Article d59eb031-b1cb-4864-b949-345eac9db7c0: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:25] [quality] error: Article 427ef388-2737-4c16-93f0-ccdddee593de: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:26] [quality] error: Article 945a9b05-c16e-488e-bc7d-853497e1e1d5: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:26] [quality] error: Article 04219de7-8d05-40ec-91c4-2422e3f9ea58: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:26] [quality] error: Article 519fc1e7-8e47-46b1-82dd-a6d5c9763475: Connection error.
+  Details:
+  {
+    "error": "Connection error."
+  }
+[2026-05-18 15:43:26] [quality] batch_done: Evaluation complete for 'ai_capability': 0/8 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 8
+  }

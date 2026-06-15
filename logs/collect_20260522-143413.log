@@ -1,0 +1,7 @@
+[2026-05-22 14:34:13] [collector] starting: Fetching articles for category 'ai_research' (max_results=30, collector=deep).
+  Details:
+  {
+    "category": "ai_research",
+    "max_results": 30,
+    "collector": "deep"
+  }

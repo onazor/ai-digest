@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Digest (May 18, 2026)</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --accent: #e85d04;
+      --accent-dark: #9a3412;
+      --ink: #111827;
+      --muted: #4b5563;
+      --line: #e5e7eb;
+      --panel: #ffffff;
+      --wash: #f8fafc;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--wash);
+      color: var(--ink);
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      line-height: 1.5;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .page {
+      width: min(960px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 32px 0 48px;
+    }
+
+    .masthead {
+      background: var(--ink);
+      color: #ffffff;
+      border-radius: 8px;
+      padding: 28px;
+    }
+
+    .masthead h1 {
+      margin: 0 0 10px;
+      font-size: 42px;
+      line-height: 1.05;
+      letter-spacing: 0;
+    }
+
+    .masthead p {
+      max-width: 720px;
+      margin: 0;
+      color: #d1d5db;
+      font-size: 15px;
+    }
+
+    .category-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 16px 0 28px;
+      padding: 10px;
+      background: #ffffff;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .category-nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 36px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      background: #fff7ed;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+      border: 1px solid #fed7aa;
+      white-space: nowrap;
+    }
+
+    .category-nav a:hover,
+    .category-nav a:focus {
+      background: var(--accent);
+      color: #ffffff;
+      outline: none;
+    }
+
+    .category-section {
+      scroll-margin-top: 92px;
+      margin-top: 28px;
+      padding-top: 4px;
+    }
+
+    .section-head {
+      border-bottom: 2px solid var(--line);
+      padding-bottom: 12px;
+      margin-bottom: 14px;
+    }
+
+    .section-head h2 {
+      margin: 0 0 4px;
+      font-size: 24px;
+      line-height: 1.2;
+      letter-spacing: 0;
+    }
+
+    .section-head p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .story-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+    }
+
+    .story-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-top: 3px solid var(--accent);
+      border-radius: 8px;
+      padding: 16px;
+      min-width: 0;
+    }
+
+    .story-card h3 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.35;
+      letter-spacing: 0;
+    }
+
+    .story-card p {
+      margin: 0 0 12px;
+      color: #374151;
+      font-size: 14px;
+    }
+
+    .story-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+      color: #6b7280;
+      font-size: 12px;
+    }
+
+    .read-link {
+      display: inline-flex;
+      align-items: center;
+      min-height: 32px;
+      color: var(--accent-dark);
+      font-size: 13px;
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .read-link:hover,
+    .read-link:focus {
+      color: var(--accent);
+      outline: none;
+      text-decoration: underline;
+    }
+
+    .empty {
+      margin: 0;
+      color: var(--muted);
+      background: #ffffff;
+      border: 1px dashed #cbd5e1;
+      border-radius: 8px;
+      padding: 14px 16px;
+      font-size: 14px;
+    }
+
+    .footer {
+      margin-top: 32px;
+      padding-top: 16px;
+      border-top: 1px solid var(--line);
+      color: #6b7280;
+      font-size: 12px;
+      text-align: center;
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        width: min(100% - 20px, 960px);
+        padding-top: 12px;
+      }
+
+      .masthead {
+        padding: 20px;
+      }
+
+      .masthead h1 {
+        font-size: 32px;
+      }
+
+      .category-nav {
+        position: static;
+      }
+
+      .category-nav a {
+        flex: 1 1 auto;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <header class="masthead">
+      <h1>AI Digest (May 18, 2026)</h1>
+      <p>A category-based roundup of accepted AI news items across innovation, research, trends, practical tips, and capabilities.</p>
+    </header>
+
+    <nav class="category-nav" aria-label="Digest categories">
+      
+      <a href="#ai-trends">AI Trends</a>
+      
+      <a href="#ai-innovation">AI Innovation</a>
+      
+      <a href="#ai-research">AI Research</a>
+      
+      <a href="#genai-tips">GenAI Tips</a>
+      
+      <a href="#ai-capability">AI Capability</a>
+      
+    </nav>
+
+    
+    <section class="category-section" id="ai-trends">
+      <div class="section-head">
+        <h2>AI Trends</h2>
+        <p>Industry adoption, market movement, governance, and widely discussed AI shifts.</p>
+      </div>
+
+      
+      <p class="empty">No accepted articles for this category in the selected run.</p>
+      
+    </section>
+    
+    <section class="category-section" id="ai-innovation">
+      <div class="section-head">
+        <h2>AI Innovation</h2>
+        <p>New model releases, product launches, breakthroughs, and capability upgrades.</p>
+      </div>
+
+      
+      <p class="empty">No accepted articles for this category in the selected run.</p>
+      
+    </section>
+    
+    <section class="category-section" id="ai-research">
+      <div class="section-head">
+        <h2>AI Research</h2>
+        <p>Technical papers, preprints, benchmarks, methods, and research results.</p>
+      </div>
+
+      
+      <p class="empty">No accepted articles for this category in the selected run.</p>
+      
+    </section>
+    
+    <section class="category-section" id="genai-tips">
+      <div class="section-head">
+        <h2>GenAI Tips</h2>
+        <p>Practical techniques, tooling, and workflows for AI builders and data teams.</p>
+      </div>
+
+      
+      <p class="empty">No accepted articles for this category in the selected run.</p>
+      
+    </section>
+    
+    <section class="category-section" id="ai-capability">
+      <div class="section-head">
+        <h2>AI Capability</h2>
+        <p>Concrete examples of what AI systems can do across text, voice, image, video, code, and automation.</p>
+      </div>
+
+      
+      <p class="empty">No accepted articles for this category in the selected run.</p>
+      
+    </section>
+    
+
+    <footer class="footer">
+      AI Digest - Generated by AI for internal use.
+    </footer>
+  </main>
+</body>
+
+</html>

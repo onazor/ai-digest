@@ -1,0 +1,1156 @@
+[2026-05-18 15:46:55] [collector] starting: Fetching articles for category 'ai_trends' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:47:32] [collector] finished: Collected 8 articles for 'ai_trends'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 8
+  }
+[2026-05-18 15:47:32] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "512d0831-7f6c-405d-9f39-e96e84ee9383",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:47:32] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "6a5064d1-0bbd-4354-855a-64973ddefb21",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:47:32] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "dc73c642-db3e-4e6d-87eb-ed241d778285",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:47:32] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "ed493fe1-43fa-42ca-aef7-65538e7d8d2c",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:47:32] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "c054f59b-da69-411a-934b-0d3e579ee529",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:47:37] [quality] decision: Decision: reject, score=2. This is a single arXiv research paper about an agent harness for MAPDL finite-element simulation. While it’s solid, it’s narrow and focused on a specific engineering simulation workflow, without clear evidence of broader industry adoption or a cross-sector trend. It fits better under an AI research category than ai_trends, which should highlight patterns, adoption data, or multi-organization momentum. Likely too niche for an AI trends section for a banking audience.
+  Details:
+  {
+    "article_id": "c054f59b-da69-411a-934b-0d3e579ee529",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "single_research_paper",
+      "niche_domain"
+    ],
+    "notes": "This is a single arXiv research paper about an agent harness for MAPDL finite-element simulation. While it’s solid, it’s narrow and focused on a specific engineering simulation workflow, without clear evidence of broader industry adoption or a cross-sector trend. It fits better under an AI research category than ai_trends, which should highlight patterns, adoption data, or multi-organization momentum. Likely too niche for an AI trends section for a banking audience."
+  }
+[2026-05-18 15:47:37] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "1937d75c-3e18-462f-81d8-2a5133390b07",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:47:37] [quality] decision: Decision: reject, score=2. This is a single arXiv research paper proposing SkillSmith, a compiler-runtime framework for LLM agent skills. While it’s relevant to agent efficiency and tool/skill orchestration, the item does not present clear evidence of a broader industry trend (e.g., adoption data, multiple organizations, or market analysis). It fits better under an AI research or innovations category than ai_trends, which should focus on demonstrated, multi-actor trends rather than individual frameworks.
+  Details:
+  {
+    "article_id": "dc73c642-db3e-4e6d-87eb-ed241d778285",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "research_paper",
+      "single_system_not_broad_trend"
+    ],
+    "notes": "This is a single arXiv research paper proposing SkillSmith, a compiler-runtime framework for LLM agent skills. While it’s relevant to agent efficiency and tool/skill orchestration, the item does not present clear evidence of a broader industry trend (e.g., adoption data, multiple organizations, or market analysis). It fits better under an AI research or innovations category than ai_trends, which should focus on demonstrated, multi-actor trends rather than individual frameworks."
+  }
+[2026-05-18 15:47:37] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "f90adb52-b5b7-4f22-aee4-578079d11059",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:47:37] [quality] decision: Decision: accept, score=4. Strong fit for ai_trends given the focus on fairness, internal bias, and governance in high-stakes decisions like mortgage underwriting—directly relevant to a bank. While it’s a single research paper, it speaks to a broader, very active trend: moving beyond output-only fairness audits toward internal representation analysis and robustness against adversarial prompts/fine-tuning. The asymmetry of latent bias and the finding that ‘fair’ outputs can mask exploitable internal bias are timely concerns for regulators and financial institutions deploying LLMs. Not a mass-market headline, but high strategic relevance and aligned with emerging regulatory expectations, so suitable with a trend-framing writeup.
+  Details:
+  {
+    "article_id": "ed493fe1-43fa-42ca-aef7-65538e7d8d2c",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong fit for ai_trends given the focus on fairness, internal bias, and governance in high-stakes decisions like mortgage underwriting—directly relevant to a bank. While it’s a single research paper, it speaks to a broader, very active trend: moving beyond output-only fairness audits toward internal representation analysis and robustness against adversarial prompts/fine-tuning. The asymmetry of latent bias and the finding that ‘fair’ outputs can mask exploitable internal bias are timely concerns for regulators and financial institutions deploying LLMs. Not a mass-market headline, but high strategic relevance and aligned with emerging regulatory expectations, so suitable with a trend-framing writeup."
+  }
+[2026-05-18 15:47:37] [quality] evaluating: Article: NIMO Controller: a self-driving laboratory orchestrator base...
+  Details:
+  {
+    "article_id": "d08c5e24-733b-4c65-9b94-a325dd695e3a",
+    "url": "https://arxiv.org/abs/2605.15227"
+  }
+[2026-05-18 15:47:38] [quality] decision: Decision: accept, score=4. Strong fit for ai_trends: this paper tackles a very current pain point—safe, auditable multi-agent orchestration for real business workflows—using state machines plus RLHF-based routing. It references widely used frameworks (LangChain, LangGraph, CrewAI) and demonstrates results on a large, real-world HR platform, which makes it practically relevant for an enterprise bank thinking about workflow automation and alignment/safety. While it’s a single research paper, it clearly sits in an emerging trend: moving from ad-hoc agent chains to constrained, stateful, policy-compliant orchestration with measurable safety/accuracy. Good candidate to highlight as an example of where multi-agent and alignment practices are heading in production-like settings.
+  Details:
+  {
+    "article_id": "512d0831-7f6c-405d-9f39-e96e84ee9383",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong fit for ai_trends: this paper tackles a very current pain point—safe, auditable multi-agent orchestration for real business workflows—using state machines plus RLHF-based routing. It references widely used frameworks (LangChain, LangGraph, CrewAI) and demonstrates results on a large, real-world HR platform, which makes it practically relevant for an enterprise bank thinking about workflow automation and alignment/safety. While it’s a single research paper, it clearly sits in an emerging trend: moving from ad-hoc agent chains to constrained, stateful, policy-compliant orchestration with measurable safety/accuracy. Good candidate to highlight as an example of where multi-agent and alignment practices are heading in production-like settings."
+  }
+[2026-05-18 15:47:40] [quality] decision: Decision: reject, score=2. Interesting MCP-based architecture for self-driving labs, but this is a single arXiv research paper in a niche domain (lab automation) with no evidence of broader adoption, market impact, or multi-organization momentum. It fits better under ai_research/ai_innovations than ai_trends, and has limited direct relevance for a banking-focused AI team looking for industry-wide trends.
+  Details:
+  {
+    "article_id": "d08c5e24-733b-4c65-9b94-a325dd695e3a",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "single_research_paper",
+      "narrow_domain",
+      "weak_trend_signal"
+    ],
+    "notes": "Interesting MCP-based architecture for self-driving labs, but this is a single arXiv research paper in a niche domain (lab automation) with no evidence of broader adoption, market impact, or multi-organization momentum. It fits better under ai_research/ai_innovations than ai_trends, and has limited direct relevance for a banking-focused AI team looking for industry-wide trends."
+  }
+[2026-05-18 15:47:40] [quality] decision: Decision: reject, score=2. This is a single arXiv research paper proposing an RL framework (ICRL) for internalizing self-critique in LLMs. While technically interesting and relevant to model training, it does not yet represent a broader, evidenced industry trend—no adoption data, ecosystem impact, or multi-organization momentum. Better suited for an 'ai_research' or 'model training techniques' section than an 'ai_trends' slot, which should focus on widely adopted practices, market shifts, or clearly emerging patterns.
+  Details:
+  {
+    "article_id": "f90adb52-b5b7-4f22-aee4-578079d11059",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "research_paper",
+      "not_a_trend"
+    ],
+    "notes": "This is a single arXiv research paper proposing an RL framework (ICRL) for internalizing self-critique in LLMs. While technically interesting and relevant to model training, it does not yet represent a broader, evidenced industry trend—no adoption data, ecosystem impact, or multi-organization momentum. Better suited for an 'ai_research' or 'model training techniques' section than an 'ai_trends' slot, which should focus on widely adopted practices, market shifts, or clearly emerging patterns."
+  }
+[2026-05-18 15:47:40] [quality] decision: Decision: reject, score=2. Interesting research on Theory of Mind evaluation for LLMs, but this is a single arXiv paper without clear evidence of broader industry adoption or a measurable trend. It fits better under an 'ai_research' category than 'ai_trends', which requires multi-organization momentum, market data, or clear signals of widespread uptake. For an AI trends section aimed at a bank’s AI team, this is more niche and conceptual than trend-defining.
+  Details:
+  {
+    "article_id": "6a5064d1-0bbd-4354-855a-64973ddefb21",
+    "decision": "reject",
+    "quality_score": 2,
+    "flags": [
+      "single_research_paper",
+      "not_clearly_trend_level"
+    ],
+    "notes": "Interesting research on Theory of Mind evaluation for LLMs, but this is a single arXiv paper without clear evidence of broader industry adoption or a measurable trend. It fits better under an 'ai_research' category than 'ai_trends', which requires multi-organization momentum, market data, or clear signals of widespread uptake. For an AI trends section aimed at a bank’s AI team, this is more niche and conceptual than trend-defining."
+  }
+[2026-05-18 15:47:40] [quality] decision: Decision: accept, score=4. Strong conceptual/theoretical paper on the limits of AI-driven knowledge discovery and self-improvement, including failure modes and scaling laws. While it’s a single research work (normally more ai_research), its focus on fundamental limits of autonomous discovery, contamination, and the need for human amplification aligns with an emerging industry-wide discussion about how far LLMs can go without humans in the loop. Timely for teams thinking about AI agents, RAG, and automated research/discovery pipelines. Not a mass-market trending headline, but high strategic relevance and likely to be cited in broader debates, so suitable for ai_trends with a solid (but not top) score.
+  Details:
+  {
+    "article_id": "1937d75c-3e18-462f-81d8-2a5133390b07",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong conceptual/theoretical paper on the limits of AI-driven knowledge discovery and self-improvement, including failure modes and scaling laws. While it’s a single research work (normally more ai_research), its focus on fundamental limits of autonomous discovery, contamination, and the need for human amplification aligns with an emerging industry-wide discussion about how far LLMs can go without humans in the loop. Timely for teams thinking about AI agents, RAG, and automated research/discovery pipelines. Not a mass-market trending headline, but high strategic relevance and likely to be cited in broader debates, so suitable for ai_trends with a solid (but not top) score."
+  }
+[2026-05-18 15:47:40] [quality] batch_done: Evaluation complete for 'ai_trends': 3/8 passed quality bar.
+  Details:
+  {
+    "accepted": 3,
+    "total": 8
+  }
+[2026-05-18 15:47:40] [summarizer] summarizing: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "ed493fe1-43fa-42ca-aef7-65538e7d8d2c"
+  }
+[2026-05-18 15:47:40] [summarizer] summarizing: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "512d0831-7f6c-405d-9f39-e96e84ee9383"
+  }
+[2026-05-18 15:47:40] [summarizer] summarizing: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "1937d75c-3e18-462f-81d8-2a5133390b07"
+  }
+[2026-05-18 15:47:42] [summarizer] finished: Subject: New AI framework cuts multi-agent errors ⚖️
+  Details:
+  {
+    "article_id": "512d0831-7f6c-405d-9f39-e96e84ee9383",
+    "suggested_subject": "New AI framework cuts multi-agent errors ⚖️",
+    "summary_preview": "Researchers introduced SDOF, a system that runs multi-agent AI workflows as strict state machines with an intent router and safety checks, and showed it beats GPT-4o on a complex HR task benchmark. It..."
+  }
+[2026-05-18 15:47:42] [summarizer] finished: Subject: Can AI really discover new knowledge? 🤖
+  Details:
+  {
+    "article_id": "1937d75c-3e18-462f-81d8-2a5133390b07",
+    "suggested_subject": "Can AI really discover new knowledge? 🤖",
+    "summary_preview": "Researchers propose the NOVA framework to study how AI systems generate, verify, and accumulate new knowledge, and they map out ways this process can fail or hit limits. They show that discovery gets ..."
+  }
+[2026-05-18 15:47:43] [summarizer] finished: Subject: Fair on paper, biased inside 🤖
+  Details:
+  {
+    "article_id": "ed493fe1-43fa-42ca-aef7-65538e7d8d2c",
+    "suggested_subject": "Fair on paper, biased inside 🤖",
+    "summary_preview": "Researchers tested open-weight language models on mortgage decisions and found that even when outputs looked fair across races, the models’ internal representations still encoded and amplified racial ..."
+  }
+[2026-05-18 15:47:43] [summarizer] batch_done: Summarisation complete for 'ai_trends': 3 summaries so far.
+  Details:
+  {
+    "summaries": 3
+  }
+[2026-05-18 15:47:43] [collector] starting: Fetching articles for category 'ai_innovations' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_innovations",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:48:09] [collector] finished: Collected 8 articles for 'ai_innovations'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_innovations",
+    "count": 8
+  }
+[2026-05-18 15:48:09] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "c049ad24-5bf8-45b4-a277-5334c590ab08",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:48:09] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "a66d97b4-f5c4-431d-9814-e65d87820479",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:48:09] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "c7d39005-0ac0-468b-88b4-a89691747f92",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:48:09] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "74d1634c-7dec-42db-84fa-990572e2dd72",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:48:09] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "f209f856-9a7a-41b0-ba61-7799af5a3cef",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:48:12] [quality] decision: Decision: accept, score=4. Timely arXiv paper on latent bias in LLMs for high-stakes decisions (mortgage underwriting) with concrete techniques (activation steering, cross-layer interventions). Highly relevant to a bank’s AI team because it shows that seemingly fair outputs can hide exploitable internal demographic representations, and that these can be adversarially triggered or shifted via fine-tuning. While it’s research-focused rather than a product launch, it directly addresses AI governance, fairness, and risk in financial decisioning—likely to spark internal discussion. Not a 5 only because it’s not a mainstream headline, but it’s strong, applied, and important for practitioners in finance.
+  Details:
+  {
+    "article_id": "f209f856-9a7a-41b0-ba61-7799af5a3cef",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv paper on latent bias in LLMs for high-stakes decisions (mortgage underwriting) with concrete techniques (activation steering, cross-layer interventions). Highly relevant to a bank’s AI team because it shows that seemingly fair outputs can hide exploitable internal demographic representations, and that these can be adversarially triggered or shifted via fine-tuning. While it’s research-focused rather than a product launch, it directly addresses AI governance, fairness, and risk in financial decisioning—likely to spark internal discussion. Not a 5 only because it’s not a mainstream headline, but it’s strong, applied, and important for practitioners in finance."
+  }
+[2026-05-18 15:48:12] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "2cb8620c-c57a-4df4-9bb5-4374513e06e5",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:48:12] [quality] decision: Decision: accept, score=4. Timely arXiv work proposing a multi-agent, human-in-the-loop system (DeepSlide) that goes beyond simple slide generation to support full presentation delivery: requirement elicitation, time-budgeted narrative planning, grounded slide+script generation, and rehearsal support. It introduces a dual-scoreboard benchmark separating artifact quality from delivery quality, and shows gains in narrative flow, pacing, and slide–script synergy across domains. While still research (no clear product release), it’s a concrete capability advance in applied LLM agents and workflow automation that’s relevant to internal use cases (e.g., automating client/exec presentations) and likely of interest to an AI team. Not obviously a mass-trending story, but strong, practical innovation merits inclusion.
+  Details:
+  {
+    "article_id": "c049ad24-5bf8-45b4-a277-5334c590ab08",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work proposing a multi-agent, human-in-the-loop system (DeepSlide) that goes beyond simple slide generation to support full presentation delivery: requirement elicitation, time-budgeted narrative planning, grounded slide+script generation, and rehearsal support. It introduces a dual-scoreboard benchmark separating artifact quality from delivery quality, and shows gains in narrative flow, pacing, and slide–script synergy across domains. While still research (no clear product release), it’s a concrete capability advance in applied LLM agents and workflow automation that’s relevant to internal use cases (e.g., automating client/exec presentations) and likely of interest to an AI team. Not obviously a mass-trending story, but strong, practical innovation merits inclusion."
+  }
+[2026-05-18 15:48:12] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "344ef63a-dcf0-474e-80e0-e1c90f9b0296",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:48:13] [quality] decision: Decision: accept, score=3. On-topic arXiv paper about Theory of Mind capabilities in LLMs and how benchmark gains may not translate to real interactive human-AI performance. This is relevant to AI capability evaluation and socially aware models, but it’s more research-focused than a clear product/model release, so it fits as a solid but not highly trending innovation item. Useful for teams thinking about evaluation, agents, and conversational UX, but not a major industry launch or breakthrough with immediate tooling impact.
+  Details:
+  {
+    "article_id": "c7d39005-0ac0-468b-88b4-a89691747f92",
+    "decision": "accept",
+    "quality_score": 3,
+    "flags": [],
+    "notes": "On-topic arXiv paper about Theory of Mind capabilities in LLMs and how benchmark gains may not translate to real interactive human-AI performance. This is relevant to AI capability evaluation and socially aware models, but it’s more research-focused than a clear product/model release, so it fits as a solid but not highly trending innovation item. Useful for teams thinking about evaluation, agents, and conversational UX, but not a major industry launch or breakthrough with immediate tooling impact."
+  }
+[2026-05-18 15:48:13] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "5fd53272-396c-4f8d-a562-e40caf37f64f",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:48:13] [quality] decision: Decision: accept, score=4. Strong, timely research on multi-agent orchestration and safety that’s directly relevant to how teams are building LangChain/LangGraph/CrewAI-style systems. The paper introduces SDOF, a state-machine-based orchestration framework with an RLHF-trained intent router and formal pre/postcondition checks, and reports concrete benchmark wins over GPT-4o in constrained routing plus strong safety metrics (blocking injections/illegal operations). While it’s an arXiv research release rather than a commercial product, it addresses a very current pain point—alignment tax and safe workflow execution in agentic systems—making it valuable and likely of interest to practitioners building enterprise workflows (e.g., banking processes). Suitable for the ai_innovations category with a focus on what’s new in capability (state-constrained multi-agent control, GRPO-trained router, auditable execution).
+  Details:
+  {
+    "article_id": "a66d97b4-f5c4-431d-9814-e65d87820479",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely research on multi-agent orchestration and safety that’s directly relevant to how teams are building LangChain/LangGraph/CrewAI-style systems. The paper introduces SDOF, a state-machine-based orchestration framework with an RLHF-trained intent router and formal pre/postcondition checks, and reports concrete benchmark wins over GPT-4o in constrained routing plus strong safety metrics (blocking injections/illegal operations). While it’s an arXiv research release rather than a commercial product, it addresses a very current pain point—alignment tax and safe workflow execution in agentic systems—making it valuable and likely of interest to practitioners building enterprise workflows (e.g., banking processes). Suitable for the ai_innovations category with a focus on what’s new in capability (state-constrained multi-agent control, GRPO-trained router, auditable execution)."
+  }
+[2026-05-18 15:48:13] [quality] decision: Decision: accept, score=4. Timely arXiv work on improving LLM agent efficiency via a compiler-runtime framework for skills. It directly targets a hot area (agentic workflows, tool/skill libraries) and reports substantial gains in tokens, latency, and cost, plus cross-model reuse of compiled skills. While it’s research-focused, it has clear practical implications for anyone building agent systems and is aligned with current interest in making agents cheaper and more reliable. Good fit for ai_innovations with a short summary of the capability and reported metrics.
+  Details:
+  {
+    "article_id": "74d1634c-7dec-42db-84fa-990572e2dd72",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on improving LLM agent efficiency via a compiler-runtime framework for skills. It directly targets a hot area (agentic workflows, tool/skill libraries) and reports substantial gains in tokens, latency, and cost, plus cross-model reuse of compiled skills. While it’s research-focused, it has clear practical implications for anyone building agent systems and is aligned with current interest in making agents cheaper and more reliable. Good fit for ai_innovations with a short summary of the capability and reported metrics."
+  }
+[2026-05-18 15:48:14] [quality] decision: Decision: accept, score=3. Solid, on-topic research about an agent harness architecture that improves reliability of LLM-driven automation in a specific engineering domain (finite-element simulation with MAPDL). It includes concrete benchmark results and a clear capability angle (recovery policies, orchestration layers, fault handling). However, it’s a niche, domain-specific arXiv paper rather than a broadly trending or high-impact industry release, so it fits as a useful but not headline item for the AI innovations section.
+  Details:
+  {
+    "article_id": "2cb8620c-c57a-4df4-9bb5-4374513e06e5",
+    "decision": "accept",
+    "quality_score": 3,
+    "flags": [],
+    "notes": "Solid, on-topic research about an agent harness architecture that improves reliability of LLM-driven automation in a specific engineering domain (finite-element simulation with MAPDL). It includes concrete benchmark results and a clear capability angle (recovery policies, orchestration layers, fault handling). However, it’s a niche, domain-specific arXiv paper rather than a broadly trending or high-impact industry release, so it fits as a useful but not headline item for the AI innovations section."
+  }
+[2026-05-18 15:48:14] [quality] decision: Decision: accept, score=4. Timely arXiv work on fundamental limits of AI-driven knowledge discovery and self-improvement, with a concrete NOVA framework and formal results (failure modes, contamination trap, scaling laws). While theoretical, it directly addresses a hot, high-level question—can AI autonomously discover new knowledge and at what cost—which is central to current discussions about agents, self-improving systems, and automated research. Strong fit for ai_innovations as it frames capability boundaries and human-in-the-loop value; not a pure math paper with no practical angle. Likely of interest to an AI team thinking about long-term capabilities and constraints, though not a mass-market trending headline, so scored 4 rather than 5.
+  Details:
+  {
+    "article_id": "344ef63a-dcf0-474e-80e0-e1c90f9b0296",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on fundamental limits of AI-driven knowledge discovery and self-improvement, with a concrete NOVA framework and formal results (failure modes, contamination trap, scaling laws). While theoretical, it directly addresses a hot, high-level question—can AI autonomously discover new knowledge and at what cost—which is central to current discussions about agents, self-improving systems, and automated research. Strong fit for ai_innovations as it frames capability boundaries and human-in-the-loop value; not a pure math paper with no practical angle. Likely of interest to an AI team thinking about long-term capabilities and constraints, though not a mass-market trending headline, so scored 4 rather than 5."
+  }
+[2026-05-18 15:48:15] [quality] decision: Decision: accept, score=4. Strong, timely research on improving LLM agents via reinforcement learning that internalizes self-critique. It directly targets reasoning and agentic performance, with concrete benchmark gains and open-source code. While it’s an arXiv paper rather than a big vendor launch, the topic (self-improvement, critic/solver architectures, RL for reasoning) is highly relevant to AI capability development and practical agent design, making it valuable for an AI team audience.
+  Details:
+  {
+    "article_id": "5fd53272-396c-4f8d-a562-e40caf37f64f",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely research on improving LLM agents via reinforcement learning that internalizes self-critique. It directly targets reasoning and agentic performance, with concrete benchmark gains and open-source code. While it’s an arXiv paper rather than a big vendor launch, the topic (self-improvement, critic/solver architectures, RL for reasoning) is highly relevant to AI capability development and practical agent design, making it valuable for an AI team audience."
+  }
+[2026-05-18 15:48:15] [quality] batch_done: Evaluation complete for 'ai_innovations': 8/8 passed quality bar.
+  Details:
+  {
+    "accepted": 8,
+    "total": 8
+  }
+[2026-05-18 15:48:15] [summarizer] summarizing: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "f209f856-9a7a-41b0-ba61-7799af5a3cef"
+  }
+[2026-05-18 15:48:15] [summarizer] summarizing: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "c049ad24-5bf8-45b4-a277-5334c590ab08"
+  }
+[2026-05-18 15:48:15] [summarizer] summarizing: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "c7d39005-0ac0-468b-88b4-a89691747f92"
+  }
+[2026-05-18 15:48:15] [summarizer] summarizing: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "a66d97b4-f5c4-431d-9814-e65d87820479"
+  }
+[2026-05-18 15:48:15] [summarizer] summarizing: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "74d1634c-7dec-42db-84fa-990572e2dd72"
+  }
+[2026-05-18 15:48:16] [summarizer] finished: Subject: AI that helps you actually give better talks 🤖
+  Details:
+  {
+    "article_id": "c049ad24-5bf8-45b4-a277-5334c590ab08",
+    "suggested_subject": "AI that helps you actually give better talks 🤖",
+    "summary_preview": "Researchers introduced DeepSlide, an AI system that helps people plan, write, and rehearse presentations, not just generate slide decks. It matches other tools on slide quality but clearly improves st..."
+  }
+[2026-05-18 15:48:16] [summarizer] summarizing: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "2cb8620c-c57a-4df4-9bb5-4374513e06e5"
+  }
+[2026-05-18 15:48:17] [summarizer] finished: Subject: Do “mind-reading” AIs actually help us? 🤖
+  Details:
+  {
+    "article_id": "c7d39005-0ac0-468b-88b4-a89691747f92",
+    "suggested_subject": "Do “mind-reading” AIs actually help us? 🤖",
+    "summary_preview": "Researchers tested four popular ways to boost AI “theory of mind” using live human-AI interactions instead of static story quizzes. They found that gains on traditional tests often don’t improve real ..."
+  }
+[2026-05-18 15:48:17] [summarizer] summarizing: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "344ef63a-dcf0-474e-80e0-e1c90f9b0296"
+  }
+[2026-05-18 15:48:17] [summarizer] finished: Subject: Hidden AI bias in ‘fair’ decisions ⚖️
+  Details:
+  {
+    "article_id": "f209f856-9a7a-41b0-ba61-7799af5a3cef",
+    "suggested_subject": "Hidden AI bias in ‘fair’ decisions ⚖️",
+    "summary_preview": "Researchers tested open-weight language models on mortgage decisions and found that even when outputs look fair across races, the models’ internal layers still encode and amplify racial information. T..."
+  }
+[2026-05-18 15:48:17] [summarizer] summarizing: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "5fd53272-396c-4f8d-a562-e40caf37f64f"
+  }
+[2026-05-18 15:48:17] [summarizer] finished: Subject: New AI framework makes agent workflows safer 🤖
+  Details:
+  {
+    "article_id": "a66d97b4-f5c4-431d-9814-e65d87820479",
+    "suggested_subject": "New AI framework makes agent workflows safer 🤖",
+    "summary_preview": "Researchers introduced SDOF, a system that runs multi-agent AI workflows as strict state machines with an intent router and safety checks, and showed it beats GPT-4o on a constrained routing benchmark..."
+  }
+[2026-05-18 15:48:17] [summarizer] finished: Subject: New AI agent skill compiler halves costs 🤖
+  Details:
+  {
+    "article_id": "74d1634c-7dec-42db-84fa-990572e2dd72",
+    "suggested_subject": "New AI agent skill compiler halves costs 🤖",
+    "summary_preview": "Researchers introduced SkillSmith, a system that compiles AI agent skills into small, targeted interfaces so models only use the exact pieces they need. It cuts tokens, time, and cost by about half an..."
+  }
+[2026-05-18 15:48:19] [summarizer] finished: Subject: AI learns to critique itself 🤖
+  Details:
+  {
+    "article_id": "5fd53272-396c-4f8d-a562-e40caf37f64f",
+    "suggested_subject": "AI learns to critique itself 🤖",
+    "summary_preview": "Researchers propose ICRL, a reinforcement learning method where a language model jointly trains a solver and critic so it can turn critique-driven successes into lasting, critique-free skills. This ma..."
+  }
+[2026-05-18 15:48:19] [summarizer] finished: Subject: New AI agent boosts engineering reliability 🤖
+  Details:
+  {
+    "article_id": "2cb8620c-c57a-4df4-9bb5-4374513e06e5",
+    "suggested_subject": "New AI agent boosts engineering reliability 🤖",
+    "summary_preview": "Researchers introduced CAX-Agent, a lightweight AI agent harness that makes large language models more reliable for automating MAPDL finite-element simulations by adding structured control and recover..."
+  }
+[2026-05-18 15:48:19] [summarizer] finished: Subject: Can AI truly discover new knowledge? 🤖
+  Details:
+  {
+    "article_id": "344ef63a-dcf0-474e-80e0-e1c90f9b0296",
+    "suggested_subject": "Can AI truly discover new knowledge? 🤖",
+    "summary_preview": "Researchers propose the NOVA framework to study how AI systems generate, verify, and accumulate new knowledge, and they map out ways this process can fail or stall. They show that discovery gets incre..."
+  }
+[2026-05-18 15:48:19] [summarizer] batch_done: Summarisation complete for 'ai_innovations': 11 summaries so far.
+  Details:
+  {
+    "summaries": 11
+  }
+[2026-05-18 15:48:19] [collector] starting: Fetching articles for category 'ai_research' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_research",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:48:46] [collector] finished: Collected 8 articles for 'ai_research'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_research",
+    "count": 8
+  }
+[2026-05-18 15:48:46] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "48ea1ca1-bae1-49eb-9f64-840e223a0549",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:48:46] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "1fe4d4ff-076f-4418-8d22-98f0529c76a5",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:48:46] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "65799f87-d97d-4add-a221-6f3da8a1a742",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:48:46] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "ab337134-9615-4a50-9f8b-9949e4c7a255",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:48:46] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "94569e52-2572-4c88-9dd8-cdd73305060b",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:48:48] [quality] decision: Decision: accept, score=4. Strong, timely arXiv research paper on improving LLM agent efficiency via a compiler-runtime framework for skills. Directly relevant to agentic workflows, cost/latency optimization, and reuse of compiled artifacts across models—topics of high interest to an AI team experimenting with tools/skills and agents. Not obviously a blockbuster result, but clearly aligned with current research trends in agent efficiency and skill orchestration, so suitable for inclusion.
+  Details:
+  {
+    "article_id": "ab337134-9615-4a50-9f8b-9949e4c7a255",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely arXiv research paper on improving LLM agent efficiency via a compiler-runtime framework for skills. Directly relevant to agentic workflows, cost/latency optimization, and reuse of compiled artifacts across models—topics of high interest to an AI team experimenting with tools/skills and agents. Not obviously a blockbuster result, but clearly aligned with current research trends in agent efficiency and skill orchestration, so suitable for inclusion."
+  }
+[2026-05-18 15:48:48] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "e0e3f59b-a95d-419b-a8e5-b68fd4aa17c3",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:48:48] [quality] decision: Decision: accept, score=4. Solid, timely arXiv research paper directly about LLM Theory of Mind and its real impact on human–AI interaction. It challenges a popular narrative (benchmark ToM gains ≠ better real interactions) and proposes an interactive evaluation paradigm, which is highly relevant for an AI team deploying chatbots or advisory systems. Not a blockbuster like a frontier model release, but clearly aligned with current research interest in social/psychological capabilities of LLMs and evaluation methodology, so strong fit for the research section.
+  Details:
+  {
+    "article_id": "65799f87-d97d-4add-a221-6f3da8a1a742",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Solid, timely arXiv research paper directly about LLM Theory of Mind and its real impact on human–AI interaction. It challenges a popular narrative (benchmark ToM gains ≠ better real interactions) and proposes an interactive evaluation paradigm, which is highly relevant for an AI team deploying chatbots or advisory systems. Not a blockbuster like a frontier model release, but clearly aligned with current research interest in social/psychological capabilities of LLMs and evaluation methodology, so strong fit for the research section."
+  }
+[2026-05-18 15:48:48] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "a0999484-59d2-4579-8081-38524c2cb6ff",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:48:48] [quality] decision: Decision: accept, score=5. Strong fit for ai_research and highly relevant to a bank context. This arXiv paper studies latent bias in LLMs used for mortgage underwriting, showing that models can appear fair at the output level while retaining causally potent, asymmetric internal demographic representations that can be exploited via activation steering, adversarial prompts, or fine-tuning. This is timely, technically grounded research with direct implications for AI governance, model validation, and regulatory compliance in high-stakes financial decisions, making it both relevant and likely to be widely discussed.
+  Details:
+  {
+    "article_id": "94569e52-2572-4c88-9dd8-cdd73305060b",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "Strong fit for ai_research and highly relevant to a bank context. This arXiv paper studies latent bias in LLMs used for mortgage underwriting, showing that models can appear fair at the output level while retaining causally potent, asymmetric internal demographic representations that can be exploited via activation steering, adversarial prompts, or fine-tuning. This is timely, technically grounded research with direct implications for AI governance, model validation, and regulatory compliance in high-stakes financial decisions, making it both relevant and likely to be widely discussed."
+  }
+[2026-05-18 15:48:48] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "24715b4f-111d-4b94-8412-fee94f3bda61",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:48:49] [quality] decision: Decision: accept, score=4. Strong, timely research paper directly about multi-agent LLM orchestration and alignment/safety constraints in real business workflows. It introduces SDOF, a constrained state-machine framework with RLHF-trained intent routing and formal pre/postcondition checks, and reports concrete benchmarks (including outperforming GPT-4o on a constrained routing task). Highly relevant for an AI team building enterprise-grade, auditable agentic systems; while niche academically, it aligns with a trending theme (safe, reliable multi-agent orchestration in production) and offers practical ideas for banking workflows and compliance. Not a mass-market headline, but strong fit for a research-focused section.
+  Details:
+  {
+    "article_id": "1fe4d4ff-076f-4418-8d22-98f0529c76a5",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely research paper directly about multi-agent LLM orchestration and alignment/safety constraints in real business workflows. It introduces SDOF, a constrained state-machine framework with RLHF-trained intent routing and formal pre/postcondition checks, and reports concrete benchmarks (including outperforming GPT-4o on a constrained routing task). Highly relevant for an AI team building enterprise-grade, auditable agentic systems; while niche academically, it aligns with a trending theme (safe, reliable multi-agent orchestration in production) and offers practical ideas for banking workflows and compliance. Not a mass-market headline, but strong fit for a research-focused section."
+  }
+[2026-05-18 15:48:49] [quality] decision: Decision: accept, score=4. Solid, timely arXiv research paper introducing DeepSlide, a multi-agent, human-in-the-loop system for end-to-end presentation generation and delivery (not just slide artifacts). It proposes a controllable planner with time budgets, grounding via content-tree retrieval, and a new benchmark separating slide quality from delivery quality. This is clearly AI research, relevant to LLM agents, workflow automation, and productivity tooling—areas of strong current interest. While not a headline-grabbing foundation model, it’s a good example of applied multi-agent LLM research with practical implications for internal presentation workflows, so it merits inclusion with a strong (but not top-tier trending) score.
+  Details:
+  {
+    "article_id": "48ea1ca1-bae1-49eb-9f64-840e223a0549",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Solid, timely arXiv research paper introducing DeepSlide, a multi-agent, human-in-the-loop system for end-to-end presentation generation and delivery (not just slide artifacts). It proposes a controllable planner with time budgets, grounding via content-tree retrieval, and a new benchmark separating slide quality from delivery quality. This is clearly AI research, relevant to LLM agents, workflow automation, and productivity tooling—areas of strong current interest. While not a headline-grabbing foundation model, it’s a good example of applied multi-agent LLM research with practical implications for internal presentation workflows, so it merits inclusion with a strong (but not top-tier trending) score."
+  }
+[2026-05-18 15:48:50] [quality] decision: Decision: accept, score=4. Clear research paper from arXiv on an agent-harness architecture for reliable LLM tool use in a specialized engineering domain (MAPDL finite-element simulation). It introduces a structured recovery ladder and provides empirical evaluation with strong effect sizes. While the domain (APDL/MAPDL) is niche, the agent-orchestration and reliability themes are broadly relevant to enterprise AI and agentic workflows, making it useful for an AI team interested in robust automation patterns. Not obviously a viral/trending paper, but timely and technically solid, so a strong fit for the research section.
+  Details:
+  {
+    "article_id": "e0e3f59b-a95d-419b-a8e5-b68fd4aa17c3",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Clear research paper from arXiv on an agent-harness architecture for reliable LLM tool use in a specialized engineering domain (MAPDL finite-element simulation). It introduces a structured recovery ladder and provides empirical evaluation with strong effect sizes. While the domain (APDL/MAPDL) is niche, the agent-orchestration and reliability themes are broadly relevant to enterprise AI and agentic workflows, making it useful for an AI team interested in robust automation patterns. Not obviously a viral/trending paper, but timely and technically solid, so a strong fit for the research section."
+  }
+[2026-05-18 15:48:50] [quality] decision: Decision: accept, score=4. Strong, timely arXiv research paper on improving LLM self-critique and reinforcement learning for reasoning and agentic tasks. The method (ICRL) addresses a hot topic—making models internalize feedback rather than rely on external critique—and reports solid gains over GRPO on reasoning benchmarks using Qwen backbones. This is directly relevant to an AI team interested in advanced training techniques, alignment, and agent performance. Not obviously a blockbuster like a frontier model release, but clearly high-quality, current research with open-source code, so a good fit for the research section.
+  Details:
+  {
+    "article_id": "24715b4f-111d-4b94-8412-fee94f3bda61",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely arXiv research paper on improving LLM self-critique and reinforcement learning for reasoning and agentic tasks. The method (ICRL) addresses a hot topic—making models internalize feedback rather than rely on external critique—and reports solid gains over GRPO on reasoning benchmarks using Qwen backbones. This is directly relevant to an AI team interested in advanced training techniques, alignment, and agent performance. Not obviously a blockbuster like a frontier model release, but clearly high-quality, current research with open-source code, so a good fit for the research section."
+  }
+[2026-05-18 15:48:51] [quality] decision: Decision: accept, score=4. Strong, timely arXiv research paper on fundamental limits of AI-driven knowledge discovery and self-improvement. It introduces a formal framework (NOVA) for the generate–verify–accumulate–retrain loop, analyzes failure modes (contamination, forgetting, exploration/acceptance failure), and derives scaling laws for discovery cost under Zipf-like assumptions. This is highly relevant to frontier model capabilities, autonomy, and the role of human oversight—topics that are strategically important and widely discussed in the AI community. While somewhat theoretical, it addresses a hot question (can AI autonomously discover new knowledge and at what cost/limits?), making it a good fit for an AI research section for an internal team, especially one thinking about long-term capabilities and governance. Not obviously clickbait or low-credibility; arXiv venue is appropriate for research content.
+  Details:
+  {
+    "article_id": "a0999484-59d2-4579-8081-38524c2cb6ff",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely arXiv research paper on fundamental limits of AI-driven knowledge discovery and self-improvement. It introduces a formal framework (NOVA) for the generate–verify–accumulate–retrain loop, analyzes failure modes (contamination, forgetting, exploration/acceptance failure), and derives scaling laws for discovery cost under Zipf-like assumptions. This is highly relevant to frontier model capabilities, autonomy, and the role of human oversight—topics that are strategically important and widely discussed in the AI community. While somewhat theoretical, it addresses a hot question (can AI autonomously discover new knowledge and at what cost/limits?), making it a good fit for an AI research section for an internal team, especially one thinking about long-term capabilities and governance. Not obviously clickbait or low-credibility; arXiv venue is appropriate for research content."
+  }
+[2026-05-18 15:48:51] [quality] batch_done: Evaluation complete for 'ai_research': 8/8 passed quality bar.
+  Details:
+  {
+    "accepted": 8,
+    "total": 8
+  }
+[2026-05-18 15:48:51] [summarizer] summarizing: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "ab337134-9615-4a50-9f8b-9949e4c7a255"
+  }
+[2026-05-18 15:48:51] [summarizer] summarizing: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "65799f87-d97d-4add-a221-6f3da8a1a742"
+  }
+[2026-05-18 15:48:52] [summarizer] summarizing: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "94569e52-2572-4c88-9dd8-cdd73305060b"
+  }
+[2026-05-18 15:48:52] [summarizer] summarizing: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "1fe4d4ff-076f-4418-8d22-98f0529c76a5"
+  }
+[2026-05-18 15:48:52] [summarizer] summarizing: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "48ea1ca1-bae1-49eb-9f64-840e223a0549"
+  }
+[2026-05-18 15:48:53] [summarizer] finished: Subject: Theory-of-Mind Benchmarks Fail to Predict Real Human–AI Gains 🔬
+  Details:
+  {
+    "article_id": "65799f87-d97d-4add-a221-6f3da8a1a742",
+    "suggested_subject": "Theory-of-Mind Benchmarks Fail to Predict Real Human–AI Gains 🔬",
+    "summary_preview": "Introduces an interactive, first-person evaluation paradigm for Theory of Mind (ToM) in LLMs and systematically tests four ToM-enhancement techniques across real-world datasets and a user study spanni..."
+  }
+[2026-05-18 15:48:53] [summarizer] summarizing: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "e0e3f59b-a95d-419b-a8e5-b68fd4aa17c3"
+  }
+[2026-05-18 15:48:53] [summarizer] finished: Subject: AI slide agent boosts presentation delivery quality, not just visuals 🧠
+  Details:
+  {
+    "article_id": "48ea1ca1-bae1-49eb-9f64-840e223a0549",
+    "suggested_subject": "AI slide agent boosts presentation delivery quality, not just visuals 🧠",
+    "summary_preview": "DeepSlide is a human-in-the-loop multi-agent system that plans time-budgeted narratives, grounds content via a content-tree retriever, and jointly generates slides and scripts with attention cues plus..."
+  }
+[2026-05-18 15:48:53] [summarizer] summarizing: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "24715b4f-111d-4b94-8412-fee94f3bda61"
+  }
+[2026-05-18 15:48:53] [summarizer] finished: Subject: Boundary-Compiled Skills Halve Agent Solve Time ⚡
+  Details:
+  {
+    "article_id": "ab337134-9615-4a50-9f8b-9949e4c7a255",
+    "suggested_subject": "Boundary-Compiled Skills Halve Agent Solve Time ⚡",
+    "summary_preview": "SkillSmith introduces a boundary-first compiler-runtime framework that compiles LLM agent skills offline into minimal, executable interfaces so agents only invoke the precise skill components needed a..."
+  }
+[2026-05-18 15:48:53] [summarizer] summarizing: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "a0999484-59d2-4579-8081-38524c2cb6ff"
+  }
+[2026-05-18 15:48:53] [summarizer] finished: Subject: Fair Outputs, Biased Internals in LLM Decisions 🛡️
+  Details:
+  {
+    "article_id": "94569e52-2572-4c88-9dd8-cdd73305060b",
+    "suggested_subject": "Fair Outputs, Biased Internals in LLM Decisions 🛡️",
+    "summary_preview": "Authors study instruction-tuned LLMs for mortgage underwriting, showing that models can appear fair at the output level while internally encoding and amplifying race-associated representations, probed..."
+  }
+[2026-05-18 15:48:54] [summarizer] finished: Subject: State-Constrained Multi-Agent Orchestration Beats GPT-4o on Routing 🧠
+  Details:
+  {
+    "article_id": "1fe4d4ff-076f-4418-8d22-98f0529c76a5",
+    "suggested_subject": "State-Constrained Multi-Agent Orchestration Beats GPT-4o on Routing 🧠",
+    "summary_preview": "SDOF models multi-agent LLM workflows as a constrained state machine with an RLHF-trained intent router plus a state-aware dispatcher that enforces finite-state workflow stages and pre/postcondition c..."
+  }
+[2026-05-18 15:48:55] [summarizer] finished: Subject: RL-trained self-critique turns guided success into solo skill 🧠
+  Details:
+  {
+    "article_id": "24715b4f-111d-4b94-8412-fee94f3bda61",
+    "suggested_subject": "RL-trained self-critique turns guided success into solo skill 🧠",
+    "summary_preview": "ICRL jointly trains a solver and critic from a shared backbone with reinforcement learning so that critique-induced successes are selectively internalized into the solver’s critique-free behavior via ..."
+  }
+[2026-05-18 15:48:55] [summarizer] finished: Subject: Agent harness boosts reliability of MAPDL automation 🧠
+  Details:
+  {
+    "article_id": "e0e3f59b-a95d-419b-a8e5-b68fd4aa17c3",
+    "suggested_subject": "Agent harness boosts reliability of MAPDL automation 🧠",
+    "summary_preview": "Introduces CAX-Agent, a lightweight agent harness that wraps LLM-driven MAPDL finite-element simulations with structured orchestration and a multi-step recovery ladder spanning rules, model-based rege..."
+  }
+[2026-05-18 15:48:55] [summarizer] finished: Subject: AI Self-Discovery Has Steep Diminishing Returns ⚡
+  Details:
+  {
+    "article_id": "a0999484-59d2-4579-8081-38524c2cb6ff",
+    "suggested_subject": "AI Self-Discovery Has Steep Diminishing Returns ⚡",
+    "summary_preview": "Introduces the NOVA framework modeling AI self-improvement as adaptive sampling over a knowledge space, characterizing when iterative generate–verify–retrain loops succeed or fail via modes like conta..."
+  }
+[2026-05-18 15:48:56] [summarizer] batch_done: Summarisation complete for 'ai_research': 19 summaries so far.
+  Details:
+  {
+    "summaries": 19
+  }
+[2026-05-18 15:48:56] [collector] starting: Fetching articles for category 'genai_tips' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "genai_tips",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:49:18] [collector] finished: Collected 8 articles for 'genai_tips'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "genai_tips",
+    "count": 8
+  }
+[2026-05-18 15:49:18] [quality] evaluating: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "e57197ca-5d5e-4941-a9e0-184cf1c33983",
+    "url": "https://arxiv.org/abs/2605.15202"
+  }
+[2026-05-18 15:49:18] [quality] evaluating: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "2bd7da1e-ac6c-472d-9bbf-378614bfc252",
+    "url": "https://arxiv.org/abs/2605.15204"
+  }
+[2026-05-18 15:49:18] [quality] evaluating: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "73c7cdbd-c02b-4dff-b965-9c777167eb7f",
+    "url": "https://arxiv.org/abs/2605.15205"
+  }
+[2026-05-18 15:49:18] [quality] evaluating: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "5597b959-9e86-4fff-a99e-29f5ed1a06d3",
+    "url": "https://arxiv.org/abs/2605.15215"
+  }
+[2026-05-18 15:49:18] [quality] evaluating: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "c5875e98-bebe-4cdb-b4a5-a45ee226f45d",
+    "url": "https://arxiv.org/abs/2605.15217"
+  }
+[2026-05-18 15:49:21] [quality] decision: Decision: accept, score=5. Strong fit for genai_tips: this is a technical, research-level framework for safe multi-agent orchestration with concrete mechanisms (FSM/state machine modeling, Online-RLHF intent router via GRPO, state-aware dispatcher, pre/postcondition validation). Highly relevant to practitioners building agentic workflows and business process automations with LangChain/LangGraph/CrewAI. The paper includes benchmarks, real-world deployment context (recruitment system with 6000+ enterprises), and measurable gains over GPT-4o routing, making it both timely and likely to be discussed in the agentic AI community. Good candidate for a short summary plus practical takeaways on how to apply state-constrained orchestration and defensive routing in enterprise GenAI systems.
+  Details:
+  {
+    "article_id": "2bd7da1e-ac6c-472d-9bbf-378614bfc252",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "Strong fit for genai_tips: this is a technical, research-level framework for safe multi-agent orchestration with concrete mechanisms (FSM/state machine modeling, Online-RLHF intent router via GRPO, state-aware dispatcher, pre/postcondition validation). Highly relevant to practitioners building agentic workflows and business process automations with LangChain/LangGraph/CrewAI. The paper includes benchmarks, real-world deployment context (recruitment system with 6000+ enterprises), and measurable gains over GPT-4o routing, making it both timely and likely to be discussed in the agentic AI community. Good candidate for a short summary plus practical takeaways on how to apply state-constrained orchestration and defensive routing in enterprise GenAI systems."
+  }
+[2026-05-18 15:49:21] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "58520b45-509b-4733-b0b7-b78c5d507aa8",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:49:21] [quality] decision: Decision: accept, score=5. Strong fit for genai_tips and this audience. The paper is timely (new arXiv), technically substantive, and directly relevant to high-stakes financial decisions like mortgage underwriting. It introduces concrete methods (activation steering, cross-layer interventions, representational analysis) that practitioners can study and potentially adapt for internal model evaluation and AI governance. The focus on latent bias, asymmetric causal potency, and vulnerability to adversarial prompting/PEFT is highly relevant for a bank’s risk, compliance, and model governance teams. This is not a how-to tutorial, but the methodological depth and direct application domain (credit decisions) make it high-value and likely to spark discussion.
+  Details:
+  {
+    "article_id": "c5875e98-bebe-4cdb-b4a5-a45ee226f45d",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "Strong fit for genai_tips and this audience. The paper is timely (new arXiv), technically substantive, and directly relevant to high-stakes financial decisions like mortgage underwriting. It introduces concrete methods (activation steering, cross-layer interventions, representational analysis) that practitioners can study and potentially adapt for internal model evaluation and AI governance. The focus on latent bias, asymmetric causal potency, and vulnerability to adversarial prompting/PEFT is highly relevant for a bank’s risk, compliance, and model governance teams. This is not a how-to tutorial, but the methodological depth and direct application domain (credit decisions) make it high-value and likely to spark discussion."
+  }
+[2026-05-18 15:49:21] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "49565fbe-169c-4d96-be66-79f0f671885e",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:49:21] [quality] decision: Decision: accept, score=4. Solid, timely arXiv work on LLM agents and skill compilation with clear practical implications for anyone building agentic systems. The paper introduces SkillSmith, a compiler-runtime framework that compiles skills into minimal executable interfaces, reducing context size, reasoning iterations, latency, and cost. This is directly relevant to practitioners experimenting with tool-using agents or skill libraries, and the reported 2x speedup and ~57% token savings are substantial. While it’s research (not a hands-on tutorial), it has enough technical depth and concrete metrics to be valuable for an AI team considering how to structure and optimize agent skills, especially in cost-sensitive production environments like a bank. Including a short summary plus link to the GitHub repo would be useful for the UnionBank AI team.
+  Details:
+  {
+    "article_id": "5597b959-9e86-4fff-a99e-29f5ed1a06d3",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Solid, timely arXiv work on LLM agents and skill compilation with clear practical implications for anyone building agentic systems. The paper introduces SkillSmith, a compiler-runtime framework that compiles skills into minimal executable interfaces, reducing context size, reasoning iterations, latency, and cost. This is directly relevant to practitioners experimenting with tool-using agents or skill libraries, and the reported 2x speedup and ~57% token savings are substantial. While it’s research (not a hands-on tutorial), it has enough technical depth and concrete metrics to be valuable for an AI team considering how to structure and optimize agent skills, especially in cost-sensitive production environments like a bank. Including a short summary plus link to the GitHub repo would be useful for the UnionBank AI team."
+  }
+[2026-05-18 15:49:21] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "98c14e22-fcdf-4dd2-a15e-9149ad05e629",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:49:21] [quality] decision: Decision: accept, score=4. Solid, timely arXiv work on Theory of Mind in LLMs with a clear empirical, interaction-focused evaluation paradigm. While not a hands-on tutorial, it offers practical insight for practitioners building human-facing GenAI systems: it questions the validity of common ToM benchmarks and shows that benchmark gains may not translate to real interactive performance across coding, math, and counseling tasks. Useful for an AI team thinking about evaluation design, user studies, and socially aware LLM behavior, though readers will need to dig into the paper for implementation details.
+  Details:
+  {
+    "article_id": "73c7cdbd-c02b-4dff-b965-9c777167eb7f",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Solid, timely arXiv work on Theory of Mind in LLMs with a clear empirical, interaction-focused evaluation paradigm. While not a hands-on tutorial, it offers practical insight for practitioners building human-facing GenAI systems: it questions the validity of common ToM benchmarks and shows that benchmark gains may not translate to real interactive performance across coding, math, and counseling tasks. Useful for an AI team thinking about evaluation design, user studies, and socially aware LLM behavior, though readers will need to dig into the paper for implementation details."
+  }
+[2026-05-18 15:49:21] [quality] decision: Decision: accept, score=4. Research paper with concrete system design details (multi-agent workflow, controllable logical-chain planner with time budgets, content-tree retriever, Markov-style rendering, sandboxed execution) and a new benchmark for separating slide quality from delivery quality. While the application is slide generation/presentation support, the techniques (planning, grounding, multi-agent orchestration, evaluation) are directly relevant to GenAI practitioners building complex LLM workflows. Timely arXiv work, technically substantive, and offers ideas that can be adapted to other agentic/LLM planning tasks, making it a strong fit for a genai_tips audience of practitioners.
+  Details:
+  {
+    "article_id": "e57197ca-5d5e-4941-a9e0-184cf1c33983",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Research paper with concrete system design details (multi-agent workflow, controllable logical-chain planner with time budgets, content-tree retriever, Markov-style rendering, sandboxed execution) and a new benchmark for separating slide quality from delivery quality. While the application is slide generation/presentation support, the techniques (planning, grounding, multi-agent orchestration, evaluation) are directly relevant to GenAI practitioners building complex LLM workflows. Timely arXiv work, technically substantive, and offers ideas that can be adapted to other agentic/LLM planning tasks, making it a strong fit for a genai_tips audience of practitioners."
+  }
+[2026-05-18 15:49:23] [quality] decision: Decision: accept, score=4. Solid, technically detailed agent-architecture paper focused on reliability and recovery policies for LLM-based automation in a specific engineering domain (MAPDL finite-element simulation). While the domain is niche, the agent harness pattern, layered architecture (LLM service / agent harness / solver backend), and empirical evaluation of recovery strategies (rule vs model vs none) are directly relevant to practitioners building reliable GenAI agents and tool-using systems. Good fit for genai_tips as a deeper-dive example of orchestration, error handling, and human-in-the-loop design, even if not broadly trending beyond technical circles.
+  Details:
+  {
+    "article_id": "58520b45-509b-4733-b0b7-b78c5d507aa8",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Solid, technically detailed agent-architecture paper focused on reliability and recovery policies for LLM-based automation in a specific engineering domain (MAPDL finite-element simulation). While the domain is niche, the agent harness pattern, layered architecture (LLM service / agent harness / solver backend), and empirical evaluation of recovery strategies (rule vs model vs none) are directly relevant to practitioners building reliable GenAI agents and tool-using systems. Good fit for genai_tips as a deeper-dive example of orchestration, error handling, and human-in-the-loop design, even if not broadly trending beyond technical circles."
+  }
+[2026-05-18 15:49:24] [quality] decision: Decision: accept, score=4. Timely arXiv work on improving LLM agents via reinforcement learning that internalizes self-critique. Technically substantial: joint training of solver and critic from a shared backbone, distribution-calibration re-weighting, and role-wise group advantage estimation. Uses modern open models (Qwen3-4B/8B), shows measurable gains on agentic and math reasoning tasks, and releases code. While it’s research rather than a step-by-step tutorial, it’s directly relevant to practitioners experimenting with RLHF/RLAIF, self-critique, and agent training, and offers ideas that can inform internal experimentation, so it fits the genai_tips category with solid practical value for an AI team.
+  Details:
+  {
+    "article_id": "98c14e22-fcdf-4dd2-a15e-9149ad05e629",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on improving LLM agents via reinforcement learning that internalizes self-critique. Technically substantial: joint training of solver and critic from a shared backbone, distribution-calibration re-weighting, and role-wise group advantage estimation. Uses modern open models (Qwen3-4B/8B), shows measurable gains on agentic and math reasoning tasks, and releases code. While it’s research rather than a step-by-step tutorial, it’s directly relevant to practitioners experimenting with RLHF/RLAIF, self-critique, and agent training, and offers ideas that can inform internal experimentation, so it fits the genai_tips category with solid practical value for an AI team."
+  }
+[2026-05-18 15:49:24] [quality] decision: Decision: accept, score=4. Timely arXiv work with clear relevance for advanced GenAI practice. The NOVA framework formalizes the common generate–verify–accumulate–retrain loop used in self-improving and autonomous LLM systems, and analyzes failure modes (contamination, forgetting, exploration failure, acceptance failure) plus the impact of imperfect verification. It also provides scaling laws for discovery cost and a formal treatment of human-in-the-loop amplification. While theoretical, it offers conceptual tools and warnings directly applicable to teams designing self-improving agents, knowledge discovery pipelines, or auto-RAG-style systems. Strong fit for a technically sophisticated audience, though not a hands-on tutorial, so scored 4 rather than 5.
+  Details:
+  {
+    "article_id": "49565fbe-169c-4d96-be66-79f0f671885e",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work with clear relevance for advanced GenAI practice. The NOVA framework formalizes the common generate–verify–accumulate–retrain loop used in self-improving and autonomous LLM systems, and analyzes failure modes (contamination, forgetting, exploration failure, acceptance failure) plus the impact of imperfect verification. It also provides scaling laws for discovery cost and a formal treatment of human-in-the-loop amplification. While theoretical, it offers conceptual tools and warnings directly applicable to teams designing self-improving agents, knowledge discovery pipelines, or auto-RAG-style systems. Strong fit for a technically sophisticated audience, though not a hands-on tutorial, so scored 4 rather than 5."
+  }
+[2026-05-18 15:49:24] [quality] batch_done: Evaluation complete for 'genai_tips': 8/8 passed quality bar.
+  Details:
+  {
+    "accepted": 8,
+    "total": 8
+  }
+[2026-05-18 15:49:24] [summarizer] summarizing: Article: SDOF: Taming the Alignment Tax in Multi-Agent Orchestration ...
+  Details:
+  {
+    "article_id": "2bd7da1e-ac6c-472d-9bbf-378614bfc252"
+  }
+[2026-05-18 15:49:24] [summarizer] summarizing: Article: Fair outputs, Biased Internals: Causal Potency and Asymmetry...
+  Details:
+  {
+    "article_id": "c5875e98-bebe-4cdb-b4a5-a45ee226f45d"
+  }
+[2026-05-18 15:49:24] [summarizer] summarizing: Article: DeepSlide: From Artifacts to Presentation Delivery...
+  Details:
+  {
+    "article_id": "e57197ca-5d5e-4941-a9e0-184cf1c33983"
+  }
+[2026-05-18 15:49:24] [summarizer] summarizing: Article: Does Theory of Mind Improvement Really Benefit Human-AI Inte...
+  Details:
+  {
+    "article_id": "73c7cdbd-c02b-4dff-b965-9c777167eb7f"
+  }
+[2026-05-18 15:49:24] [summarizer] summarizing: Article: SkillSmith: Compiling Agent Skills into Boundary-Guided Runt...
+  Details:
+  {
+    "article_id": "5597b959-9e86-4fff-a99e-29f5ed1a06d3"
+  }
+[2026-05-18 15:49:26] [summarizer] finished: Subject: AI agents get a big speed boost 🤖
+  Details:
+  {
+    "article_id": "5597b959-9e86-4fff-a99e-29f5ed1a06d3",
+    "suggested_subject": "AI agents get a big speed boost 🤖",
+    "summary_preview": "Researchers introduced SkillSmith, a system that compiles AI agent skills into small, targeted interfaces so models only use the exact pieces they need at runtime. This cuts tokens, cost, and solve ti..."
+  }
+[2026-05-18 15:49:26] [summarizer] summarizing: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "58520b45-509b-4733-b0b7-b78c5d507aa8"
+  }
+[2026-05-18 15:49:26] [summarizer] finished: Subject: Do Smarter AI Minds Help Us More? 🤖
+  Details:
+  {
+    "article_id": "73c7cdbd-c02b-4dff-b965-9c777167eb7f",
+    "suggested_subject": "Do Smarter AI Minds Help Us More? 🤖",
+    "summary_preview": "Researchers tested whether boosting AI “theory of mind” skills on standard benchmarks actually improves real back-and-forth interactions with people across coding, math, and counseling tasks. They fou..."
+  }
+[2026-05-18 15:49:26] [summarizer] summarizing: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "98c14e22-fcdf-4dd2-a15e-9149ad05e629"
+  }
+[2026-05-18 15:49:26] [summarizer] finished: Subject: AI that helps you actually give better talks 🤖
+  Details:
+  {
+    "article_id": "e57197ca-5d5e-4941-a9e0-184cf1c33983",
+    "suggested_subject": "AI that helps you actually give better talks 🤖",
+    "summary_preview": "Researchers introduced DeepSlide, an AI system that helps people plan, write, and rehearse presentations, not just auto-generate slide decks. It matters because it focuses on pacing, narrative flow, a..."
+  }
+[2026-05-18 15:49:26] [summarizer] summarizing: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "49565fbe-169c-4d96-be66-79f0f671885e"
+  }
+[2026-05-18 15:49:26] [summarizer] finished: Subject: Safer AI workflows with smarter routing 🤖
+  Details:
+  {
+    "article_id": "2bd7da1e-ac6c-472d-9bbf-378614bfc252",
+    "suggested_subject": "Safer AI workflows with smarter routing 🤖",
+    "summary_preview": "Researchers introduce SDOF, a framework that runs multi-agent AI workflows as a strict state machine with an intent router and safety checks, and show it beats GPT-4o on a constrained routing benchmar..."
+  }
+[2026-05-18 15:49:26] [summarizer] finished: Subject: Fair on paper, biased inside 🤖
+  Details:
+  {
+    "article_id": "c5875e98-bebe-4cdb-b4a5-a45ee226f45d",
+    "suggested_subject": "Fair on paper, biased inside 🤖",
+    "summary_preview": "Researchers tested open-weight language models on mortgage decisions and found that even when outputs looked fair across races, the models still encoded and amplified racial information inside their l..."
+  }
+[2026-05-18 15:49:27] [summarizer] finished: Subject: Smarter AI recovery for engineering sims 🤖
+  Details:
+  {
+    "article_id": "58520b45-509b-4733-b0b7-b78c5d507aa8",
+    "suggested_subject": "Smarter AI recovery for engineering sims 🤖",
+    "summary_preview": "Researchers built CAX-Agent, a lightweight system that wraps large language models to more reliably run ANSYS MAPDL engineering simulations, and tested different error-recovery strategies on 50 benchm..."
+  }
+[2026-05-18 15:49:28] [summarizer] finished: Subject: Can AI really discover new knowledge? 🤖
+  Details:
+  {
+    "article_id": "49565fbe-169c-4d96-be66-79f0f671885e",
+    "suggested_subject": "Can AI really discover new knowledge? 🤖",
+    "summary_preview": "Researchers propose the NOVA framework to study how AI systems generate, verify, and accumulate new knowledge, revealing several ways this process can fail and how costs grow as discoveries get harder..."
+  }
+[2026-05-18 15:49:28] [summarizer] finished: Subject: AI learns to self-critique with RL 🤖
+  Details:
+  {
+    "article_id": "98c14e22-fcdf-4dd2-a15e-9149ad05e629",
+    "suggested_subject": "AI learns to self-critique with RL 🤖",
+    "summary_preview": "Researchers propose ICRL, a reinforcement learning method where a model jointly trains a solver and critic so it can turn critique-guided successes into better unassisted performance on reasoning task..."
+  }
+[2026-05-18 15:49:28] [summarizer] batch_done: Summarisation complete for 'genai_tips': 27 summaries so far.
+  Details:
+  {
+    "summaries": 27
+  }
+[2026-05-18 15:49:28] [collector] starting: Fetching articles for category 'ai_capability' (max_results=8, collector=deep).
+  Details:
+  {
+    "category": "ai_capability",
+    "max_results": 8,
+    "collector": "deep"
+  }
+[2026-05-18 15:49:54] [collector] finished: Collected 8 articles for 'ai_capability'. Evaluating 8 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_capability",
+    "count": 8
+  }
+[2026-05-18 15:49:54] [quality] evaluating: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "d6beda27-cae0-4fa4-8a61-3e3df395af88",
+    "url": "https://arxiv.org/abs/2605.15218"
+  }
+[2026-05-18 15:49:54] [quality] evaluating: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "0f20ccac-16af-4757-847c-ebbed50ef3a9",
+    "url": "https://arxiv.org/abs/2605.15219"
+  }
+[2026-05-18 15:49:54] [quality] evaluating: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "b8d435eb-bf9c-4692-9bb3-d383e5be673e",
+    "url": "https://arxiv.org/abs/2605.15224"
+  }
+[2026-05-18 15:49:54] [quality] evaluating: Article: NIMO Controller: a self-driving laboratory orchestrator base...
+  Details:
+  {
+    "article_id": "08fd63c5-452e-4f02-8efb-2f7760f1767f",
+    "url": "https://arxiv.org/abs/2605.15227"
+  }
+[2026-05-18 15:49:54] [quality] evaluating: Article: Verifiable Agentic Infrastructure: Proof-Derived Authorizati...
+  Details:
+  {
+    "article_id": "bd39c96b-ea0c-4ca3-ae98-f709547e5012",
+    "url": "https://arxiv.org/abs/2605.15228"
+  }
+[2026-05-18 15:49:56] [quality] decision: Decision: accept, score=4. Timely arXiv work on the theoretical limits of AI-driven knowledge discovery and self-improvement, including failure modes (contamination, forgetting, exploration failure) and scaling laws for discovery cost. While theoretical, it directly addresses a hot topic—can AI autonomously discover new knowledge and at what cost—and introduces a concrete framework (NOVA) plus formal results. This is relevant for an AI team thinking about autonomous agents, self-training loops, and human-in-the-loop design, and is likely to be discussed in research circles, though not a mainstream headline, so scored 4 rather than 5.
+  Details:
+  {
+    "article_id": "0f20ccac-16af-4757-847c-ebbed50ef3a9",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on the theoretical limits of AI-driven knowledge discovery and self-improvement, including failure modes (contamination, forgetting, exploration failure) and scaling laws for discovery cost. While theoretical, it directly addresses a hot topic—can AI autonomously discover new knowledge and at what cost—and introduces a concrete framework (NOVA) plus formal results. This is relevant for an AI team thinking about autonomous agents, self-training loops, and human-in-the-loop design, and is likely to be discussed in research circles, though not a mainstream headline, so scored 4 rather than 5."
+  }
+[2026-05-18 15:49:56] [quality] decision: Decision: accept, score=4. Strong, timely arXiv paper on infrastructure for autonomous AI agents in high-stakes environments. It focuses on concrete capability around governable, auditable agent execution (proof-derived authorization, distributed trust, execution identities, evidence chains) and maps to cloud-native environments. Highly relevant to an AI team in a regulated financial institution thinking about sovereign AI, agent safety, and secure integration with infrastructure. Not obviously viral/trending beyond the research/infra community, so rated 4 rather than 5, but still a strong, on-topic capability piece.
+  Details:
+  {
+    "article_id": "bd39c96b-ea0c-4ca3-ae98-f709547e5012",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely arXiv paper on infrastructure for autonomous AI agents in high-stakes environments. It focuses on concrete capability around governable, auditable agent execution (proof-derived authorization, distributed trust, execution identities, evidence chains) and maps to cloud-native environments. Highly relevant to an AI team in a regulated financial institution thinking about sovereign AI, agent safety, and secure integration with infrastructure. Not obviously viral/trending beyond the research/infra community, so rated 4 rather than 5, but still a strong, on-topic capability piece."
+  }
+[2026-05-18 15:49:56] [quality] decision: Decision: accept, score=4. Timely arXiv paper showing a concrete agentic architecture (CAX-Agent) that improves reliability of LLM-driven finite-element simulation automation via structured recovery policies. Strong capability angle: clear benchmarks, quantitative gains in completion rate and reduced human intervention, and an explicit agent harness pattern that generalizes to other tool-using LLM setups. While the domain (MAPDL) is niche, the agent-harness and recovery-ladder concepts are broadly relevant to anyone building reliable LLM agents and workflows, making it a solid, forward-looking capability piece for an AI-focused internal audience.
+  Details:
+  {
+    "article_id": "d6beda27-cae0-4fa4-8a61-3e3df395af88",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv paper showing a concrete agentic architecture (CAX-Agent) that improves reliability of LLM-driven finite-element simulation automation via structured recovery policies. Strong capability angle: clear benchmarks, quantitative gains in completion rate and reduced human intervention, and an explicit agent harness pattern that generalizes to other tool-using LLM setups. While the domain (MAPDL) is niche, the agent-harness and recovery-ladder concepts are broadly relevant to anyone building reliable LLM agents and workflows, making it a solid, forward-looking capability piece for an AI-focused internal audience."
+  }
+[2026-05-18 15:49:56] [quality] evaluating: Article: Solvita: Enhancing Large Language Models for Competitive Pro...
+  Details:
+  {
+    "article_id": "83565d3c-897f-46d4-9f3a-d36c59507309",
+    "url": "https://arxiv.org/abs/2605.15301"
+  }
+[2026-05-18 15:49:56] [quality] evaluating: Article: SMCEvolve: Principled Scientific Discovery via Sequential Mo...
+  Details:
+  {
+    "article_id": "18022f6e-21fb-4f08-9bfb-359826055ce7",
+    "url": "https://arxiv.org/abs/2605.15308"
+  }
+[2026-05-18 15:49:56] [quality] evaluating: Article: Ensemble Monitoring for AI Control: Diverse Signals Outweigh...
+  Details:
+  {
+    "article_id": "5f97dcfc-8967-474d-87c9-78136ef88de2",
+    "url": "https://arxiv.org/abs/2605.15377"
+  }
+[2026-05-18 15:49:57] [quality] decision: Decision: accept, score=4. Timely arXiv paper showing a concrete AI capability: using Model Context Protocol (MCP) to orchestrate self-driving labs via an MCP-based controller that both humans and AI agents can use. While the domain is scientific experimentation rather than finance, it’s a strong example of agentic AI + tool orchestration with real deployment (case study on a color-matching SDL). Relevant for understanding how MCP can unify human and agent workflows and how AI can control complex physical systems—useful inspiration for enterprise/automation use cases. Not mass-market trending, but cutting-edge and capability-focused, so a solid include.
+  Details:
+  {
+    "article_id": "08fd63c5-452e-4f02-8efb-2f7760f1767f",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv paper showing a concrete AI capability: using Model Context Protocol (MCP) to orchestrate self-driving labs via an MCP-based controller that both humans and AI agents can use. While the domain is scientific experimentation rather than finance, it’s a strong example of agentic AI + tool orchestration with real deployment (case study on a color-matching SDL). Relevant for understanding how MCP can unify human and agent workflows and how AI can control complex physical systems—useful inspiration for enterprise/automation use cases. Not mass-market trending, but cutting-edge and capability-focused, so a solid include."
+  }
+[2026-05-18 15:49:57] [quality] decision: Decision: accept, score=4. Timely arXiv work on improving LLM agents’ reasoning via a new RL framework (ICRL) that internalizes self-critique. It reports concrete capability gains on agentic and math reasoning benchmarks using Qwen models, with measurable improvements over GRPO and an efficient critic. This is directly relevant to AI capability and agent reliability, and likely to be of interest to an AI team exploring self-improving systems and RLHF-style methods. Not obviously viral/trending enough for a 5, but strong, current, and substantive for capability-focused readers.
+  Details:
+  {
+    "article_id": "b8d435eb-bf9c-4692-9bb3-d383e5be673e",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on improving LLM agents’ reasoning via a new RL framework (ICRL) that internalizes self-critique. It reports concrete capability gains on agentic and math reasoning benchmarks using Qwen models, with measurable improvements over GRPO and an efficient critic. This is directly relevant to AI capability and agent reliability, and likely to be of interest to an AI team exploring self-improving systems and RLHF-style methods. Not obviously viral/trending enough for a 5, but strong, current, and substantive for capability-focused readers."
+  }
+[2026-05-18 15:49:59] [quality] decision: Decision: accept, score=4. Timely arXiv paper showing a concrete capability advance: using LLM-driven program evolution with a principled Sequential Monte Carlo framework for automated scientific discovery. It reports superior performance to prior systems across multiple benchmarks (math, algorithm efficiency, symbolic regression, ML research) with fewer LLM calls and provides code. While research-focused and somewhat niche, it’s directly about what AI systems can do (automated discovery and program search) and is likely of interest to an AI team tracking cutting-edge capabilities and efficiency methods. Not obviously a mainstream trending story, but strong, relevant capability content.
+  Details:
+  {
+    "article_id": "18022f6e-21fb-4f08-9bfb-359826055ce7",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv paper showing a concrete capability advance: using LLM-driven program evolution with a principled Sequential Monte Carlo framework for automated scientific discovery. It reports superior performance to prior systems across multiple benchmarks (math, algorithm efficiency, symbolic regression, ML research) with fewer LLM calls and provides code. While research-focused and somewhat niche, it’s directly about what AI systems can do (automated discovery and program search) and is likely of interest to an AI team tracking cutting-edge capabilities and efficiency methods. Not obviously a mainstream trending story, but strong, relevant capability content."
+  }
+[2026-05-18 15:49:59] [quality] decision: Decision: accept, score=4. Strong, timely arXiv paper demonstrating a concrete capability advance: an agentic framework (Solvita) that significantly improves LLM performance on competitive programming benchmarks and live Codeforces rounds. It shows state-of-the-art code-generation and reasoning via multi-agent orchestration and a trainable knowledge network without updating base model weights. This is relevant to AI capability, agentic workflows, and code-generation reliability—topics that are currently trending in the AI community. Not a mass-market headline, but high technical relevance and showcases a meaningful capability jump, so suitable for inclusion.
+  Details:
+  {
+    "article_id": "83565d3c-897f-46d4-9f3a-d36c59507309",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Strong, timely arXiv paper demonstrating a concrete capability advance: an agentic framework (Solvita) that significantly improves LLM performance on competitive programming benchmarks and live Codeforces rounds. It shows state-of-the-art code-generation and reasoning via multi-agent orchestration and a trainable knowledge network without updating base model weights. This is relevant to AI capability, agentic workflows, and code-generation reliability—topics that are currently trending in the AI community. Not a mass-market headline, but high technical relevance and showcases a meaningful capability jump, so suitable for inclusion."
+  }
+[2026-05-18 15:49:59] [quality] decision: Decision: accept, score=4. Timely arXiv work on AI safety/control that demonstrates a concrete capability: using diverse ensembles of GPT-4.1-mini monitors (prompted and fine-tuned) to detect misaligned or adversarial agent actions in coding tasks. It provides empirical results (2.4x detection gain vs homogeneous ensembles, robustness to OOD attacks) and a practical takeaway that diversity and fine-tuning matter more than just scaling compute. While research-focused, it’s directly relevant to real-world deployment of autonomous/agentic systems and monitoring pipelines, which is important for an AI team in a regulated domain like banking. Not a mass-market trending headline, but strong, current, and capability-centric, so suitable for inclusion.
+  Details:
+  {
+    "article_id": "5f97dcfc-8967-474d-87c9-78136ef88de2",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "Timely arXiv work on AI safety/control that demonstrates a concrete capability: using diverse ensembles of GPT-4.1-mini monitors (prompted and fine-tuned) to detect misaligned or adversarial agent actions in coding tasks. It provides empirical results (2.4x detection gain vs homogeneous ensembles, robustness to OOD attacks) and a practical takeaway that diversity and fine-tuning matter more than just scaling compute. While research-focused, it’s directly relevant to real-world deployment of autonomous/agentic systems and monitoring pipelines, which is important for an AI team in a regulated domain like banking. Not a mass-market trending headline, but strong, current, and capability-centric, so suitable for inclusion."
+  }
+[2026-05-18 15:49:59] [quality] batch_done: Evaluation complete for 'ai_capability': 8/8 passed quality bar.
+  Details:
+  {
+    "accepted": 8,
+    "total": 8
+  }
+[2026-05-18 15:49:59] [summarizer] summarizing: Article: NOVA: Fundamental Limits of Knowledge Discovery Through AI...
+  Details:
+  {
+    "article_id": "0f20ccac-16af-4757-847c-ebbed50ef3a9"
+  }
+[2026-05-18 15:49:59] [summarizer] summarizing: Article: Verifiable Agentic Infrastructure: Proof-Derived Authorizati...
+  Details:
+  {
+    "article_id": "bd39c96b-ea0c-4ca3-ae98-f709547e5012"
+  }
+[2026-05-18 15:49:59] [summarizer] summarizing: Article: CAX-Agent: A Lightweight Agent Harness for Reliable APDL Aut...
+  Details:
+  {
+    "article_id": "d6beda27-cae0-4fa4-8a61-3e3df395af88"
+  }
+[2026-05-18 15:49:59] [summarizer] summarizing: Article: NIMO Controller: a self-driving laboratory orchestrator base...
+  Details:
+  {
+    "article_id": "08fd63c5-452e-4f02-8efb-2f7760f1767f"
+  }
+[2026-05-18 15:49:59] [summarizer] summarizing: Article: ICRL: Learning to Internalize Self-Critique with Reinforceme...
+  Details:
+  {
+    "article_id": "b8d435eb-bf9c-4692-9bb3-d383e5be673e"
+  }
+[2026-05-18 15:50:01] [summarizer] finished: Subject: Can AI really discover new knowledge? 🤖
+  Details:
+  {
+    "article_id": "0f20ccac-16af-4757-847c-ebbed50ef3a9",
+    "suggested_subject": "Can AI really discover new knowledge? 🤖",
+    "summary_preview": "Researchers propose the NOVA framework to study how AI systems generate, verify, and accumulate new knowledge, and they map out ways this process can fail or stall. They show that discovery gets incre..."
+  }
+[2026-05-18 15:50:01] [summarizer] summarizing: Article: SMCEvolve: Principled Scientific Discovery via Sequential Mo...
+  Details:
+  {
+    "article_id": "18022f6e-21fb-4f08-9bfb-359826055ce7"
+  }
+[2026-05-18 15:50:01] [summarizer] finished: Subject: New safety guardrails for powerful AI 🤖⚖️
+  Details:
+  {
+    "article_id": "bd39c96b-ea0c-4ca3-ae98-f709547e5012",
+    "suggested_subject": "New safety guardrails for powerful AI 🤖⚖️",
+    "summary_preview": "Researchers propose a new framework that forces AI agents to get cryptographic proof-based approval before they can run sensitive actions in cloud or national systems. This matters because it replaces..."
+  }
+[2026-05-18 15:50:01] [summarizer] summarizing: Article: Solvita: Enhancing Large Language Models for Competitive Pro...
+  Details:
+  {
+    "article_id": "83565d3c-897f-46d4-9f3a-d36c59507309"
+  }
+[2026-05-18 15:50:01] [summarizer] finished: Subject: AI models learn to self-critique 🤖
+  Details:
+  {
+    "article_id": "b8d435eb-bf9c-4692-9bb3-d383e5be673e",
+    "suggested_subject": "AI models learn to self-critique 🤖",
+    "summary_preview": "Researchers propose ICRL, a reinforcement learning method where a language model jointly trains a solver and critic so it can turn critique-guided successes into standalone problem-solving skill. This..."
+  }
+[2026-05-18 15:50:01] [summarizer] summarizing: Article: Ensemble Monitoring for AI Control: Diverse Signals Outweigh...
+  Details:
+  {
+    "article_id": "5f97dcfc-8967-474d-87c9-78136ef88de2"
+  }
+[2026-05-18 15:50:01] [summarizer] finished: Subject: New AI agent boosts engineering sims 🤖
+  Details:
+  {
+    "article_id": "d6beda27-cae0-4fa4-8a61-3e3df395af88",
+    "suggested_subject": "New AI agent boosts engineering sims 🤖",
+    "summary_preview": "Researchers introduced CAX-Agent, a lightweight AI harness that makes large language models more reliable at automating MAPDL finite-element simulations by adding structured control and recovery steps..."
+  }
+[2026-05-18 15:50:03] [summarizer] finished: Subject: AI coder levels up with self-learning 🤖
+  Details:
+  {
+    "article_id": "83565d3c-897f-46d4-9f3a-d36c59507309",
+    "suggested_subject": "AI coder levels up with self-learning 🤖",
+    "summary_preview": "Researchers introduced Solvita, a multi-agent system that lets large language models learn from past competitive programming attempts without changing their core weights. It matters because this setup..."
+  }
+[2026-05-18 15:50:03] [summarizer] finished: Subject: New AI method boosts automated discovery 🤖
+  Details:
+  {
+    "article_id": "18022f6e-21fb-4f08-9bfb-359826055ce7",
+    "suggested_subject": "New AI method boosts automated discovery 🤖",
+    "summary_preview": "Researchers propose SMCEvolve, a new way to evolve code with large language models using a more mathematically grounded search process that includes adaptive resampling, controlled mutations, and buil..."
+  }
+[2026-05-18 15:50:03] [summarizer] finished: Subject: Smarter AI safety checks with diverse monitors 🤖
+  Details:
+  {
+    "article_id": "5f97dcfc-8967-474d-87c9-78136ef88de2",
+    "suggested_subject": "Smarter AI safety checks with diverse monitors 🤖",
+    "summary_preview": "Researchers show that combining different GPT-4.1-Mini-based monitors into an ensemble catches unsafe or misaligned AI code actions much better than any single monitor or a group of identical ones. Th..."
+  }
+[2026-05-18 15:50:11] [summarizer] finished: Subject: 🤖 New AI brain for self-driving labs
+  Details:
+  {
+    "article_id": "08fd63c5-452e-4f02-8efb-2f7760f1767f",
+    "suggested_subject": "🤖 New AI brain for self-driving labs",
+    "summary_preview": "Researchers introduced NIMO Controller, a lab orchestration system that uses the Model Context Protocol so both humans and AI agents can control self-driving laboratory tools through the same interfac..."
+  }
+[2026-05-18 15:50:11] [summarizer] batch_done: Summarisation complete for 'ai_capability': 35 summaries so far.
+  Details:
+  {
+    "summaries": 35
+  }

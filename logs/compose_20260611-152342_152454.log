@@ -1,0 +1,5 @@
+[2026-06-11 15:24:54] [compose] no_eligible: No eligible items for 'ai_trends'. Writing fallback message.
+  Details:
+  {
+    "category": "ai_trends"
+  }

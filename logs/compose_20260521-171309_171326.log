@@ -1,0 +1,45 @@
+[2026-05-21 17:13:26] [compose] note: Only 1 eligible item(s) for 'ai_trends' (requested 3). Composing with 1 section(s).
+  Details:
+  {
+    "requested": 3,
+    "using": 1
+  }
+[2026-05-21 17:13:26] [image_collector] fetching: Fetching 1 image(s) in parallel...
+  Details:
+  {
+    "count": 1
+  }
+[2026-05-21 17:13:27] [image_collector] saved: Saved image for item 1: images/20260521-171309/1.jpg
+  Details:
+  {
+    "path": "images/20260521-171309/1.jpg"
+  }
+[2026-05-21 17:13:27] [composer] starting: Category=ai_trends, audience=AI team at UnionBank, tone=professional, concise, sections=1.
+  Details:
+  {
+    "category": "ai_trends",
+    "audience": "AI team at UnionBank",
+    "tone": "professional, concise",
+    "num_items": 1
+  }
+[2026-05-21 17:13:29] [composer] finished: Draft length: 353 chars, ~39 words.
+  Details:
+  {
+    "char_count": 353,
+    "word_count": 39
+  }
+[2026-05-21 17:13:29] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-05-21 17:13:31] [standardizer] finished: Words: 39 -> 39. Changes: ["Cut redundant qualifier 'in the market'"]
+  Details:
+  {
+    "word_count_before": 39,
+    "word_count_after": 39,
+    "changes_applied": [
+      "Cut redundant qualifier 'in the market'"
+    ]
+  }

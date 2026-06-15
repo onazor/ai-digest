@@ -1,0 +1,19 @@
+[2026-05-22 14:55:14] [collector] starting: Fetching articles for category 'ai_technology' (max_results=50, collector=deep).
+  Details:
+  {
+    "category": "ai_technology",
+    "max_results": 50,
+    "collector": "deep"
+  }
+[2026-05-22 14:55:14] [collector] finished: Collected 0 articles for 'ai_technology'. Evaluating 0 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_technology",
+    "count": 0
+  }
+[2026-05-22 14:55:14] [quality] batch_done: Evaluation complete for 'ai_technology': 0/0 passed quality bar.
+  Details:
+  {
+    "accepted": 0,
+    "total": 0
+  }

@@ -1,0 +1,50 @@
+[2026-06-11 15:40:11] [image_collector] fetching: Fetching 3 image(s) in parallel...
+  Details:
+  {
+    "count": 3
+  }
+[2026-06-11 15:40:14] [image_collector] saved: Saved image for item 2: images/20260611-153849/2.png
+  Details:
+  {
+    "path": "images/20260611-153849/2.png"
+  }
+[2026-06-11 15:40:14] [image_collector] saved: Saved image for item 1: images/20260611-153849/1.png
+  Details:
+  {
+    "path": "images/20260611-153849/1.png"
+  }
+[2026-06-11 15:40:14] [image_collector] saved: Saved image for item 3: images/20260611-153849/3.png
+  Details:
+  {
+    "path": "images/20260611-153849/3.png"
+  }
+[2026-06-11 15:40:14] [composer] starting: Category=ai_capability, audience=Data Scientists and AI teams at UnionBank, tone=professional, concise, practical, sections=3.
+  Details:
+  {
+    "category": "ai_capability",
+    "audience": "Data Scientists and AI teams at UnionBank",
+    "tone": "professional, concise, practical",
+    "num_items": 3
+  }
+[2026-06-11 15:40:19] [composer] finished: Draft length: 1168 chars, ~135 words.
+  Details:
+  {
+    "char_count": 1168,
+    "word_count": 135
+  }
+[2026-06-11 15:40:19] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-06-11 15:40:24] [standardizer] finished: Words: 135 -> 135. Changes: ["Removed filler phrase 'relying on free-form' in the first item.", "Removed filler phrase 'more' in the last item."]
+  Details:
+  {
+    "word_count_before": 135,
+    "word_count_after": 135,
+    "changes_applied": [
+      "Removed filler phrase 'relying on free-form' in the first item.",
+      "Removed filler phrase 'more' in the last item."
+    ]
+  }

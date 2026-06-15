@@ -1,0 +1,51 @@
+[2026-05-22 14:54:02] [image_collector] fetching: Fetching 3 image(s) in parallel...
+  Details:
+  {
+    "count": 3
+  }
+[2026-05-22 14:54:03] [image_collector] saved: Saved image for item 1: images/20260522-145319/1.png
+  Details:
+  {
+    "path": "images/20260522-145319/1.png"
+  }
+[2026-05-22 14:54:03] [image_collector] saved: Saved image for item 2: images/20260522-145319/2.png
+  Details:
+  {
+    "path": "images/20260522-145319/2.png"
+  }
+[2026-05-22 14:54:04] [image_collector] saved: Saved image for item 3: images/20260522-145319/3.png
+  Details:
+  {
+    "path": "images/20260522-145319/3.png"
+  }
+[2026-05-22 14:54:04] [composer] starting: Category=ai_innovations, audience=AI team at UnionBank, tone=professional, concise, technical, sections=3.
+  Details:
+  {
+    "category": "ai_innovations",
+    "audience": "AI team at UnionBank",
+    "tone": "professional, concise, technical",
+    "num_items": 3
+  }
+[2026-05-22 14:54:10] [composer] finished: Draft length: 1035 chars, ~114 words.
+  Details:
+  {
+    "char_count": 1035,
+    "word_count": 114
+  }
+[2026-05-22 14:54:10] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-05-22 14:54:20] [standardizer] finished: Words: 114 -> 110. Changes: ['Cut filler openers', 'Cut redundant qualifiers', 'Tightened wordy phrases']
+  Details:
+  {
+    "word_count_before": 114,
+    "word_count_after": 110,
+    "changes_applied": [
+      "Cut filler openers",
+      "Cut redundant qualifiers",
+      "Tightened wordy phrases"
+    ]
+  }
