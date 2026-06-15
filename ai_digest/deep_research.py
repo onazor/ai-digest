@@ -75,19 +75,6 @@ DEFAULT_AI_FEEDS = [
     "https://www.infoq.com/ai-ml/news/feed/",
 ]
 
-# Feeds used exclusively for ai_research_arxiv — only arXiv RSS feeds, nothing else.
-ARXIV_ONLY_FEEDS = [
-    "https://rss.arxiv.org/rss/cs.AI",
-    "https://rss.arxiv.org/rss/cs.LG",
-    "https://rss.arxiv.org/rss/cs.CL",
-    "https://rss.arxiv.org/rss/cs.CV",
-    "https://rss.arxiv.org/rss/cs.NE",
-    "https://rss.arxiv.org/rss/cs.RO",
-    "https://rss.arxiv.org/rss/stat.ML",
-    "https://rss.arxiv.org/rss/cs.IR",
-    "https://rss.arxiv.org/rss/eess.SP",
-]
-
 # Per-category keywords: if set, prefer entries that match. If no match or too few, we still use all entries.
 CATEGORY_KEYWORDS = {
     "ai_trends": [
@@ -95,18 +82,13 @@ CATEGORY_KEYWORDS = {
         "industry", "enterprise", "market", "widespread", "mainstream", "boom", "demand",
         "investment", "workforce", "jobs", "impact", "future", "regulation", "governance",
         "rollout", "deployment", "transformation", "disruption", "race", "competition",
-        # tools/frameworks gaining traction (absorbed from tools_updates)
-        "tool", "release", "update", "launch", "new version", "framework", "platform",
-        "open source", "SDK", "API update", "integration",
+        "strategy", "policy", "lawsuit", "risk", "workplace", "business",
     ],
     "ai_innovations": [
         # capability and model releases
         "GPT", "Gemini", "Claude", "Llama", "Mistral", "Grok", "model", "release", "launch",
         "benchmark", "capability", "performance", "multimodal", "reasoning", "agent",
         "long-context", "inference", "quantization", "fine-tuning", "open source", "weights",
-        # architecture and technique advances
-        "architecture", "transformer", "diffusion", "LoRA", "RLHF", "alignment",
-        "neural", "training", "new model", "state-of-the-art", "SOTA", "outperforms",
         # major lab and company capability news
         "Google", "OpenAI", "Microsoft", "Meta", "Apple", "NVIDIA", "Anthropic",
         "announces", "introduces", "unveils", "breakthrough",
@@ -116,7 +98,6 @@ CATEGORY_KEYWORDS = {
         "journal", "publication", "method", "result", "finding", "model", "training",
         "architecture", "NeurIPS", "ICML", "ICLR",
     ],
-    "ai_research_arxiv": [],  # no keyword filter — URL filtering handles source restriction
     "genai_tips": [
         "prompt", "prompting", "chain-of-thought", "few-shot", "RAG", "agent", "LangChain",
         "LlamaIndex", "workflow", "pipeline", "technique", "framework", "evaluation", "evals",
@@ -125,29 +106,24 @@ CATEGORY_KEYWORDS = {
         "guide", "how to", "best practice", "practical", "hands-on", "walkthrough",
         "implementation", "API", "SDK",
     ],
-    "ai_capability": [
-        # Knowledge & search
-        "knowledge assist", "knowledge management", "search", "enterprise search", "semantic search",
-        "question answering", "chatbot", "virtual assistant", "copilot", "AI assistant",
-        # Voice & speech
-        "voice AI", "speech recognition", "text-to-speech", "speech synthesis", "voice agent",
-        "voice assistant", "conversational AI", "natural language understanding", "ASR", "TTS",
-        # Document & data processing
-        "intelligent document processing", "IDP", "document understanding", "OCR",
-        "document extraction", "data extraction", "form processing", "invoice processing",
-        "contract analysis", "document AI",
-        # Image & video generation
-        "image generation", "video generation", "text-to-image", "text-to-video",
-        "image editing", "video editing", "deepfake", "visual AI", "computer vision",
-        "image recognition", "object detection", "image segmentation",
-        # Code generation
-        "code generation", "code completion", "code assistant", "coding AI", "AI coding",
-        "program synthesis", "automated programming",
-        # Other capabilities
-        "translation", "summarization", "content generation", "text generation",
-        "recommendation", "personalization", "predictive", "forecasting",
-        "anomaly detection", "fraud detection", "automation", "RPA",
-        "robotics", "autonomous", "self-driving", "AI agent", "agentic",
+}
+
+CATEGORY_EXCLUSIONS = {
+    "ai_trends": [
+        "arxiv", "preprint", "paper", "journal", "tutorial", "how to", "guide",
+        "prompting", "github", "sdk", "api tutorial",
+    ],
+    "genai_tips": [
+        "market", "survey", "investment", "funding", "regulation", "lawsuit",
+        "arxiv", "preprint", "paper", "journal", "launches", "announces",
+    ],
+    "ai_innovations": [
+        "survey", "adoption", "market", "regulation", "lawsuit", "tutorial",
+        "how to", "guide", "prompting", "arxiv", "preprint", "journal",
+    ],
+    "ai_research": [
+        "market", "funding", "investment", "lawsuit", "regulation", "tutorial",
+        "how to", "guide", "product launch", "announces", "unveils",
     ],
 }
 
@@ -234,7 +210,10 @@ def _matches_category(entry: dict, category: str) -> bool:
         return True
     text = (entry.get("title") or "") + " " + (entry.get("snippet") or "") + " " + (entry.get("content") or "")
     text_lower = text.lower()
-    return any(k.lower() in text_lower for k in keywords)
+    if not any(k.lower() in text_lower for k in keywords):
+        return False
+    exclusions = CATEGORY_EXCLUSIONS.get(category, [])
+    return not any(k.lower() in text_lower for k in exclusions)
 
 
 def _sort_by_date(entries: List[dict]) -> List[dict]:
@@ -296,14 +275,10 @@ def collect_articles_for_category(
 ) -> List[Article]:
     """
     Deep research collector: fetch from configured RSS/Atom feeds, filter by category
-    keywords, sort by date, and return up to max_results Articles. No Tavily dependency.
+    keywords, sort by date, and return up to max_results Articles.
     """
     settings = get_settings()
-    if category == "ai_research_arxiv":
-        # Bypass user-configured feeds entirely — only arXiv RSS feeds
-        feeds = ARXIV_ONLY_FEEDS
-    else:
-        feeds = settings.deep_research_feeds if settings.deep_research_feeds else DEFAULT_AI_FEEDS
+    feeds = settings.deep_research_feeds if settings.deep_research_feeds else DEFAULT_AI_FEEDS
 
     def _fetch_one(feed_url: str) -> Tuple[str, List[dict], str]:
         content, fetch_err = _fetch_feed_content(feed_url, timeout=25)
@@ -361,15 +336,10 @@ def collect_articles_for_category(
 
     # For ai_research: sort arXiv entries to the top so they aren't buried by general tech news.
     # For other categories: keyword filter with full-pool fallback.
-    if category in ("ai_research", "ai_research_arxiv"):
+    if category == "ai_research":
         filtered = [e for e in unique if _matches_category(e, category)]
         if not filtered:
             filtered = unique
-        # For ai_research_arxiv, additionally hard-filter to only arxiv.org URLs
-        if category == "ai_research_arxiv":
-            arxiv_only = [e for e in filtered if "arxiv.org" in (e.get("url") or "")]
-            if arxiv_only:
-                filtered = arxiv_only
         sorted_entries = _sort_arxiv_first(filtered)
     else:
         filtered = [e for e in unique if _matches_category(e, category)]

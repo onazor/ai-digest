@@ -158,7 +158,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         default=None,
         metavar="N",
         help=(
-            "Max articles passed to the quality evaluator (deep collector only). "
+            "Max articles passed to the quality evaluator. "
             "Defaults to --max-results when not set."
         ),
     )
@@ -234,7 +234,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         "--category",
         type=str,
         required=True,
-        help="Category to collect and generate newsletter for (e.g., 'ai_trends', 'genai_tips', 'ai_research_arxiv', 'ai_capability').",
+        help="Category to collect and generate newsletter for (ai_trends, genai_tips, ai_innovations, ai_research).",
     )
     collect_compose_parser.add_argument(
         "--audience",
@@ -252,7 +252,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         "--max-results",
         type=int,
         default=6,
-        help="Max Tavily results to collect for the category.",
+        help="Max articles to collect for the category.",
     )
     collect_compose_parser.add_argument(
         "--sections",
@@ -267,7 +267,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         default=None,
         metavar="N",
         help=(
-            "Max articles passed to the quality evaluator (deep collector only). "
+            "Max articles passed to the quality evaluator. "
             "Defaults to --max-results when not set. "
             "Raise this to give the evaluator a larger pool without fetching more from the source."
         ),
