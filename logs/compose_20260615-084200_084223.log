@@ -1,0 +1,63 @@
+[2026-06-15 08:42:23] [compose] note: Only 4 eligible item(s) for 'ai_trends' (requested 5). Composing with 4 section(s).
+  Details:
+  {
+    "requested": 5,
+    "using": 4
+  }
+[2026-06-15 08:42:23] [image_collector] fetching: Fetching 4 image(s) in parallel...
+  Details:
+  {
+    "count": 4
+  }
+[2026-06-15 08:42:25] [image_collector] saved: Saved image for item 4: images/20260615-084200/4.jpg
+  Details:
+  {
+    "path": "images/20260615-084200/4.jpg"
+  }
+[2026-06-15 08:42:25] [image_collector] saved: Saved image for item 1: images/20260615-084200/1.jpg
+  Details:
+  {
+    "path": "images/20260615-084200/1.jpg"
+  }
+[2026-06-15 08:42:27] [image_collector] saved: Saved image for item 2: images/20260615-084200/2.png
+  Details:
+  {
+    "path": "images/20260615-084200/2.png"
+  }
+[2026-06-15 08:42:27] [image_collector] saved: Saved image for item 3: images/20260615-084200/3.jpg
+  Details:
+  {
+    "path": "images/20260615-084200/3.jpg"
+  }
+[2026-06-15 08:42:27] [composer] starting: Category=ai_trends, audience=Data Scientists and AI teams at UnionBank, tone=professional, concise, practical, sections=4.
+  Details:
+  {
+    "category": "ai_trends",
+    "audience": "Data Scientists and AI teams at UnionBank",
+    "tone": "professional, concise, practical",
+    "num_items": 4
+  }
+[2026-06-15 08:42:39] [composer] finished: Draft length: 1494 chars, ~152 words.
+  Details:
+  {
+    "char_count": 1494,
+    "word_count": 152
+  }
+[2026-06-15 08:42:39] [standardizer] starting: Normalizing length (max 500 words) and structure.
+  Details:
+  {
+    "target_max_words": 500,
+    "target_words_per_item": 80
+  }
+[2026-06-15 08:42:46] [standardizer] finished: Words: 152 -> 480. Changes: ['Cut filler openers in the first item.', 'Cut redundant qualifiers in the second item.', 'Cut wordy phrases in the second item.', 'Cut the less important sentence in the fourth item.']
+  Details:
+  {
+    "word_count_before": 152,
+    "word_count_after": 480,
+    "changes_applied": [
+      "Cut filler openers in the first item.",
+      "Cut redundant qualifiers in the second item.",
+      "Cut wordy phrases in the second item.",
+      "Cut the less important sentence in the fourth item."
+    ]
+  }
