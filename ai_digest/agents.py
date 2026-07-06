@@ -327,6 +327,168 @@ def compose_newsletter_section(
     return chat_completion(system_prompt=system_prompt, user_prompt=user_prompt, temperature=0.2)
 
 
+def synthesize_category_brief(
+    category: str,
+    audience: str,
+    tone: str,
+    items: List[Dict[str, str]],
+    max_source_links: int = 6,
+) -> Dict[str, Any]:
+    """
+    Deep Research-style synthesis:
+    Turn many accepted sources into one short category brief, with links preserved.
+    """
+    source_blocks: List[str] = []
+    for idx, item in enumerate(items, start=1):
+        source_blocks.append(
+            textwrap.dedent(
+                f"""
+                Source {idx}
+                Title: {item.get("title", "")}
+                URL: {item.get("url", "")}
+                Source: {item.get("source", "")}
+                Quality score: {item.get("quality_score", "")}
+                Summary: {item.get("summary", "")}
+                Notes: {item.get("notes", "")}
+                """
+            ).strip()
+        )
+
+    source_text = "\n\n---\n\n".join(source_blocks)
+    system_prompt = textwrap.dedent(
+        """
+        You are a Deep Research editor writing an internal AI newsletter brief.
+        Your job is to synthesize sources into one concise category story, not summarize
+        each source separately.
+
+        Output must be useful to busy readers:
+        - brief, specific, and source-grounded
+        - no hype, no generic filler
+        - no long report style
+        - no invented facts beyond the supplied sources
+
+        Structure:
+        1. title: one sharp newsletter title, no more than 10 words.
+        2. what_changed: 2-3 sentences explaining the umbrella story across sources.
+        3. key_themes: exactly 3 bullets, each no more than 28 words.
+        4. why_it_matters: 2 sentences focused on practical implication for the audience.
+        5. read_more: 3-6 source links. Choose the most useful sources, not necessarily highest score.
+
+        Return strict JSON:
+        {
+          "title": "short title",
+          "what_changed": "2-3 sentences",
+          "key_themes": ["theme 1", "theme 2", "theme 3"],
+          "why_it_matters": "2 sentences",
+          "read_more": [
+            {"title": "source title", "url": "https://...", "reason": "why to read, under 14 words"}
+          ]
+        }
+        """
+    ).strip()
+
+    user_prompt = textwrap.dedent(
+        f"""
+        Category: {category}
+        Audience: {audience}
+        Tone: {tone}
+        Max read_more links: {max_source_links}
+
+        Accepted sources:
+        ---
+        {source_text}
+        ---
+
+        Write one synthesized category brief. Do not create one section per source.
+        """
+    ).strip()
+
+    data = chat_completion_json(
+        system_prompt=system_prompt,
+        user_prompt=user_prompt,
+        temperature=0.2,
+    )
+    title = str(data.get("title", "")).strip()
+    what_changed = str(data.get("what_changed", "")).strip()
+    why_it_matters = str(data.get("why_it_matters", "")).strip()
+
+    read_more = data.get("read_more", [])
+    if not isinstance(read_more, list):
+        read_more = []
+    key_themes = data.get("key_themes", [])
+    if not isinstance(key_themes, list):
+        key_themes = []
+
+    cleaned_themes = [str(theme).strip() for theme in key_themes if str(theme).strip()][:3]
+    for item in items:
+        if len(cleaned_themes) >= 3:
+            break
+        fallback_theme = (item.get("summary") or item.get("title") or "").strip()
+        if fallback_theme:
+            words = fallback_theme.replace("\n", " ").split()
+            cleaned_themes.append(" ".join(words[:28]))
+
+    if not title:
+        title = category.replace("_", " ").title()
+    if not what_changed:
+        source_summaries = [
+            (item.get("summary") or item.get("title") or "").strip()
+            for item in items[:2]
+            if (item.get("summary") or item.get("title") or "").strip()
+        ]
+        what_changed = " ".join(source_summaries)
+    if not why_it_matters:
+        why_it_matters = "The sources point to a practical shift worth tracking for this audience."
+
+    source_by_url = {
+        (item.get("url") or "").strip(): item
+        for item in items
+        if (item.get("url") or "").strip()
+    }
+    cleaned_links: List[Dict[str, str]] = []
+    seen_urls = set()
+    for link in read_more:
+        if not isinstance(link, dict):
+            continue
+        url = str(link.get("url", "")).strip()
+        if not url or url not in source_by_url or url in seen_urls:
+            continue
+        source_item = source_by_url[url]
+        cleaned_links.append(
+            {
+                "title": str(link.get("title", "") or source_item.get("title", "")).strip(),
+                "url": url,
+                "reason": str(link.get("reason", "")).strip(),
+            }
+        )
+        seen_urls.add(url)
+        if len(cleaned_links) >= max_source_links:
+            break
+
+    for item in items:
+        if len(cleaned_links) >= max_source_links:
+            break
+        url = (item.get("url") or "").strip()
+        if not url or url in seen_urls:
+            continue
+        cleaned_links.append(
+            {
+                "title": (item.get("title") or "Read more").strip(),
+                "url": url,
+                "reason": "Source used in the synthesis.",
+            }
+        )
+        seen_urls.add(url)
+
+    return {
+        "title": title,
+        "what_changed": what_changed,
+        "key_themes": cleaned_themes,
+        "why_it_matters": why_it_matters,
+        "read_more": cleaned_links,
+    }
+
+
 def standardize_newsletter(
     draft: str,
     category: str,

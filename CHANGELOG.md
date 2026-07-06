@@ -27,4 +27,6 @@ Removed categories are no longer accepted by the pipeline. `.env` category value
 
 ### Output Pipeline
 
-The existing flow remains: collect articles, evaluate quality, summarize accepted items, compose a newsletter section, standardize the draft, and save Markdown plus self-contained HTML output.
+* **Default synthesized brief format:** The default compose output now uses all accepted, deduplicated sources for a category to generate one concise Deep Research-style brief instead of selecting only the top scored article cards.
+* **Brief HTML template:** Added a separate email-safe HTML template for synthesized briefs with `What changed`, `The bigger story`, `Why it matters`, and `Read more` sections.
+* **Legacy formats retained:** `--format card` and `--format table` remain available. `--sections`, `--target-max-words`, `--target-words-per-item`, and `--no-standardize` now apply only to card/table behavior as documented.

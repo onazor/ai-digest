@@ -38,7 +38,7 @@ def cmd_collect(args: argparse.Namespace) -> None:
 
 
 def _sections_from_args(args: argparse.Namespace) -> int:
-    """Number of sections (news items): --sections overrides --max-items; default 3."""
+    """Legacy item count for card/table formats: --sections overrides --max-items."""
     return getattr(args, "sections", None) or getattr(args, "max_items", None) or 3
 
 
@@ -52,8 +52,12 @@ def cmd_compose(args: argparse.Namespace) -> None:
     audience = args.audience
     tone = args.tone
     sections = _sections_from_args(args)
+    output_format = getattr(args, "format", "brief")
 
-    print(f"Composing newsletter for category '{category}' ({sections} sections)...")
+    if output_format == "brief":
+        print(f"Composing synthesized brief for category '{category}'...")
+    else:
+        print(f"Composing newsletter for category '{category}' ({sections} sections, {output_format} format)...")
     text = compose_newsletter_from_run(
         run_payload=run_payload,
         category=category,
@@ -63,7 +67,7 @@ def cmd_compose(args: argparse.Namespace) -> None:
         standardize=not args.no_standardize,
         target_max_words=args.target_max_words,
         target_words_per_item=args.target_words_per_item,
-        output_format=getattr(args, "format", "card"),
+        output_format=output_format,
         roundup_title=getattr(args, "roundup_title", None),
         roundup_intro=getattr(args, "roundup_intro", None),
     )
@@ -103,7 +107,11 @@ def cmd_collect_and_compose(args: argparse.Namespace) -> None:
     print("=" * 60)
 
     sections = _sections_from_args(args)
-    print(f"Sections: {sections}, Format: {getattr(args, 'format', 'card')}")
+    output_format = getattr(args, "format", "brief")
+    if output_format == "brief":
+        print("Format: brief (synthesizes all accepted sources)")
+    else:
+        print(f"Sections: {sections}, Format: {output_format}")
 
     # Compose newsletter from the run we just created
     text = compose_newsletter_from_run(
@@ -115,7 +123,7 @@ def cmd_collect_and_compose(args: argparse.Namespace) -> None:
         standardize=not args.no_standardize,
         target_max_words=args.target_max_words,
         target_words_per_item=args.target_words_per_item,
-        output_format=getattr(args, "format", "card"),
+        output_format=output_format,
         roundup_title=getattr(args, "roundup_title", None),
         roundup_intro=getattr(args, "roundup_intro", None),
     )
@@ -191,37 +199,37 @@ def main(argv: Optional[List[str]] = None) -> None:
         type=int,
         default=3,
         metavar="N",
-        help="Fixed number of news sections (e.g. 3 = exactly 3 items). Default: 3.",
+        help="Item count for card/table formats only; ignored by brief. Default: 3.",
     )
     compose_parser.add_argument(
         "--max-items",
         type=int,
         default=None,
         metavar="N",
-        help="Deprecated: use --sections. Max items to include (default 3).",
+        help="Deprecated: use --sections. Max card/table items to include (default 3).",
     )
     compose_parser.add_argument(
         "--format",
-        choices=["card", "table"],
-        default="card",
-        help="Output style: 'card' (emoji headlines + summaries) or 'table' (Date | Headline | Source | Summary). Default: card.",
+        choices=["brief", "card", "table"],
+        default="brief",
+        help="Output style: 'brief' (synthesized category brief), 'card' (article cards), or 'table' (Date | Headline | Source | Summary). Default: brief.",
     )
     compose_parser.add_argument(
         "--no-standardize",
         action="store_true",
-        help="Skip the standardizer agent (output raw composer draft).",
+        help="Skip the standardizer agent (card format only; ignored for brief/table).",
     )
     compose_parser.add_argument(
         "--target-max-words",
         type=int,
         default=500,
-        help="Target max total words for the standardized draft.",
+        help="Target max total words for the standardized draft (card only).",
     )
     compose_parser.add_argument(
         "--target-words-per-item",
         type=int,
         default=80,
-        help="Target words per item in the standardized draft (2 sentences).",
+        help="Target words per item in the standardized draft (card only, 2 sentences).",
     )
     compose_parser.set_defaults(func=cmd_compose)
 
@@ -259,7 +267,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         type=int,
         default=3,
         metavar="N",
-        help="Fixed number of news sections (e.g. 3 = exactly 3 items). Default: 3.",
+        help="Item count for card/table formats only; ignored by brief. Default: 3.",
     )
     collect_compose_parser.add_argument(
         "--max-pool",
@@ -277,18 +285,18 @@ def main(argv: Optional[List[str]] = None) -> None:
         type=int,
         default=None,
         metavar="N",
-        help="Deprecated: use --sections. Max items (default 3).",
+        help="Deprecated: use --sections. Max card/table items (default 3).",
     )
     collect_compose_parser.add_argument(
         "--format",
-        choices=["card", "table"],
-        default="card",
-        help="Output style: 'card' (emoji headlines + summaries) or 'table' (Date | Headline | Source | Summary). Default: card.",
+        choices=["brief", "card", "table"],
+        default="brief",
+        help="Output style: 'brief' (synthesized category brief), 'card' (article cards), or 'table' (Date | Headline | Source | Summary). Default: brief.",
     )
     collect_compose_parser.add_argument(
         "--no-standardize",
         action="store_true",
-        help="Skip the standardizer agent (card format only; ignored for table).",
+        help="Skip the standardizer agent (card format only; ignored for brief/table).",
     )
     collect_compose_parser.add_argument(
         "--target-max-words",

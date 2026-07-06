@@ -18,13 +18,20 @@ from .agents import (
     evaluate_article,
     generate_digest_headline,
     standardize_newsletter,
+    synthesize_category_brief,
     summarize_article,
     summary_to_dict,
 )
 from .config import get_settings
 from .image_collector import collect_and_save_image
-from .formatter import render_newsletter_html
+from .formatter import render_newsletter_brief_html, render_newsletter_html
 from .storage import save_run, save_newsletter_text, save_newsletter_html
+
+
+_DEFAULT_ROUNDUP_INTRO = (
+    "Here is a concise digest of the most relevant accepted sources from the latest run, "
+    "with links for deeper follow-up."
+)
 
 
 def _get_collector():
@@ -155,7 +162,19 @@ def run_collection_pipeline(
             # max_pool lets the user pass a larger pool to the evaluator than max_results.
             # Falls back to max_results_per_category if not set.
             pool_size = max_pool if max_pool is not None else max_results_per_category
-            articles = collect_fn(category=category, max_results=pool_size)
+            if settings.collector_type == "openai_deep_research":
+                articles = collect_fn(
+                    category=category,
+                    max_results=pool_size,
+                    progress_callback=lambda action, message, details=None: safe_log(
+                        "collector",
+                        action,
+                        message,
+                        details=details or {},
+                    ),
+                )
+            else:
+                articles = collect_fn(category=category, max_results=pool_size)
             all_articles.extend(articles)
 
             safe_log("collector", "finished",
@@ -433,12 +452,7 @@ def _build_roundup_header(
     elif week_ending_date is None:
         week_ending_date = datetime.now(APP_TIMEZONE).strftime("%b %d, %Y")
     title = title_override or f"AI Digest ({week_ending_date})"
-    intro = intro_override or (
-        "In the past week, the AI world witnessed record-breaking tech deals, "
-        "cutting-edge product launches, market upheavals driven by AI breakthroughs, "
-        "and pivotal regulatory moves. Below is a concise summary of the most impactful "
-        "AI news, followed by detailed highlights:"
-    )
+    intro = intro_override or _DEFAULT_ROUNDUP_INTRO
     return f"# {title}\n\n{intro}\n\n"
 
 
@@ -464,6 +478,52 @@ def _build_roundup_table(
     return "\n".join(lines) + "\n"
 
 
+def _brief_markdown(brief: Dict) -> str:
+    lines = []
+    title = (brief.get("title") or "").strip()
+    if title:
+        lines.append(f"## {title}")
+        lines.append("")
+
+    what_changed = (brief.get("what_changed") or "").strip()
+    if what_changed:
+        lines.append("### What changed")
+        lines.append(what_changed)
+        lines.append("")
+
+    key_themes = brief.get("key_themes") or []
+    if key_themes:
+        lines.append("### The bigger story")
+        for theme in key_themes:
+            text = str(theme).strip()
+            if text:
+                lines.append(f"- {text}")
+        lines.append("")
+
+    why_it_matters = (brief.get("why_it_matters") or "").strip()
+    if why_it_matters:
+        lines.append("### Why it matters")
+        lines.append(why_it_matters)
+        lines.append("")
+
+    read_more = brief.get("read_more") or []
+    if read_more:
+        lines.append("### Read more")
+        for link in read_more:
+            if not isinstance(link, dict):
+                continue
+            link_title = (link.get("title") or "Read more").strip()
+            url = (link.get("url") or "").strip()
+            reason = (link.get("reason") or "").strip()
+            if not url:
+                continue
+            suffix = f" - {reason}" if reason else ""
+            lines.append(f"- [{link_title}]({url}){suffix}")
+        lines.append("")
+
+    return "\n".join(lines).strip() + "\n"
+
+
 def compose_newsletter_from_run(
     run_payload: Dict,
     category: str,
@@ -473,17 +533,23 @@ def compose_newsletter_from_run(
     standardize: bool = True,
     target_max_words: int = 500,
     target_words_per_item: int = 80,
-    output_format: str = "card",
+    output_format: str = "brief",
     roundup_title: Optional[str] = None,
     roundup_intro: Optional[str] = None,
     logger: Optional[AgentLogger] = None,
 ) -> str:
     """
     Given a stored run and a category, compose a newsletter section.
-    output_format: "card" (emoji headlines + summaries) or "table" (Date | Headline | Source | Summary).
+    output_format: "brief" (synthesized category brief), "card" (article cards),
+    or "table" (Date | Headline | Source | Summary).
+    When format is "brief", all accepted deduplicated sources are synthesized together.
     When format is "table", exactly max_items rows are output; no composer/standardizer.
     Logs each agent step if logger is provided.
     """
+    output_format = (output_format or "brief").strip().lower()
+    if output_format not in {"brief", "card", "table"}:
+        raise ValueError("output_format must be one of: brief, card, table")
+
     run_id = run_payload.get("run_id", "")
     compose_run_id = f"{run_id}_{datetime.now(APP_TIMEZONE).strftime('%H%M%S')}"
     own_logger = logger is None
@@ -521,7 +587,7 @@ def compose_newsletter_from_run(
     deduplicated_items = _deduplicate_by_story(eligible_items, category=category)
     selected_items = deduplicated_items[:max_items]
 
-    if not selected_items:
+    if not deduplicated_items:
         logger.step(
             "compose",
             "no_eligible",
@@ -544,6 +610,65 @@ def compose_newsletter_from_run(
             logger.close()
         save_newsletter_text(text=text, category=category, run_id=run_id)
         return text
+
+    if output_format == "brief":
+        try:
+            logger.step(
+                "synthesizer",
+                "starting",
+                f"Synthesizing {len(deduplicated_items)} accepted source(s) into one category brief.",
+                details={"category": category, "sources": len(deduplicated_items)},
+            )
+            brief_items: List[Dict[str, str]] = []
+            for article, evaluation, summary in deduplicated_items:
+                brief_items.append(
+                    {
+                        "title": article.get("title", ""),
+                        "url": article.get("url", ""),
+                        "source": article.get("source", "") or _source_from_url(article.get("url", "")),
+                        "quality_score": str(evaluation.get("quality_score", "")),
+                        "notes": evaluation.get("notes", ""),
+                        "summary": summary.get("summary", ""),
+                    }
+                )
+            brief = synthesize_category_brief(
+                category=category,
+                audience=audience,
+                tone=tone,
+                items=brief_items,
+                max_source_links=min(6, max(3, len(brief_items))),
+            )
+            logger.step(
+                "synthesizer",
+                "finished",
+                f"Brief length: ~{len(_brief_markdown(brief).split())} words.",
+                details={
+                    "title": brief.get("title", ""),
+                    "source_links": len(brief.get("read_more", [])),
+                },
+            )
+        finally:
+            if own_logger:
+                logger.close()
+
+        header = _build_roundup_header(
+            category=category,
+            run_id=run_id,
+            title_override=roundup_title,
+            intro_override=roundup_intro,
+        )
+        text = header + _brief_markdown(brief)
+        save_newsletter_text(text=text, category=category, run_id=run_id)
+
+        html = render_newsletter_brief_html(
+            brief=brief,
+            title=roundup_title or f"AI Digest ({_date_from_iso(run_id[:8] + 'T12:00:00+08:00' if len(run_id) >= 8 else None)})",
+            section_label=category.replace("_", " ").title(),
+            intro=roundup_intro or _DEFAULT_ROUNDUP_INTRO,
+        )
+        save_newsletter_html(html=html, category=category, run_id=run_id)
+        return text
+
     # Use up to max_items; if we have fewer (e.g. 1 or 2), still compose with what we have
     if len(selected_items) < max_items:
         logger.step(

@@ -12,7 +12,7 @@ import re
 import time
 import uuid
 from datetime import datetime
-from typing import Any, Dict, List
+from typing import Any, Callable, Dict, List, Optional
 
 from openai import OpenAI  # type: ignore[import-error]
 
@@ -157,13 +157,40 @@ def _parse_articles_json(text: str) -> List[Dict[str, Any]]:
     return [a for a in articles if isinstance(a, dict)]
 
 
-def _wait_for_response(client: OpenAI, response: Any, timeout_seconds: int, poll_interval: int) -> Any:
+ProgressCallback = Callable[[str, str, Dict[str, Any]], None]
+
+
+def _wait_for_response(
+    client: OpenAI,
+    response: Any,
+    timeout_seconds: int,
+    poll_interval: int,
+    progress_callback: Optional[ProgressCallback] = None,
+) -> Any:
     deadline = time.monotonic() + timeout_seconds
     current = response
+    started_at = time.monotonic()
     while getattr(current, "status", None) in ("queued", "in_progress"):
         if time.monotonic() >= deadline:
             raise TimeoutError(
                 f"OpenAI Deep Research did not finish within {timeout_seconds} seconds."
+            )
+        elapsed_seconds = int(time.monotonic() - started_at)
+        response_id = getattr(current, "id", "")
+        status = getattr(current, "status", "unknown")
+        if progress_callback:
+            progress_callback(
+                "polling",
+                (
+                    f"OpenAI Deep Research response {status}; "
+                    f"elapsed={elapsed_seconds}s, polling again in {poll_interval}s."
+                ),
+                {
+                    "response_id": response_id,
+                    "status": status,
+                    "elapsed_seconds": elapsed_seconds,
+                    "poll_interval_seconds": poll_interval,
+                },
             )
         time.sleep(poll_interval)
         current = client.responses.retrieve(getattr(current, "id"))
@@ -186,8 +213,26 @@ def _is_rate_limit_response(response: Any) -> bool:
     return "rate_limit" in _response_error_text(response).lower()
 
 
-def _run_deep_research_request(client: OpenAI, prompt: str, settings: Any) -> Any:
+def _run_deep_research_request(
+    client: OpenAI,
+    prompt: str,
+    settings: Any,
+    progress_callback: Optional[ProgressCallback] = None,
+) -> Any:
     for attempt in range(len(RATE_LIMIT_RETRY_DELAYS_SECONDS) + 1):
+        if progress_callback:
+            progress_callback(
+                "submitting",
+                (
+                    "Submitting OpenAI Deep Research request "
+                    f"(attempt {attempt + 1}/{len(RATE_LIMIT_RETRY_DELAYS_SECONDS) + 1})."
+                ),
+                {
+                    "attempt": attempt + 1,
+                    "model": settings.openai_deep_research_model,
+                    "max_tool_calls": settings.openai_deep_research_max_tool_calls,
+                },
+            )
         response = client.responses.create(
             model=settings.openai_deep_research_model,
             input=prompt,
@@ -195,18 +240,43 @@ def _run_deep_research_request(client: OpenAI, prompt: str, settings: Any) -> An
             max_tool_calls=settings.openai_deep_research_max_tool_calls,
             tools=[{"type": "web_search_preview"}],
         )
+        if progress_callback:
+            progress_callback(
+                "submitted",
+                "OpenAI Deep Research request submitted; waiting for background response.",
+                {
+                    "response_id": getattr(response, "id", ""),
+                    "status": getattr(response, "status", "unknown"),
+                },
+            )
         response = _wait_for_response(
             client=client,
             response=response,
             timeout_seconds=settings.openai_deep_research_timeout_seconds,
             poll_interval=settings.openai_deep_research_poll_interval_seconds,
+            progress_callback=progress_callback,
         )
         status = getattr(response, "status", None)
         if status in (None, "completed"):
+            if progress_callback:
+                progress_callback(
+                    "completed",
+                    "OpenAI Deep Research response completed.",
+                    {
+                        "response_id": getattr(response, "id", ""),
+                        "status": status or "completed",
+                    },
+                )
             return response
         if _is_rate_limit_response(response) and attempt < len(RATE_LIMIT_RETRY_DELAYS_SECONDS):
             delay = RATE_LIMIT_RETRY_DELAYS_SECONDS[attempt]
             logger.warning("OpenAI Deep Research rate-limited; retrying in %s seconds.", delay)
+            if progress_callback:
+                progress_callback(
+                    "rate_limited",
+                    f"OpenAI Deep Research was rate-limited; retrying in {delay}s.",
+                    {"delay_seconds": delay, "attempt": attempt + 1},
+                )
             time.sleep(delay)
             continue
         error = getattr(response, "error", None)
@@ -233,7 +303,11 @@ def _article_content(item: Dict[str, Any]) -> str:
     return "\n\n".join(part for part in parts if part.strip())
 
 
-def collect_articles_for_category(category: str, max_results: int = 6) -> List[Article]:
+def collect_articles_for_category(
+    category: str,
+    max_results: int = 6,
+    progress_callback: Optional[ProgressCallback] = None,
+) -> List[Article]:
     """
     Collect category-matched articles with OpenAI Deep Research.
 
@@ -248,6 +322,19 @@ def collect_articles_for_category(category: str, max_results: int = 6) -> List[A
             max_results,
             requested_results,
         )
+        if progress_callback:
+            progress_callback(
+                "capped",
+                (
+                    f"Capping OpenAI Deep Research request from {max_results} to "
+                    f"{requested_results} result(s)."
+                ),
+                {
+                    "requested_max_results": max_results,
+                    "effective_max_results": requested_results,
+                    "env_var": "OPENAI_DEEP_RESEARCH_MAX_RESULTS",
+                },
+            )
     client = OpenAI(
         api_key=settings.openai_api_key,
         timeout=settings.openai_deep_research_timeout_seconds,
@@ -259,10 +346,28 @@ def collect_articles_for_category(category: str, max_results: int = 6) -> List[A
         category,
         settings.openai_deep_research_model,
     )
+    if progress_callback:
+        progress_callback(
+            "starting_deep_research",
+            (
+                f"Starting OpenAI Deep Research with model={settings.openai_deep_research_model}; "
+                f"poll interval={settings.openai_deep_research_poll_interval_seconds}s, "
+                f"timeout={settings.openai_deep_research_timeout_seconds}s."
+            ),
+            {
+                "category": category,
+                "model": settings.openai_deep_research_model,
+                "effective_max_results": requested_results,
+                "max_tool_calls": settings.openai_deep_research_max_tool_calls,
+                "poll_interval_seconds": settings.openai_deep_research_poll_interval_seconds,
+                "timeout_seconds": settings.openai_deep_research_timeout_seconds,
+            },
+        )
     response = _run_deep_research_request(
         client=client,
         prompt=prompt,
         settings=settings,
+        progress_callback=progress_callback,
     )
 
     text = _extract_text(response)
@@ -270,6 +375,12 @@ def collect_articles_for_category(category: str, max_results: int = 6) -> List[A
         raise RuntimeError("OpenAI Deep Research returned no final text.")
 
     items = _parse_articles_json(text)
+    if progress_callback:
+        progress_callback(
+            "parsed",
+            f"OpenAI Deep Research returned {len(items)} raw item(s); converting to articles.",
+            {"raw_items": len(items)},
+        )
     now = datetime.now(APP_TIMEZONE).isoformat()
     articles: List[Article] = []
     seen_urls = set()

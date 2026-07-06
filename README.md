@@ -1,13 +1,13 @@
 # AI Digest – Agentic Newsletter MVP
 
-A terminal-based pipeline for an **AI Digest** newsletter: it collects AI/GenAI news per category, quality-checks and summarizes it, then composes and standardizes newsletter drafts. Multiple agents run in sequence; each step is logged to a file and to the CLI.
+A terminal-based pipeline for an **AI Digest** newsletter: it collects AI/GenAI news per category, quality-checks sources, then synthesizes a short category brief with read-more links. Multiple agents run in sequence; each step is logged to a file and to the CLI.
 
 ---
 
 ## What it does
 
 1. **Collect** – For each category, the **Collector** fetches articles via **OpenAI Deep Research** through the Responses API, or optionally via the legacy local **Deep Research** RSS/feed collector; the **Quality** agent accepts/rejects each; the **Summarizer** writes short summaries for accepted items. Results are stored in `data/`. Articles within a category are evaluated and summarized **concurrently**.
-2. **Compose** – Loads the latest run, picks top items for a category, and the **Composer** drafts a section; the **Standardizer** normalizes length and structure. The final draft is printed and saved to `output/` as both a **Markdown** and a **self-contained HTML** file (with base64-embedded images).
+2. **Compose** – Loads the latest run and, by default, synthesizes all accepted sources for a category into one concise Deep Research-style brief. The final draft is printed and saved to `output/` as both a **Markdown** and a **self-contained HTML** file.
 
 All agent steps are logged under `logs/` and echoed in the terminal.
 
@@ -19,7 +19,8 @@ All agent steps are logged under `logs/` and echoed in the terminal.
 |------|--------|
 | `ai_digest/` | Core package: config, LLM, agents, pipeline, storage, agent logger, image collector |
 | `ai_digest/templates/newsletter_card.html` | Email-safe Jinja2 template (table-based layout, orange masthead, responsive stacking) |
-| `ai_digest/formatter.py` | Renders newsletter cards as a self-contained HTML string; converts images to base64 |
+| `ai_digest/templates/newsletter_brief.html` | Email-safe template for synthesized category briefs |
+| `ai_digest/formatter.py` | Renders newsletter briefs/cards as self-contained HTML; converts card images to base64 |
 | `data/` | JSON files per collection run (`digest_run_<run_id>.json`) |
 | `logs/` | Agent log files per run (`collect_<run_id>.log`, `compose_<run_id>.log`) |
 | `output/` | Newsletter drafts – both `newsletter_<category>_<run_id>.md` and `newsletter_<category>_<run_id>.html` |
@@ -130,8 +131,7 @@ python run_pipeline.py collect-and-compose \
   --category "ai_trends" \
   --audience "AI team at UnionBank" \
   --tone "professional, concise, optimistic" \
-  --max-results 8 \
-  --sections 3
+  --max-results 8
 ```
 
 Output: newsletter draft printed in the terminal and saved under `output/` as both `.md` and `.html` files. Logs in `logs/`.
@@ -146,8 +146,7 @@ python run_pipeline.py collect --categories "ai_trends,ai_innovations" --max-res
 python run_pipeline.py compose \
   --category "ai_trends" \
   --audience "AI team at UnionBank" \
-  --tone "professional, concise, optimistic" \
-  --sections 3
+  --tone "professional, concise, optimistic"
 ```
 
 ---
@@ -164,7 +163,7 @@ All commands are run from the **project root** (`ai-digest`). Use `python` or `p
 
 ### Command: `collect`
 
-Fetches articles per category (via OpenAI Deep Research or the legacy local RSS collector depending on `AI_DIGEST_COLLECTOR`), runs the Quality and Summarizer agents **concurrently**, and saves one JSON run in `data/`. Images are also fetched in parallel. Logs go to `logs/collect_<run_id>.log` and to the terminal.
+Fetches articles per category (via OpenAI Deep Research or the legacy local RSS collector depending on `AI_DIGEST_COLLECTOR`), runs the Quality and Summarizer agents **concurrently**, and saves one JSON run in `data/`. Logs go to `logs/collect_<run_id>.log` and to the terminal.
 
 **When to use:** To refresh content for all (or selected) categories. Run this before `compose` if you use the two-step workflow.
 
@@ -204,7 +203,7 @@ python run_pipeline.py collect --audience "CTO and tech leadership" --max-result
 
 ### Command: `compose`
 
-Loads the **latest** run from `data/`, selects items for the given category, runs the Composer then the Standardizer (unless disabled), and writes the draft to `output/` as both `.md` and `.html` and prints it. Logs go to `logs/compose_<run_id>_<time>.log` and to the terminal.
+Loads the **latest** run from `data/`, synthesizes accepted sources for the given category into a concise brief, and writes the draft to `output/` as both `.md` and `.html` and prints it. Logs go to `logs/compose_<run_id>_<time>.log` and to the terminal.
 
 **When to use:** After you have run `collect` at least once. Use when you want to generate or regenerate a newsletter section from existing run data (e.g. different audience/tone or format without re-collecting).
 
@@ -219,21 +218,28 @@ python run_pipeline.py compose --category CATEGORY --audience "..." --tone "..."
 | `--category` | Yes | — | Category to draft (e.g. `ai_trends`, `genai_tips`) |
 | `--audience` | Yes | — | Audience (e.g. `"AI team at UnionBank"`) |
 | `--tone` | Yes | — | Tone (e.g. `"professional, concise, optimistic"`) |
-| `--sections N` | No | `3` | Number of news sections (items) in the draft |
-| `--format` | No | `card` | `card` (emoji headlines + summaries + images) or `table` (Date \| Headline \| Source \| Summary) |
-| `--no-standardize` | No | off | Skip Standardizer (card only; ignored for table) |
+| `--sections N` | No | `3` | Used by `card`/`table`; ignored by default `brief` format |
+| `--format` | No | `brief` | `brief` (synthesized category brief), `card`, or `table` |
+| `--no-standardize` | No | off | Skip Standardizer (card only; ignored for brief/table) |
 | `--target-max-words N` | No | `500` | Target total words for standardized draft (card only) |
 | `--target-words-per-item N` | No | `80` | Target words per item (card only) |
 
 **Examples:**
 
 ```bash
-# Card format, 3 sections (default)
+# Brief format (default)
+python run_pipeline.py compose \
+  --category "ai_trends" \
+  --audience "AI team at UnionBank" \
+  --tone "professional, concise, optimistic"
+
+# Card format, 3 separate article items
 python run_pipeline.py compose \
   --category "ai_trends" \
   --audience "AI team at UnionBank" \
   --tone "professional, concise, optimistic" \
-  --sections 3
+  --sections 3 \
+  --format card
 
 # Table format (Date | Headline | Source | Summary)
 python run_pipeline.py compose \
@@ -243,20 +249,22 @@ python run_pipeline.py compose \
   --sections 3 \
   --format table
 
-# More sections and longer draft
+# Card format with more sections and a longer draft
 python run_pipeline.py compose \
   --category "genai_tips" \
   --audience "AI team at UnionBank" \
   --tone "friendly, practical" \
   --sections 4 \
+  --format card \
   --target-max-words 800 \
   --target-words-per-item 150
 
-# Raw draft only (no standardizer)
+# Raw card draft only (no standardizer)
 python run_pipeline.py compose \
   --category "ai_trends" \
   --audience "CTO and tech leadership" \
   --tone "strategic, concise" \
+  --format card \
   --no-standardize
 ```
 
@@ -283,8 +291,8 @@ python run_pipeline.py collect-and-compose --category CATEGORY --audience "..." 
 | `--tone` | Yes | — | Tone (e.g. `"professional, concise, optimistic"`) |
 | `--max-results N` | No | `6` | Max articles to collect for the category |
 | `--max-pool N` | No | — | Max articles passed to the quality evaluator, independent of `--max-results` |
-| `--sections N` | No | `3` | Number of news sections (items) in the draft |
-| `--format` | No | `card` | `card` or `table` (Date \| Headline \| Source \| Summary) |
+| `--sections N` | No | `3` | Used by `card`/`table`; ignored by default `brief` format |
+| `--format` | No | `brief` | `brief`, `card`, or `table` |
 | `--no-standardize` | No | off | Skip Standardizer (card only) |
 | `--target-max-words N` | No | `500` | Target max total words (card only) |
 | `--target-words-per-item N` | No | `80` | Target words per item (card only) |
@@ -292,19 +300,18 @@ python run_pipeline.py collect-and-compose --category CATEGORY --audience "..." 
 **Examples:**
 
 ```bash
-# Minimal: one category, default sections and format
+# Minimal: one category, synthesized brief format
 python run_pipeline.py collect-and-compose \
   --category "ai_trends" \
   --audience "AI team at UnionBank" \
   --tone "professional, concise, optimistic"
 
-# More sources and 4 sections (card format)
+# More sources, still synthesized into one brief
 python run_pipeline.py collect-and-compose \
   --category "genai_tips" \
   --audience "CTO and tech leadership" \
   --tone "strategic, concise" \
-  --max-results 8 \
-  --sections 4
+  --max-results 8
 
 # Table format (Date | Headline | Source | Summary)
 python run_pipeline.py collect-and-compose \
@@ -319,18 +326,14 @@ python run_pipeline.py collect-and-compose \
   --category "ai_innovations" \
   --audience "AI Center of Excellence Team" \
   --tone "concise, technical, punchy" \
-  --max-results 10 \
-  --sections 3 \
-  --format card
+  --max-results 10
 
 # AI Research (papers, journals, and theory-heavy articles)
 python run_pipeline.py collect-and-compose \
   --category "ai_research" \
   --audience "Data scientists and AI researchers" \
   --tone "technical, precise, research-oriented" \
-  --max-results 12 \
-  --sections 3 \
-  --format card
+  --max-results 12
 ```
 
 **Result:** The draft is printed to the terminal and saved as `output/newsletter_<category>_<run_id>.md` and `output/newsletter_<category>_<run_id>.html`. Logs are written to `logs/`.
@@ -355,11 +358,12 @@ The collection and evaluation prompts treat these categories as mutually exclusi
 | **Collector** | Fetches articles per category (OpenAI Deep Research by default, or legacy Deep Research RSS per `AI_DIGEST_COLLECTOR`); produces raw articles. |
 | **Quality** | LLM accept/reject and 1–5 score per article using category-specific criteria; articles within a category are evaluated concurrently. Accepted curated collector items need score >= 2. |
 | **Summarizer** | LLM creates eye-catching headline and concise summary per accepted article. General categories use a plain-English impact-focused prompt; research categories use a structured prompt preserving technical terms and concrete results. Summarization runs concurrently per category. |
+| **Synthesizer** | Default output path. Reads all accepted, deduplicated sources for a category and writes one concise Deep Research-style brief with themes, implications, and source links. |
 | **Image collector** | For each selected article, fetches the article page and saves one image (`og:image` or first suitable `img`) under `output/images/<run_id>/`. Images are fetched in parallel (reducing ~30s to ~10s for 3 articles). Used only in **card** format. |
-| **Composer** | LLM drafts a full newsletter section with headlines, summaries, optional embedded image markdown, and "Read more" links. Operates at low temperature (0.2) and copies headlines and summaries verbatim — no creative rewriting. |
-| **Standardizer** | LLM normalizes length and structure (headings, intro, per-item blocks, word limits); preserves image markdown. Operates at very low temperature (0.1) and only trims — never expands. Trim priority: filler openers → redundant qualifiers → wordy phrases → sentence shortening. |
+| **Composer** | Card-format fallback. LLM drafts separate article sections with headlines, summaries, optional embedded image markdown, and "Read more" links. |
+| **Standardizer** | Card-format final trim pass. Normalizes length and structure, preserves image markdown, and only trims — never expands. |
 | **Deduplicator** | Runs before the final item slice. Uses named entity overlap (0.45 threshold) and text similarity (0.38 threshold) to remove same-story duplicates. Research categories skip the entity signal to avoid false positives. |
-| **Headline generator** | Reads the final composer items and generates a single teaser sentence used as the masthead tagline in the HTML output. |
+| **Headline generator** | Card-format HTML helper. Reads final composer items and generates a single teaser sentence used as the masthead tagline. |
 
 **Image collection (card format only):** Before composing, the pipeline fetches one image per news item from the article's page (via `og:image` or the first suitable image). Images are saved under `output/images/<run_id>/` as `1.jpg`, `2.png`, etc., and the newsletter markdown embeds them as `![Headline](images/<run_id>/1.jpg)`. The HTML output has all images embedded as base64.
 
@@ -384,7 +388,7 @@ Log details include e.g. category, article title/URL, quality decision and notes
    `python run_pipeline.py collect` (optionally `--categories "ai_trends,ai_innovations"` and `--max-results 8`).
 
 3. **Draft a section from the latest run**
-   `python run_pipeline.py compose --category "ai_trends" --audience "..." --tone "..." --sections 3`.
+   `python run_pipeline.py compose --category "ai_trends" --audience "..." --tone "..."`.
 
 4. **Reuse the same data with different audience/tone**
    Run `compose` again with different `--audience` and `--tone` (no need to re-collect).

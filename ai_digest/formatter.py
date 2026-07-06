@@ -1,8 +1,6 @@
-"""
-formatter.py
-Renders newsletter cards as a self-contained HTML file using a Jinja2 template.
+"""Render newsletter drafts as self-contained HTML files using Jinja2 templates.
 
-Each card item must be a dict with:
+Card items must be dicts with:
   - title   (str)  : headline, may include emoji
   - summary (str)  : 2-sentence body
   - url     (str)  : "Read more" link
@@ -22,10 +20,15 @@ from .storage import OUTPUT_DIR
 
 # Path to the Jinja2 template file
 _TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "newsletter_card.html"
+_BRIEF_TEMPLATE_PATH = Path(__file__).resolve().parent / "templates" / "newsletter_brief.html"
 
 
 def _load_template() -> Template:
     return Template(_TEMPLATE_PATH.read_text(encoding="utf-8"))
+
+
+def _load_brief_template() -> Template:
+    return Template(_BRIEF_TEMPLATE_PATH.read_text(encoding="utf-8"))
 
 
 def _image_to_b64(image_path: str) -> tuple[str, str]:
@@ -89,4 +92,20 @@ def render_newsletter_html(
         section_label=section_label,
         items=enriched,
         digest_headline=digest_headline,
+    )
+
+
+def render_newsletter_brief_html(
+    brief: Dict[str, Any],
+    title: str,
+    section_label: str,
+    intro: Optional[str] = None,
+) -> str:
+    """Render a synthesized category brief into a self-contained HTML string."""
+    template = _load_brief_template()
+    return template.render(
+        title=title,
+        section_label=section_label,
+        intro=intro,
+        brief=brief,
     )
