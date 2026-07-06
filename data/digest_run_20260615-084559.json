@@ -1,0 +1,226 @@
+{
+  "run_id": "20260615-084559",
+  "run_started_at": "2026-06-15T08:45:59.227649+08:00",
+  "categories": [
+    "ai_trends"
+  ],
+  "collector_type": "deep",
+  "articles": [
+    {
+      "id": "2f53f237-03f8-46e6-be95-e1c21505b49c",
+      "category": "ai_trends",
+      "title": "Startup CEO Charlie Javice is reportedly angling for a Trump pardon",
+      "url": "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/",
+      "snippet": "JPMorgan can't be pleased by any of this.",
+      "content": "JPMorgan can't be pleased by any of this.",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+      "category": "ai_trends",
+      "title": "China may have accessed Mythos",
+      "url": "https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos",
+      "snippet": "According to a new report from Semafor, the White House's decision to impose export restrictions on Anthropic's Mythos was driven in part by fears that it had been accessed by a group linked to China. If the Chinese government actually had access to Mythos 5 or Fable 5, it would present a serious national security […]",
+      "content": "According to a new report from Semafor, the White House's decision to impose export restrictions on Anthropic's Mythos was driven in part by fears that it had been accessed by a group linked to China. If the Chinese government actually had access to Mythos 5 or Fable 5, it would present a serious national security […]",
+      "source": "The Verge",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "0326f40f-89a0-494e-b27c-dd17f384df26",
+      "category": "ai_trends",
+      "title": "Apple reportedly has three more iOS 27 features coming in the fall",
+      "url": "https://www.engadget.com/2193891/apple-reportedly-has-three-more-ios-27-features-coming-in-the-fall/",
+      "snippet": "Apple is still holding some of its iOS 27 cards close to its chest.",
+      "content": "Apple is still holding some of its iOS 27 cards close to its chest.",
+      "source": "Engadget - Technology News & Expert Reviews",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+      "category": "ai_trends",
+      "title": "Introducing the OpenAI Partner Network",
+      "url": "https://openai.com/index/introducing-openai-partner-network",
+      "snippet": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+      "content": "OpenAI launches the Partner Network, investing $150M to help global partners accelerate enterprise AI adoption, deployment, and transformation.",
+      "source": "OpenAI News",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "2d97637f-b997-490b-a786-f3f746e76099",
+      "category": "ai_trends",
+      "title": "As AI companies race to go public, who else is along for the ride?",
+      "url": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/",
+      "snippet": "Startups are trying to \"ride that SpaceX IPO wave.\"",
+      "content": "Startups are trying to \"ride that SpaceX IPO wave.\"",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "068b91aa-0636-438c-8b93-085c23b43a91",
+      "category": "ai_trends",
+      "title": "TechCrunch Mobility: SpaceX rockets past Tesla",
+      "url": "https://techcrunch.com/2026/06/14/techcrunch-mobility-spacex-rockets-past-tesla/",
+      "snippet": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+      "content": "Welcome back to TechCrunch Mobility, your hub for the future of transportation and now, more than ever, how AI is playing a part.",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+      "category": "ai_trends",
+      "title": "The Web Is Now Mostly Traveled by AI, Not People",
+      "url": "https://www.cnet.com/tech/services-and-software/its-official-agentic-bots-surf-the-web-more-than-real-people-do/",
+      "snippet": "For the first time ever, agentic AI internet activity has overtaken human-generated traffic, marking a historic shift online.",
+      "content": "For the first time ever, agentic AI internet activity has overtaken human-generated traffic, marking a historic shift online.",
+      "source": "CNET",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+      "category": "ai_trends",
+      "title": "As Anthropic suspends access to new models, India debates its AI future",
+      "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/",
+      "snippet": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.",
+      "content": "Tech leaders debate whether the Anthropic episode is a wake-up call for India’s AI ambitions.",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+      "category": "ai_trends",
+      "title": "Meta reportedly moves to unwind $2B Manus deal after Beijing’s demand",
+      "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/",
+      "snippet": "Meta starts dismantling its $2 billion Manus acquisition after Beijing ordered the deal reversed.",
+      "content": "Meta starts dismantling its $2 billion Manus acquisition after Beijing ordered the deal reversed.",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    },
+    {
+      "id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+      "category": "ai_trends",
+      "title": "KPMG pulls report on AI usage due to apparent hallucinations",
+      "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/",
+      "snippet": "Once again, AI proves to be an unreliable source of information about AI.",
+      "content": "Once again, AI proves to be an unreliable source of information about AI.",
+      "source": "TechCrunch",
+      "collected_at": "2026-06-15T08:46:04.628345+08:00"
+    }
+  ],
+  "evaluations": [
+    {
+      "article_id": "0326f40f-89a0-494e-b27c-dd17f384df26",
+      "decision": "reject",
+      "quality_score": 1,
+      "flags": [
+        "off-topic"
+      ],
+      "notes": "The article is focused on iOS features, which is not directly relevant to AI trends or developments."
+    },
+    {
+      "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+      "decision": "accept",
+      "quality_score": 5,
+      "flags": [],
+      "notes": "The article discusses significant national security concerns related to AI export restrictions and potential access by foreign entities, which is a trending and highly relevant topic in the AI landscape."
+    },
+    {
+      "article_id": "2f53f237-03f8-46e6-be95-e1c21505b49c",
+      "decision": "reject",
+      "quality_score": 1,
+      "flags": [
+        "off-topic",
+        "low relevance"
+      ],
+      "notes": "The article focuses on a legal issue involving a startup CEO and does not pertain to AI trends or relevant developments in the AI field."
+    },
+    {
+      "article_id": "2d97637f-b997-490b-a786-f3f746e76099",
+      "decision": "accept",
+      "quality_score": 4,
+      "flags": [],
+      "notes": "The article discusses the trend of AI companies pursuing IPOs, which is timely and relevant as it reflects current market dynamics and interest in AI investments. This topic is likely to generate discussion among data scientists and AI teams."
+    },
+    {
+      "article_id": "068b91aa-0636-438c-8b93-085c23b43a91",
+      "decision": "reject",
+      "quality_score": 1,
+      "flags": [
+        "off-topic"
+      ],
+      "notes": "The article focuses on transportation and SpaceX rather than AI trends specifically, making it irrelevant for the target audience of data scientists and AI teams."
+    },
+    {
+      "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+      "decision": "accept",
+      "quality_score": 5,
+      "flags": [],
+      "notes": "This article discusses a significant trend where AI-generated internet activity surpasses human traffic, indicating a major shift in online behavior. This topic is likely to generate interest and discussion among data scientists and AI teams, making it highly relevant and timely."
+    },
+    {
+      "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+      "decision": "accept",
+      "quality_score": 4,
+      "flags": [],
+      "notes": "The article discusses a significant event involving Anthropic and its implications for India's AI landscape, which is timely and relevant. It reflects ongoing debates in the industry, making it likely to attract attention."
+    },
+    {
+      "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+      "decision": "accept",
+      "quality_score": 4,
+      "flags": [],
+      "notes": "The article discusses a significant move by Meta to unwind a major acquisition due to regulatory demands from Beijing, which highlights the intersection of AI, corporate strategy, and international policy. This is timely and likely to be trending due to its implications for the tech industry and regulatory landscape."
+    },
+    {
+      "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+      "decision": "accept",
+      "quality_score": 4,
+      "flags": [],
+      "notes": "The article discusses KPMG's decision to pull a report on AI usage due to issues with hallucinations, highlighting a significant concern in the AI field. This topic is timely and relevant, as it addresses the reliability of AI outputs, which is a widely discussed issue in the industry."
+    },
+    {
+      "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+      "decision": "accept",
+      "quality_score": 5,
+      "flags": [],
+      "notes": "The launch of the OpenAI Partner Network with a significant investment of $150M is highly relevant and likely to trend, as it directly impacts enterprise AI adoption and transformation, which is a key interest for data scientists and AI teams."
+    }
+  ],
+  "summaries": [
+    {
+      "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+      "summary": "Meta is unwinding its $2 billion Manus acquisition due to a demand from Beijing. This move highlights the increasing influence of government regulations on tech deals.",
+      "suggested_subject": "Meta reverses $2B deal after Beijing's demand 🚫"
+    },
+    {
+      "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+      "summary": "The White House is concerned that China accessed Anthropic's Mythos. This raises significant national security issues for the U.S.",
+      "suggested_subject": "🚨 China may have accessed AI secrets!"
+    },
+    {
+      "article_id": "2d97637f-b997-490b-a786-f3f746e76099",
+      "summary": "AI startups are gearing up for IPOs as they seek to capitalize on the current market excitement. This trend highlights the growing importance of AI in the tech landscape and could reshape investment strategies.",
+      "suggested_subject": "🚀 AI Startups Eye IPOs Amid Buzz"
+    },
+    {
+      "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+      "summary": "Agentic AI now accounts for more internet traffic than humans. This shift highlights the growing influence of AI in our digital landscape.",
+      "suggested_subject": "🤖 AI Surpasses Humans Online!"
+    },
+    {
+      "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+      "summary": "Anthropic has suspended access to its new AI models, prompting discussions among tech leaders in India about the country's AI future. This situation highlights the need for India to reassess its approach to AI development and regulation.",
+      "suggested_subject": "🤖 India rethinks AI after Anthropic pause"
+    },
+    {
+      "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+      "summary": "KPMG has withdrawn a report on AI usage after discovering inaccuracies. This highlights ongoing concerns about the reliability of AI-generated information.",
+      "suggested_subject": "KPMG pulls AI report! 🤖"
+    },
+    {
+      "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+      "summary": "OpenAI has launched the Partner Network with a $150M investment to boost enterprise AI adoption. This initiative aims to help global partners effectively implement and transform their AI strategies.",
+      "suggested_subject": "🤖 OpenAI Launches Partner Network!"
+    }
+  ]
+}

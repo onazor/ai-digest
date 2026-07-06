@@ -1,0 +1,266 @@
+[2026-06-15 08:45:59] [collector] starting: Fetching articles for category 'ai_trends' (max_results=10, collector=deep).
+  Details:
+  {
+    "category": "ai_trends",
+    "max_results": 10,
+    "collector": "deep"
+  }
+[2026-06-15 08:46:04] [collector] finished: Collected 10 articles for 'ai_trends'. Evaluating 10 articles in parallel (max_workers=5).
+  Details:
+  {
+    "category": "ai_trends",
+    "count": 10
+  }
+[2026-06-15 08:46:04] [quality] evaluating: Article: Startup CEO Charlie Javice is reportedly angling for a Trump...
+  Details:
+  {
+    "article_id": "2f53f237-03f8-46e6-be95-e1c21505b49c",
+    "url": "https://techcrunch.com/2026/06/14/startup-ceo-charlie-javice-is-reportedly-angling-for-a-trump-pardon/"
+  }
+[2026-06-15 08:46:04] [quality] evaluating: Article: China may have accessed Mythos...
+  Details:
+  {
+    "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+    "url": "https://www.theverge.com/ai-artificial-intelligence/949644/china-white-house-anthropic-mythos"
+  }
+[2026-06-15 08:46:04] [quality] evaluating: Article: Apple reportedly has three more iOS 27 features coming in th...
+  Details:
+  {
+    "article_id": "0326f40f-89a0-494e-b27c-dd17f384df26",
+    "url": "https://www.engadget.com/2193891/apple-reportedly-has-three-more-ios-27-features-coming-in-the-fall/"
+  }
+[2026-06-15 08:46:04] [quality] evaluating: Article: Introducing the OpenAI Partner Network...
+  Details:
+  {
+    "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+    "url": "https://openai.com/index/introducing-openai-partner-network"
+  }
+[2026-06-15 08:46:04] [quality] evaluating: Article: As AI companies race to go public, who else is along for the...
+  Details:
+  {
+    "article_id": "2d97637f-b997-490b-a786-f3f746e76099",
+    "url": "https://techcrunch.com/2026/06/14/as-ai-companies-race-to-go-public-who-else-is-along-for-the-ride/"
+  }
+[2026-06-15 08:46:07] [quality] decision: Decision: reject, score=1. The article is focused on iOS features, which is not directly relevant to AI trends or developments.
+  Details:
+  {
+    "article_id": "0326f40f-89a0-494e-b27c-dd17f384df26",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article is focused on iOS features, which is not directly relevant to AI trends or developments."
+  }
+[2026-06-15 08:46:07] [quality] evaluating: Article: TechCrunch Mobility: SpaceX rockets past Tesla...
+  Details:
+  {
+    "article_id": "068b91aa-0636-438c-8b93-085c23b43a91",
+    "url": "https://techcrunch.com/2026/06/14/techcrunch-mobility-spacex-rockets-past-tesla/"
+  }
+[2026-06-15 08:46:07] [quality] decision: Decision: accept, score=5. The article discusses significant national security concerns related to AI export restrictions and potential access by foreign entities, which is a trending and highly relevant topic in the AI landscape.
+  Details:
+  {
+    "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The article discusses significant national security concerns related to AI export restrictions and potential access by foreign entities, which is a trending and highly relevant topic in the AI landscape."
+  }
+[2026-06-15 08:46:07] [quality] evaluating: Article: The Web Is Now Mostly Traveled by AI, Not People...
+  Details:
+  {
+    "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+    "url": "https://www.cnet.com/tech/services-and-software/its-official-agentic-bots-surf-the-web-more-than-real-people-do/"
+  }
+[2026-06-15 08:46:07] [quality] decision: Decision: reject, score=1. The article focuses on a legal issue involving a startup CEO and does not pertain to AI trends or relevant developments in the AI field.
+  Details:
+  {
+    "article_id": "2f53f237-03f8-46e6-be95-e1c21505b49c",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic",
+      "low relevance"
+    ],
+    "notes": "The article focuses on a legal issue involving a startup CEO and does not pertain to AI trends or relevant developments in the AI field."
+  }
+[2026-06-15 08:46:07] [quality] evaluating: Article: As Anthropic suspends access to new models, India debates it...
+  Details:
+  {
+    "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+    "url": "https://techcrunch.com/2026/06/13/as-anthropic-suspends-access-to-new-models-india-debates-its-ai-future/"
+  }
+[2026-06-15 08:46:07] [quality] decision: Decision: accept, score=4. The article discusses the trend of AI companies pursuing IPOs, which is timely and relevant as it reflects current market dynamics and interest in AI investments. This topic is likely to generate discussion among data scientists and AI teams.
+  Details:
+  {
+    "article_id": "2d97637f-b997-490b-a786-f3f746e76099",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses the trend of AI companies pursuing IPOs, which is timely and relevant as it reflects current market dynamics and interest in AI investments. This topic is likely to generate discussion among data scientists and AI teams."
+  }
+[2026-06-15 08:46:07] [quality] evaluating: Article: Meta reportedly moves to unwind $2B Manus deal after Beijing...
+  Details:
+  {
+    "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+    "url": "https://techcrunch.com/2026/06/13/meta-reportedly-moves-to-unwind-2b-manus-deal-after-beijings-demand/"
+  }
+[2026-06-15 08:46:08] [quality] decision: Decision: reject, score=1. The article focuses on transportation and SpaceX rather than AI trends specifically, making it irrelevant for the target audience of data scientists and AI teams.
+  Details:
+  {
+    "article_id": "068b91aa-0636-438c-8b93-085c23b43a91",
+    "decision": "reject",
+    "quality_score": 1,
+    "flags": [
+      "off-topic"
+    ],
+    "notes": "The article focuses on transportation and SpaceX rather than AI trends specifically, making it irrelevant for the target audience of data scientists and AI teams."
+  }
+[2026-06-15 08:46:08] [quality] evaluating: Article: KPMG pulls report on AI usage due to apparent hallucinations...
+  Details:
+  {
+    "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+    "url": "https://techcrunch.com/2026/06/13/kpmg-pulls-report-on-ai-usage-due-to-apparent-hallucinations/"
+  }
+[2026-06-15 08:46:08] [quality] decision: Decision: accept, score=5. This article discusses a significant trend where AI-generated internet activity surpasses human traffic, indicating a major shift in online behavior. This topic is likely to generate interest and discussion among data scientists and AI teams, making it highly relevant and timely.
+  Details:
+  {
+    "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "This article discusses a significant trend where AI-generated internet activity surpasses human traffic, indicating a major shift in online behavior. This topic is likely to generate interest and discussion among data scientists and AI teams, making it highly relevant and timely."
+  }
+[2026-06-15 08:46:08] [quality] decision: Decision: accept, score=4. The article discusses a significant event involving Anthropic and its implications for India's AI landscape, which is timely and relevant. It reflects ongoing debates in the industry, making it likely to attract attention.
+  Details:
+  {
+    "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses a significant event involving Anthropic and its implications for India's AI landscape, which is timely and relevant. It reflects ongoing debates in the industry, making it likely to attract attention."
+  }
+[2026-06-15 08:46:09] [quality] decision: Decision: accept, score=4. The article discusses a significant move by Meta to unwind a major acquisition due to regulatory demands from Beijing, which highlights the intersection of AI, corporate strategy, and international policy. This is timely and likely to be trending due to its implications for the tech industry and regulatory landscape.
+  Details:
+  {
+    "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses a significant move by Meta to unwind a major acquisition due to regulatory demands from Beijing, which highlights the intersection of AI, corporate strategy, and international policy. This is timely and likely to be trending due to its implications for the tech industry and regulatory landscape."
+  }
+[2026-06-15 08:46:10] [quality] decision: Decision: accept, score=4. The article discusses KPMG's decision to pull a report on AI usage due to issues with hallucinations, highlighting a significant concern in the AI field. This topic is timely and relevant, as it addresses the reliability of AI outputs, which is a widely discussed issue in the industry.
+  Details:
+  {
+    "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+    "decision": "accept",
+    "quality_score": 4,
+    "flags": [],
+    "notes": "The article discusses KPMG's decision to pull a report on AI usage due to issues with hallucinations, highlighting a significant concern in the AI field. This topic is timely and relevant, as it addresses the reliability of AI outputs, which is a widely discussed issue in the industry."
+  }
+[2026-06-15 08:46:10] [quality] decision: Decision: accept, score=5. The launch of the OpenAI Partner Network with a significant investment of $150M is highly relevant and likely to trend, as it directly impacts enterprise AI adoption and transformation, which is a key interest for data scientists and AI teams.
+  Details:
+  {
+    "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+    "decision": "accept",
+    "quality_score": 5,
+    "flags": [],
+    "notes": "The launch of the OpenAI Partner Network with a significant investment of $150M is highly relevant and likely to trend, as it directly impacts enterprise AI adoption and transformation, which is a key interest for data scientists and AI teams."
+  }
+[2026-06-15 08:46:10] [quality] batch_done: Evaluation complete for 'ai_trends': 7/10 passed quality bar (0 cross-category duplicate(s) skipped).
+  Details:
+  {
+    "accepted": 7,
+    "total": 10,
+    "cross_category_duplicates_skipped": 0
+  }
+[2026-06-15 08:46:10] [summarizer] summarizing: Article: China may have accessed Mythos...
+  Details:
+  {
+    "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81"
+  }
+[2026-06-15 08:46:10] [summarizer] summarizing: Article: As AI companies race to go public, who else is along for the...
+  Details:
+  {
+    "article_id": "2d97637f-b997-490b-a786-f3f746e76099"
+  }
+[2026-06-15 08:46:10] [summarizer] summarizing: Article: The Web Is Now Mostly Traveled by AI, Not People...
+  Details:
+  {
+    "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab"
+  }
+[2026-06-15 08:46:10] [summarizer] summarizing: Article: As Anthropic suspends access to new models, India debates it...
+  Details:
+  {
+    "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48"
+  }
+[2026-06-15 08:46:10] [summarizer] summarizing: Article: Meta reportedly moves to unwind $2B Manus deal after Beijing...
+  Details:
+  {
+    "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1"
+  }
+[2026-06-15 08:46:11] [summarizer] finished: Subject: Meta reverses $2B deal after Beijing's demand 🚫
+  Details:
+  {
+    "article_id": "0205beba-509f-40ea-94f0-363b802d6fa1",
+    "suggested_subject": "Meta reverses $2B deal after Beijing's demand 🚫",
+    "summary_preview": "Meta is unwinding its $2 billion Manus acquisition due to a demand from Beijing. This move highlights the increasing influence of government regulations on tech deals."
+  }
+[2026-06-15 08:46:11] [summarizer] summarizing: Article: KPMG pulls report on AI usage due to apparent hallucinations...
+  Details:
+  {
+    "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0"
+  }
+[2026-06-15 08:46:11] [summarizer] finished: Subject: 🚨 China may have accessed AI secrets!
+  Details:
+  {
+    "article_id": "b2c950db-d363-4c28-be62-492cfd38bf81",
+    "suggested_subject": "🚨 China may have accessed AI secrets!",
+    "summary_preview": "The White House is concerned that China accessed Anthropic's Mythos. This raises significant national security issues for the U.S."
+  }
+[2026-06-15 08:46:11] [summarizer] finished: Subject: 🚀 AI Startups Eye IPOs Amid Buzz
+  Details:
+  {
+    "article_id": "2d97637f-b997-490b-a786-f3f746e76099",
+    "suggested_subject": "🚀 AI Startups Eye IPOs Amid Buzz",
+    "summary_preview": "AI startups are gearing up for IPOs as they seek to capitalize on the current market excitement. This trend highlights the growing importance of AI in the tech landscape and could reshape investment s..."
+  }
+[2026-06-15 08:46:11] [summarizer] finished: Subject: 🤖 AI Surpasses Humans Online!
+  Details:
+  {
+    "article_id": "444b1aa8-a24a-42b1-9757-4871a73ddfab",
+    "suggested_subject": "🤖 AI Surpasses Humans Online!",
+    "summary_preview": "Agentic AI now accounts for more internet traffic than humans. This shift highlights the growing influence of AI in our digital landscape."
+  }
+[2026-06-15 08:46:11] [summarizer] summarizing: Article: Introducing the OpenAI Partner Network...
+  Details:
+  {
+    "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049"
+  }
+[2026-06-15 08:46:11] [summarizer] finished: Subject: 🤖 India rethinks AI after Anthropic pause
+  Details:
+  {
+    "article_id": "762ccc58-a7dc-4453-8638-6396d6916e48",
+    "suggested_subject": "🤖 India rethinks AI after Anthropic pause",
+    "summary_preview": "Anthropic has suspended access to its new AI models, prompting discussions among tech leaders in India about the country's AI future. This situation highlights the need for India to reassess its appro..."
+  }
+[2026-06-15 08:46:12] [summarizer] finished: Subject: KPMG pulls AI report! 🤖
+  Details:
+  {
+    "article_id": "c1cc25a2-adfb-4900-934c-5fb64b4d41f0",
+    "suggested_subject": "KPMG pulls AI report! 🤖",
+    "summary_preview": "KPMG has withdrawn a report on AI usage after discovering inaccuracies. This highlights ongoing concerns about the reliability of AI-generated information."
+  }
+[2026-06-15 08:46:12] [summarizer] finished: Subject: 🤖 OpenAI Launches Partner Network!
+  Details:
+  {
+    "article_id": "f77950a2-11d0-4bff-8d46-836ae617b049",
+    "suggested_subject": "🤖 OpenAI Launches Partner Network!",
+    "summary_preview": "OpenAI has launched the Partner Network with a $150M investment to boost enterprise AI adoption. This initiative aims to help global partners effectively implement and transform their AI strategies."
+  }
+[2026-06-15 08:46:12] [summarizer] batch_done: Summarisation complete for 'ai_trends': 7 summaries so far.
+  Details:
+  {
+    "summaries": 7
+  }
